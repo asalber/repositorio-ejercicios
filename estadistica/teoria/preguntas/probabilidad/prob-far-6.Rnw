@@ -1,0 +1,40 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+pA <- 4/5
+pB <- 0.5
+pNoANoB <- 1/20
+
+## QUESTION/ANSWER GENERATION
+pAoB <- 1-pNoANoB
+pAB <- pA + pB - pAoB
+pNoAB <- pB-pAB
+pNoA <- 1-pA
+pNoB <- 1-pB
+pBSiA <- pAB/pA
+pBSiNoA <- pNoAB/pNoA
+@
+
+\begin{question}
+\puntos{2.5}Se Se está estudiando la efectividad de dos fármacos $A$ y $B$ contra la gripe y se ha determinado en un ensayo que en el 12\% de los casos solo es efectivo el fármaco $B$, en el 24\% de los casos solo es efectivo el fármaco $A$ y en el 80\% de los casos en los que el fármaco $B$ fue efectivo también lo fue el $A$.
+Se pide:
+\begin{enumerate}
+\item ¿Cuál es la probabilidad de que sea efectivo solo uno de los fármacos?
+\item ¿Cuál es la probabilidad que sean efectivos los dos fármacos a la vez?
+\item ¿Cuál es la probabilidad de que ningún fármaco sea efectivo?
+\item ¿Depende la efectividad de un fármaco de la efectividad del otro?
+\end{enumerate}
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{prob-med-2}
+%% \extol{0.001}
+%% \degree{Medicina}
+ 

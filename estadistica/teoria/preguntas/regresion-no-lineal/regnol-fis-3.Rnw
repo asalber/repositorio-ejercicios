@@ -1,0 +1,83 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+library(xtable)
+x <- c(4, 8, 12, 16, 20, 24)
+y <- c(25.4, 24, 22.8, 22, 21.6, 21.4)
+table <- matrix(c(x,y), nrow = 2, byrow = T)
+rownames(table) <- c("\\mbox{Tiempo ejercicio}", "\\mbox{IMC}")
+## QUESTION/ANSWER GENERATION
+# colors
+col1 <- "#05A1E6"
+# sample size
+n <- length(x)
+# means
+mx <- mean(x)
+mlogx <- mean(log(x))
+my <- mean(y)
+mlogy <- mean(log(y))
+# variances
+s2x <- sum(x^2)/n-mx^2
+s2logx <- sum(log(x)^2)/n-mlogx^2
+s2y <- sum(y^2)/n-my^2
+s2logy <- sum(log(y)^2)/n-mlogy^2
+# Covariances
+sxlogy <- sum(x*log(y))/n-mx*mlogy
+slogxy <- sum(log(x)*y)/n-mlogx*my
+# Determination coeff
+r2xlogy <- sxlogy^2/(s2x*s2logy)
+r2logxy <- slogxy^2/(s2logx*s2y)
+# Exponential regression model
+regexp <- lm(log(y)~x)
+# Logarithmic regression model
+reglog <- lm(y~log(x))
+@
+
+\begin{question}
+\puntos{2.5}Se ha medido el número medio de horas de estudio semanales $X$ y la nota en un test de acceso a una clínica $Y$, de 8 aspirantes, obteniendo los siguientes resultados:
+
+$\sum x_i=15.9$, $\sum \log(x_i)=3.852$, $\sum y_j=41.5$, $\sum \log(y_j)=11,511$,\\  
+$\sum x_i^2=42.23$, $\sum \log(x_i)^2=5.559$, $\sum y_j^2=274.25$, $\sum \log(y_j)^2=20.742$,\\
+$\sum x_iy_j=103.3$, $\sum x_i\log(y_j)=28.047$, $\sum \log(x_i)y_j=32.616$.
+
+\begin{enumerate}
+\item Calcular las ecuaciones de los modelos de regresión logarítmico y exponencial de la nota en función del número medio de horas de estudio. 
+\item Utilizar el mejor de los dos modelos anteriores para predecir la nota si se estudia $3.2$ horas a la semana. 
+\end{enumerate}
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+\begin{enumerate}
+\item \null
+
+<<diagrama-dispersion-lesiones-tiempo-calentamiento, fig=T, echo=F, height=4, width=5, dev=svg, fig.path="img">>=
+plot(x, y, main="Diagrama de dispersión del número de lesiones\n sobre el tiempo de calentamiento", xlab = "Tiempo de calentamiento", ylab="Lesiones", pch=20, col=col1)
+@
+
+\item $\bar x=\Sexpr{round(mx,4)}$ min, $s_x^2=\Sexpr{round(s2x,4)}$ min$^2$.\\
+$\overline{\log(x)}=\Sexpr{round(mlogx,4)}$ log(min), $s_{\log(x)}^2=\Sexpr{round(s2logx,4)}$ log(min)$^2$.\\
+$\bar y=\Sexpr{round(my,4)}$ lesiones, $s_y^2=\Sexpr{round(s2y,4)}$ lesiones$^2$.\\
+$\overline{\log(y)}=\Sexpr{round(mlogy,4)}$ log(lesiones), $s_{\log(y)}^2=\Sexpr{round(s2logy,4)}$ log(lesiones)$^2$.\\
+$s_{x\log(y)}=\Sexpr{round(sxlogy,4)}$, $s_{\log(x)y}=\Sexpr{round(slogxy,4)}$\\
+Coeficiente de determinanción exponencial: $r^2=\Sexpr{round(r2xlogy,4)}$\\
+Coeficiente de determinación logarítmico: $r^2=\Sexpr{round(r2logxy,4)}$\\
+Por tanto, el modelo de regresión exponencial es mejor para predecir el número de lesiones en función del tiempo de calentamiento.\\
+Modelo de regresión exponencial: $y=e^{\Sexpr{round(regexp$coefficients[1],4)}+\Sexpr{round(regexp$coefficients[2],4)}x}$.\\
+Predicción: $y(20)=\Sexpr{round(exp(regexp$coefficients[1] + regexp$coefficients[2]*20),4)}$ lesiones.
+
+\item El modelo logarítmico es mejor para predecir el tiempo de calentamiento en función del número de lesiones.\\
+Modelo de regresión logarítmico: $x=\Sexpr{round(reglog$coefficients[1],4)}+\Sexpr{round(reglog$coefficients[2],4)}\log(y)$.\\
+Predicción: $x(10)=\Sexpr{round(reglog$coefficients[1]+reglog$coefficients[2]*log(10), 4)}$ min.
+
+\item De acuerdo al coeficiente de determinación ambas predicciones son muy fiables pero la última lo es menos ya que es para un valor que no está incluido en el rango de valores de la muestra.
+\end{enumerate}
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{regnol-fis-2}
+%% \extol{0.001}
+%% \degree{Fisioterapia}
+ 

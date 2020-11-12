@@ -1,0 +1,33 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+
+
+## QUESTION/ANSWER GENERATION
+
+@
+
+\begin{question}
+\puntos{2}Para estudiar la efectividad de la terapia corneal refractiva se tomó una muestra de 1200 pacientes con más de 6 dioptrías de miopía y se dividió en dos grupos de 400 y 800 pacientes respectivamente. El primer grupo utilizó lentillas CTR durante un periodo y el segundo unas lentillas placebo. El número de pacientes que notaron una disminución de la miopía fue 320 en el primer grupo y 80 en el segundo.
+Se pide:
+
+\begin{enumerate}
+\item Calcular el riesgo de disminución de la miopía en el grupo tratamiento. 
+\item Calcular el riesgo relativo de disminución de la miopía.
+\item Calcular el odds ratio de disminución de la miopía.
+\item ¿Puede decirse que las lentillas CTR son efectivas?
+\end{enumerate}
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{prob-med-2}
+%% \extol{0.001}
+%% \degree{Medicina}
+ 

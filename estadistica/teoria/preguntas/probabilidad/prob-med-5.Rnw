@@ -1,0 +1,43 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+pA <- 4/5
+pB <- 0.5
+pNoANoB <- 1/20
+
+## QUESTION/ANSWER GENERATION
+pAoB <- 1-pNoANoB
+pAB <- pA + pB - pAoB
+pNoAB <- pB-pAB
+pNoA <- 1-pA
+pNoB <- 1-pB
+pBSiA <- pAB/pA
+pBSiNoA <- pNoAB/pNoA
+@
+
+\begin{question}
+\puntos{3}Un equipo de atención primaria de salud realiza un estudio de la población, para evaluar la incidencia de hipertensión
+e hipercolesterolemia.
+Para ello analizan a 1000 personas de dicha población, seleccionadas aleatoriamente, encontrándose que 180 presentan
+hipertensión, 140 hipercolesterolemia y 800 ninguna de ambas.
+Se pide calcular la probabilidad de que una persona tomada al azar.
+\begin{enumerate}
+\item Presente ambas enfermedades.
+\item Presente alguna enfermedad.
+\item Presente hipertensión si no presenta hipercolesterolemia.
+\item ¿Son independientes la hipertensión y la hipercolesterolemia?
+\end{enumerate}
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{prob-med-2}
+%% \extol{0.001}
+%% \degree{Medicina}
+ 

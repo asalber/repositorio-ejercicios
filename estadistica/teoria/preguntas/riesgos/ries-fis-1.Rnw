@@ -1,0 +1,55 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+n <- 500
+n11 <- 12
+n12 <- 21
+n21 <- 32
+n22 <- 48
+n1 <- n11 + n12
+n2 <- n21 + n22
+## QUESTION/ANSWER GENERATION
+i5 <- (n11 + n21) / 500
+i10 <- (n1 + n2) / 500
+rt <- n1 / (n/2)
+rc <- n2 / (n/2)
+rr <- rt / rc
+ot <- n1 / (n/2 - n1)
+oc <- n2 / (n/2 - n2)
+or <- ot / oc
+@
+
+\begin{question}
+\puntos{2}En un estudio sobre la efectividad de un programa de prevención de riesgos laborales en oficios que requieren estar sentados muchas horas, se tomó una muestra aleatoria 500 de individuos entre 40 y 50 años sin lesiones vertebrales que pasaban más de 5 horas sentados. La mitad de los individuos siguieron un programa de prevención de riesgos laborales mientras que los demás no. Transcurridos 5 años el número de personas que desarrollaron alguna lesión vertebral en el grupo de los que siguieron el programa de prevención fue de 12, mientras que en el otro grupo fue de 32. En los siguientes 5 años hubo otras 21 personas que desarrollaron alguna lesión vertebral en el grupo de los que siguieron el programa de prevención, mientras que en el otro grupo fue de 48.   
+Se pide:
+
+Se pide: 
+\begin{enumerate}
+\item Calcular la incidencia acumulada de lesiones vertebrales en la muestra total a los 5 y a los 10 años.
+\item Calcular el riesgo absoluto de desarrollar alguna lesión vertebral a los 10 años en el grupo de los que siguieron el programa de prevención y en el de los que no.
+\item Calcular el riesgo relativo de desarrollar alguna lesión vertebral a los 10 años de los que siguieron el programa de prevención de riesgos con respecto a los que no e interpretarlo.
+\item Calcular el odds ratio de desarrollar alguna lesión vertebral a los 10 años de los que siguieron el programa de prevención de riesgos con respecto a los que no e interpretarlo.
+\item ¿Cuál de las dos medidas anteriores, riesgo relativo u odds ratio, tiene más sentido en este estudio? Justificar la respuesta.
+\end{enumerate}
+\end{question}
+
+%% SOLUTIONS
+\begin{solution}
+Sea $E$ el evento consistente en sufrir una lesión vertebral.
+\begin{enumerate}
+\item Incidencia acumulada después de 5 años: $R(E)=\Sexpr{round(i5, 4)}$.\\
+Incidencia acumulada después de 10 años: $R(E)=\Sexpr{round(i10, 4)}$.
+\item Riesgo en el grupo tratamiento: $R_T(E)=\Sexpr{round(rt,4)}$.\\
+Riesgo en el grupo control: $R_C(E)=\Sexpr{round(rc,4)}$.
+\item $RR(D)=\Sexpr{round(rr, 4)}$. Por tanto, el riesgo de sufrir una lesión vertebral es menos de la mitad si se sigue el programa de prevención.
+\item $OR(D)=\Sexpr{round(or, 4)}$. Por tanto, el odd de sufrir una lesión vertebral es menos de un tercio si se sigue el programa de prevención.
+\item Puesto que se trata de un estudio prospectivo se puede estimar la prevalencia de $D$ y ambos estadísticos son válidos, pero el riesgo relativo es más fácil de interpretar.
+\end{enumerate}
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{des-far-2}
+%% \extol{0.001}
+%% \degree{Farmacia}
+ 

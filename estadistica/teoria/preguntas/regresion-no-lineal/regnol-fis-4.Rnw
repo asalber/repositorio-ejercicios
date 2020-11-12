@@ -1,0 +1,85 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+library(xtable)
+x <- c(9, 10, 11, 12, 13, 14, 15, 16, 17, 18)
+y <- c(128, 144, 148, 154, 158, 161, 165, 164, 166, 167)
+table <- matrix(c(x,y), nrow = 2, byrow = T)
+rownames(table) <- c("\\mbox{Edad (años)}", "\\mbox{Estatura (cm)}")
+## QUESTION/ANSWER GENERATION
+# colors
+col1 <- "#05A1E6"
+# sample size
+n <- length(x)
+# means
+mx <- mean(x)
+mlogx <- mean(log(x))
+my <- mean(y)
+mlogy <- mean(log(y))
+# variances
+s2x <- sum(x^2)/n-mx^2
+s2logx <- sum(log(x)^2)/n-mlogx^2
+s2y <- sum(y^2)/n-my^2
+s2logy <- sum(log(y)^2)/n-mlogy^2
+# Covariances
+sxlogy <- sum(x*log(y))/n-mx*mlogy
+slogxy <- sum(log(x)*y)/n-mlogx*my
+# Determination coeff
+r2xlogy <- sxlogy^2/(s2x*s2logy)
+r2logxy <- slogxy^2/(s2logx*s2y)
+# Exponential regression model
+regexp <- lm(log(y)~x)
+# Logarithmic regression model
+reglog <- lm(y~log(x))
+@
+
+\begin{question}
+\puntos{3.5}En cierto club de tenis se ha registrado la edad ($X$) y la estatura ($Y$) de las diez jugadoras que componen el primer equipo juvenil femenino.  
+
+$$
+<<echo=FALSE, results=tex>>=
+print(xtable(table, auto=T), tabular.environment="array", include.colnames = F, floating=F, hline.after = c(0,nrow(table)), sanitize.text.function = function(x) { x })
+@
+$$
+
+\begin{enumerate}
+\item ¿Qué modelo de regresión se ajusta mejor a estos datos, el logarítmico o el lineal?
+\item ¿Qué estatura predice el mejor de los dos modelos anteriores para una edad de 12.5 años?
+\end{enumerate}
+Usar las siguientes sumas para los cálculos:\\
+$\sum x_i=\Sexpr{round(sum(x), 4)}$ años, $\sum \log(x_i)=\Sexpr{round(sum(log(x)), 4)}$ $\log(\mbox{años})$, $\sum y_j=\Sexpr{round(sum(y), 4)}$ cm, $\sum \log(y_j)=\Sexpr{round(sum(log(y)), 4)}$ $\log(\mbox{cm})$,\\  
+$\sum x_i^2=\Sexpr{round(sum(x^2), 4)}$ años$^2$, $\sum \log(x_i)^2=\Sexpr{round(sum(log(x)^2), 4)}$ $\log(\mbox{años})^2$, $\sum y_j^2=\Sexpr{round(sum(y^2), 4)}$ cm$^2$, $\sum \log(y_j)^2=\Sexpr{round(sum(log(y)^2), 4)}$ $\log(\mbox{cm})^2$,\\
+$\sum x_iy_j=\Sexpr{round(sum(x*y), 4)}$ años$\cdot$cm, $\sum x_i\log(y_j)=\Sexpr{round(sum(x*log(y)), 4)}$ años$\cdot\log(\mbox{cm})$, $\sum \log(x_i)y_j=\Sexpr{round(sum(log(x)*y), 4)}$ $\log(\mbox{años})$cm, $\sum \log(x_i)\log(y_j)=\Sexpr{round(sum(log(x)*log(y)), 4)}$ $\log(\mbox{años})\log(\mbox{cm})$.
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+% \begin{enumerate}
+% \item \null
+% 
+% \item $\bar x=\Sexpr{round(mx,4)}$ min, $s_x^2=\Sexpr{round(s2x,4)}$ min$^2$.\\
+% $\overline{\log(x)}=\Sexpr{round(mlogx,4)}$ log(min), $s_{\log(x)}^2=\Sexpr{round(s2logx,4)}$ log(min)$^2$.\\
+% $\bar y=\Sexpr{round(my,4)}$ lesiones, $s_y^2=\Sexpr{round(s2y,4)}$ lesiones$^2$.\\
+% $\overline{\log(y)}=\Sexpr{round(mlogy,4)}$ log(lesiones), $s_{\log(y)}^2=\Sexpr{round(s2logy,4)}$ log(lesiones)$^2$.\\
+% $s_{x\log(y)}=\Sexpr{round(sxlogy,4)}$, $s_{\log(x)y}=\Sexpr{round(slogxy,4)}$\\
+% Coeficiente de determinanción exponencial: $r^2=\Sexpr{round(r2xlogy,4)}$\\
+% Coeficiente de determinación logarítmico: $r^2=\Sexpr{round(r2logxy,4)}$\\
+% Por tanto, el modelo de regresión exponencial es mejor para predecir el número de lesiones en función del tiempo de calentamiento.\\
+% Modelo de regresión exponencial: $y=e^{\Sexpr{round(regexp$coefficients[1],4)}+\Sexpr{round(regexp$coefficients[2],4)}x}$.\\
+% Predicción: $y(20)=\Sexpr{round(exp(regexp$coefficients[1] + regexp$coefficients[2]*20),4)}$ lesiones.
+% 
+% \item El modelo logarítmico es mejor para predecir el tiempo de calentamiento en función del número de lesiones.\\
+% Modelo de regresión logarítmico: $x=\Sexpr{round(reglog$coefficients[1],4)}+\Sexpr{round(reglog$coefficients[2],4)}\log(y)$.\\
+% Predicción: $x(10)=\Sexpr{round(reglog$coefficients[1]+reglog$coefficients[2]*log(10), 4)}$ min.
+% 
+% \item De acuerdo al coeficiente de determinación ambas predicciones son muy fiables pero la última lo es menos ya que es para un valor que no está incluido en el rango de valores de la muestra.
+% \end{enumerate}
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{regnol-fis-4}
+%% \extol{0.001}
+%% \degree{Fisioterapia}
+ 

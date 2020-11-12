@@ -1,0 +1,57 @@
+
+\begin{question}
+\puntos{5}Se ha medido la tensión arterial sistólica en dos grupos de 100 personas cada uno de dos poblaciones $A$ y $B$, obteniendo los siguientes resultados:
+
+$$
+% latex table generated in R 3.6.1 by xtable 1.8-4 package
+% Fri Oct 11 17:15:58 2019
+\begin{array}{lrr}
+ \mbox{Tensión sistólica} & \mbox{Num personas $A$} & \mbox{Num personas $B$} \\ 
+  \hline
+(80, 90] & 4 & 6 \\ 
+  (90, 100] & 10 & 18 \\ 
+  (100, 110] & 28 & 30 \\ 
+  (110, 120] & 24 & 26 \\ 
+  (120, 130] & 16 & 10 \\ 
+  (130, 140] & 10 & 7 \\ 
+  (140, 150] & 6 & 2 \\ 
+  (150, 160] & 2 & 1 \\ 
+   \hline
+\end{array}$$
+
+Se pide: 
+\begin{enumerate}
+\item ¿Cuál de las dos distribuciones de la tensión sistólica es más simétrica? ¿Cuál es más apuntada? ¿Pueden provenir estas muestras de poblaciones normales?
+\item ¿En cuál de los dos grupos es más apuntada la distribución de la tensión sistólica?
+\item ¿En cuál de los dos grupos es más representativa la media de la tensión sistólica?
+\item ¿Qué tensión sistólica es relativamente más alta, 132 en el grupo de la población $A$, o 130 en el grupo de la población $B$?
+\item Si a las 100 peronas de la población $A$ se les mide la tensión sistólica con otro tensiómetro, y la tensión obtenida ($Y$) está relacionada con la del primer tensiómetro ($X$) mediante la ecuación $y=0.98x-1.4$, ¿en cuál de las dos tensiones $X$ o $Y$ es más representativa la media?   
+\end{enumerate}
+
+Usar las siguientes sumas para los cálculos.\\
+Población $A$: $\sum x_i=11520$ mmHg, $\sum x_i^2=1351700$ mmHg$^2$, $\sum (x_i-\bar x)^3=155241.6$ mmHg$^3$ y $\sum (x_i-\bar x)^4=16729903.52$ mmHg$^4$.\\
+Población $B$: $\sum x_i=11000$ mmHg, $\sum x_i^2=1230300$ mmHg$^2$, $\sum (x_i-\bar x)^3=165000$ mmHg$^3$ y $\sum (x_i-\bar x)^4=13632500$ mmHg$^4$.
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+\begin{enumerate}
+\item Sean $x$ e $y$ las tensiones sistólicas de las poblaciones $A$ y $B$ respectivamente.\\
+$g_{1x}=0.4024$ y $g_{1y}=0.5705$, de manera que la distribución del grupo de la población $A$ es más asimétrica ya que el coeficiente de $g_1$ está más lejos de 0.
+\item $g_{2x}=-0.2346$ y $g_{2y}=0.3081$, de manera que la distribución del grupo de la población $A$ es más apuntada que la de la población $B$ ya que $g_{2x}>g_{2y}$.
+\item $\bar x=115.2$ mmHg, $s_x^2=245.96$ mmHg$^2$, $s_x=15.6831$ mmHg and $cv_x=0.1361$.\\
+$\bar y=110$ mmHg, $s_y^2=203$ mmHg$^2$, $s_y=14.2478$ mmHg y $cv_y=0.1295$.\\
+La media es más representativa en el grupo de la población $A$ ya que el coeficiente de variación es menor.
+\item $g_{1x}=0.4024$ y $g_{1y}=0.5705$, de manera que la distribución de edades de los pacientes menores de 65 es menos simétrica.
+\item Las puntuaciones típicas son $z_x(132)=1.0712$ y $z_y(130)=1.4037$, de manera que 132 mmHg es relativamente menor en el grupo de la población $A$ ya que su puntación típica es menor.
+\end{enumerate}
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{1}
+%% \exname{des-gen-6}
+%% \extol{0.001}
+%% \degree{Medicina}
+ 

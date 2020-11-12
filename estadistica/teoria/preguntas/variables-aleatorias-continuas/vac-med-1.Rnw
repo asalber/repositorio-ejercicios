@@ -1,0 +1,42 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+m <- 44
+s <- 2
+x1 <- 46
+x2 <- 49
+p1 <- 0.8
+## QUESTION/ANSWER GENERATION
+sol1 <- pnorm(x1, m, s, lower.tail = F)
+sol2 <- pnorm(x2, m, s) - pnorm(x1, m, s)
+a <- qnorm((1-p1)/2, m, s)
+b <- qnorm(1-(1-p1)/2, m, s)
+@
+
+\begin{question}
+\puntos{2.5}Se sabe que la longitud del fémur de un feto a las 25 semanas de embarazo sigue una distribución normal de media \Sexpr{m} mm y desviación típica \Sexpr{s} mm. 
+Se pide:
+\begin{enumerate}
+\item Calcular la probabilidad de que, tomando un feto de 25 semanas al azar, el fémur mida más de 46 mm. 
+\item Calcular la probabilidad de que, tomando un feto de 25 semanas al azar, el fémur mida entre 46 y 49 mm. 
+\item Determina un intervalo $(a,b)$ centrado en la media, que contenga el 80\% de los valores de la longitud del fémur de fetos de 25 semanas. 
+\end{enumerate}
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+Sea $X\sim N(44,2)$ la longitud del fémur de un feto a las 25 semanas de embarazo.
+\begin{enumerate}
+\item $P(X>\Sexpr{x1})=\Sexpr{round(sol1,4)}$.
+\item $P(\Sexpr{x1}<X<\Sexpr{x2}))=\Sexpr{round(sol2,4)}$.
+\item El intervalo centrado en $\Sexpr{m}$ que contiene \Sexpr{p1*100}\% de las longitudes del femur de fetos de 25 semanas es $(\Sexpr{round(a,4)},\Sexpr{round(b,4)})$.
+\end{enumerate}
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{\Sexpr{1}}
+%% \exname{vac-med-1}
+%% \extol{0.001}
+%% \degree{Medicina}
+ 

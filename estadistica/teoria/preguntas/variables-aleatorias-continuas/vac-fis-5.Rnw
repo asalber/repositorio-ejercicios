@@ -1,0 +1,41 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+s <- 8
+x1 <- 80
+p1 <- 0.9
+## QUESTION/ANSWER GENERATION
+m  <- x1 - qnorm(p1) * s
+p2 <- pnorm(75, m, s) - pnorm(60, m, s)
+p3 <- dbinom(9, 12, 0.9) + dbinom(10, 12, 0.9) + dbinom(11, 12, 0.9)
+p4 <- ppois(3, 5)
+@
+
+\begin{question}
+\puntos{5}El tiempo de recuperación tras un tipo de lesión sigue una distribución normal con varianza 64 días. Se sabe además que el 10\% de las personas con esta lesión tardan en curarse más de 80 días. 
+\begin{enumerate}
+\item ¿Cuál es el tiempo esperado de curación para esta lesión?\\
+Nota: Si no se sabe calcular, usar $\mu=70$ para el resto de los apartados
+\item ¿Qué porcentaje de individuos tardará en curarse entre 60 y 75 días?
+\item Si se toma una muestra aleatoria de 12 individuos con esta lesión, ¿cuál es la probabilidad de que haya entre 9 y 11 individuos, ambos incluidos, que tarden menos de 80 días en curarse?
+\item Si se toma una muestra aleatoria de 500 individuos con esta lesión, ¿cuál es la probabilidad de haya menos de 4 por encima del percentil 99 del tiempo de curación?
+\end{enumerate}
+\end{question}
+
+%% SOLUTIONS
+\begin{solution}
+Sea $X$ el tiempo requerido para recuperarse de la lesión. Entonces $X\sim N(\mu, 8)$.
+\begin{enumerate}
+\item $\mu=\Sexpr{round(m, 4)}$ días.
+\item $P(60<X<75) = \Sexpr{round(p2, 4)}$.
+\item Sea $Y$ el número de individuos con la lesión que requieren más de 80 días para recuperarse en una muestra aleatoria de 12 individuos. Entonces $Y\sim B(12, 0.9)$ y $P(9\leq Y\leq 11)=\Sexpr{round(p3, 4)}$.
+\item Sea $Z$ be el número de individuos con la lesión que requieren un tiempo de recuperación por encima del percentil 99 en una muestra aleatoria de 500 individuos. Entonces $Z\sim B(500, 0.01)\approx P(5)$ y $P(Z\leq 4)=\Sexpr{round(p4, 4)}$.
+\end{enumerate}
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{\Sexpr{1}}
+%% \exname{vac-med-1}
+%% \extol{0.001}
+%% \degree{Medicina}
+ 

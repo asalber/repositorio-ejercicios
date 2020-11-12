@@ -1,0 +1,23 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+
+@
+
+\begin{question}
+\puntos{1}Se sabe que la recta de regresión de $Y$ sobre $X$ tiene ecuación $3x+2y-4=0$ y explica la mitad de la variabilidad de $Y$. 
+Según el modelo lineal, ¿cuánto cambiará $X$ por cada unidad que aumente $Y$?
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+Sol
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{reglin-gen-4}
+%% \extol{0.001}
+%% \degree{Todos}
+ 

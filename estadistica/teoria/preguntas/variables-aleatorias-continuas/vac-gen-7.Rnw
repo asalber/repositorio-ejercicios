@@ -1,0 +1,41 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+# m1 <- 26
+# s1 <- 2.1
+# m2 <- 15
+# s2 <- 2.8
+# 
+# x1 <- 46
+# x2 <- 49
+# p1 <- 0.8
+## QUESTION/ANSWER GENERATION
+# sol1 <- pnorm(x1, m, s, lower.tail = F)
+# sol2 <- pnorm(x2, m, s) - pnorm(x1, m, s)
+# a <- qnorm((1-p1)/2, m, s)
+# b <- qnorm(1-(1-p1)/2, m, s)
+@
+
+\begin{question}
+\puntos{3}Se sabe que en una región la precipitación anual sigue una distribución normal.
+Si las estadísticas muestran que el 10\% de los años la precipitación ha sido superior a 55 cm y el 5\% de los años inferior a 35 cm, se pide: 
+
+\begin{enumerate}
+\item  Calcular la media y la desviación típica de las precipitaciones.\\
+Nota: Si no se sabe calcular la media y la desviación típica, tomar $\mu=45$ cm y $\sigma=4$ cm. 
+\item ¿Cuál es la probabilidad de que en los próximos 5 años al menos en uno de ellos la precipitación sea superior a 60 cm?
+\end{enumerate}
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{vac-opt-2}
+%% \extol{0.001}
+%% \degree{Óptica}
+ 

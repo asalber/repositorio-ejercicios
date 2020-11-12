@@ -1,0 +1,36 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+m <- 44
+s <- 2
+x1 <- 46
+x2 <- 49
+p1 <- 0.8
+## QUESTION/ANSWER GENERATION
+sol1 <- pnorm(x1, m, s, lower.tail = F)
+sol2 <- pnorm(x2, m, s) - pnorm(x1, m, s)
+a <- qnorm((1-p1)/2, m, s)
+b <- qnorm(1-(1-p1)/2, m, s)
+@
+
+\begin{question}
+\puntos{2}Un test diagnóstico para detectar el dopaje en atletas da un resultado positivo cuando la concentración de una determinada sustancia en sangre es mayor de 4 $\mu$g/ml.
+Si la distribución de la concentración de a sustancia en sangre en atletas dopados sigue un modelo de distribución normal con media $4.5$
+$\mu$g/ml y desviación típica $0.2$ $\mu$g/ml, y en atletas no dopados sigue un modelo de distribución normal con media $3$ $\mu$g/ml y desviación típica $0.3$ $\mu$g/ml, 
+\begin{enumerate}
+\item ¿cuál es la sensibilidad y la especificidad del test?
+\item Si hay un $10\%$ de atletas dopados en una competición, ¿cuales son los valores predictivos positivo y negativo del test? Interpretarlos. 
+\end{enumerate}
+\end{question}
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{vac-fis-3}
+%% \extol{0.001}
+%% \degree{Fisioterapia}
+ 

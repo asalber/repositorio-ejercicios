@@ -1,0 +1,42 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+# m1 <- 26
+# s1 <- 2.1
+# m2 <- 15
+# s2 <- 2.8
+# 
+# x1 <- 46
+# x2 <- 49
+# p1 <- 0.8
+## QUESTION/ANSWER GENERATION
+# sol1 <- pnorm(x1, m, s, lower.tail = F)
+# sol2 <- pnorm(x2, m, s) - pnorm(x1, m, s)
+# a <- qnorm((1-p1)/2, m, s)
+# b <- qnorm(1-(1-p1)/2, m, s)
+@
+
+\begin{question}
+\puntos{3}En un examen, el 63\% de los alumnos ha obtenido una nota superior a 5, y el 44\% entre 5 y 7.
+Suponiendo que las notas siguen una distribución normal:
+
+\begin{enumerate}
+\item  Calcular la media y la desviación típica de las notas.\\
+Nota: Si no se sabe calcular la media y la desviación típica, tomar $\mu=6$ y $\sigma=1.2$. 
+\item  Calcular el porcentaje de alumnos con nota superior a 8.
+\item  ¿Cuál es la nota por encima de la cual está el 5\% de los alumnos?
+\end{enumerate}
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{vac-opt-2}
+%% \extol{0.001}
+%% \degree{Óptica}
+ 

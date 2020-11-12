@@ -1,0 +1,150 @@
+\begin{enumerate}
+\item
+  \textbf{Question}\\
+  Para ver si la situación de confinamiento debida al COVID19 ha
+  influído en el rendimiento de un curso, se ha contado el número de
+  asignaturas suspensas de cada alumno en el curso actual y en el curso
+  anterior, obteniendo la siguiente tabla:
+
+  \[% latex table generated in R 4.0.1 by xtable 1.8-4 package
+  % Thu Jun 18 17:41:39 2020
+  \begin{array}{crr}
+   \mbox{Asignaturas suspensas} & \mbox{Curso anterior} & \mbox{Curso actual} \\ 
+    \hline
+  0 & 7 & 8 \\ 
+    1 & 15 & 12 \\ 
+    2 & 11 & 8 \\ 
+    3 & 5 & 7 \\ 
+    4 & 4 & 3 \\ 
+    5 & 2 & 2 \\ 
+    6 & 1 & 2 \\ 
+    8 & 0 & 1 \\ 
+     \hline
+  \end{array}\]
+
+  Se pide:
+
+  \begin{enumerate}
+  \item
+    Dibujar los diagramas de cajas del número de asignaturas suspensas
+    en el curso actual y en el anterior y compararlos.
+  \item
+    ¿Se puede asumir que ambas muestras, la del curso actual y la del
+    anterior, provienen de poblaciones normales?
+  \item
+    ¿En qué muestra es más representativa la media?
+  \item
+    ¿Qué número de asignaturas suspensas es mayor, 7 asignaturas en el
+    curso actual, o 6 en el curso anterior?
+  \end{enumerate}
+
+  Usar las siguientes sumas para los cálculos:\\
+  Curso anterior: \(\sum x_in_i=84\), \(\sum x_i^2n_i=254\),
+  \(\sum (x_i-\bar x)^3n_i=122.99\) y
+  \(\sum (x_i-\bar x)^4n_i=669.21\).\\
+  Curso actual: \(\sum y_in_i=91\), \(\sum y_i^2n_i=341\),
+  \(\sum (y_i-\bar y)^3n_i=301.16\) y
+  \(\sum (y_i-\bar y)^4n_i=2012.88\).
+
+  \textbf{Solution}\\
+
+  \begin{enumerate}
+  \item
+    Han aprobado el 66.5\% de los estudiantes no trabajadores y el 59\%
+    de los trabajadores.
+  \item
+    No trabajadores: \(\bar x=1.8667\), \(s^2=2.16\), \(s=1.4697\) y
+    \(cv=0.7873\).\\
+    Trabajadores: \(\bar y=2.1163\), \(s^2=3.4516\), \(s=1.8578\) y
+    \(cv=0.8779\).\\
+    La muestra de los alumnos que no trabajan tiene una dispersión
+    relativa con respecto a la media ligeramente mayor ya que su
+    coeficiente de variación es mayor.
+  \item
+    No trabajadores: \(g_1=0.8609\).\\
+    Trabajadores: \(g_1=1.0922\).\\
+    Así pues, la muestra de los alumnos que no trabajan es más
+    asimétrica ya que su coeficiente de asimetría está más lejos de 0.
+  \item
+    No trabajadores: \(\bar y=3.2067\).\\
+    Trabajadores: \(\bar x=3.5686\).\\
+    El coeficiente de asimetría no cambia al ser la pendiente de la
+    transformación positiva.\\
+  \item
+    No trabajadores: \(z(7)=3.4928\).\\
+    Trabajadores: \(z(6)=2.0904\).\\
+    Así pues, un 7 en la muestra de alumnos que no trabajan es
+    relativamente mayor que un 6 en la muestra de alumnos que trabajan.
+  \end{enumerate}
+\item
+  \textbf{Question}\\
+  Un estudio intenta poner a punto una nueva técnica de detección de un
+  cierto anticuerpo. Para ello se utiliza un inmunosensor
+  piezoeléctrico, que permite medir el cambio en la señal en Hz al
+  variar la concentracióndel anticuerpo (\(\mu\)g/ml). Se recolectaron
+  los siguientes datos:
+  \[% latex table generated in R 4.0.1 by xtable 1.8-4 package
+  % Thu Jun 18 17:41:39 2020
+  \begin{array}{lrrrrrrr}
+     \hline
+  \mbox{Concentración ($\mu$g/ml)} & 5 & 8 & 20 & 35 & 50 & 80 & 110 \\ 
+    \mbox{Señal (Hz)} & 50 & 70 & 100 & 150 & 170 & 190 & 200 \\ 
+     \hline
+  \end{array}\]
+
+  Se pide:
+
+  \begin{enumerate}
+  \item
+    Construir el modelo logarítmico del cambio de la señal sobre la
+    concentración de los anticuerpos.
+  \item
+    Se vio que con una concentración de 100\(\mu\)g/ml el cambio en la
+    señaltiende a estabilizarse. Predecir el valor de la señal
+    correspondiente a tal concentración haciendo uso del modelo
+    logarítmico.
+  \item
+    Usar el mejor modelo para predecir la concentración de anticuerpos
+    para que haya un cambio en la señal de 120 Hz.
+  \end{enumerate}
+
+  Usar las siguientes sumas para los cálculos (\(X\)=Concentración e
+  \(Y\)=Señal):\\
+  \(\sum x_i=308\) Hz, \(\sum \log(x_i)=23.2345\) \(\log(\mbox{Hz})\),
+  \(\sum y_j=930\) \(\mu\)g/ml, \(\sum \log(y_j)=33.4575\)
+  \(\log(\mbox{$\mu$g/ml})\),\\
+  \(\sum x_i^2=22714\) Hz\(^2\), \(\sum \log(x_i)^2=85.1299\)
+  \(\log(\mbox{Hz})^2\), \(\sum y_j^2=144900\) \(\mu\)g/ml\(^2\),
+  \(\sum \log(y_j)^2=161.6475\) \(\log(\mbox{$\mu$g/ml})^2\),\\
+  \(\sum x_iy_j=53760\) Hz\(\cdot\)\(\mu\)g/ml,
+  \(\sum x_i\log(y_j)=1580.3905\) Hz\(\cdot\log(\mbox{$\mu$g/ml})\),
+  \(\sum \log(x_i)y_j=3496.6333\) \(\log(\mbox{Hz})\)\(\mu\)g/ml,
+  \(\sum \log(x_i)\log(y_j)=114.7297\)
+  \(\log(\mbox{Hz})\log(\mbox{$\mu$g/ml})\).
+
+  \textbf{Solution}\\
+
+  \begin{enumerate}
+  \item
+    \(\bar x=44\) Hz, \(s_x^2=1308.8571\) Hz\(^2\).\\
+    \(\bar y=132.8571\) \(\mu\)g/ml, \(s_y^2=3048.9796\) \(10^{-4}\)
+    s\(^2\).\\
+    \(s_{xy}=1834.2857\) Hz\(\cdot 10^{-2}\) s.\\
+    \(b_{yx} = 1.4014\) \(\mu\)g/ml/Hz.\\
+    Así pues, el tiempo de respuesta aumenta \(1.4014\) centésimas de
+    segundo por cada Hz más que se incrementa la dosis.
+  \item
+    \(\overline{\log(y)}=4.7796\) log(\(\mu\)g/ml),
+    \(s_{\log(y)}^2=0.2476\) log(\(\mu\)g/ml)\(^2\).\\
+    \(s_{x\log(y)}=15.466\) Hz\(\cdot\log(10^{-2}\) s).\\
+    Modelo de regresión exponencial: \(y=e^{4.2597+0.0118x}\).\\
+    Predicción: \(y(75)=171.734\) \(\mu\)g/ml.\\
+    Coeficiente de determinación exponencial: \(r^2=0.7382\)\\
+    Así pues, el modelo exponencial se ajusta muy bien a la nube de
+    puntos del diagrama de dispersión pero la muestra es muy pequeña
+    para considerar las predicciones fiables.
+  \item
+    Modelo de regresión logarítmico: \(x=-254.5891+62.4711\ln(y)\).\\
+    Predicción: \(x(100)=33.1008\) Hz.\\
+  \end{enumerate}
+\end{enumerate}

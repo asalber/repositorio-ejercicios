@@ -1,0 +1,84 @@
+<ol>
+<li><p><strong>Question</strong><br />
+Para ver si la situación de confinamiento debida al COVID19 ha influído en el rendimiento de un curso, se ha contado el número de asignaturas suspensas de cada alumno en el curso actual y en el curso anterior, obteniendo la siguiente tabla:</p>
+<p><br /><span class="math display">$$% latex table generated in R 4.0.1 by xtable 1.8-4 package
+  % Thu Jun 18 17:41:39 2020
+  \begin{array}{crr}
+   \mbox{Asignaturas suspensas} &amp; \mbox{Curso anterior} &amp; \mbox{Curso actual} \\ 
+    \hline
+  0 &amp; 7 &amp; 8 \\ 
+    1 &amp; 15 &amp; 12 \\ 
+    2 &amp; 11 &amp; 8 \\ 
+    3 &amp; 5 &amp; 7 \\ 
+    4 &amp; 4 &amp; 3 \\ 
+    5 &amp; 2 &amp; 2 \\ 
+    6 &amp; 1 &amp; 2 \\ 
+    8 &amp; 0 &amp; 1 \\ 
+     \hline
+  \end{array}$$</span><br /></p>
+<p>Se pide:</p>
+<ol>
+<li><p>Dibujar los diagramas de cajas del número de asignaturas suspensas en el curso actual y en el anterior y compararlos.</p></li>
+<li><p>¿Se puede asumir que ambas muestras, la del curso actual y la del anterior, provienen de poblaciones normales?</p></li>
+<li><p>¿En qué muestra es más representativa la media?</p></li>
+<li><p>¿Qué número de asignaturas suspensas es mayor, 7 asignaturas en el curso actual, o 6 en el curso anterior?</p></li>
+</ol>
+<p>Usar las siguientes sumas para los cálculos:<br />
+Curso anterior: <span class="math inline">∑<em>x</em><sub><em>i</em></sub><em>n</em><sub><em>i</em></sub> = 84</span>, <span class="math inline">∑<em>x</em><sub><em>i</em></sub><sup>2</sup><em>n</em><sub><em>i</em></sub> = 254</span>, <span class="math inline">∑(<em>x</em><sub><em>i</em></sub> − <em>x̄</em>)<sup>3</sup><em>n</em><sub><em>i</em></sub> = 122.99</span> y <span class="math inline">∑(<em>x</em><sub><em>i</em></sub> − <em>x̄</em>)<sup>4</sup><em>n</em><sub><em>i</em></sub> = 669.21</span>.<br />
+Curso actual: <span class="math inline">∑<em>y</em><sub><em>i</em></sub><em>n</em><sub><em>i</em></sub> = 91</span>, <span class="math inline">∑<em>y</em><sub><em>i</em></sub><sup>2</sup><em>n</em><sub><em>i</em></sub> = 341</span>, <span class="math inline">∑(<em>y</em><sub><em>i</em></sub> − <em>ȳ</em>)<sup>3</sup><em>n</em><sub><em>i</em></sub> = 301.16</span> y <span class="math inline">∑(<em>y</em><sub><em>i</em></sub> − <em>ȳ</em>)<sup>4</sup><em>n</em><sub><em>i</em></sub> = 2012.88</span>.</p>
+<p><strong>Solution</strong><br />
+</p>
+<ol>
+<li><p>Han aprobado el 66.5% de los estudiantes no trabajadores y el 59% de los trabajadores.</p></li>
+<li><p>No trabajadores: <span class="math inline"><em>x̄</em> = 1.8667</span>, <span class="math inline"><em>s</em><sup>2</sup> = 2.16</span>, <span class="math inline"><em>s</em> = 1.4697</span> y <span class="math inline"><em>c</em><em>v</em> = 0.7873</span>.<br />
+Trabajadores: <span class="math inline"><em>ȳ</em> = 2.1163</span>, <span class="math inline"><em>s</em><sup>2</sup> = 3.4516</span>, <span class="math inline"><em>s</em> = 1.8578</span> y <span class="math inline"><em>c</em><em>v</em> = 0.8779</span>.<br />
+La muestra de los alumnos que no trabajan tiene una dispersión relativa con respecto a la media ligeramente mayor ya que su coeficiente de variación es mayor.</p></li>
+<li><p>No trabajadores: <span class="math inline"><em>g</em><sub>1</sub> = 0.8609</span>.<br />
+Trabajadores: <span class="math inline"><em>g</em><sub>1</sub> = 1.0922</span>.<br />
+Así pues, la muestra de los alumnos que no trabajan es más asimétrica ya que su coeficiente de asimetría está más lejos de 0.</p></li>
+<li><p>No trabajadores: <span class="math inline"><em>ȳ</em> = 3.2067</span>.<br />
+Trabajadores: <span class="math inline"><em>x̄</em> = 3.5686</span>.<br />
+El coeficiente de asimetría no cambia al ser la pendiente de la transformación positiva.<br />
+</p></li>
+<li><p>No trabajadores: <span class="math inline"><em>z</em>(7) = 3.4928</span>.<br />
+Trabajadores: <span class="math inline"><em>z</em>(6) = 2.0904</span>.<br />
+Así pues, un 7 en la muestra de alumnos que no trabajan es relativamente mayor que un 6 en la muestra de alumnos que trabajan.</p></li>
+</ol></li>
+<li><p><strong>Question</strong><br />
+Un estudio intenta poner a punto una nueva técnica de detección de un cierto anticuerpo. Para ello se utiliza un inmunosensor piezoeléctrico, que permite medir el cambio en la señal en Hz al variar la concentracióndel anticuerpo (<span class="math inline"><em>μ</em></span>g/ml). Se recolectaron los siguientes datos: <br /><span class="math display">$$% latex table generated in R 4.0.1 by xtable 1.8-4 package
+  % Thu Jun 18 17:41:39 2020
+  \begin{array}{lrrrrrrr}
+     \hline
+  \mbox{Concentración ($\mu$g/ml)} &amp; 5 &amp; 8 &amp; 20 &amp; 35 &amp; 50 &amp; 80 &amp; 110 \\ 
+    \mbox{Señal (Hz)} &amp; 50 &amp; 70 &amp; 100 &amp; 150 &amp; 170 &amp; 190 &amp; 200 \\ 
+     \hline
+  \end{array}$$</span><br /></p>
+<p>Se pide:</p>
+<ol>
+<li><p>Construir el modelo logarítmico del cambio de la señal sobre la concentración de los anticuerpos.</p></li>
+<li><p>Se vio que con una concentración de 100<span class="math inline"><em>μ</em></span>g/ml el cambio en la señaltiende a estabilizarse. Predecir el valor de la señal correspondiente a tal concentración haciendo uso del modelo logarítmico.</p></li>
+<li><p>Usar el mejor modelo para predecir la concentración de anticuerpos para que haya un cambio en la señal de 120 Hz.</p></li>
+</ol>
+<p>Usar las siguientes sumas para los cálculos (<span class="math inline"><em>X</em></span>=Concentración e <span class="math inline"><em>Y</em></span>=Señal):<br />
+<span class="math inline">∑<em>x</em><sub><em>i</em></sub> = 308</span> Hz, <span class="math inline">∑log (<em>x</em><sub><em>i</em></sub>) = 23.2345</span> <span class="math inline">log (Hz)</span>, <span class="math inline">∑<em>y</em><sub><em>j</em></sub> = 930</span> <span class="math inline"><em>μ</em></span>g/ml, <span class="math inline">∑log (<em>y</em><sub><em>j</em></sub>) = 33.4575</span> <span class="math inline">log (<em>μ</em>g/ml)</span>,<br />
+<span class="math inline">∑<em>x</em><sub><em>i</em></sub><sup>2</sup> = 22714</span> Hz<span class="math inline"><sup>2</sup></span>, <span class="math inline">∑log (<em>x</em><sub><em>i</em></sub>)<sup>2</sup> = 85.1299</span> <span class="math inline">log (Hz)<sup>2</sup></span>, <span class="math inline">∑<em>y</em><sub><em>j</em></sub><sup>2</sup> = 144900</span> <span class="math inline"><em>μ</em></span>g/ml<span class="math inline"><sup>2</sup></span>, <span class="math inline">∑log (<em>y</em><sub><em>j</em></sub>)<sup>2</sup> = 161.6475</span> <span class="math inline">log (<em>μ</em>g/ml)<sup>2</sup></span>,<br />
+<span class="math inline">∑<em>x</em><sub><em>i</em></sub><em>y</em><sub><em>j</em></sub> = 53760</span> Hz<span class="math inline">⋅</span><span class="math inline"><em>μ</em></span>g/ml, <span class="math inline">∑<em>x</em><sub><em>i</em></sub>log (<em>y</em><sub><em>j</em></sub>) = 1580.3905</span> Hz<span class="math inline"> ⋅ log (<em>μ</em>g/ml)</span>, <span class="math inline">∑log (<em>x</em><sub><em>i</em></sub>)<em>y</em><sub><em>j</em></sub> = 3496.6333</span> <span class="math inline">log (Hz)</span><span class="math inline"><em>μ</em></span>g/ml, <span class="math inline">∑log (<em>x</em><sub><em>i</em></sub>)log (<em>y</em><sub><em>j</em></sub>) = 114.7297</span> <span class="math inline">log (Hz)log (<em>μ</em>g/ml)</span>.</p>
+<p><strong>Solution</strong><br />
+</p>
+<ol>
+<li><p><span class="math inline"><em>x̄</em> = 44</span> Hz, <span class="math inline"><em>s</em><sub><em>x</em></sub><sup>2</sup> = 1308.8571</span> Hz<span class="math inline"><sup>2</sup></span>.<br />
+<span class="math inline"><em>ȳ</em> = 132.8571</span> <span class="math inline"><em>μ</em></span>g/ml, <span class="math inline"><em>s</em><sub><em>y</em></sub><sup>2</sup> = 3048.9796</span> <span class="math inline">10<sup> − 4</sup></span> s<span class="math inline"><sup>2</sup></span>.<br />
+<span class="math inline"><em>s</em><sub><em>x</em><em>y</em></sub> = 1834.2857</span> Hz<span class="math inline"> ⋅ 10<sup> − 2</sup></span> s.<br />
+<span class="math inline"><em>b</em><sub><em>y</em><em>x</em></sub> = 1.4014</span> <span class="math inline"><em>μ</em></span>g/ml/Hz.<br />
+Así pues, el tiempo de respuesta aumenta <span class="math inline">1.4014</span> centésimas de segundo por cada Hz más que se incrementa la dosis.</p></li>
+<li><p><span class="math inline">$\overline{\log(y)}=4.7796$</span> log(<span class="math inline"><em>μ</em></span>g/ml), <span class="math inline"><em>s</em><sub>log (<em>y</em>)</sub><sup>2</sup> = 0.2476</span> log(<span class="math inline"><em>μ</em></span>g/ml)<span class="math inline"><sup>2</sup></span>.<br />
+<span class="math inline"><em>s</em><sub><em>x</em>log (<em>y</em>)</sub> = 15.466</span> Hz<span class="math inline"> ⋅ log (10<sup> − 2</sup></span> s).<br />
+Modelo de regresión exponencial: <span class="math inline"><em>y</em> = <em>e</em><sup>4.2597 + 0.0118<em>x</em></sup></span>.<br />
+Predicción: <span class="math inline"><em>y</em>(75) = 171.734</span> <span class="math inline"><em>μ</em></span>g/ml.<br />
+Coeficiente de determinación exponencial: <span class="math inline"><em>r</em><sup>2</sup> = 0.7382</span><br />
+Así pues, el modelo exponencial se ajusta muy bien a la nube de puntos del diagrama de dispersión pero la muestra es muy pequeña para considerar las predicciones fiables.</p></li>
+<li><p>Modelo de regresión logarítmico: <span class="math inline"><em>x</em> =  − 254.5891 + 62.4711ln (<em>y</em>)</span>.<br />
+Predicción: <span class="math inline"><em>x</em>(100) = 33.1008</span> Hz.<br />
+</p></li>
+</ol></li>
+</ol>

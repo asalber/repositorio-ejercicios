@@ -1,0 +1,86 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+library(xtable)
+x <- c(10, 20, 30, 40, 50, 60, 70, 80)
+y <- c(28, 46, 62, 81, 100, 132, 195, 302)
+table <- matrix(c(x,y), nrow = 2, byrow = T)
+#decimals <- matrix(c(rep(0,6), rep(2,6)), nrow = 3, ncol=6, byrow=TRUE)
+rownames(table) <- c("\\mbox{Dosis (mg)}", "\\mbox{Tiempo ($10^{-2}$ s)}")
+## QUESTION/ANSWER GENERATION
+# colors  
+col1 <- "#05A1E6"
+# sample size
+n <- length(x)
+# means
+mx <- mean(x)
+mlogx <- mean(log(x))
+my <- mean(y)
+mlogy <- mean(log(y))
+# variances
+s2x <- sum(x^2)/n-mx^2
+s2logx <- sum(log(x)^2)/n-mlogx^2
+s2y <- sum(y^2)/n-my^2
+s2logy <- sum(log(y)^2)/n-mlogy^2
+# Covariances
+sxy <- sum(x * y) / n - mx * my
+sxlogy <- sum(x*log(y))/n-mx*mlogy
+slogxy <- sum(log(x)*y)/n-mlogx*my
+# Determination coeff
+r2xy <-  sxy^2 / (s2x * s2y)
+r2xlogy <- sxlogy^2/(s2x*s2logy)
+r2logxy <- slogxy^2/(s2logx*s2y)
+# Linear regression model
+reglin <- lm(y ~ x)
+# Exponential regression model y on x
+regexp <- lm(log(y)~x)
+# Logarithmic regression model x on y
+reglog <- lm(x~log(y))
+@
+
+\begin{question}
+\puntos{5 }En un grupo de pacientes se analiza el efecto de una sustancia dopante en el tiempo de respuesta a un determinado estímulo. Para ello, se suministra en sucesivas dosis, de 10 a 80 mg, la misma cantidad de dopante a todos los miembros del grupo, y se anota el tiempo medio de respuesta al estímulo, expresado en
+centésimas de segundo.
+$$
+<<echo=FALSE, results=tex>>=
+print(xtable(table, auto=T), tabular.environment="array", include.colnames = F, floating=F, hline.after = c(0,nrow(table)), sanitize.text.function = function(x) { x })
+@
+$$
+
+\begin{enumerate}
+\item Según el modelo de regresión lineal, ¿cuánto aumentará o disminuirá el tiempo de respuesta por cada mg más que aumentemos la dosis?
+\item Según el modelo de regresión exponencial, ¿qué tiempo de respuesta se espera para una dosis de 75 mg? ¿Es fiable la predicción?
+\item Si para el estímulo estudiado los tiempos de reacción superiores a un segundo se consideran peligrosos para la salud, ¿a partir de qué nivel debería regularse, e incluso prohibirse, la administración de la sustancia dopante según el modelo logarítmico?
+\end{enumerate}
+Usar las siguientes sumas para los cálculos:\\
+$\sum x_i=\Sexpr{round(sum(x), 4)}$ mg, $\sum \log(x_i)=\Sexpr{round(sum(log(x)), 4)}$ $\log(\mbox{mg})$, $\sum y_j=\Sexpr{round(sum(y), 4)}$ $10^{-2}$ s, $\sum \log(y_j)=\Sexpr{round(sum(log(y)), 4)}$ $\log(\mbox{$10^{-2}$ s})$,\\
+$\sum x_i^2=\Sexpr{round(sum(x^2), 4)}$ mg$^2$, $\sum \log(x_i)^2=\Sexpr{round(sum(log(x)^2), 4)}$ $\log(\mbox{mg})^2$, $\sum y_j^2=\Sexpr{round(sum(y^2), 4)}$ $10^{-2}$ s$^2$, $\sum \log(y_j)^2=\Sexpr{round(sum(log(y)^2), 4)}$ $\log(\mbox{$10^{-2}$ s})^2$,\\
+$\sum x_iy_j=\Sexpr{round(sum(x*y), 4)}$ mg$\cdot$$10^{-2}$ s, $\sum x_i\log(y_j)=\Sexpr{round(sum(x*log(y)), 4)}$ mg$\cdot\log(\mbox{$10^{-2}$ s})$, $\sum \log(x_i)y_j=\Sexpr{round(sum(log(x)*y), 4)}$ $\log(\mbox{mg})$$10^{-2}$ s, $\sum \log(x_i)\log(y_j)=\Sexpr{round(sum(log(x)*log(y)), 4)}$ $\log(\mbox{mg})\log(\mbox{$10^{-2}$ s})$.
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+\begin{enumerate}
+\item $\bar x=\Sexpr{round(mx,4)}$ mg, $s_x^2=\Sexpr{round(s2x,4)}$ mg$^2$.\\
+$\bar y=\Sexpr{round(my,4)}$ $10^{-2}$ s, $s_y^2=\Sexpr{round(s2y,4)}$ $10^{-4}$ s$^2$.\\
+$s_{xy}=\Sexpr{round(sxy,4)}$ mg$\cdot 10^{-2}$ s.\\
+$b_{yx} = \Sexpr{round(reglin$coefficients[2],4)}$ $10^{-2}$ s/mg.\\
+Así pues, el tiempo de respuesta aumenta $\Sexpr{round(reglin$coefficients[2],4)}$ centésimas de segundo por cada mg más que se incrementa la dosis.
+\item $\overline{\log(y)}=\Sexpr{round(mlogy,4)}$ log($10^{-2}$ s), $s_{\log(y)}^2=\Sexpr{round(s2logy,4)}$ log($10^{-2}$ s)$^2$.\\
+$s_{x\log(y)}=\Sexpr{round(sxlogy,4)}$ mg$\cdot\log(10^{-2}$ s).\\
+Modelo de regresión exponencial: $y=e^{\Sexpr{round(regexp$coefficients[1],4)}+\Sexpr{round(regexp$coefficients[2],4)}x}$.\\
+Predicción: $y(75)=\Sexpr{round(exp(regexp$coefficients[1] + regexp$coefficients[2]*75),4)}$ $10^{-2}$ s.\\
+Coeficiente de determinación exponencial: $r^2=\Sexpr{round(r2xlogy,4)}$\\
+Así pues, el modelo exponencial se ajusta muy bien a la nube de puntos del diagrama de dispersión pero la muestra es muy pequeña para considerar las predicciones fiables.
+\item Modelo de regresión logarítmico: $x=\Sexpr{round(reglog$coefficients[1],4)}+\Sexpr{round(reglog$coefficients[2],4)}\ln(y)$.\\
+Predicción: $x(100)=\Sexpr{round(reglog$coefficients[1] + reglog$coefficients[2]*log(100),4)}$ mg.\\
+\end{enumerate}
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{regnol-med-8}
+%% \extol{0.001}
+%% \degree{Medicina}
+ 

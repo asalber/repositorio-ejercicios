@@ -1,0 +1,73 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+require(xtable)
+classes <- c("(30,35]", "(35,40]", "(40,45]", "(45,50]")
+xi <- c(32.5, 37.5, 42.5, 47.5)
+ni <- c(15, 35, 40, 10)
+x <- rep(xi,ni)
+data <- data.frame(classes, ni)
+colnames(data) <- c("\\mbox{Tiempo (min)}", "\\mbox{Num corredores}")
+## QUESTION/ANSWER GENERATION
+# sample size
+nx <- length(x)
+# quartiles
+q1 <- quantile(x, probs = c(0.25), type=1)
+q2 <- quantile(x, probs = c(0.5), type=1)
+q3 <- quantile(x, probs = c(0.75), type=1)
+# interquartile range
+iqr <- q3-q1
+#fences
+f1 <- q1-1.5*iqr
+f2 <- q3+1.5*iqr
+# outliers
+outliers <- x[x < f1 | x > f2]
+# means
+mx <- mean(x)
+# variances
+s2x <- sum(x^2)/nx-mx^2
+# standard deviation
+sx <- sqrt(s2x)
+# coef. variation
+cvx <- sx/mx
+# coef. skewness
+g1x <- sum((x-mx)^3)/(nx*sx^3)
+# standard scores
+zx <- (50-mx)/sx
+@
+
+\begin{question}
+\puntos{5}En una prueba de fondo en Madrid, los corredores tardaron en llegar a la meta el tiempo que se indica:
+
+$$
+<<echo=FALSE, results=tex>>=
+print(xtable(data, auto=T), tabular.environment="array", include.rownames = F, floating=F, hline.after = c(0,nrow(data)), sanitize.text.function = function(x) { x })
+@
+$$
+
+En otra carrera similar en París, el tiempo medio empleado en recorrerla fue de 40 minutos, la desviación típica 5 minutos y el coeficiente de asimetría $0.75$.
+
+Se pide: 
+\begin{enumerate}
+\item ¿Qué porcentaje de corredores tardaron menos de 42 minutos en la carrera de Madrid?
+\item Calcular el rango intercuartílico del tiempo empleado en la carrera de Madrid.
+\item ¿En qué carrera resulta más representativa la media del tiempo empleado?
+\item ¿Cuál de las dos carreras tienen una distribución del tiempo más simétrica?
+\item ¿En qué prueba un tiempo de 39 minutos es relativamente menor?
+\end{enumerate}
+
+Usar las siguientes sumas para los cálculos: $\sum x_i=\Sexpr{sum(x)}$ min, $\sum x_i^2=\Sexpr{sum(x^2)}$ min$^2$, $\sum (x_i-\bar x)^3=\Sexpr{round(sum((x-mx)^3),2)}$ min$^3$ y $\sum (x_i-\bar x)^4=\Sexpr{round(sum((x-mx)^4),2)}$ min$^4$.
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{des-far-2}
+%% \extol{0.001}
+%% \degree{Farmacia}
+ 

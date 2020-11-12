@@ -1,0 +1,37 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+m <- 44
+s <- 2
+x1 <- 46
+x2 <- 49
+p1 <- 0.8
+## QUESTION/ANSWER GENERATION
+sol1 <- pnorm(x1, m, s, lower.tail = F)
+sol2 <- pnorm(x2, m, s) - pnorm(x1, m, s)
+a <- qnorm((1-p1)/2, m, s)
+b <- qnorm(1-(1-p1)/2, m, s)
+@
+
+\begin{question}
+\puntos{4}Se ha comprobado que la concentración de un metabolito en orina se puede utilizar como test diagnóstico para una enfermedad.
+Teniendo en cuenta que la concentración (en mg/dl) en individuos sanos sigue una distribución normal de media 90 y desviación típica 8, y en individuos enfermos también una distribución normal de media 120 y desviación típica 10, se pide:
+\begin{enumerate}
+\item Si se establece el punto de corte en 105 mg/dl (positivo por encima y negativo por debajo), ¿cuál es la sensibilidad y la especificidad del test?
+\item Si se establece el punto de corte en 105 mg/dl y se asume una prevalencia del 10\%. ¿Cuál es la probabilidad de un diagnóstico acertado?
+\item Si se pretende lograr una sensibilidad del 95\%, ¿dónde se debería situar el punto de corte? ¿Cuál sería la especificidad del test?
+\end{enumerate}
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{\Sexpr{1}}
+%% \exname{vac-med-1}
+%% \extol{0.001}
+%% \degree{Medicina}
+ 

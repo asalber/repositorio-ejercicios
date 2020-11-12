@@ -1,0 +1,25 @@
+\begin{enumerate}
+\item
+  \textbf{Question}\\
+  Dada la función \(f(x,y) = A-(x^2+Bx+y^2+Cy)\), se pide:
+
+  \begin{enumerate}
+  \item
+    Encontrar los valores de \(A\), \(B\) y \(C\) tales que la función
+    \(f\) tenga un valor máximo de 15 en el punto \((-2,1)\).
+  \item
+    Para esos valores, calcular la ecuación del plano tangente y la
+    recta normal a \(f\) en el punto \((-2,1)\).
+  \end{enumerate}
+
+  \textbf{Solution}\\
+\item
+  \textbf{Question}\\
+  Un microorganismo crece a un ritmo proporcional a su población de
+  forma que transcurrida una hora desde el inicio del cultivo la
+  población se ha duplicado. ¿Cuánto tiempo tardará en multiplicarse la
+  población inicial por 10? ¿Por cuánto se habrá multiplicado la
+  población inicial a las 5 horas del inicio del cultivo?
+
+  \textbf{Solution}\\
+\end{enumerate}

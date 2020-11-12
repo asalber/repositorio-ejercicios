@@ -1,0 +1,85 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+library(xtable)
+x <- c(10, 14, 8, 11, 7, 6, 2, 5, 9, 9, 4, 6)
+y <- c(2.55, 2.44, 2.68, 2.65, 2.71, 2.85, 3.45, 2.93, 2.67, 2.59, 3.02, 2.72)
+table <- matrix(c(x,y), nrow = 2, byrow = T)
+rownames(table) <- c("\\mbox{Num cigarros diarios}", "\\mbox{Peso (kg)}")
+## QUESTION/ANSWER GENERATION
+# colors
+col1 <- "#05A1E6"
+# sample size
+n <- length(x)
+# means
+mx <- mean(x)
+mlogx <- mean(log(x))
+my <- mean(y)
+mlogy <- mean(log(y))
+# variances
+s2x <- sum(x^2)/n-mx^2
+s2logx <- sum(log(x)^2)/n-mlogx^2
+s2y <- sum(y^2)/n-my^2
+s2logy <- sum(log(y)^2)/n-mlogy^2
+# Covariances
+sxlogy <- sum(x*log(y))/n-mx*mlogy
+slogxy <- sum(log(x)*y)/n-mlogx*my
+# Determination coeff
+r2xlogy <- sxlogy^2/(s2x*s2logy)
+r2logxy <- slogxy^2/(s2logx*s2y)
+# Exponential regression model
+regexp <- lm(log(y)~x)
+# Logarithmic regression model
+reglog <- lm(y~log(x))
+@
+
+\begin{question}
+\puntos{5}Para ver como influye el tabaco en el peso de los recién nacidos se tomó una muestra de madres que fumaron durante el embarazo y se observó el número de cigarros diarios que fumaban ($X$) y el peso del recién nacido (todos los recien nacidos fueron niños) ($Y$).
+$$
+<<echo=FALSE, results=tex>>=
+print(xtable(table, auto=T), tabular.environment="array", include.colnames = F, floating=F, hline.after = c(0,nrow(table)), sanitize.text.function = function(x) { x })
+@
+$$
+
+\begin{enumerate}
+\item Construir la recta de regresión del número de cigarros sobre el peso del recién nacido e interpretar la pendiente.
+\item ¿Qué modelo de regresión es mejor para predecir el peso en función del número de cigarros, el logarítmico o el exponencial?
+\item Utilizar el mejor de los dos modelos anteriores para predecir el peso de un recién nacido cuya madre ha fumado 12 cigarros al día. ¿Es fiable la predicción? 
+\end{enumerate}
+Usar las siguientes sumas para los cálculos:\\
+$\sum x_i=\Sexpr{round(sum(x), 4)}$ cigarros, $\sum \log(x_i)=\Sexpr{round(sum(log(x)), 4)}$ $\log(\mbox{cigarros})$, $\sum y_j=\Sexpr{round(sum(y), 4)}$ kg, $\sum \log(y_j)=\Sexpr{round(sum(log(y)), 4)}$ $\log(\mbox{kg})$,\\  
+$\sum x_i^2=\Sexpr{round(sum(x^2), 4)}$ cigarros$^2$, $\sum \log(x_i)^2=\Sexpr{round(sum(log(x)^2), 4)}$ $\log(\mbox{cigarros})^2$, $\sum y_j^2=\Sexpr{round(sum(y^2), 4)}$ kg$^2$, $\sum \log(y_j)^2=\Sexpr{round(sum(log(y)^2), 4)}$ $\log(\mbox{kg})^2$,\\
+$\sum x_iy_j=\Sexpr{round(sum(x*y), 4)}$ cigarros$\cdot$kg, $\sum x_i\log(y_j)=\Sexpr{round(sum(x*log(y)), 4)}$ cigarros$\cdot\log(\mbox{kg})$, $\sum \log(x_i)y_j=\Sexpr{round(sum(log(x)*y), 4)}$ $\log(\mbox{cigarros})$kg, $\sum \log(x_i)\log(y_j)=\Sexpr{round(sum(log(x)*log(y)), 4)}$ $\log(\mbox{cigarros})\log(\mbox{kg})$.
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+% \begin{enumerate}
+% \item \null
+% 
+% \item $\bar x=\Sexpr{round(mx,4)}$ min, $s_x^2=\Sexpr{round(s2x,4)}$ min$^2$.\\
+% $\overline{\log(x)}=\Sexpr{round(mlogx,4)}$ log(min), $s_{\log(x)}^2=\Sexpr{round(s2logx,4)}$ log(min)$^2$.\\
+% $\bar y=\Sexpr{round(my,4)}$ lesiones, $s_y^2=\Sexpr{round(s2y,4)}$ lesiones$^2$.\\
+% $\overline{\log(y)}=\Sexpr{round(mlogy,4)}$ log(lesiones), $s_{\log(y)}^2=\Sexpr{round(s2logy,4)}$ log(lesiones)$^2$.\\
+% $s_{x\log(y)}=\Sexpr{round(sxlogy,4)}$, $s_{\log(x)y}=\Sexpr{round(slogxy,4)}$\\
+% Coeficiente de determinanción exponencial: $r^2=\Sexpr{round(r2xlogy,4)}$\\
+% Coeficiente de determinación logarítmico: $r^2=\Sexpr{round(r2logxy,4)}$\\
+% Por tanto, el modelo de regresión exponencial es mejor para predecir el número de lesiones en función del tiempo de calentamiento.\\
+% Modelo de regresión exponencial: $y=e^{\Sexpr{round(regexp$coefficients[1],4)}+\Sexpr{round(regexp$coefficients[2],4)}x}$.\\
+% Predicción: $y(20)=\Sexpr{round(exp(regexp$coefficients[1] + regexp$coefficients[2]*20),4)}$ lesiones.
+% 
+% \item El modelo logarítmico es mejor para predecir el tiempo de calentamiento en función del número de lesiones.\\
+% Modelo de regresión logarítmico: $x=\Sexpr{round(reglog$coefficients[1],4)}+\Sexpr{round(reglog$coefficients[2],4)}\log(y)$.\\
+% Predicción: $x(10)=\Sexpr{round(reglog$coefficients[1]+reglog$coefficients[2]*log(10), 4)}$ min.
+% 
+% \item De acuerdo al coeficiente de determinación ambas predicciones son muy fiables pero la última lo es menos ya que es para un valor que no está incluido en el rango de valores de la muestra.
+% \end{enumerate}
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{regnol-fis-4}
+%% \extol{0.001}
+%% \degree{Fisioterapia}
+ 

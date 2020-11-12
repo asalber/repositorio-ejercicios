@@ -1,0 +1,48 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+library(ggplot2)
+set.seed(123)
+n <- 20
+x <- rbinom(n, 10, 0.5)
+y <- rbinom(n, 10, 0.2)
+z <- rbinom(n, 10, 0.8)
+Nota <- c(x, y, z)
+Asignatura <- c(rep('X', n), rep('Y', n), rep('Z', n))
+data <- data.frame(Nota, Asignatura)
+
+## QUESTION/ANSWER GENERATION
+
+@
+
+\begin{question}
+\puntos{1}El siguiente diagrama muestra la distribución de notas en tres asignaturas distintas.
+
+<<diagrama-notas, fig=T, echo=F, width=5, height=3, dev="svg", fig.path="img">>=
+p <- ggplot(data, aes(x=Nota, y=Asignatura)) + geom_boxplot(width=0.5)
+p
+@
+
+\begin{enumerate}
+\item ¿Qué asignatura es más difícil?
+\item ¿En qué asignatura hay más variabilidad central de los datos?
+\item ¿En qué asignaturas hay datos atípicos?
+\item ¿Qué asignatura tiene una distribución más asimétrica?
+\end{enumerate}
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+\begin{enumerate}
+\item Diagrama de cajas
+\item Si porque la valla inferior es $v_1=3$.
+\end{enumerate}
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{\Sexpr{1}}
+%% \exname{des-gen-7}
+%% \extol{0.001}
+%% \degree{Todos}
+ 

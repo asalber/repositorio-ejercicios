@@ -1,0 +1,93 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+library(xtable)
+x <- c(175, 182, 190, 165, 172, 183, 187, 174, 168, 178)
+y <- c(164, 175, 165, 160, 155, 172, 160, 151, 165, 163)
+z <- c(177, 180, 193, 172, 173, 188, 185, 177, 168, 182)
+data <- data.frame(x, y, z)
+colnames(data) <- c("\\mbox{Estatura padre}", "\\mbox{Estatura madre}", "\\mbox{Estatura hijo}")
+n <- length(x)
+
+## QUESTION/ANSWER GENERATION
+# sample size
+nx <- length(x)
+ny <- length(y)
+nz <- length(z)
+# quartiles
+q1 <- quantile(x, probs = c(0.25), type=1)
+q2 <- quantile(x, probs = c(0.5), type=1)
+q3 <- quantile(x, probs = c(0.75), type=1)
+# interquartile range
+iqr <- q3-q1
+#fences
+f1 <- q1-1.5*iqr
+f2 <- q3+1.5*iqr
+# outliers
+outliers <- x[x < f1 | x > f2]
+# means
+mx <- mean(x)
+my <- mean(y)
+mz <- mean(z)
+# variances
+s2x <- sum(x^2)/nx-mx^2
+s2y <- sum(y^2)/ny-my^2
+s2z <- sum(z^2)/nz-mz^2
+# standard deviation
+sx <- sqrt(s2x)
+sy <- sqrt(s2y)
+sz <- sqrt(s2z)
+# coef. variation
+cvx <- sx/mx
+cvy <- sy/my
+cvz <- sz/mz
+# coef. skewness
+g1x <- sum((x-mx)^3)/(nx*sx^3)
+g1y <- sum((y-my)^3)/(ny*sy^3)
+g1z <- sum((z-mz)^3)/(nz*sz^3)
+# Transformación lineal
+myx <- 0.5 + mx * 1.45
+myy <- 0.5 + my * 1.45
+# standard scores
+zx <- (6-mx)/sx
+zy <- (7-my)/sy
+@
+
+\begin{question}
+\puntos{5}En una muestra de familias se ha medido la estatura del padre ($X$), de la madre ($Y$) y de un hijo ($Z$) en centímetros, obteniendo los siguientes resultados:
+
+$$
+<<echo=FALSE, results=tex>>=
+print(xtable(data, align=c("c", "c", "r", "r"), auto=T), tabular.environment="array", include.rownames = F, floating=F, hline.after = c(0,nrow(data)), sanitize.text.function = function(x) { x })
+@
+$$
+
+Se pide: 
+
+\begin{enumerate}
+\item ¿En qué grupo es más representativa la media, en el de padres o en el de madres?
+\item ¿Hay algún punto atípico entre los hijos?
+\item Según su forma, ¿Puede provenir la muestra de madres de una distribución normal?
+\item ¿Quién es más alto dentro de su grupo, una madre con una altura de 165 cm o un hijo con una altura de 178 cm?
+\item ¿Cómo afectaría a la representatividad de las medias que las alturas se midiesen en metros en vez de en centímetros?
+
+\end{enumerate}
+
+Usar las siguientes sumas para los cálculos:\\
+Estatura padre: $\sum x_i=\Sexpr{sum(x)}$ cm, $\sum x_i^2=\Sexpr{sum(x^2)}$ cm$^2$, $\sum (x_i-\bar x)^3=\Sexpr{round(sum((x-mx)^3),2)}$ cm$^3$ y $\sum (x_i-\bar x)^4=\Sexpr{round(sum((x-mx)^4),2)}$ cm$^4$.\\
+Estatura madre: $\sum y_i=\Sexpr{sum(y)}$ cm, $\sum y_i^2=\Sexpr{sum(y^2)}$ cm$^2$, $\sum (y_i-\bar y)^3=\Sexpr{round(sum((y-my)^3),2)}$ cm$^3$ y $\sum (y_i-\bar y)^4=\Sexpr{round(sum((y-my)^4),2)}$ cm$^4$. \\
+Estatura hijo : $\sum z_i=\Sexpr{sum(z)}$ cm, $\sum z_i^2=\Sexpr{sum(z^2)}$ cm$^2$, $\sum (z_i-\bar z)^3=\Sexpr{round(sum((z-mz)^3),2)}$ cm$^3$ y $\sum (z_i-\bar z)^4=\Sexpr{round(sum((z-mz)^4),2)}$ cm$^4$.
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{reglin-far-8}
+%% \extol{0.001}
+%% \degree{Farmacia}
+ 

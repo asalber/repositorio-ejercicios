@@ -1,0 +1,28 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+
+## QUESTION/ANSWER GENERATION
+# sample size
+
+@
+
+\begin{question}
+\reversemarginpar \renewcommand{\marginparsep}{-.4cm}\marginpar{(3 pts.)}Se tiene un medicamento en un frigorífico a 2ºC, y se debe administrar a 15ºC. A las 9 h se saca el medicamento del
+frigorífico y se coloca en una habitación que se encuentra a 22ºC. A las 10 h se observa que el medicamento está a
+10ºC. Suponiendo que la velocidad de calentamiento es proporcional a la diferencia entre la temperatura del medicamento
+y la del ambiente, ¿en qué hora se deberá administrar dicho medicamento?
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{edo-far-2}
+%% \extol{0.001}
+%% \degree{Farmacia}
+ 

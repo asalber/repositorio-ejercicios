@@ -1,0 +1,73 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+set.seed(1234)
+x <- runif(20, 10, 50)
+y1 <- 1.5*x+100
+y1 <- y1 + rnorm(20, 0, 7)
+y2 <- 0.5*x+90
+y2 <- y2 + rnorm(20, 0, 2)
+## QUESTION/ANSWER GENERATION
+# sample size
+n <- length(x)
+n1 <- length(y1)
+n2 <- length(y2)
+# means
+mx <- mean(x)
+my1 <- mean(y1)
+my2 <- mean(y2)
+# variances
+s2x <- sum(x^2)/n-mx^2
+s2y1 <- sum(y1^2)/n1-my1^2
+s2y2 <- sum(y2^2)/n2-my2^2
+# Covariances
+sxy1 <- sum(x*y1)/n1-mx*my1
+sxy2 <- sum(x*y2)/n2-mx*my2
+# Determination coeff
+r2xy1 <- sxy1^2/(s2x1*s2y1)
+r2xy2 <- sxy2^2/(s2x2*s2y2)
+# Regression lines
+reglinxy1 <- lm(y1~x)
+reglinxy2 <- lm(y2~x)
+@
+
+\begin{question}
+Se ha modificado un gen de una especie de rata para facilitar la metabolización del colesterol en sangre. Para comprobar la efectividad de la modificación genética se tomaron dos grupos de 20 ratas, unas con el gen modificado y las otras no, y se sometieron a una misma dieta con distintas concentraciones de aceite de palma durante un mes, obteniendo los siguientes resultados:
+
+\textbf{Cantidad de aceite de palma en gr} (igual en las dos muestras)\\
+$\sum x_i=\Sexpr{round(sum(x),4)}$, $\sum x_i^2=\Sexpr{round(sum(x^2),4)}$, $\sum(x_i-\bar x)^3=\Sexpr{round(sum((x-mx)^3),2)}$, $\sum(x_i-\bar x)^4=\Sexpr{round(sum((x-mx)^4),2)}$\\
+\textbf{Colesterol en sangre en mg/dl de ratas no modificadas genéticamente}\\
+$\sum y_j=\Sexpr{round(sum(y1),4)}$, $\sum y_j^2=\Sexpr{round(sum(y1^2),4)}$, $\sum(y_j-\bar y)^3=\Sexpr{round(sum((y1-my1)^3),2)}$, $\sum(y_j-\bar y)^4=\Sexpr{round(sum((y1-my1)^4),2)}$\\
+$\sum x_iy_j=\Sexpr{round(sum(x*y1),4)}$.\\
+\textbf{Colesterol en sangre en mg/dl de ratas modificadas genéticamente}\\
+$\sum y_j=\Sexpr{round(sum(y2),4)}$, $\sum y_j^2=\Sexpr{round(sum(y2^2),4)}$, $\sum(y_j-\bar y)^3=\Sexpr{round(sum((y2-my2)^3),2)}$, $\sum(y_j-\bar y)^4=\Sexpr{round(sum((y2-my2)^4),2)}$\\
+$\sum x_iy_j=\Sexpr{round(sum(x*y2),4)}$.\\
+
+Se pide: 
+\begin{enumerate}
+\item ¿En qué muestra es más representativa la media del colesterol, en las ratas modificadas genéticamente o en las no modificadas?
+\item ¿En qué muestra es más asimétrica la distribución del colesterol?
+\item ¿En qué muestra es menos normal el apuntamiento del colesterol?
+\item ¿Qué nivel de colesterol es relativamente mayor, el de una rata modificada genéticamente con nivel 130 mg/dl, o el de una rata no modificada con nivel 145 mg/dl?
+\item ¿En qué grupo se ajusta mejor la recta de regresión del nivel de colesterol sobre la cantidad de aceite de palma?
+\item Según el modelo de regresión lineal, ¿qué cantidad de colesterol se espera que tenga una rata modificada genéticamente que toma 25 gr de aceite de palma en la dieta?
+¿Y una no modificada?
+\item ¿Qué cantidad máxima de aceite de palma hay que suministrar a una rata no modificada genéticamente para que su colesterol no pase de 150 mg/dl?
+¿Es fiable la predicción?
+\end{enumerate}
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+\begin{enumerate}
+\item Sol
+\end{enumerate}
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{reglin-med-3}
+%% \extol{0.001}
+%% \degree{Medicina}
+ 

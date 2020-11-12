@@ -1,0 +1,90 @@
+1.  **Question**\
+    Se sabe que la recta de regresión de $Y$ sobre $X$ tiene ecuación
+    $3x+2y-4=0$ y explica la mitad de la variabilidad de $Y$. Según el
+    modelo lineal, ¿cuánto cambiará $X$ por cada unidad que aumente $Y$?
+
+    **Solution**\
+    Sol
+
+2.  **Question**\
+    Se ha realizado un estudio sobre la obesidad en una ciudad, y se han
+    obtenido os siguientes datos del IMC en personas de 30 a 50 años.
+
+    $$% latex table generated in R 3.5.1 by xtable 1.8-3 package
+      % Mon Oct 29 16:10:48 2018
+      \begin{array}{lr}
+       \mbox{IMC} & \mbox{Personas} \\ 
+        \hline
+      15-18 & 5 \\ 
+        18-21 & 63 \\ 
+        21-24 & 72 \\ 
+        24-27 & 45 \\ 
+        27-30 & 12 \\ 
+        30-33 & 2 \\ 
+        33-36 & 1 \\ 
+         \hline
+      \end{array}$$
+
+    Se pide:
+
+    1.  Calcular el porcentaje de personas cuyo IMC está entre 19 y 25.
+
+    2.  ¿Cuál será el IMC por encima del cual están el 20% de las
+        personas de la muestra?
+
+    3.  ¿Hay datos atípicos en la muestra? Justificar la respuesta e
+        indicar los datos atípicos si los hubiera.
+
+    **Solution**\
+
+3.  **Question**\
+    Se ha modificado un gen de una especie de rata para facilitar la
+    metabolización del colesterol en sangre. Para comprobar la
+    efectividad de la modificación genética se tomaron dos grupos de 20
+    ratas, unas con el gen modificado y las otras no, y se sometieron a
+    una misma dieta con distintas concentraciones de aceite de palma
+    durante un mes, obteniendo los siguientes resultados:
+
+    **Cantidad de aceite de palma en gr** (igual en las dos muestras)\
+    $\sum x_i=577.5441$, $\sum x_i^2=18851.0818$,
+    $\sum(x_i-\bar x)^3=603.93$, $\sum(x_i-\bar x)^4=432681.15$\
+    **Colesterol en sangre en mg/dl de ratas no modificadas
+    genéticamente**\
+    $\sum y_j=2830.8879$, $\sum y_j^2=407045.1766$,
+    $\sum(y_j-\bar y)^3=18803.89$, $\sum(y_j-\bar y)^4=3951268.17$\
+    $\sum x_iy_j=85255.7223$.\
+    **Colesterol en sangre en mg/dl de ratas modificadas
+    genéticamente**\
+    $\sum y_j=2061.2522$, $\sum y_j^2=213082.2288$,
+    $\sum(y_j-\bar y)^3=-381.09$, $\sum(y_j-\bar y)^4=46192.42$\
+    $\sum x_iy_j=60659.1132$.\
+    Se pide:
+
+    1.  ¿En qué muestra es más representativa la media del colesterol,
+        en las ratas modificadas genéticamente o en las no modificadas?
+
+    2.  ¿En qué muestra es más asimétrica la distribución del
+        colesterol?
+
+    3.  ¿En qué muestra es menos normal el apuntamiento del colesterol?
+
+    4.  ¿Qué nivel de colesterol es relativamente mayor, el de una rata
+        modificada genéticamente con nivel 130 mg/dl, o el de una rata
+        no modificada con nivel 145 mg/dl?
+
+    5.  ¿En qué grupo se ajusta mejor la recta de regresión del nivel de
+        colesterol sobre la cantidad de aceite de palma?
+
+    6.  Según el modelo de regresión lineal, ¿qué cantidad de colesterol
+        se espera que tenga una rata modificada genéticamente que toma
+        25 gr de aceite de palma en la dieta? ¿Y una no modificada?
+
+    7.  ¿Qué cantidad máxima de aceite de palma hay que suministrar a
+        una rata no modificada genéticamente para que su colesterol no
+        pase de 150 mg/dl? ¿Es fiable la predicción?
+
+    **Solution**\
+
+    1.  Sol
+
+

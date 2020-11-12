@@ -1,0 +1,89 @@
+1.  **Question**\
+    Se ha medido el tiempo de espera para que un medicamento $A$ haga
+    efecto en un grupo de 150 pacientes, obteniéndose los siguientes
+    resultados:
+
+    $$% latex table generated in R 3.6.0 by xtable 1.8-4 package
+      % Fri May 17 13:25:58 2019
+      \begin{array}{lr}
+       \mbox{Tiempo} & \mbox{Pacientes} \\ 
+        \hline
+      (0,5] & 5 \\ 
+        (5,10] & 15 \\ 
+        (10,15] & 32 \\ 
+        (15,20] & 36 \\ 
+        (20,30] & 42 \\ 
+        (30,60] & 20 \\ 
+         \hline
+      \end{array}$$
+
+    Se pide:
+
+    1.  ¿Existen datos atípicos en la muestra? Justificar la respuesta.
+
+    2.  ¿Cuál fue el tiempo de espera mínimo para el 20% de los
+        pacientes que más esperaron?
+
+    3.  ¿Cuál fue el tiempo medio de espera? ¿Es muy representativa esta
+        medida?
+
+    4.  ¿Podemos suponer que la muestra proviene de una población
+        normal?
+
+    5.  Si tomamos otro grupo de pacientes tratados con el medicamento
+        $A$ cuya media fue 18 min con una desviación típica de 15 min,
+        ¿en cuál de los dos grupos sería más alto un tiempo de espera de
+        25 min?
+
+    Usar las siguientes sumas para los cálculos: $\sum x_i=3105$ min,
+    $\sum x_i^2=83650$ min$^2$, $\sum (x_i-\bar x)^3=206851.65$ min$^3$
+    y $\sum (x_i-\bar x)^4=8140374.96$ min$^4$.
+
+    **Solution**\
+
+2.  **Question**\
+    Al analizar la regresón lineal entre dos variables $X$ e $Y$ se
+    obtuvo $\bar x=7$ y $r^2=0.9$. Si la ecuación de la recta de
+    regresión de $Y$ sobre $X$ es $y-x=1$, calcular
+
+    1.  La media de $Y$.
+
+    2.  La ecuación de la recta de regresión de $X$ sobre $Y$.
+
+    3.  ¿Qué valor predice este modelo cuando $x=6$? ¿Y cuando $y=10$?
+
+    **Solution**\
+    Sol
+
+3.  **Question**\
+    En cierto club de tenis se ha registrado la edad ($X$) y la estatura
+    ($Y$) de las diez jugadoras que componen el primer equipo juvenil
+    femenino.
+
+    $$% latex table generated in R 3.6.0 by xtable 1.8-4 package
+      % Fri May 17 13:25:58 2019
+      \begin{array}{lrrrrrrrrrr}
+         \hline
+      \mbox{Edad (años)} & 9 & 10 & 11 & 12 & 13 & 14 & 15 & 16 & 17 & 18 \\ 
+        \mbox{Estatura (cm)} & 128 & 144 & 148 & 154 & 158 & 161 & 165 & 164 & 166 & 167 \\ 
+         \hline
+      \end{array}$$
+
+    1.  ¿Qué modelo de regresión se ajusta mejor a estos datos, el
+        logarítmico o el lineal?
+
+    2.  ¿Qué estatura predice el mejor de los dos modelos anteriores
+        para una edad de 12.5 años?
+
+    Usar las siguientes sumas para los cálculos:\
+    $\sum x_i=135$ años, $\sum \log(x_i)=25.7908$ $\log(\mbox{años})$,
+    $\sum y_j=1555$ cm, $\sum \log(y_j)=50.4358$ $\log(\mbox{cm})$,\
+    $\sum x_i^2=1905$ años$^2$, $\sum \log(x_i)^2=67.0001$
+    $\log(\mbox{años})^2$, $\sum y_j^2=243191$ cm$^2$,
+    $\sum \log(y_j)^2=254.4404$ $\log(\mbox{cm})^2$,\
+    $\sum x_iy_j=21303$ años$\cdot$cm, $\sum x_i\log(y_j)=682.9473$
+    años$\cdot\log(\mbox{cm})$, $\sum \log(x_i)y_j=4035.0697$
+    $\log(\mbox{años})$cm, $\sum \log(x_i)\log(y_j)=130.2422$
+    $\log(\mbox{años})\log(\mbox{cm})$.
+
+    **Solution**\

@@ -1,0 +1,43 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+m1 <- 26
+s1 <- 2.1
+m2 <- 15
+s2 <- 2.8
+
+x1 <- 46
+x2 <- 49
+p1 <- 0.8
+## QUESTION/ANSWER GENERATION
+sol1 <- pnorm(x1, m, s, lower.tail = F)
+sol2 <- pnorm(x2, m, s) - pnorm(x1, m, s)
+a <- qnorm((1-p1)/2, m, s)
+b <- qnorm(1-(1-p1)/2, m, s)
+@
+
+\begin{question}
+\puntos{7}Se sabe que la tensión ocular en pacientes con glaucoma sigue una distribución normal de media $\Sexpr{m1}$ mmHg y desviación típica $\Sexpr{s1}$ mmHg, y en personas sin glaucoma sigue una distribución normal de media $\Sexpr{m2}$ mmHg y desviación típica $\Sexpr{s2}$ mmHg.
+Si para detectar el glaucoma se aplica un test consistente en medir la tensión ocular, y se considera que el resultado es positivo si la tensión ocular está por encima de 22 mmHg y negativo en caso contrario. 
+Se pide:
+\begin{enumerate}
+\item Calcular la sensibilidad y la especificidad del test.\\
+\textbf{Nota}: Si no se saben calcular, tomar una sensibilidad de $0.95$ y una especificidad de $0.97$ para los próximos apartados.
+\item Si en la población hay un 6\% de personas con glaucoma, ¿cuáles serían los valores predictivos positivo y negativo del test?
+\item Si se consideran 10 personas en las que el resultado del test ha sido positivo, ¿cuál es la probabilidad de que más de 8 padezcan glaucoma?
+\item Si se consideran 70 personas de la población, ¿cuál es la probabilidad de que el test haya dado positivo entre 2 y 5 personas, ambas inclusive?
+\end{enumerate}
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{vac-opt-2}
+%% \extol{0.001}
+%% \degree{Óptica}
+ 

@@ -1,0 +1,65 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+x <- c(175, 182, 190, 165, 172, 183, 187, 174, 168, 178)
+y <- c(164, 175, 165, 160, 155, 172, 160, 151, 165, 163)
+z <- c(177, 180, 193, 172, 173, 188, 185, 177, 168, 182)
+sumx <- sum(x)
+sumy <- sum(y)
+sumz <- sum(z)
+sumx2 <- sum(x^2)
+sumy2 <- sum(y^2)
+sumz2 <- sum(z^2)
+sumxy <- sum(x*y)
+sumxz <- sum(x*z)
+sumyz <- sum(y*z)
+n <- length(x)
+
+## QUESTION/ANSWER GENERATION
+# means
+mx <- sumx / n
+my <- sumy / n
+mz <- sumz / n
+# variances
+s2x <- sumx2/n-mx^2
+s2y <- sumy2/n-my^2
+s2z <- sumz2/n-mz^2
+# Covariances
+sxy <- sumxy/n-mx*my
+syz <- sumyz/n-my*mz
+# Detercmation coeff
+r2xy <- sxy^2/(s2x*s2y)
+r2yz <- syz^2/(s2y*s2z)
+# Regression lines
+
+@
+
+\begin{question}
+\puntos{5}Se quiere estudiar si la estatura de los hijos depende de la estatura de los padres y para ello se ha tomado una muestra de 10 familias con un hijo mayor de 20 años y se ha medido la estatura del padre ($X$), de la madre ($Y$) y del hijo ($Z$) en centímetros, obteniendo los siguientes resultados:
+
+$\sum x_i=\Sexpr{sumx}$ cm, $\sum y_i=\Sexpr{sumy}$ cm, $\sum z_i=\Sexpr{sumz}$ cm,\\
+$\sum x_i^2=\Sexpr{sumx2}$ cm$^2$, $\sum y_i^2=\Sexpr{sumy2}$ cm$^2$, $\sum z_i^2=\Sexpr{sumz2}$ cm$^2$,\\
+$\sum x_iy_j=\Sexpr{sumxy}$ cm$^2$, $\sum x_iz_j=\Sexpr{sumxz}$ cm$^2$, $\sum y_iz_j=\Sexpr{sumyz}$ cm$^2$.
+
+Se pide: 
+
+\begin{enumerate}
+\item ¿De qué estatura depende más linealmente la estatura del hijo, de la estatura del padre o de la madre?
+\item Utilizando el mejor modelo lineal, predecir la estatura de un hijo cuyo padre mide 181cm y cuya madre mide 163cm.
+\item ¿Cuánto aumentará la estatura del hijo por cada centímetro que aumente la estatura del padre? ¿Y de la madre?
+\item ¿Cómo afectaría a la fiabilidad de los modelos que las estaturas se hubiesen medido en pulgadas? (Una pulgada son 2.54 cm).
+\end{enumerate}
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{reglin-far-8}
+%% \extol{0.001}
+%% \degree{Farmacia}
+ 

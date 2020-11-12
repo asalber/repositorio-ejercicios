@@ -1,0 +1,54 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+require(xtable)
+classes <- c("15-18", "18-21", "21-24", "24-27", "27-30", "30-33", "33-36")
+xi <- seq(16.5, 34.5, 3)
+ni <- c(5, 63, 72, 45, 12, 2, 1)
+x <- rep(xi,ni)
+data <- data.frame(classes, ni)
+colnames(data) <- c("\\mbox{IMC}", "\\mbox{Personas}")
+## QUESTION/ANSWER GENERATION
+# sample size
+nx <- length(x)
+# quartiles
+q1 <- quantile(x, probs = c(0.25), type=1)
+q2 <- quantile(x, probs = c(0.5), type=1)
+q3 <- quantile(x, probs = c(0.75), type=1)
+# interquartile range
+iqr <- q3-q1
+#fences
+f1 <- q1-1.5*iqr
+f2 <- q3+1.5*iqr
+# outliers
+@
+
+\begin{question}
+\puntos{2}Se ha realizado un estudio sobre la obesidad en una ciudad, y se han obtenido os siguientes datos del IMC en personas de 30 a 50 años. 
+
+$$
+<<echo=FALSE, results=tex>>=
+print(xtable(data, auto=T), tabular.environment="array", include.rownames = F, floating=F, hline.after = c(0,nrow(data)), sanitize.text.function = function(x) { x })
+@
+$$
+
+Se pide: 
+\begin{enumerate}
+\item Calcular el porcentaje de personas cuyo IMC está entre 19 y 25.
+\item ¿Cuál será el IMC por encima del cual están el 20\% de las personas de la muestra?
+\item ¿Hay datos atípicos en la muestra? Justificar la respuesta e indicar los datos atípicos si los hubiera. 
+\end{enumerate}
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{des-gen-3}
+%% \extol{0.001}
+%% \degree{General}
+ 

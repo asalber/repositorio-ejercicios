@@ -1,0 +1,46 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+library(MASS)
+pA <- 4/5
+pB <- 0.5
+pNoANoB <- 1/20
+
+## QUESTION/ANSWER GENERATION
+pAoB <- 1-pNoANoB
+pAB <- pA + pB - pAoB
+pNoAB <- pB-pAB
+pNoA <- 1-pA
+pNoB <- 1-pB
+pBSiA <- pAB/pA
+pBSiNoA <- pNoAB/pNoA
+@
+
+\begin{question}
+\puntos{2.5}La probabilidad de que una lesión $A$ se reproduzca es $\Sexpr{fractions(pA)}$, la de que se reproduzca otra lesión $B$ es $\Sexpr{fractions(pB)}$, y la de que ninguna se
+reproduzca $\Sexpr{fractions(pNoANoB)}$. Hallar la probabilidad de que:
+\begin{enumerate}
+\item Al menos una se reproduzca.
+\item Sólo se reproduzca la lesión $B$.
+\item Se reproduzca la lesión $B$ si se ha reproducido la $A$.
+\item Se reproduzca la lesión $B$ si no se reproduce la lesión $A$.
+\end{enumerate}
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+\begin{enumerate}
+\item $P(A\cup B)=\Sexpr{fractions(pAoB)}$.
+\item $P(B\cap\overline{A})=\Sexpr{fractions(pNoAB)}$.
+\item $P(B/A)=\Sexpr{fractions(pBSiA)}$.
+\item $P(B/\overline{A})=\Sexpr{fractions(pBSiNoA)}$.
+\end{enumerate}
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{\Sexpr{fmt(pAoB, 3)}}
+%% \exname{prob-fis-1}
+%% \extol{0.001}
+%% \degree{Fisioterapia}
+ 

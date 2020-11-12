@@ -1,0 +1,29 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+
+## QUESTION/ANSWER GENERATION
+# sample size
+
+@
+
+\begin{question}
+\puntos{3}La población de un microorganismo crece a un ritmo proporcional al tamaño de la población de forma que transcurrida una hora desde el inicio del cultivo la población se ha duplicado.
+\begin{enumerate}
+\item ¿Cuánto tiempo tardará en multiplicarse la población inicial por 10? 
+\item ¿Por cuánto se habrá multiplicado la población inicial a las 5 horas del inicio del cultivo?
+\end{enumerate}
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{edo-far-1}
+%% \extol{0.001}
+%% \degree{Farmacia}
+ 

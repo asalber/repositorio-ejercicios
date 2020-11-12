@@ -1,0 +1,33 @@
+  <<echo=FALSE, results=hide>>=
+  ## DATA GENERATION
+    
+  ## QUESTION/ANSWER GENERATION
+  
+@
+
+\begin{question}
+\puntos{1}Se sabe que en una distribución de frecuencias simétrica la media vale 15, el primer cuartil vale 12 y el máximo valor es 25. 
+Se pide:
+
+\begin{enumerate}
+\item Dibujar el diagrama de caja y bigotes.
+\item ¿Podría considerarse como atípico en esta distribución un valor de 2? 
+\end{enumerate}
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+\begin{enumerate}
+\item Diagrama de cajas
+\item Si porque la valla inferior es $v_1=3$.
+\end{enumerate}
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{\Sexpr{1}}
+%% \exname{des-gen-7}
+%% \extol{0.001}
+%% \degree{Todos}
+ 

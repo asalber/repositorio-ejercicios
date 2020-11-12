@@ -1,0 +1,99 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+x <- c(51,63,61,44,63,57,53,63,44,59,51,56,58,59,25,30,58,58)
+y <- c(66,71,82,85,72,70,68,74)
+ages <- sort(c(x,y))
+
+## QUESTION/ANSWER GENERATION
+# sample size
+nx <- length(x)
+ny <- length(y)
+n <- nx+ny
+# quartiles
+q1 <- quantile(ages,probs = c(0.25), type=1)
+q2 <- quantile(ages,probs = c(0.5), type=1)
+q3 <- quantile(ages,probs = c(0.75), type=1)
+# interquartile range
+iqr <- q3-q1
+#fences
+f1 <- q1-1.5*iqr
+f2 <- q3+1.5*iqr
+# outliers
+outliers <- ages[ages<f1 | ages >f2]
+# means
+mx <- mean(x)
+my <- mean(y)
+# variances
+s2x <- sum(x^2)/nx-mx^2
+s2y <- sum(y^2)/ny-my^2
+# standard deviation
+sx <- sqrt(s2x)
+sy <- sqrt(s2y)
+# coef. variation
+cvx <- sx/mx
+cvy <- sy/my
+# coef. skewness
+g1x <- sum((x-mx)^3)/(nx*sx^3)
+g1y <- sum((y-my)^3)/(ny*sy^3)
+# standard scores
+zx <- (50-mx)/sx
+zy <- (72-my)/sy
+@
+
+\begin{question}
+\puntos{5}Las edades de una muestra de pacientes que acuden a una clínica de fisioterapia son las siguientes:
+
+\begin{center}
+<<echo=FALSE, results=tex>>=
+cat(paste(as.character(ages), collapse=", "))
+@
+\end{center}
+
+Se pide: 
+\begin{enumerate}
+\item Calcular los cuartiles.
+\item Dibujar el diagrama de cajas e identificar los datos atípicos (no agrupar los datos en intervalos).
+\item Considerando los grupos de los menores y mayores de 65 años, ¿en cuál de ellos es más representativa la media?
+\item ¿Qué distribución es menos simétrica, la de los menores o la de los mayores de 65 años?
+\item ¿Qué edad es relativamente mayor con respecto a su grupo, 50 años en el grupo de los menores o 75 en  el de los mayores?
+\end{enumerate}
+
+Usar las siguientes sumas para los cálculos.\\
+Menores de 65: $\sum x_i=\Sexpr{sum(x)}$ años, $\sum x_i^2=\Sexpr{sum(x^2)}$ años$^2$, $\sum (x_i-\bar x)^3=\Sexpr{round(sum((x-mx)^3),2)}$ años$^3$ y $\sum (x_i-\bar x)^4=\Sexpr{round(sum((x-mx)^4),2)}$ años$^4$.\\
+Mayores de 65: $\sum x_i=\Sexpr{sum(y)}$ años, $\sum x_i^2=\Sexpr{sum(y^2)}$ años$^2$, $\sum (x_i-\bar x)^3=\Sexpr{round(sum((y-my)^3),2)}$ años$^3$ y $\sum (x_i-\bar x)^4=\Sexpr{round(sum((y-my)^4),2)}$ años$^4$.
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+\begin{enumerate}
+\item $C_1=\Sexpr{q1}$ años, $C_2=\Sexpr{q2}$ años and $C_3=\Sexpr{q3}$ años.
+\item Hay \Sexpr{length(outliers)} datos atípicos: \Sexpr{paste(outliers, collapse=", ")}.
+
+<<diagrama-caja-edades, fig=T, echo=F, height=4, width=5, dev="svg", fig.path="img">>=
+boxplot(ages, horizontal=T, main="Diagrama de caja de las edades de los pacientes", xlab="Edades")
+# require(ggplot2)
+# data <- data.frame(ages)
+# g <- ggplot(data, aes(x="", y=ages)) + geom_boxplot() + 
+#   labs(title="Boxplot of patients ages", x="Patients", y = "Ages") + 
+#   coord_flip() + 
+#   theme(plot.title = element_text(hjust = 0.5))
+# print(g)
+@
+
+\item Sea $x$ las edades de los pacientes menores de 65 e $y$ las de los mayores de 65.\\
+$\bar x=\Sexpr{round(mx,4)}$ años, $s_x^2=\Sexpr{round(s2x,4)}$ años$^2$, $s_x=\Sexpr{round(sx,4)}$ años and $cv_x=\Sexpr{round(cvx,4)}$.\\
+$\bar y=\Sexpr{round(my,4)}$ años, $s_y^2=\Sexpr{round(s2y,4)}$ años$^2$, $s_y=\Sexpr{round(sy,4)}$ años y $cv_y=\Sexpr{round(cvy,4)}$.\\
+La media es más representativa en los pacientes mayores de 65 ya que su coeficiente de variación es menor.
+\item $g_{1x}=\Sexpr{round(g1x,4)}$ y $g_{1y}=\Sexpr{round(g1y,4)}$, de manera que la distribución de edades de los pacientes menores de 65 es menos simétrica.
+\item Las puntuaciones típicas son $z_x(50)=\Sexpr{round(zx,4)}$ y $z_y(72)=\Sexpr{round(zy,4)}$, de manera que 50 años es relativamente menor en el grupo de los pacientes menores de 65.
+\end{enumerate}
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{\Sexpr{1}}
+%% \exname{des-fis-1}
+%% \extol{0.001}
+%% \degree{Fisioterapia}
+ 

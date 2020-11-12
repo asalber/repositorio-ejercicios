@@ -1,0 +1,42 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+library(MASS)
+pA <- 4/5
+pB <- 0.5
+pNoANoB <- 1/20
+
+## QUESTION/ANSWER GENERATION
+pAoB <- 1-pNoANoB
+pAB <- pA + pB - pAoB
+pNoAB <- pB-pAB
+pNoA <- 1-pA
+pNoB <- 1-pB
+pBSiA <- pAB/pA
+pBSiNoA <- pNoAB/pNoA
+@
+
+\begin{question}
+\puntos{3}Sean $A$ y $B$ dos sucesos de un mismo experimento aleatorio, tales que $A$ es el triple de probable que $B$, $P(A\cup B)=0.8$ y $P(A\cap B)=0.2$.
+Se pide:
+\begin{enumerate}
+\item Calcular $P(A)$ y $P(B)$.
+\item Calcular $P(A-B)$ y $P(B-A)$.
+\item Calcular $P(\bar A \cup \bar B)$ y $P(\bar A \cap \bar B)$.
+\item Calcular $P(A|B)$ y $P(B|A)$.
+\item ¿Son $A$ y $B$ sucesos independientes?
+\end{enumerate}
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{prob-fis-3}
+%% \extol{0.001}
+%% \degree{Fisioterapia}
+ 

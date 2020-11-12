@@ -1,0 +1,56 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+data <- data.reglin.opt.12
+x <- data$x
+y <- data$y
+z <- data$z
+n <- length(x)
+## QUESTION/ANSWER GENERATION
+# means
+mx <- sum(x) / n
+my <- sum(y) / n
+mz <- sum(z) / n
+# variances
+s2x <- sum(x^2) / n - mx^2
+s2y <- sum(y^2) / n - my^2
+s2z <- sum(z^2) / n - mz^2
+# Covariances
+sxy <- sum(x*y) / n - mx*my
+sxz <- sum(x*z) / n - mx*mz
+# Detercmation coeff
+r2xy <- sxy^2 / (s2x * s2y)
+r2xz <- sxz^2 / (s2x * s2z)
+# Regression lines
+
+@
+
+\begin{question}
+\puntos{5}Uno de los parámetros que se suele utilizar para diagnosticar el glaucoma de ángulo abierto es la distancia mínima al borde de la abertura de la membrana de Bruch ($X$) de la retina, pero se sabe que esta medida depende de la edad del paciente ($Y$) en años y del área de la abertura de esta membrana por la que pasa el nervio óptico ($Z$). En un estudio se ha medido en 1000 pacientes estas variables obteniendo los siguientes resultados:
+
+$\sum x_i=\Sexpr{sum(x)}$ $\mu$m, $\sum y_i=\Sexpr{sum(y)}$ años, $\sum z_i=\Sexpr{sum(z)}$ mm$^2$,\\
+$\sum x_i^2=\Sexpr{round(sum(x^2), 2)}$ $\mu$m$^2$, $\sum y_i^2=\Sexpr{round(sum(y^2),2)}$ años$^2$, $\sum z_i^2=\Sexpr{round(sum(z^2),2)}$ mm$^4$,\\
+$\sum x_iy_j=\Sexpr{round(sum(x*y),2)}$ $\mu$m$\cdot$años, $\sum x_iz_j=\Sexpr{round(sum(x*z),2)}$ $\mu$m$\cdot$mm$^2$, $\sum y_iz_j=\Sexpr{round(sum(y*z),2)}$ años$\cdot$mm$^2$.
+
+Se pide: 
+
+\begin{enumerate}
+\item Calcular las rectas de regresión de la distancia mínima al borde de la abertura de la membrana de Bruch sobre la edad, y de la distancia mínima al borde de la abertura de la membrana de Bruch sobre el área de la abertura de la membrana.
+\item ¿Cuánto aumenta o disminuye la distancia mínima al borde de la abertura de la membrana de Bruch por cada año más del paciente?
+\item ¿Qué porcentaje de la variabilidad de la distancia mínima al borde de la abertura de la membrana de Bruch explica cada uno de los modelos lineales anteriores?
+\item Utilizando el mejor de los modelos lineales anteriores predecir la distancia mínima al borde de la abertura de la membrana de Bruch de un paciente de 60 años con un área de la abertura de la membrana de 2 mm$^2$. 
+\end{enumerate}
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{reglin-far-8}
+%% \extol{0.001}
+%% \degree{Farmacia}
+ 

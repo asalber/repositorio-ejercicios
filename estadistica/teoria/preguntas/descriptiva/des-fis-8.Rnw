@@ -1,0 +1,80 @@
+  <<echo=FALSE, results=hide>>=
+  ## DATA GENERATION
+  require(xtable)
+  classes <- c("0-1", "1-2", "2-3", "3-4", "4-5", "5-6", "6-7", "7-8")
+  xi <- seq(0.5, 7.5, 1)
+  nxi <- c(11, 18, 10, 8, 6, 4, 1, 2)
+  x <- rep(xi, nxi)
+  nyi <- c(5, 13, 6, 10, 9, 1, 0, 8)
+  y <- rep(xi, nyi)
+  data <- data.frame(classes, nxi, nyi)
+  colnames(data) <- c("\\mbox{Meses postoperatorios}", "\\mbox{Pacientes sin sutura}", "\\mbox{Pacientes con sutura}")
+  ## QUESTION/ANSWER GENERATION
+  # sample size
+  n <- length(x)
+  # quartiles
+  q1 <- quantile(x, probs = c(0.25), type=1)
+  q2 <- quantile(x, probs = c(0.5), type=1)
+  q3 <- quantile(x, probs = c(0.75), type=1)
+  # interquartile range
+  iqr <- q3-q1
+  #fences
+  f1 <- q1-1.5*iqr
+  f2 <- q3+1.5*iqr
+  # outliers
+  outliers <- x[x < f1 | x > f2]
+  # means
+  mx <- mean(x)
+  my <- mean(y)
+  # variances
+  s2x <- sum(x^2)/n-mx^2
+  s2y <- sum(y^2)/n-my^2
+  # standard deviation
+  sx <- sqrt(s2x)
+  sy <- sqrt(s2y)
+  # coef. variation
+  cvx <- sx/mx
+  cvy <- sy/my
+  # coef. skewness
+  g1x <- sum((x-mx)^3)/(n*sx^3)
+  g1y <- sum((y-my)^3)/(n*sy^3)
+  # standard scores
+  zx <- (50-mx)/sx
+  @
+  
+  \begin{question}
+  \puntos{5}En un estudio sobre la reconstrucción del ligamento cruzado anterior (LCA) se evaluó el tiempo de recuperación postoperatorio según los pacientes hayan sido sometidos a una sutura meniscal o no. Los resultados aparecen en la siguiente tabla:
+  
+  $$
+  <<echo=FALSE, results=tex>>=
+  print(xtable(data, align=c("c", "c", "r", "r"), auto=T), tabular.environment="array", include.rownames = F, floating=F, hline.after = c(0,nrow(data)), sanitize.text.function = function(x) { x })
+  @
+  $$
+  
+  Se pide:
+  \begin{enumerate}
+  \item Dibujar el polígono de frecuencias relativas acumuladas de la muestra de pacientes sin sutura meniscal.
+  \item ¿Hay datos atípicos en el número de meses postoperatorios para pacientes sin sutura meniscal?
+  \item ¿En cuál de los dos grupos es más representativa la media del número de meses postoperatorios?
+  \item ¿Se puede asumir que la muestra de pacientes con sutura meniscal proviene de una población normal? Justifique la respuesta.
+  \item ¿Qué valor es relativamente mayor, 5 meses para un paciente sin sutura meniscal o 6 meses para un paciente con sutura meniscal?
+  \end{enumerate}
+  
+  Usar las siguientes sumas para los cálculos:\\
+  Sin sutura meniscal: $\sum x_in_i=\Sexpr{sum(x)}$ meses, $\sum x_i^2n_i=\Sexpr{sum(x^2)}$ meses$^2$, $\sum (x_i-\bar x)^3n_i=\Sexpr{round(sum((x-mx)^3),2)}$ meses$^3$ y $\sum (x_i-\bar x)^4n_i=\Sexpr{round(sum((x-mx)^4),2)}$ meses$^4$.\\
+  Con sutura meniscal: $\sum y_in_i=\Sexpr{sum(y)}$ meses, $\sum y_i^2n_i=\Sexpr{sum(y^2)}$ meses$^2$, $\sum (y_i-\bar y)^3n_i=\Sexpr{round(sum((y-my)^3),2)}$ meses$^3$ y $\sum (y_i-\bar y)^4n_i=\Sexpr{round(sum((y-my)^4),2)}$ meses$^4$.
+  \end{question}
+  
+  
+  %% SOLUTIONS
+  \begin{solution}
+  
+  \end{solution}
+  
+  %% META-INFORMATION
+  %% \extype{num}
+  %% \exsolution{Solución}
+  %% \exname{des-fis-8}
+  %% \extol{0.001}
+  %% \degree{Fisioterapia}
+   

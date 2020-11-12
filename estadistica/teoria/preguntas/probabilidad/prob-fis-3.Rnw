@@ -1,0 +1,40 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+library(MASS)
+pA <- 4/5
+pB <- 0.5
+pNoANoB <- 1/20
+
+## QUESTION/ANSWER GENERATION
+pAoB <- 1-pNoANoB
+pAB <- pA + pB - pAoB
+pNoAB <- pB-pAB
+pNoA <- 1-pA
+pNoB <- 1-pB
+pBSiA <- pAB/pA
+pBSiNoA <- pNoAB/pNoA
+@
+
+\begin{question}
+\puntos{1.5}El 40\% de los atletas de una población tienen una madre muy deportista y un 30\% tienen un padre muy deportista.
+Si el 50\% de los atletas de esta población tienen algún progenitor muy deportista, se pide:
+\begin{enumerate}
+\item Calcular la probabilidad de que, eligiendo uno de estos atletas al azar, su madre sea muy deportista, si su padre lo es.
+\item Calcular la probabilidad de que, eligiendo uno de estos atletas al azar, su padre sea muy deportista, si su madre no lo es.
+\item ¿Son independientes los sucesos correspondientes a tener una madre muy deportista y tener un padre muy deportista? Razonar la respuesta.
+\end{enumerate}
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{prob-fis-3}
+%% \extol{0.001}
+%% \degree{Fisioterapia}
+ 

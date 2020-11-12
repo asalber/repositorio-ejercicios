@@ -1,0 +1,146 @@
+\begin{enumerate}
+\item
+  \textbf{Question}\\
+  Se ha medido la tensión arterial sistólica (en mmHg) en dos grupos de
+  100 personas cada uno de dos poblaciones \(A\) y \(B\), obteniendo los
+  siguientes resultados:
+
+  \[% latex table generated in R 3.6.1 by xtable 1.8-4 package
+  % Mon Oct 14 11:23:51 2019
+  \begin{array}{lrr}
+   \mbox{Tensión sistólica} & \mbox{Num personas $A$} & \mbox{Num personas $B$} \\ 
+    \hline
+  (80, 90] & 4 & 6 \\ 
+    (90, 100] & 10 & 18 \\ 
+    (100, 110] & 28 & 30 \\ 
+    (110, 120] & 24 & 26 \\ 
+    (120, 130] & 16 & 10 \\ 
+    (130, 140] & 10 & 7 \\ 
+    (140, 150] & 6 & 2 \\ 
+    (150, 160] & 2 & 1 \\ 
+     \hline
+  \end{array}\]
+
+  Se pide:
+
+  \begin{enumerate}
+  \item
+    ¿Cuál de las dos distribuciones de la tensión sistólica es menos
+    asimétrica? ¿Cuál es más apuntada? ¿Pueden provenir estas muestras
+    de poblaciones normales?
+  \item
+    ¿En cuál de los dos grupos es más representativa la media de la
+    tensión sistólica?
+  \item
+    ¿Por encima de qué tensión sistólica se encuentra el 30\% de las
+    personas del grupo de la población \(A\)?
+  \item
+    ¿Qué tensión sistólica es relativamente más alta, 132 mmHg en el
+    grupo de la población \(A\), o 130 mmHg en el grupo de la población
+    \(B\)?
+  \item
+    Si a las 100 personas de la población \(A\) se les mide la tensión
+    sistólica con otro tensiómetro, y la tensión obtenida (\(Y\)) está
+    relacionada con la del primer tensiómetro (\(X\)) mediante la
+    ecuación \(y=0.98x-1.4\), ¿en cuál de las dos tensiones \(X\) o
+    \(Y\) es más representativa la media? Justificar la respuesta.
+  \end{enumerate}
+
+  Usar las siguientes sumas para los cálculos.\\
+  Grupo \(A\): \(\sum x_in_i=11520\) mmHg, \(\sum x_i^2n_i=1351700\)
+  mmHg\(^2\), \(\sum (x_i-\bar x)^3n_i=155241.6\) mmHg\(^3\) y
+  \(\sum (x_i-\bar x)^4n_i=16729903.52\) mmHg\(^4\).\\
+  Grupo \(B\): \(\sum x_in_i=11000\) mmHg, \(\sum x_i^2n_i=1230300\)
+  mmHg\(^2\), \(\sum (x_i-\bar x)^3n_i=165000\) mmHg\(^3\) y
+  \(\sum (x_i-\bar x)^4n_i=13632500\) mmHg\(^4\).
+
+  \textbf{Solution}\\
+
+  \begin{enumerate}
+  \item
+    Sean \(x\) e \(y\) las tensiones sistólicas de las poblaciones \(A\)
+    y \(B\) respectivamente.\\
+    \(g_{1x}=0.4024\) y \(g_{1y}=0.5705\), de manera que la distribución
+    del grupo de la población \(A\) es más asimétrica ya que el
+    coeficiente de \(g_1\) está más lejos de 0.
+  \item
+    \(g_{2x}=-0.2346\) y \(g_{2y}=0.3081\), de manera que la
+    distribución del grupo de la población \(A\) es más apuntada que la
+    de la población \(B\) ya que \(g_{2x}>g_{2y}\).
+  \item
+    \(\bar x=115.2\) mmHg, \(s_x^2=245.96\) mmHg\(^2\), \(s_x=15.6831\)
+    mmHg and \(cv_x=0.1361\).\\
+    \(\bar y=110\) mmHg, \(s_y^2=203\) mmHg\(^2\), \(s_y=14.2478\) mmHg
+    y \(cv_y=0.1295\).\\
+    La media es más representativa en el grupo de la población \(A\) ya
+    que el coeficiente de variación es menor.
+  \item
+    \(g_{1x}=0.4024\) y \(g_{1y}=0.5705\), de manera que la distribución
+    de edades de los pacientes menores de 65 es menos simétrica.
+  \item
+    Las puntuaciones típicas son \(z_x(132)=1.0712\) y
+    \(z_y(130)=1.4037\), de manera que 132 mmHg es relativamente menor
+    en el grupo de la población \(A\) ya que su puntación típica es
+    menor.
+  \end{enumerate}
+\item
+  \textbf{Question}\\
+  Se sabe que en una distribución de frecuencias simétrica la media vale
+  15, el primer cuartil vale 12 y el máximo valor es 25. Se pide:
+
+  \begin{enumerate}
+  \item
+    Dibujar el diagrama de caja y bigotes.
+  \item
+    ¿Podría considerarse como atípico en esta distribución un valor de
+    2?
+  \end{enumerate}
+
+  \textbf{Solution}\\
+
+  \begin{enumerate}
+  \item
+    Diagrama de cajas
+  \item
+    Si porque la valla inferior es \(v_1=3\).
+  \end{enumerate}
+\item
+  \textbf{Question}\\
+  Un laboratorio está ensayando tres analgésicos diferentes y se quiere
+  determinar si existe relación entre los tiempos que tardan en hacer
+  efecto en un paciente. Para ello, realizan una prueba administrando
+  los diferentes analgésicos a un grupo de 20 pacientes evaluando el
+  tiempo que tarda en hacer efecto cada analgésico, denominándolos
+  \(X\), \(Y\) y \(Z\) a cada uno de los tiempos, obteniéndose los
+  siguientes datos:
+
+  \(\sum x_i=668\) min, \(\sum y_i=855\) min, \(\sum z_i=1466\) min,\\
+  \(\sum x_i^2=25056\) min\(^2\), \(\sum y_i^2=42161\) min\(^2\),
+  \(\sum z_i^2=123904\) min\(^2\),\\
+  \(\sum x_iy_j=31522\) min\(^2\), \(\sum y_jz_j=54895\) min\(^2\).
+
+  Se pide:
+
+  \begin{enumerate}
+  \item
+    ¿Existe relación lineal entre los tiempos \(X\) e \(Y\)? ¿Y entre
+    los tiempos \(Y\) y \(Z\)?
+  \item
+    Según un modelo lineal, ¿cuánto aumentaría el tiempo \(X\) por cada
+    minuto que aumente el tiempo \(Y\)?
+  \item
+    Si deseamos realizar una predicción del tiempo \(Y\) mediante un
+    modelo lineal, ¿Cuál de los dos tiempos \(X\) o \(Z\) sería el más
+    adecuado? ¿Por qué?
+  \item
+    Predecir según el mejor modelo lineal elegido en el apartado
+    anterior el valor del tiempo \(Y\) para un valor del tiempo \(X\) o
+    \(Z\), según el modelo elegido, de 40 minutos.
+  \item
+    Si el coeficiente de correlación lineal entre los tiempos \(X\) y
+    \(Z\) es \(r=-0,69\), ¿Cuál es el modelo lineal que explica el
+    tiempo \(X\) en función del tiempo \(Z\)?
+  \end{enumerate}
+
+  \textbf{Solution}\\
+\end{enumerate}

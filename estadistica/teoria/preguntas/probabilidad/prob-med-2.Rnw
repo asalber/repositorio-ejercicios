@@ -1,0 +1,41 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+library(MASS)
+pA <- 4/5
+pB <- 0.5
+pNoANoB <- 1/20
+
+## QUESTION/ANSWER GENERATION
+pAoB <- 1-pNoANoB
+pAB <- pA + pB - pAoB
+pNoAB <- pB-pAB
+pNoA <- 1-pA
+pNoB <- 1-pB
+pBSiA <- pAB/pA
+pBSiNoA <- pNoAB/pNoA
+@
+
+\begin{question}
+\puntos{3}Se realizó un estudio en una población y se observó que el 36\% de las personas padecen hipertensión, que 60\% de los fumadores padecen hipertensión y que el 75\% de los que no sufren hipertensión no son fumadores.
+Se pide:
+\begin{enumerate}
+\item Calcular la probabilidad de que una persona sea fumadora.
+\item Calcular la probabilidad de que una persona sea fumadora o padezca hipertensión.
+\item Calcular la probabilidad de que una persona que no es fumadora no tenga hipertensión.
+\item ¿Depende el tener hipertensión de si se fuma? Razonar la respuesta.
+\end{enumerate}
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{prob-med-2}
+%% \extol{0.001}
+%% \degree{Medicina}
+ 

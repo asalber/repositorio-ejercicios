@@ -1,0 +1,77 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+require(xtable)
+classes <- c("(0,5]", "(5,10]", "(10,15]", "(15,20]", "(20,30]", "(30,60]")
+xi <- c(2.5, 7.5, 12.5, 17.5, 25, 45)
+ni <- c(5, 15, 32, 36, 42, 20)
+x <- rep(xi,ni)
+data <- data.frame(classes, ni)
+colnames(data) <- c("\\mbox{Tiempo}", "\\mbox{Pacientes}")
+## QUESTION/ANSWER GENERATION
+# sample size
+nx <- length(x)
+# quartiles
+q1 <- quantile(x, probs = c(0.25), type=1)
+q2 <- quantile(x, probs = c(0.5), type=1)
+q3 <- quantile(x, probs = c(0.75), type=1)
+# interquartile range
+iqr <- q3-q1
+#fences
+f1 <- q1-1.5*iqr
+f2 <- q3+1.5*iqr
+# outliers
+outliers <- x[x < f1 | x > f2]
+# means
+mx <- mean(x)
+# variances
+s2x <- sum(x^2)/nx-mx^2
+# standard deviation
+sx <- sqrt(s2x)
+# coef. variation
+cvx <- sx/mx
+# coef. skewness
+g1x <- sum((x-mx)^3)/(nx*sx^3)
+# standard scores
+zx <- (50-mx)/sx
+@
+
+\begin{question}
+\puntos{5}Se ha medido el tiempo de espera para que un medicamento $A$ haga efecto en un grupo de 150 pacientes, obteniéndose los siguientes resultados:
+
+$$
+<<echo=FALSE, results=tex>>=
+print(xtable(data, auto=T), tabular.environment="array", include.rownames = F, floating=F, hline.after = c(0,nrow(data)), sanitize.text.function = function(x) { x })
+@
+$$
+
+Se pide: 
+\begin{enumerate}
+\item ¿Existen datos atípicos en la muestra?
+Justificar la respuesta.
+\item ¿Cuál fue el tiempo de espera mínimo para el 20\% de los pacientes que más esperaron?
+\item ¿Cuál fue el tiempo medio de espera? 
+¿Es muy representativa esta medida? 
+%\item Se ha propuesto utilizar otro medicamento B cuyos tiempos de espera son Y=5+0.5X. ($Y$= Tiempo de espera con el medicamento $B$, $X$= Tiempo de espera con el medicamento $A$)
+%¿Cuál será el tiempo medio de espera del medicamento B? 
+%¿Es una medida más o menos representativa que el del medicamento A?
+%Justificar la respuesta.
+\item ¿Podemos suponer que la muestra proviene de una población normal?
+\item Si tomamos otro grupo de pacientes tratados con el medicamento $A$ cuya media fue 18 min con una desviación típica de 15 min, ¿en cuál de los dos grupos sería más alto un tiempo de espera de 25 min?
+\end{enumerate}
+
+Usar las siguientes sumas para los cálculos: $\sum x_i=\Sexpr{sum(x)}$ min, $\sum x_i^2=\Sexpr{sum(x^2)}$ min$^2$, $\sum (x_i-\bar x)^3=\Sexpr{round(sum((x-mx)^3),2)}$ min$^3$ y $\sum (x_i-\bar x)^4=\Sexpr{round(sum((x-mx)^4),2)}$ min$^4$.
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{des-far-2}
+%% \extol{0.001}
+%% \degree{Farmacia}
+ 

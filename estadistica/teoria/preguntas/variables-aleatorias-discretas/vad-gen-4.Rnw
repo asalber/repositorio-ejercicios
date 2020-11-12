@@ -1,0 +1,47 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+mean.day <- 12
+hours <- 1
+patients <- 4
+employees <- patients
+hours.day <- 6
+
+## QUESTION/ANSWER GENERATION
+lambda1 <- mean.day/hours.day*hours
+sol1 <- ppois(patients, lambda1, lower.tail = F)
+sol2 <- pbinom(0, hours.day, sol1, lower.tail = F)
+sol3 <- ppois(patients+1, lambda1, lower.tail = F)
+sol4 <- pbinom(0, hours.day, sol3, lower.tail = F)
+@
+
+\begin{question}
+\puntos{3}Los empleados de una empresa de mensajería envían una media de $246.2$ mensajes en un periodo de 12 horas. Se sabe además que la media de mensajes enviados por hombres en el mismo periodo es de $256.2$ y por mujeres $237.4$.
+
+Se pide:
+\begin{enumerate}
+\item Calcular la probabilidad de que en un periodo de media hora, una persona elegida al azar en esta empresa haya enviado 5 mensajes.
+\item Si elegimos al azar un grupo de 10 mujeres de esta empresa, ¿cuál es la probabilidad de que en un periodo de una hora, al menos 3 de ellas hayan enviado un mensaje?
+\item Si elegimos al azar un grupo de 100 hombres de esta empresa, ¿cuál es la probabilidad de que en un periodo de un cuarto de hora ninguno de ellos haya enviado menos de 2 mensajes?
+\end{enumerate}
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+\begin{enumerate}
+\item Sea $X$ el número de pacientes que llegan en \Sexpr{hours} horas. 
+$X\sim P(\Sexpr{lambda1})$ y $P(X>\Sexpr{patients})=\Sexpr{round(sol1,4)}$.
+\item Sea $Y$ el número de horas en un día en las que algún paciente no puede ser atendido. 
+$Y\sim B(\Sexpr{hours.day}, \Sexpr{round(sol1,4)})$ y $P(Y>0)=\Sexpr{round(sol2,4)}$.
+Se necesitan 5 empleados para que esta probabilidad sea menor del 10\%.\\
+Se necesitan 5 empleados para que esta probabilidad sea menor del 10\%, ya que $P(X>\Sexpr{patients+1})=\Sexpr{round(sol1,4)}$ y $P(Y>0)=\Sexpr{round(sol4,4)}$, siendo ahora $Y\sim B(\Sexpr{hours.day}, \Sexpr{round(sol3,4)})$.
+\end{enumerate}
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{vad-fis-2}
+%% \extol{0.01}
+%% \degree{Fisioterapia}
+ 

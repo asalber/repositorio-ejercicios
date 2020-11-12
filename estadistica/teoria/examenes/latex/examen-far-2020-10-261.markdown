@@ -1,0 +1,113 @@
+1.  **Question**\
+    La siguiente tabla recoge el número de pacientes diarios que
+    ingresaron en un hospital durante el mes de septiembre.
+
+    $$% latex table generated in R 4.0.3 by xtable 1.8-4 package
+      % Mon Oct 26 11:50:51 2020
+      \begin{array}{cr}
+       \mbox{Pacientes} & \mbox{Frecuencia} \\ 
+        \hline
+      (10,14] & 6 \\ 
+        (14,18] & 10 \\ 
+        (18,22] & 7 \\ 
+        (22,26] & 6 \\ 
+        (26,30] & 1 \\ 
+         \hline
+      \end{array}$$
+
+    Se pide:
+
+    1.  Estudiar la dispersión del 50% de los datos centrales.
+
+    2.  Calcular la media y estudiar la dispersión con respecto a ella.
+
+    3.  Estudiar la normalidad de los datos.
+
+    4.  Se sabe que en mismo hospital durante el mes de abril la media
+        fue 35 pacientes y la varianza 40 pacientes$^2$. ¿En qué mes
+        hubo más variabilidad relativa?
+
+    5.  ¿Qué número de ingresos es relativamente mayor, 20 ingresos en
+        septiembre o 40 en abril?
+
+    Usar las siguientes sumas para los cálculos:\
+    $\sum x_in_i=544$ pacientes, $\sum x_i^2n_i=10464$ pacientes$^2$,
+    $\sum (x_i-\bar x)^3n_i=736.14$ pacientes$^3$ y\
+    $\sum (x_i-\bar x)^4n_i = 25367.44$ pacientes$^4$.\
+    **Solution**\
+
+    1.  Han aprobado el 66.5% de los estudiantes no trabajadores y el
+        59% de los trabajadores.
+
+    2.  No trabajadores: $\bar x=18.1333$, $s^2=19.9822$, $s=4.4701$ y
+        $cv=0.2465$.\
+        Trabajadores: $\bar y=163$, $s^2=46$, $s=1.8578$ y $cv=0.8779$.\
+        La muestra de los alumnos que no trabajan tiene una dispersión
+        relativa con respecto a la media ligeramente mayor ya que su
+        coeficiente de variación es mayor.
+
+    3.  No trabajadores: $g_1=0.2747$.\
+        Trabajadores: $g_1=1.0922$.\
+        Así pues, la muestra de los alumnos que no trabajan es más
+        asimétrica ya que su coeficiente de asimetría está más lejos
+        de 0.
+
+    4.  No trabajadores: $\bar y=26.7933$.\
+        Trabajadores: $\bar x=3.5686$.\
+        El coeficiente de asimetría no cambia al ser la pendiente de la
+        transformación positiva.\
+
+    5.  No trabajadores: $z(7)=-2.7143$.\
+        Trabajadores: $z(6)=-83.9682$.\
+        Así pues, un 7 en la muestra de alumnos que no trabajan es
+        relativamente mayor que un 6 en la muestra de alumnos que
+        trabajan.
+
+2.  **Question**\
+    El siguiente diagrama muestra la distribución de notas en tres
+    asignaturas distintas.
+
+    ![image](media/supplements1/exercise2/des-gen-14-diagrama-notas.svg)
+
+    1.  ¿Qué asignatura es más difícil?
+
+    2.  ¿En qué asignatura hay más variabilidad central de los datos?
+
+    3.  ¿En qué asignaturas hay datos atípicos?
+
+    4.  ¿Qué asignatura tiene una distribución más asimétrica?
+
+    **Solution**\
+
+    1.  Diagrama de cajas
+
+    2.  Si porque la valla inferior es $v_1=3$.
+
+3.  **Question**\
+    Se quiere estudiar si la estatura de los hijos depende de la
+    estatura de los padres y para ello se ha tomado una muestra de 10
+    familias con un hijo mayor de 20 años y se ha medido la estatura del
+    padre ($X$), de la madre ($Y$) y del hijo ($Z$) en centímetros,
+    obteniendo los siguientes resultados:
+
+    $\sum x_i=1774$ cm, $\sum y_i=1630$ cm, $\sum z_i=1795$ cm,\
+    $\sum x_i^2=315300$ cm$^2$, $\sum y_i^2=266150$ cm$^2$,
+    $\sum z_i^2=322737$ cm$^2$,\
+    $\sum x_iy_j=289364$ cm$^2$, $\sum x_iz_j=318958$ cm$^2$,
+    $\sum y_iz_j=292757$ cm$^2$.
+
+    Se pide:
+
+    1.  ¿De qué estatura depende más linealmente la estatura del hijo,
+        de la estatura del padre o de la madre?
+
+    2.  Utilizando el mejor modelo lineal, predecir la estatura de un
+        hijo cuyo padre mide 181cm y cuya madre mide 163cm.
+
+    3.  ¿Cuánto aumentará la estatura del hijo por cada centímetro que
+        aumente la estatura del padre? ¿Y de la madre?
+
+    4.  ¿Cómo afectaría a la fiabilidad de los modelos que las estaturas
+        se hubiesen medido en pulgadas? (Una pulgada son 2.54 cm).
+
+    **Solution**\

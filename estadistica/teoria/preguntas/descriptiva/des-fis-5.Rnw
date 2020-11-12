@@ -1,0 +1,107 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+require(xtable)
+set.seed(123)
+x <- rbinom(15, 20, 0.1)
+y <- rbinom(14, 20, 0.2)
+table <- matrix(c(x, y, NA), nrow = 2, byrow = T)
+rownames(table) <- c("\\mbox{Con programa de prevención}", "\\mbox{Sin programa de prevención}")
+## QUESTION/ANSWER GENERATION
+# sample size
+nx <- length(x)
+ny <- length(y)
+# quartiles
+q1x <- quantile(x, probs = c(0.25), type=1)
+q2x <- quantile(x, probs = c(0.5), type=1)
+q3x <- quantile(x, probs = c(0.75), type=1)
+q1y <- quantile(y, probs = c(0.25), type=1)
+q2y <- quantile(y, probs = c(0.5), type=1)
+q3y <- quantile(y, probs = c(0.75), type=1)
+# interquartile range
+iqrx <- q3x-q1x
+iqry <- q3y-q1y
+# means
+mx <- mean(x)
+my <- mean(y)
+# variances
+s2x <- sum(x^2)/nx-mx^2
+s2y <- sum(y^2)/ny-my^2
+# standard deviation
+sx <- sqrt(s2x)
+sy <- sqrt(s2y)
+# coef. variation
+cvx <- sx/mx
+cvy <- sy/my
+# coef. skewness
+g1x <- sum((x-mx)^3)/(nx*sx^3)
+# coef. kurtosis
+g2x <- sum((x-mx)^4)/(nx*sx^4) - 3
+g2y <- sum((y-my)^4)/(ny*sy^4) - 3
+# standard scores
+zx <- (2-mx)/sx
+zy <- (4-my)/sy
+@
+
+\begin{question}
+\puntos{5}En un estudio sobre la efectividad de un programa de prevención de riesgos laborales en oficios que requieren estar sentados muchas horas, se tomó una muestra aleatoria de individuos entre 40 y 50 años que pasaban más de 5 horas sentados y se observó si habían seguido las recomendaciones del programa de prevención o no y el número de lesiones vertebrales transcurridos 10 años.
+Los resultados obtenidos aparecen en la siguiente tabla.
+
+$$
+<<echo=FALSE, results=tex>>=
+print(xtable(table, auto=T), tabular.environment="array", include.colnames = F, floating=F, hline.after = c(0,nrow(table)), sanitize.text.function = function(x) { x })
+@
+$$
+
+Se pide: 
+\begin{enumerate}
+\item Dibujar el polígono de frecuencias relativas acumuladas de la muestra global.
+\item Según el rango intercuartílico, ¿en qué muestra hay una mayor dispersión central del número de lesiones vertebrales, en la de los que siguieron el programa de prevención o en la de los que no? 
+\item ¿En qué muestra hay una mayor dispersión relativa del número de lesiones vertebrales, en la de los que siguieron el programa de prevención o en la de los que no? 
+\item ¿Qué muestra tienen un apuntamiento más normal del número de lesiones vertebrales, la de los que siguieron el programa de prevención o en la de los que no? 
+\item ¿Qué número de lesiones vertebrales es relativamente mayor, 2 lesiones siguiendo el programa de prevención o 4 sin seguirlo?
+\end{enumerate}
+
+Usar las siguientes sumas para los cálculos:\\
+Siguiendo el programa de prevención: $\sum x_i=\Sexpr{sum(x)}$ lesiones, $\sum x_i^2=\Sexpr{sum(x^2)}$ lesiones$^2$, $\sum (x_i-\bar x)^3=\Sexpr{round(sum((x-mx)^3),2)}$ lesiones$^3$ y $\sum (x_i-\bar x)^4=\Sexpr{round(sum((x-mx)^4),2)}$ lesiones$^4$.\\
+No siguiendo el programa de prevención: $\sum y_i=\Sexpr{sum(y)}$ lesiones, $\sum y_i^2=\Sexpr{sum(y^2)}$ lesiones$^2$, $\sum (y_i-\bar y)^3=\Sexpr{round(sum((y-my)^3),2)}$ lesiones$^3$ y $\sum (y_i-\bar y)^4=\Sexpr{round(sum((y-my)^4),2)}$ lesiones$^4$.
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+\begin{enumerate}
+\item 
+<<poligono-frecuencias-relativas-acumuladas-lesiones-vertebrales, fig=T, echo=F, height=3, width=4, dev="svg", fig.path="img">>=
+require(ggplot2)
+#require(rk.Teaching)
+data <- data.frame(lesiones = c(x, y))
+.df <- rk.Teaching::frequencyTable(data, "lesiones")
+p <- ggplot(data=.df, aes(x=lesiones, y=Cum.Rel.Freq.)) + 
+  geom_step(aes(group=1)) + xlab("Lesiones vertebrales") + 
+  ylab("Frecuencia relativa acumulada") +
+  scale_x_continuous(breaks = 0:9) +
+  theme(plot.title = element_text(hjust = 0.5), axis.title=element_text(size=12))
+print(p)
+@
+\item Con programa de prevención: $C_1=\Sexpr{round(q1x,4)}$ lesiones, $C_3=\Sexpr{round(q3x,4)}$ lesiones, $RI=\Sexpr{round(iqrx,4)}$ lesiones.\\
+Sin programa de prevención: $C_1=\Sexpr{round(q1y,4)}$ lesiones, $C_3=\Sexpr{round(q3y,4)}$ lesiones, $RI=\Sexpr{round(iqry,4)}$ lesiones.\\
+La muestra que no siguió el programa de prevención tiene una dispersión central mayor ya que su rango intercuartílico es mayor.
+\item Con programa de prevención: $\bar x=\Sexpr{round(mx,4)}$ lesiones, $s^2=\Sexpr{round(s2x,4)}$ lesiones$^2$, $s=\Sexpr{round(sx,4)}$ lesiones and $cv=\Sexpr{round(cvx,4)}$.\\
+Sin programa de prevención: $\bar y=\Sexpr{round(my,4)}$ lesiones, $s^2=\Sexpr{round(s2y,4)}$ lesiones$^2$, $s=\Sexpr{round(sy,4)}$ lesiones and $cv=\Sexpr{round(cvy,4)}$.\\
+La muestra que siguió el programa de prevención tiene una dispersión relativa con respecto a la media mayor ya que su coeficiente de variación es mayor.
+\item Con programa de prevención: $g_2=\Sexpr{round(g2x,4)}$.\\
+Sin programa de prevención: $g_2=\Sexpr{round(g2y,4)}$.\\
+Así pues, la muestra que no siguió el programa de prevención tiene un apuntamiento más normal ya que el coeficiente de apuntamiento está más próximo a 0.
+\item Con programa de prevención: $z(2)=\Sexpr{round(zx,4)}$.\\
+Sin programa de prevención: $z(4)=\Sexpr{round(zy,4)}$.\\
+Así pues, 4 lesiones sin seguir el programa de prevención es relativamente menor que 2 lesiones siguiendo el programa ya que su puntuación típica es menor.
+\end{enumerate}
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{des-far-2}
+%% \extol{0.001}
+%% \degree{Farmacia}
+ 

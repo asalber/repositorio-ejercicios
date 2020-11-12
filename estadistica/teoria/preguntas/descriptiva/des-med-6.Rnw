@@ -1,0 +1,83 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+require(xtable)
+clases <- c("(80, 90]", "(90, 100]", "(100, 110]", "(110, 120]", "(120, 130]", "(130, 140]", "(140, 150]", "(150, 160]")
+nx <- c(4, 10, 28, 24, 16, 10, 6, 2)
+ny <- c(6, 18, 30, 26, 10, 7, 2, 1)
+x <- rep(c(85, 95, 105, 115, 125, 135, 145, 155), nx)
+y <- rep(c(85, 95, 105, 115, 125, 135, 145, 155), ny)
+data <- data.frame(clases, nx, ny)
+colnames(data) <- c("\\mbox{Tensión sistólica}", "\\mbox{Num personas $A$}", "\\mbox{Num personas $B$}")
+  
+## QUESTION/ANSWER GENERATION
+# sample size
+nx <- length(x)
+ny <- length(y)
+# means
+mx <- mean(x)
+my <- mean(y)
+# variances
+s2x <- sum(x^2)/nx-mx^2
+s2y <- sum(y^2)/ny-my^2
+# standard deviation
+sx <- sqrt(s2x)
+sy <- sqrt(s2y)
+# coef. variation
+cvx <- sx/mx
+cvy <- sy/my
+# coef. skewness
+g1x <- sum((x-mx)^3)/(nx*sx^3)
+g1y <- sum((y-my)^3)/(ny*sy^3)
+# coef. kurtosis
+g2x <- sum((x-mx)^4)/(nx*sx^4)-3
+g2y <- sum((y-my)^4)/(ny*sy^4)-3
+# standard scores
+zx <- (132-mx)/sx
+zy <- (130-my)/sy
+@
+
+\begin{question}
+\puntos{5}Se ha medido la tensión arterial sistólica (en mmHg) en dos grupos de 100 personas cada uno de dos poblaciones $A$ y $B$, obteniendo los siguientes resultados:
+
+$$
+<<echo=FALSE, results=tex>>=
+print(xtable(data, auto=T), tabular.environment="array", include.rownames = F, floating=F, hline.after = c(0,nrow(data)), sanitize.text.function = function(x) { x })
+@
+$$
+
+Se pide: 
+\begin{enumerate}
+\item ¿Cuál de las dos distribuciones de la tensión sistólica es menos asimétrica? ¿Cuál es más apuntada? ¿Pueden provenir estas muestras de poblaciones normales?
+\item ¿En cuál de los dos grupos es más representativa la media de la tensión sistólica?
+\item ¿Por encima de qué tensión sistólica se encuentra el 30\% de las personas del grupo de la población $A$?
+\item ¿Qué tensión sistólica es relativamente más alta, 132 mmHg en el grupo de la población $A$, o 130 mmHg en el grupo de la población $B$?
+\item Si a las 100 personas de la población $A$ se les mide la tensión sistólica con otro tensiómetro, y la tensión obtenida ($Y$) está relacionada con la del primer tensiómetro ($X$) mediante la ecuación $y=0.98x-1.4$, ¿en cuál de las dos tensiones $X$ o $Y$ es más representativa la media? Justificar la respuesta.
+\end{enumerate}
+
+Usar las siguientes sumas para los cálculos.\\
+Grupo $A$: $\sum x_in_i=\Sexpr{sum(x)}$ mmHg, $\sum x_i^2n_i=\Sexpr{sum(x^2)}$ mmHg$^2$, $\sum (x_i-\bar x)^3n_i=\Sexpr{round(sum((x-mx)^3),2)}$ mmHg$^3$ y $\sum (x_i-\bar x)^4n_i=\Sexpr{round(sum((x-mx)^4),2)}$ mmHg$^4$.\\
+Grupo $B$: $\sum x_in_i=\Sexpr{sum(y)}$ mmHg, $\sum x_i^2n_i=\Sexpr{sum(y^2)}$ mmHg$^2$, $\sum (x_i-\bar x)^3n_i=\Sexpr{round(sum((y-my)^3),2)}$ mmHg$^3$ y $\sum (x_i-\bar x)^4n_i=\Sexpr{round(sum((y-my)^4),2)}$ mmHg$^4$.
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+\begin{enumerate}
+\item Sean $x$ e $y$ las tensiones sistólicas de las poblaciones $A$ y $B$ respectivamente.\\
+$g_{1x}=\Sexpr{round(g1x,4)}$ y $g_{1y}=\Sexpr{round(g1y,4)}$, de manera que la distribución del grupo de la población $A$ es más asimétrica ya que el coeficiente de $g_1$ está más lejos de 0.
+\item $g_{2x}=\Sexpr{round(g2x,4)}$ y $g_{2y}=\Sexpr{round(g2y,4)}$, de manera que la distribución del grupo de la población $A$ es más apuntada que la de la población $B$ ya que $g_{2x}>g_{2y}$.
+\item $\bar x=\Sexpr{round(mx,4)}$ mmHg, $s_x^2=\Sexpr{round(s2x,4)}$ mmHg$^2$, $s_x=\Sexpr{round(sx,4)}$ mmHg and $cv_x=\Sexpr{round(cvx,4)}$.\\
+$\bar y=\Sexpr{round(my,4)}$ mmHg, $s_y^2=\Sexpr{round(s2y,4)}$ mmHg$^2$, $s_y=\Sexpr{round(sy,4)}$ mmHg y $cv_y=\Sexpr{round(cvy,4)}$.\\
+La media es más representativa en el grupo de la población $A$ ya que el coeficiente de variación es menor.
+\item $g_{1x}=\Sexpr{round(g1x,4)}$ y $g_{1y}=\Sexpr{round(g1y,4)}$, de manera que la distribución de edades de los pacientes menores de 65 es menos simétrica.
+\item Las puntuaciones típicas son $z_x(132)=\Sexpr{round(zx,4)}$ y $z_y(130)=\Sexpr{round(zy,4)}$, de manera que 132 mmHg es relativamente menor en el grupo de la población $A$ ya que su puntación típica es menor.
+\end{enumerate}
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{\Sexpr{1}}
+%% \exname{des-gen-6}
+%% \extol{0.001}
+%% \degree{Medicina}
+   
