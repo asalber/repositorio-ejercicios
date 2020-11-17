@@ -29,8 +29,13 @@ syz <- sumyz/n-my*mz
 # Detercmation coeff
 r2xy <- sxy^2/(s2x*s2y)
 r2yz <- syz^2/(s2y*s2z)
-# Regression lines
-
+# Slopes
+bzx <- sxz/s2x
+bzy <- syz/s2y
+# Intercept
+azx <- mz - bzx * mx
+# Prediction
+predz <- azx + bzx * 181
 @
 
 \begin{question}
@@ -44,7 +49,7 @@ Se pide:
 
 \begin{enumerate}
 \item ¿De qué estatura depende más linealmente la estatura del hijo, de la estatura del padre o de la madre?
-\item Utilizando el mejor modelo lineal, predecir la estatura de un hijo cuyo padre mide 181cm y cuya madre mide 163cm.
+\item Utilizyo el mejor modelo lineal, predecir la estatura de un hijo cuyo padre mide 181cm y cuya madre mide 163cm.
 \item ¿Cuánto aumentará la estatura del hijo por cada centímetro que aumente la estatura del padre? ¿Y de la madre?
 \item ¿Cómo afectaría a la fiabilidad de los modelos que las estaturas se hubiesen medido en pulgadas? (Una pulgada son 2.54 cm).
 \end{enumerate}
@@ -53,13 +58,22 @@ Se pide:
 
 %% SOLUTIONS
 \begin{solution}
-
+\begin{enumerate}
+\item $\bar x=\Sexpr{round(mx,4)}$ cm, $s_x^2=\Sexpr{round(s2x,4)}$ cm$^2$,\\
+$\bar y=\Sexpr{round(my,4)}$ cm, $s_y^2=\Sexpr{round(s2y,4)}$ cm$^2$,\\
+$\bar z=\Sexpr{round(mz,4)}$ cm, $s_z^2=\Sexpr{round(s2z,4)}$ cm$^2$,\\
+$s_{xz}=\Sexpr{round(sxz,4)}$ cm$^2$ y $s_{yz}=\Sexpr{round(syz,4)}$ cm$^2$.\\
+$r^2_{xz}=\Sexpr{round(r2xz,4)}$ y $r^2_{yz}=\Sexpr{round(r2yz,4)}$, de manera que la estatura de los hijos depende linealmente más de la estatura del padre ya que su coeficiente de determinación es mayor.
+\item Recta de regresión de $Z$ sobre $X$: $z=\Sexpr{round(azx,4)} + \Sexpr{round(bzx,4)}x$ y $z(181)=\Sexpr{round(predz, 4)}$.
+\item La estatura del hijo aumentará $\Sexpr{round(bzx,4)}$ cm por cada cm que aumente la estatura del padre y $\Sexpr{round(bzy,4)}$ cm por cada cm que aumente la estatura de la madre.
+\item La fiabilidad sería la misma, ya que al aplicar la misma transformación lineal a $X$ y $Z$, las varianzas quedan multiplicadas por el cuadrado de la pendiente y la covarianza también queda multiplicada por el cuadrado de la pendiente.
+\end{enumerate}
 \end{solution}
 
 %% META-INFORMATION
 %% \extype{num}
 %% \exsolution{Solución}
-%% \exname{reglin-far-8}
+%% \exname{reglin-far-11}
 %% \extol{0.001}
 %% \degree{Farmacia}
  

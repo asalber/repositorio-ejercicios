@@ -9,47 +9,48 @@ colnames(data) <- c("\\mbox{Estatura padre}", "\\mbox{Estatura madre}", "\\mbox{
 n <- length(x)
 
 ## QUESTION/ANSWER GENERATION
-# sample size
+# Tamaño de la muestra
 nx <- length(x)
 ny <- length(y)
 nz <- length(z)
-# quartiles
-q1 <- quantile(x, probs = c(0.25), type=1)
-q2 <- quantile(x, probs = c(0.5), type=1)
-q3 <- quantile(x, probs = c(0.75), type=1)
-# interquartile range
+# Cuartiles
+q1 <- quantile(z, probs = c(0.25), type=1)
+q2 <- quantile(z, probs = c(0.5), type=1)
+q3 <- quantile(z, probs = c(0.75), type=1)
+# Rango intercuartílico
 iqr <- q3-q1
-#fences
+# Vallas
 f1 <- q1-1.5*iqr
 f2 <- q3+1.5*iqr
-# outliers
-outliers <- x[x < f1 | x > f2]
-# means
+# Datos atípicos
+outliers <- z[z < f1 | z > f2]
+# Media
 mx <- mean(x)
 my <- mean(y)
 mz <- mean(z)
-# variances
+# Varianza
 s2x <- sum(x^2)/nx-mx^2
 s2y <- sum(y^2)/ny-my^2
 s2z <- sum(z^2)/nz-mz^2
-# standard deviation
+# Desviación típica
 sx <- sqrt(s2x)
 sy <- sqrt(s2y)
 sz <- sqrt(s2z)
-# coef. variation
+# Coef. variación
 cvx <- sx/mx
 cvy <- sy/my
 cvz <- sz/mz
-# coef. skewness
+# Coef. asimetría
 g1x <- sum((x-mx)^3)/(nx*sx^3)
 g1y <- sum((y-my)^3)/(ny*sy^3)
 g1z <- sum((z-mz)^3)/(nz*sz^3)
-# Transformación lineal
-myx <- 0.5 + mx * 1.45
-myy <- 0.5 + my * 1.45
-# standard scores
-zx <- (6-mx)/sx
-zy <- (7-my)/sy
+# Coef. apuntamiento
+g2x <- sum((x-mx)^4)/(nx*sx^4)-3
+g2y <- sum((y-my)^4)/(ny*sy^4)-3
+g2z <- sum((z-mz)^4)/(nz*sz^4)-3
+# Puntuaciones típicas
+zy <- (165-my)/sy
+zz <- (178-mz)/sz
 @
 
 \begin{question}
@@ -57,7 +58,7 @@ zy <- (7-my)/sy
 
 $$
 <<echo=FALSE, results=tex>>=
-print(xtable(data, align=c("c", "c", "r", "r"), auto=T), tabular.environment="array", include.rownames = F, floating=F, hline.after = c(0,nrow(data)), sanitize.text.function = function(x) { x })
+print(xtable(data, align=c("c", "c", "c", "c"), auto=T), tabular.environment="array", include.rownames = F, floating=F, hline.after = c(0,nrow(data)), sanitize.text.function = function(x) { x })
 @
 $$
 
@@ -65,8 +66,8 @@ Se pide:
 
 \begin{enumerate}
 \item ¿En qué grupo es más representativa la media, en el de padres o en el de madres?
-\item ¿Hay algún punto atípico entre los hijos?
-\item Según su forma, ¿Puede provenir la muestra de madres de una distribución normal?
+\item ¿Hay alguna estatura atípica entre los hijos?
+\item Según su forma, ¿puede provenir la muestra de madres de una distribución normal?
 \item ¿Quién es más alto dentro de su grupo, una madre con una altura de 165 cm o un hijo con una altura de 178 cm?
 \item ¿Cómo afectaría a la representatividad de las medias que las alturas se midiesen en metros en vez de en centímetros?
 
@@ -81,13 +82,23 @@ Estatura hijo : $\sum z_i=\Sexpr{sum(z)}$ cm, $\sum z_i^2=\Sexpr{sum(z^2)}$ cm$^
 
 %% SOLUTIONS
 \begin{solution}
-
+\begin{enumerate}
+\item Padres: $\bar x=\Sexpr{round(mx,4)}$ cm, $s^2=\Sexpr{round(s2x,4)}$ cm$^2$, $s=\Sexpr{round(sx,4)}$ cm y $cv=\Sexpr{round(cvx,4)}$.\\
+Madres: $\bar y=\Sexpr{round(my,4)}$ cm, $s^2=\Sexpr{round(s2y,4)}$ cm$^2$, $s=\Sexpr{round(sy,4)}$ cm y $cv=\Sexpr{round(cvy,4)}$.\\
+La estatura media es un poco más representativa en el grupo de las madres.
+\item Las vallas en la muestra de hijos son $f_1=\Sexpr{round(f1,2)}$ cm y $f_2=\Sexpr{round(f2,2)}$ cm por lo que no hay estaturas atípicas entre los hijos.
+\item $g_{1y}=\Sexpr{round(g1y,4)}$ y $g_{2y}=\Sexpr{round(g2y,4)}$. Como el coeficiente de asimetría y el de apuntamiento están dentro del intervalo de -2 a 2, podemos asumir que la muestra de estaturas de madres proviene de una población normal.
+\item  Puntuación típica madres: $z(165)=\Sexpr{round(zy, 4)}$.\\
+Puntuación típica hijos: $z(178)=\Sexpr{round(zz, 4)}$.\\
+Así pues, una madre de 165 cm es relativamente más alta que un hijo de 178 cm.
+\item La respresentatividad de las medias no cambiaría ya que tanto las medias como las desviaciones típicas estarían divididas por 100.
+\end{enumerate}
 \end{solution}
 
 %% META-INFORMATION
 %% \extype{num}
 %% \exsolution{Solución}
-%% \exname{reglin-far-8}
+%% \exname{des-gen-15}
 %% \extol{0.001}
-%% \degree{Farmacia}
+%% \degree{Óptica}
  

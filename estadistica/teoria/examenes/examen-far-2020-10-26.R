@@ -5,7 +5,7 @@ setwd("estadistica/teoria/examenes")
 
 questions <- c("des-med-13", "des-gen-14", "reglin-far-11")
 
-exams2pdf(questions, n=1, name = c("examen-far-2020-11-17", "solucion-far-2020-11-17"), encoding = "UTF-8",
+exams2pdf(questions, n=1, name = c("examen-far-2020-10-26", "solucion-far-2020-10-26"), encoding = "UTF-8",
   dir = "pdf",
   edir = "../preguntas",
   template = c("plantillas/examenceu.tex", "plantillas/solucionceu.tex"),
@@ -15,12 +15,12 @@ exams2pdf(questions, n=1, name = c("examen-far-2020-11-17", "solucion-far-2020-1
     Date = "17 de noviembre de 2020",
     Version = "A",
     Time = "1 hora"
-  ))
+))
 
 # Borrar directorio de imagenes del examen
 unlink("img/exam1", recursive = TRUE) 
 exams2pandoc(questions, n=1, 
-            name = "examen-far-2020-11-17", 
+            name = "examen-far-2020-10-26", 
             encoding = "UTF-8", 
             type="latex",
             dir = "latex",
@@ -30,4 +30,5 @@ exams2pandoc(questions, n=1,
             svg=T
 )
 
-pandoc("latex/examen-far-2020-11-171.latex", format="markdown")
+pandoc("latex/examen-far-2020-10-261.latex", format="markdown")
+  

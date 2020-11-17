@@ -3,7 +3,9 @@ library("exams")
 
 setwd("estadistica/teoria/examenes")
 
-questions <- c("des-gen-15", "reglin-far-12")
+questions <- c("des-gen-15", "reglin-opt-12")
+
+data.reglin.opt.12 <- read.csv('../preguntas/regresion-lineal/datos-opt-12.csv')
 
 exams2pdf(questions, n=1, name = c("examen-far-2020-11-17", "solucion-far-2020-11-17"), encoding = "UTF-8",
   dir = "pdf",
@@ -11,7 +13,7 @@ exams2pdf(questions, n=1, name = c("examen-far-2020-11-17", "solucion-far-2020-1
   template = c("plantillas/examenceu.tex", "plantillas/solucionceu.tex"),
   header = list(
     Subject = "ESTADÍSTICA\\\\[2mm] (DESCRIPTIVA Y REGRESIÓN)",
-    Degree= "1º Farmacia",
+    Degree= "1º Farmacia y Biotecnología",
     Date = "17 de noviembre de 2020",
     Version = "A",
     Time = "1 hora"

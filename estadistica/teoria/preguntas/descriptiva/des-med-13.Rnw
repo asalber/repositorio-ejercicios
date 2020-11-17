@@ -26,7 +26,7 @@ outliers <- x[x < f1 | x > f2]
 mx <- mean(x)
 # variances
 s2x <- sum(x^2)/nx-mx^2
-# standard deviation
+# styard deviation
 sx <- sqrt(s2x)
 # coef. variation
 cvx <- sx/mx
@@ -34,7 +34,7 @@ cvx <- sx/mx
 g1x <- sum((x-mx)^3)/(nx*sx^3)
 # Transformación lineal
 myx <- 0.5 + mx * 1.45
-# standard scores
+# styard scores
 zx <- (6-mx)/sx
 zy <- (7-my)/sy
 @
@@ -65,26 +65,20 @@ $\sum x_in_i=\Sexpr{sum(x)}$ pacientes, $\sum x_i^2n_i=\Sexpr{sum(x^2)}$ pacient
 %% SOLUTIONS
 \begin{solution}
 \begin{enumerate}
-\item Han aprobado el 66.5\% de los estudiantes no trabajadores y el 59\% de los trabajadores.
-\item No trabajadores: $\bar x=\Sexpr{round(mx,4)}$, $s^2=\Sexpr{round(s2x,4)}$, $s=\Sexpr{round(sx,4)}$ y $cv=\Sexpr{round(cvx,4)}$.\\
-Trabajadores: $\bar y=\Sexpr{round(my,4)}$, $s^2=\Sexpr{round(s2y,4)}$, $s=\Sexpr{round(sy,4)}$ y $cv=\Sexpr{round(cvy,4)}$.\\
-La muestra de los alumnos que no trabajan tiene una dispersión relativa con respecto a la media ligeramente mayor ya que su coeficiente de variación es mayor.
-\item No trabajadores: $g_1=\Sexpr{round(g1x,4)}$.\\
-Trabajadores: $g_1=\Sexpr{round(g1y,4)}$.\\
-Así pues, la muestra de los alumnos que no trabajan es más asimétrica ya que su coeficiente de asimetría está más lejos de 0.
-\item No trabajadores: $\bar y=\Sexpr{round(myx, 4)}$.\\
-Trabajadores: $\bar x=\Sexpr{round(myy, 4)}$.\\
-El coeficiente de asimetría no cambia al ser la pendiente de la transformación positiva.\\
-\item No trabajadores: $z(7)=\Sexpr{round(zx, 4)}$.\\
-Trabajadores: $z(6)=\Sexpr{round(zy, 4)}$.\\
-Así pues, un 7 en la muestra de alumnos que no trabajan es relativamente mayor que un 6 en la muestra de alumnos que trabajan.
+\item $Q_1=\Sexpr{round(q1,4)}$ pacientes, $Q_3=\Sexpr{round(q3,4)}$ pacientes y $RI=\Sexpr{round(iqr,4)}$ pacientes. Por tanto, la dispersión central es pequeña.
+\item $\bar x=\Sexpr{round(mx,4)}$ pacientes, $s^2=\Sexpr{round(s2x,4)}$ pacientes$^2$, $s=\Sexpr{round(sx,4)}$ pacientes y $cv=\Sexpr{round(cvx,4)}$. Por tanto, la dispersión con respecto a la media es pequeña y la media representa bien.
+\item $g_1=\Sexpr{round(g1x,4)}$ y $g_2=\Sexpr{round(g2x,4)}$. Como los coeficientes de asimetría y apuntamiento están entre -2 y 2, podemos asumir que la muestra proviene de una población normal.
+\item Sea $Y$ el número de pacientes diarios hospitalizados durante el mes de abril. Entonces, $cv_y=\Sexpr{round(cvy,4)}$. Como el coeficiente de variación del mes de abril es mayor que el de septiembre, la dispersión relativa es mayor en abril.
+\item Septiembre: $z(20)=\Sexpr{round(zx, 4)}$.\\
+Abril: $z(40)=\Sexpr{round(zy, 4)}$.\\
+Así pues, 40 pacientes hospitalizados en abril es relativamente mayor que 20 pacientes hospitalizados en septiembre ya que su puntuación típica es mayor.
 \end{enumerate}
 \end{solution}
 
 %% META-INFORMATION
 %% \extype{num}
 %% \exsolution{Solución}
-%% \exname{des-gen-11}
+%% \exname{des-med-13}
 %% \extol{0.001}
-%% \degree{General}
+%% \degree{Medicina}
    

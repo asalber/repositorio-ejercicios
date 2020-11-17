@@ -34,15 +34,17 @@ p
 %% SOLUTIONS
 \begin{solution}
 \begin{enumerate}
-\item Diagrama de cajas
-\item Si porque la valla inferior es $v_1=3$.
+\item La asignatura $Y$ ya que sus puntuaciones son menores (la caja y los bigotes están más desplazados hacia la izquierda).
+\item La asignatura $X$ porque la anchura de la caja es mayor.
+\item La asignatura $Z$ porque hay una nota que está fuera de los bigotes.
+\item La asignatura $Z$ porque la distancia desde el primer cuartil hasta la mediana (lado izquierdo de la caja) es mayor que la distancia desde la mediana al tercer cuartil (lado derecho de la caja).
 \end{enumerate}
 \end{solution}
 
 %% META-INFORMATION
 %% \extype{num}
 %% \exsolution{\Sexpr{1}}
-%% \exname{des-gen-7}
+%% \exname{des-gen-14}
 %% \extol{0.001}
 %% \degree{Todos}
  

@@ -3,7 +3,7 @@
     ingresaron en un hospital durante el mes de septiembre.
 
     $$% latex table generated in R 4.0.3 by xtable 1.8-4 package
-      % Sat Nov 14 08:06:22 2020
+      % Sat Nov 14 08:04:46 2020
       \begin{array}{cr}
        \mbox{Pacientes} & \mbox{Frecuencia} \\ 
         \hline
