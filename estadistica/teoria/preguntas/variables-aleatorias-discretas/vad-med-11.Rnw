@@ -1,0 +1,45 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+mean.day <- 12
+hours <- 1
+patients <- 4
+employees <- patients
+hours.day <- 6
+
+## QUESTION/ANSWER GENERATION
+lambda1 <- mean.day/hours.day*hours
+sol1 <- ppois(patients, lambda1, lower.tail = F)
+sol2 <- pbinom(0, hours.day, sol1, lower.tail = F)
+sol3 <- ppois(patients+1, lambda1, lower.tail = F)
+sol4 <- pbinom(0, hours.day, sol3, lower.tail = F)
+@
+
+\begin{question}
+\puntos{2.5}Un recién nacido afectado por el síndrome de Moebius parpadea, en término medio, 2 veces por minuto.
+\begin{enumerate}
+\item Calcula la probabilidad de que el recién nacido parpadee 2 veces en medio minuto.
+\item En un hospital nacen 5 niños con síndrome de Moebius. Calcula la probabilidad de que al menos 3 de ellos parpadeen en su primer minuto de vida.
+\item ¿En qué distribución es más representativa la media, en la del número de veces que parpadea en un minunto o en la del número de veces que parpadea en medio minuto?
+\end{enumerate}
+\end{question}  
+
+
+%% SOLUTIONS
+\begin{solution}
+\begin{enumerate}
+\item Sea $X$ el número de pacientes que llegan en \Sexpr{hours} horas. 
+$X\sim P(\Sexpr{lambda1})$ y $P(X>\Sexpr{patients})=\Sexpr{round(sol1,4)}$.
+\item Sea $Y$ el número de horas en un día en las que algún paciente no puede ser atendido. 
+$Y\sim B(\Sexpr{hours.day}, \Sexpr{round(sol1,4)})$ y $P(Y>0)=\Sexpr{round(sol2,4)}$.
+Se necesitan 5 empleados para que esta probabilidad sea menor del 10\%.\\
+Se necesitan 5 empleados para que esta probabilidad sea menor del 10\%, ya que $P(X>\Sexpr{patients+1})=\Sexpr{round(sol1,4)}$ y $P(Y>0)=\Sexpr{round(sol4,4)}$, siendo ahora $Y\sim B(\Sexpr{hours.day}, \Sexpr{round(sol3,4)})$.
+\end{enumerate}
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{vad-fis-2}
+%% \extol{0.01}
+%% \degree{Fisioterapia}
+ 

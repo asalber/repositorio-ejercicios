@@ -1,0 +1,41 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+# m1 <- 26
+# s1 <- 2.1
+# m2 <- 15
+# s2 <- 2.8
+# 
+# x1 <- 46
+# x2 <- 49
+# p1 <- 0.8
+## QUESTION/ANSWER GENERATION
+# sol1 <- pnorm(x1, m, s, lower.tail = F)
+# sol2 <- pnorm(x2, m, s) - pnorm(x1, m, s)
+# a <- qnorm((1-p1)/2, m, s)
+# b <- qnorm(1-(1-p1)/2, m, s)
+@
+
+\begin{question}
+\puntos{3}El nivel de prolactina en mujeres embarazadas y no embarazadas sigue una distribución normal con distintas medias $\mu_1$ y $\mu_2$ respectivamente, pero con la misma varianza. Cuando los niveles de prolactina superan los 15 ng/ml, la mujer segrega leche por las glándulas mamarias. Se sabe que el 95\% de las mujeres embarazadas segregan leche pero esto sólo lo hacen el 1\% de las mujeres no embarazas.
+
+\begin{enumerate}
+\item Si se sabe que la mediana del nivel de prolactina en las mujeres embarazadas es 16 ng/ml, ¿cuánto valen las medias y desviación típica de ambas variables?\\
+Nota: Si no se ha sabido calcular la media y la desviación típica para mujeres embarazadas tomar $\mu_1=17$ ng/ml, $\sigma=2$ ng/ml para los siguientes apartados.
+\item ¿Cuál sería la probabilidad de que una mujer embarazada tenga un nivel de prolactina entre $15.5$ ng/ml y 17 ng/ml?
+\item ¿Qué nivel mínimo de prolactina tienen el 20\% de las mujeres embarazadas con mayores niveles?
+\end{enumerate}
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{vac-opt-2}
+%% \extol{0.001}
+%% \degree{Óptica}
+ 

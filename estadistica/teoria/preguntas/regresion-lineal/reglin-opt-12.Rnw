@@ -40,7 +40,7 @@ Se pide:
 \item Calcular las rectas de regresión de la distancia mínima al borde de la abertura de la membrana de Bruch sobre la edad, y de la distancia mínima al borde de la abertura de la membrana de Bruch sobre el área de la abertura de la membrana.
 \item ¿Cuánto aumenta o disminuye la distancia mínima al borde de la abertura de la membrana de Bruch por cada año más del paciente?
 \item ¿Qué porcentaje de la variabilidad de la distancia mínima al borde de la abertura de la membrana de Bruch explica cada uno de los modelos lineales anteriores?
-\item Utilizando el mejor de los modelos lineales anteriores predecir la distancia mínima al borde de la abertura de la membrana de Bruch de un paciente de 60 años con un área de la abertura de la membrana de 2 mm$^2$. 
+\item Utilizando el mejor de los modelos lineales anteriores predecir la distancia mínima al borde de la abertura de la membrana de Bruch de un paciente de 60 años con un área de la abertura de la membrana de 2 mm$^2$. ¿Es fiable esta predicción?
 \end{enumerate}
 \end{question}
 

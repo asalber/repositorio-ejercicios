@@ -1,137 +1,132 @@
 1.  **Question**\
-    La siguiente tabla recoge el número de pacientes diarios que
-    ingresaron en un hospital durante el mes de septiembre.
+    En una muestra de familias se ha medido la estatura del padre ($X$),
+    de la madre ($Y$) y de un hijo ($Z$) en centímetros, obteniendo los
+    siguientes resultados:
 
     $$% latex table generated in R 4.0.3 by xtable 1.8-4 package
-      % Sat Nov 14 08:04:46 2020
-      \begin{array}{cr}
-       \mbox{Pacientes} & \mbox{Frecuencia} \\ 
+      % Tue Nov 17 11:13:03 2020
+      \begin{array}{ccc}
+       \mbox{Estatura padre} & \mbox{Estatura madre} & \mbox{Estatura hijo} \\ 
         \hline
-      (10,14] & 6 \\ 
-        (14,18] & 10 \\ 
-        (18,22] & 7 \\ 
-        (22,26] & 6 \\ 
-        (26,30] & 1 \\ 
+      175 & 164 & 177 \\ 
+        182 & 175 & 180 \\ 
+        190 & 165 & 193 \\ 
+        165 & 160 & 172 \\ 
+        172 & 155 & 173 \\ 
+        183 & 172 & 188 \\ 
+        187 & 160 & 185 \\ 
+        174 & 151 & 177 \\ 
+        168 & 165 & 168 \\ 
+        178 & 163 & 182 \\ 
          \hline
       \end{array}$$
 
     Se pide:
 
-    1.  Estudiar la dispersión del 50% de los datos centrales.
+    1.  ¿En qué grupo es más representativa la media, en el de padres o
+        en el de madres?
 
-    2.  Calcular la media y estudiar la dispersión con respecto a ella.
+    2.  ¿Hay alguna estatura atípica entre los hijos?
 
-    3.  Estudiar la normalidad de los datos.
+    3.  Según su forma, ¿puede provenir la muestra de madres de una
+        distribución normal?
 
-    4.  Se sabe que en mismo hospital durante el mes de abril la media
-        fue 35 pacientes y la varianza 40 pacientes$^2$. ¿En qué mes
-        hubo más variabilidad relativa?
+    4.  ¿Quién es más alto dentro de su grupo, una madre con una altura
+        de 165 cm o un hijo con una altura de 178 cm?
 
-    5.  ¿Qué número de ingresos es relativamente mayor, 20 ingresos en
-        septiembre o 40 en abril?
+    5.  ¿Cómo afectaría a la representatividad de las medias que las
+        alturas se midiesen en metros en vez de en centímetros?
 
     Usar las siguientes sumas para los cálculos:\
-    $\sum x_in_i=544$ pacientes, $\sum x_i^2n_i=10464$ pacientes$^2$,
-    $\sum (x_i-\bar x)^3n_i=736.14$ pacientes$^3$ y\
-    $\sum (x_i-\bar x)^4n_i = 25367.44$ pacientes$^4$.\
+    Estatura padre: $\sum x_i=1774$ cm, $\sum x_i^2=315300$ cm$^2$,
+    $\sum (x_i-\bar x)^3=210.48$ cm$^3$ y $\sum (x_i-\bar x)^4=67596.27$
+    cm$^4$.\
+    Estatura madre: $\sum y_i=1630$ cm, $\sum y_i^2=266150$ cm$^2$,
+    $\sum (y_i-\bar y)^3=180$ cm$^3$ y $\sum (y_i-\bar y)^4=52324$
+    cm$^4$.\
+    Estatura hijo : $\sum z_i=1795$ cm, $\sum z_i^2=322737$ cm$^2$,
+    $\sum (z_i-\bar z)^3=1008$ cm$^3$ y $\sum (z_i-\bar z)^4=61906.62$
+    cm$^4$.
+
     **Solution**\
 
-    1.  $Q_1=16$ pacientes, $Q_3=20$ pacientes y $RI=4$ pacientes. Por
-        tanto, la dispersión central es pequeña.
+    1.  Padres: $\bar x=177.4$ cm, $s^2=59.24$ cm$^2$, $s=7.6968$ cm y
+        $cv=0.0434$.\
+        Madres: $\bar y=163$ cm, $s^2=46$ cm$^2$, $s=6.7823$ cm y
+        $cv=0.0416$.\
+        La estatura media es un poco más representativa en el grupo de
+        las madres.
 
-    2.  $\bar x=18.1333$ pacientes, $s^2=19.9822$ pacientes$^2$,
-        $s=4.4701$ pacientes y $cv=0.2465$. Por tanto, la dispersión con
-        respecto a la media es pequeña y la media representa bien.
+    2.  Las vallas en la muestra de hijos son $f_1=155$ cm y $f_2=203$
+        cm por lo que no hay estaturas atípicas entre los hijos.
 
-    3.  $g_1=0.2747$ y $g_2=-0.2346$. Como los coeficientes de asimetría
-        y apuntamiento están entre -2 y 2, podemos asumir que la muestra
+    3.  $g_{1y}=0.0577$ y $g_{2y}=-0.5272$. Como el coeficiente de
+        asimetría y el de apuntamiento están dentro del intervalo de -2
+        a 2, podemos asumir que la muestra de estaturas de madres
         proviene de una población normal.
 
-    4.  Sea $Y$ el número de pacientes diarios hospitalizados durante el
-        mes de abril. Entonces, $cv_y=0.8779$. Como el coeficiente de
-        variación del mes de abril es mayor que el de septiembre, la
-        dispersión relativa es mayor en abril.
+    4.  Puntuación típica madres: $z(165)=0.2949$.\
+        Puntuación típica hijos: $z(178)=-0.2052$.\
+        Así pues, una madre de 165 cm es relativamente más alta que un
+        hijo de 178 cm.
 
-    5.  Septiembre: $z(20)=-2.7143$.\
-        Abril: $z(40)=-83.9682$.\
-        Así pues, 40 pacientes hospitalizados en abril es relativamente
-        mayor que 20 pacientes hospitalizados en septiembre ya que su
-        puntuación típica es mayor.
+    5.  La respresentatividad de las medias no cambiaría ya que tanto
+        las medias como las desviaciones típicas estarían divididas
+        por 100.
 
 2.  **Question**\
-    El siguiente diagrama muestra la distribución de notas en tres
-    asignaturas distintas.
+    Uno de los parámetros que se suele utilizar para diagnosticar el
+    glaucoma de ángulo abierto es la distancia mínima al borde de la
+    abertura de la membrana de Bruch ($X$) de la retina, pero se sabe
+    que esta medida depende de la edad del paciente ($Y$) en años y del
+    área de la abertura de esta membrana por la que pasa el nervio
+    óptico ($Z$). En un estudio se ha medido en 1000 pacientes estas
+    variables obteniendo los siguientes resultados:
 
-    ![image](media/supplements1/exercise2/des-gen-14-diagrama-notas.svg)
-
-    1.  ¿Qué asignatura es más difícil?
-
-    2.  ¿En qué asignatura hay más variabilidad central de los datos?
-
-    3.  ¿En qué asignaturas hay datos atípicos?
-
-    4.  ¿Qué asignatura tiene una distribución más asimétrica?
-
-    **Solution**\
-
-    1.  La asignatura $Y$ ya que sus puntuaciones son menores (la caja y
-        los bigotes están más desplazados hacia la izquierda).
-
-    2.  La asignatura $X$ porque la anchura de la caja es mayor.
-
-    3.  La asignatura $Z$ porque hay una nota que está fuera de los
-        bigotes.
-
-    4.  La asignatura $Z$ porque la distancia desde el primer cuartil
-        hasta la mediana (lado izquierdo de la caja) es mayor que la
-        distancia desde la mediana al tercer cuartil (lado derecho de la
-        caja).
-
-3.  **Question**\
-    Se quiere estudiar si la estatura de los hijos depende de la
-    estatura de los padres y para ello se ha tomado una muestra de 10
-    familias con un hijo mayor de 20 años y se ha medido la estatura del
-    padre ($X$), de la madre ($Y$) y del hijo ($Z$) en centímetros,
-    obteniendo los siguientes resultados:
-
-    $\sum x_i=1774$ cm, $\sum y_i=1630$ cm, $\sum z_i=1795$ cm,\
-    $\sum x_i^2=315300$ cm$^2$, $\sum y_i^2=266150$ cm$^2$,
-    $\sum z_i^2=322737$ cm$^2$,\
-    $\sum x_iy_j=289364$ cm$^2$, $\sum x_iz_j=318958$ cm$^2$,
-    $\sum y_iz_j=292757$ cm$^2$.
+    $\sum x_i=346337.03$ $\mu$m, $\sum y_i=47212.1$ años,
+    $\sum z_i=2002.384$ mm$^2$,\
+    $\sum x_i^2=123828243.48$ $\mu$m$^2$, $\sum y_i^2=2601264.99$
+    años$^2$, $\sum z_i^2=4175.89$ mm$^4$,\
+    $\sum x_iy_j=15855138.59$ $\mu$m$\cdot$años, $\sum x_iz_j=686623.65$
+    $\mu$m$\cdot$mm$^2$, $\sum y_iz_j=94144.37$ años$\cdot$mm$^2$.
 
     Se pide:
 
-    1.  ¿De qué estatura depende más linealmente la estatura del hijo,
-        de la estatura del padre o de la madre?
+    1.  Calcular las rectas de regresión de la distancia mínima al borde
+        de la abertura de la membrana de Bruch sobre la edad, y de la
+        distancia mínima al borde de la abertura de la membrana de Bruch
+        sobre el área de la abertura de la membrana.
 
-    2.  Utilizyo el mejor modelo lineal, predecir la estatura de un hijo
-        cuyo padre mide 181cm y cuya madre mide 163cm.
+    2.  ¿Cuánto aumenta o disminuye la distancia mínima al borde de la
+        abertura de la membrana de Bruch por cada año más del paciente?
 
-    3.  ¿Cuánto aumentará la estatura del hijo por cada centímetro que
-        aumente la estatura del padre? ¿Y de la madre?
+    3.  ¿Qué porcentaje de la variabilidad de la distancia mínima al
+        borde de la abertura de la membrana de Bruch explica cada uno de
+        los modelos lineales anteriores?
 
-    4.  ¿Cómo afectaría a la fiabilidad de los modelos que las estaturas
-        se hubiesen medido en pulgadas? (Una pulgada son 2.54 cm).
+    4.  Utilizando el mejor de los modelos lineales anteriores predecir
+        la distancia mínima al borde de la abertura de la membrana de
+        Bruch de un paciente de 60 años con un área de la abertura de la
+        membrana de 2 mm$^2$.
 
     **Solution**\
 
-    1.  $\bar x=177.4$ cm, $s_x^2=59.24$ cm$^2$,\
-        $\bar y=163$ cm, $s_y^2=46$ cm$^2$,\
-        $\bar z=179.5$ cm, $s_z^2=53.45$ cm$^2$,\
-        $s_{xz}=69.8861$ cm$^2$ y $s_{yz}=17.2$ cm$^2$.\
-        $r^2_{xz}=0.9273$ y $r^2_{yz}=0.1203$, de manera que la estatura
-        de los hijos depende linealmente más de la estatura del padre ya
-        que su coeficiente de determinación es mayor.
+    1.  $\bar x=346.337$ $\mu$m, $s_x^2=3878.9051$ $\mu$m$^2$,\
+        $\bar y=47.2121$ años, $s_y^2=372.2826$ años$^2$,\
+        $\bar z=2.0024$ mm$^2$, $s_z^2=0.1664$ mm$^4$,\
+        $s_{xy}=-496.1599$ $\mu$m$\cdot$años y $s_{xz}=-6.8761$
+        $\mu$m$\cdot$mm$^2$.\
+        Recta de regresión de $X$ sobre $Y$: $x=409.259 + -1.3328y$.\
+        Recta de regresión de $X$ sobre $Z$: $x=429.1056 + -41.335z$.
 
-    2.  Recta de regresión de $Z$ sobre $X$: $z=-29.7808 + 1.1797x$ y
-        $z(181)=183.747$.
+    2.  La distancia mínima al borde de la abertura de la membrana de
+        Bruch disminuye $1.3328$ $\mu$m por cada año más del paciente.
 
-    3.  La estatura del hijo aumentará $1.1797$ cm por cada cm que
-        aumente la estatura del padre y $0.3739$ cm por cada cm que
-        aumente la estatura de la madre.
+    3.  $r^2_{xy}=0.1705$, de manera que la recta de regresión de $X$
+        sobre $Y$ explica el $17.05$% de la variabilidad de la distancia
+        mínima al borde de la abertura de la membrana de Bruch, y
+        $r^2_{xz}=0.0733$, de manera que la recta de regresión de $X$
+        sobre $Z$ explica el $7.33$% de la variabilidad de la distancia
+        mínima al borde de la abertura de la membrana de Bruch.
 
-    4.  La fiabilidad sería la misma, ya que al aplicar la misma
-        transformación lineal a $X$ y $Z$, las varianzas quedan
-        multiplicadas por el cuadrado de la pendiente y la covarianza
-        también queda multiplicada por el cuadrado de la pendiente.
+    4.  $x(60)=329.2939$ $\mu$m.

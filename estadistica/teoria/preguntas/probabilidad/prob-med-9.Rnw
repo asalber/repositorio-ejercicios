@@ -1,0 +1,39 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+pA <- 4/5
+pB <- 0.5
+pNoANoB <- 1/20
+
+## QUESTION/ANSWER GENERATION
+pAoB <- 1-pNoANoB
+pAB <- pA + pB - pAoB
+pNoAB <- pB-pAB
+pNoA <- 1-pA
+pNoB <- 1-pB
+pBSiA <- pAB/pA
+pBSiNoA <- pNoAB/pNoA
+@
+
+\begin{question}
+\puntos{2}Un organismo tiene la misma probabilidad de ser infectado por un virus o por una bacteria. A su vez, la probabilidad de ser infectado por un virus se duplica en el caso de que el organismo ya haya sido previamente infectado por una bacteria. Por otro lado, la probabilidad de que el organismo no sea infectado por ningún patógeno (ni virus, ni bacteria) es $0.52$.
+\begin{enumerate}
+\item ¿Cuál es la probabilidad de que el organismo sea infectado por un virus y una bacteria simultáneamente?
+\item ¿Qué probabilidad hay de que el organismo sea infectado por una bacteria si previamente había sido infectado por un virus?
+\item ¿Cuál es la probabilidad de que el organismo sea infectado solo por un virus?
+\item ¿Son independientes los sucesos ser infectado por un virus y ser infectado por una bacteria?
+\end{enumerate}
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{prob-med-9}
+%% \extol{0.001}
+%% \degree{Medicina}
+ 
