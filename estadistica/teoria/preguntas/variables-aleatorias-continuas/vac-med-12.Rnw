@@ -1,0 +1,40 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+# m1 <- 26
+# s1 <- 2.1
+# m2 <- 15
+# s2 <- 2.8
+# 
+# x1 <- 46
+# x2 <- 49
+# p1 <- 0.8
+## QUESTION/ANSWER GENERATION
+# sol1 <- pnorm(x1, m, s, lower.tail = F)
+# sol2 <- pnorm(x2, m, s) - pnorm(x1, m, s)
+# a <- qnorm((1-p1)/2, m, s)
+# b <- qnorm(1-(1-p1)/2, m, s)
+@
+
+\begin{question}
+\puntos{2.5}Se sabe que el tiempo que dura una consulta de un optometrista sigue una distribución normal de media 12 minutos y desviación típica 3 minutos. Se pide:
+
+\begin{enumerate}
+\item ¿Qué porcentaje de las consultas durarán entre 10 y 15 minutos?
+\item Si los pacientes se citan cada 20 minutos para evitar aglomeraciones. ¿Cuál es la probabilidad de que a un paciente le toque esperar a que acabe la consulta anterior si esta empezó puntual?
+\item Calcular el percentil 80 del tiempo que duran las consultas e interpretarlo.
+\end{enumerate}
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{vac-opt-2}
+%% \extol{0.001}
+%% \degree{Óptica}
+ 

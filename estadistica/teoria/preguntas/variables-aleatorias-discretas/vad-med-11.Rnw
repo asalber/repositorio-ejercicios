@@ -19,7 +19,7 @@ sol4 <- pbinom(0, hours.day, sol3, lower.tail = F)
 \begin{enumerate}
 \item Calcula la probabilidad de que el recién nacido parpadee 2 veces en medio minuto.
 \item En un hospital nacen 5 niños con síndrome de Moebius. Calcula la probabilidad de que al menos 3 de ellos parpadeen en su primer minuto de vida.
-\item ¿En qué distribución es más representativa la media, en la del número de veces que parpadea en un minunto o en la del número de veces que parpadea en medio minuto?
+%\item ¿En qué distribución es más representativa la media, en la del número de veces que parpadea en un minunto o en la del número de veces que parpadea en medio minuto?
 \end{enumerate}
 \end{question}  
 

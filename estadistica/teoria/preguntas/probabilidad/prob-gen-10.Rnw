@@ -1,0 +1,52 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+pA <- 4/5
+pB <- 0.5
+pNoANoB <- 1/20
+
+## QUESTION/ANSWER GENERATION
+pAoB <- 1-pNoANoB
+pAB <- pA + pB - pAoB
+pNoAB <- pB-pAB
+pNoA <- 1-pA
+pNoB <- 1-pB
+pBSiA <- pAB/pA
+pBSiNoA <- pNoAB/pNoA
+@
+
+\begin{question}
+\puntos{2.5} La tabla siguiente muestra el número de alumnos que aprobaron Física, Matemáticas y Química en un curso con 100 alumnos:
+
+\begin{center}
+  \begin{tabular}{lr}
+  Física & 65 \\
+  Matemáticas & 60 \\
+  Química & 55 \\
+  Física y Matemáticas & 40 \\
+  Matemáticas y Química & 35 \\
+  Física y Química & 45 \\
+  Física, Matemáticas y Química & 30
+  \end{tabular}
+\end{center}
+
+\begin{enumerate}
+\item Calcular la probabilidad de que un alumno haya aprobado Física si no ha aprobado Matemáticas.
+\item Calcular la probabilidad de que un alumno no haya aprobado Matemáticas si ha aprobado Física y Química.
+\item Calcular la probabilidad de que un alumno no haya aprobado ninguna asignatura.
+\item ¿Son independientes los sucesos aprobar Física y aprobar Química? 
+\end{enumerate}
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{prob-med-2}
+%% \extol{0.001}
+%% \degree{Medicina}
+ 

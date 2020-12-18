@@ -3,24 +3,24 @@ library("exams")
 
 setwd("estadistica/teoria/examenes")
 
-questions <- c("prob-med-5", "ries-opt-2", "vad-opt-5", "vac-gen-6")
+questions <- c("prob-gen-10", "test-opt-5", "vad-med-11", "vac-med-12")
 
-exams2pdf(questions, n=1, name = c("examen-opt-2019-11-13", "solucion-opt-2019-11-13"), encoding = "UTF-8",
+exams2pdf(questions, n=1, name = c("examen-opt-2020-12-21", "solucion-opt-2020-12-21"), encoding = "UTF-8",
   dir = "pdf",
   edir = "../preguntas",
   template = c("plantillas/examenceu.tex", "plantillas/solucionceu.tex"),
   header = list(
     Subject = "ESTADÍSTICA\\\\[2mm] (PROBABILIDAD Y VARIABLES ALEATORIAS)",
     Degree= "1º Óptica",
-    Date = "13 de noviembre de 2019",
+    Date = "21 de diciembre de 2020",
     Version = "A",
-    Time = "1 hora y 15 minutos"
-  ))
+    Time = "1 hora"
+))
 
   # Borrar directorio de imagenes del examen
 unlink("img/exam1", recursive = TRUE) 
 exams2pandoc(questions, n=1, 
-            name = "examen-opt-2019-11-13", 
+            name = "examen-opt-2020-12-21", 
             encoding = "UTF-8", 
             type="latex",
             dir = "latex",
@@ -30,4 +30,4 @@ exams2pandoc(questions, n=1,
             svg=T
 )
 
-pandoc("latex/examen-opt-2019-11-131.latex", format="markdown")
+pandoc("latex/examen-opt-2020-12-211.latex", format="markdown")

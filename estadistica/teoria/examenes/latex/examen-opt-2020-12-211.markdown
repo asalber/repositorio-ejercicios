@@ -1,0 +1,94 @@
+1.  **Question**\
+    La tabla siguiente muestra el número de alumnos que aprobaron
+    Física, Matemáticas y Química en un curso con 100 alumnos:
+
+      ------------------------------- ----
+      Física                            65
+      Matemáticas                       60
+      Química                           55
+      Física y Matemáticas              40
+      Matemáticas y Química             35
+      Física y Química                  45
+      Física, Matemáticas y Química     30
+      ------------------------------- ----
+
+    1.  Calcular la probabilidad de que un alumno haya aprobado Física
+        si no ha aprobado Matemáticas.
+
+    2.  Calcular la probabilidad de que un alumno no haya aprobado
+        Matemáticas si ha aprobado Física y Química.
+
+    3.  Calcular la probabilidad de que un alumno no haya aprobado
+        ninguna asignatura.
+
+    4.  ¿Son independientes los sucesos aprobar Física y aprobar
+        Química?
+
+    **Solution**\
+
+2.  **Question**\
+    La prueba del reflejo rojo es un método simple y económico
+    implementado en muchos países como una parte importante del cribado
+    infantil de patologías oculares. Este test se aplicó a una muestra
+    de 10000 niños, 260 de los cuales presentaban alguna patología,
+    produciéndose 25 falsos positivos y 82 falsos negativos.
+
+    1.  ¿Cuál es la sensibilidad y especificidad del test?
+
+    2.  Según los valores predictivos, ¿para qué es mejor el test, para
+        confirmar o para rechazar la presencia de alguna patología?
+
+    **Solution**\
+    Sea $E$ el suceso consistente en tener la enfermedad y $+$ y $-$ los
+    sucesos correspondientes a obtener un resultado positivo y negativo
+    respectivamente en el test.
+
+    1.  $VPP=0.9192$.
+
+    2.  $VPN=0.9776$.
+
+    3.  Es más fiable para descartar la enfermedad ya que el valor
+        predictivo negativo es mayor que el valor predictivo positivo.
+
+    4.  $P(E\cap +)+P(\overline E\cap -) = 0.966$.
+
+3.  **Question**\
+    Un recién nacido afectado por el síndrome de Moebius parpadea, en
+    término medio, 2 veces por minuto.
+
+    1.  Calcula la probabilidad de que el recién nacido parpadee 2 veces
+        en medio minuto.
+
+    2.  En un hospital nacen 5 niños con síndrome de Moebius. Calcula la
+        probabilidad de que al menos 3 de ellos parpadeen en su primer
+        minuto de vida.
+
+    **Solution**\
+
+    1.  Sea $X$ el número de pacientes que llegan en 1 horas.
+        $X\sim P(2)$ y $P(X>4)=0.0527$.
+
+    2.  Sea $Y$ el número de horas en un día en las que algún paciente
+        no puede ser atendido. $Y\sim B(6, 0.0527)$ y $P(Y>0)=0.2771$.
+        Se necesitan 5 empleados para que esta probabilidad sea menor
+        del 10%.\
+        Se necesitan 5 empleados para que esta probabilidad sea menor
+        del 10%, ya que $P(X>5)=0.0527$ y $P(Y>0)=0.0954$, siendo ahora
+        $Y\sim B(6, 0.0166)$.
+
+4.  **Question**\
+    Se sabe que el tiempo que dura una consulta de un optometrista sigue
+    una distribución normal de media 12 minutos y desviación típica 3
+    minutos. Se pide:
+
+    1.  ¿Qué porcentaje de las consultas durarán entre 10 y 15 minutos?
+
+    2.  Si los pacientes se citan cada 20 minutos para evitar
+        aglomeraciones. ¿Cuál es la probabilidad de que a un paciente le
+        toque esperar a que acabe la consulta anterior si esta empezó
+        puntual?
+
+    3.  Calcular el percentil 80 del tiempo que duran las consultas e
+        interpretarlo.
+
+    **Solution**\

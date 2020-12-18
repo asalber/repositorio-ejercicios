@@ -1,0 +1,117 @@
+\begin{enumerate}
+\item
+  \textbf{Question}\\
+  La tabla siguiente muestra el número de alumnos que aprobaron Física,
+  Matemáticas y Química en un curso con 100 alumnos:
+
+  \begin{longtable}[]{@{}lr@{}}
+  \toprule
+  \endhead
+  Física & 65\tabularnewline
+  Matemáticas & 60\tabularnewline
+  Química & 55\tabularnewline
+  Física y Matemáticas & 40\tabularnewline
+  Matemáticas y Química & 35\tabularnewline
+  Física y Química & 45\tabularnewline
+  Física, Matemáticas y Química & 30\tabularnewline
+  \bottomrule
+  \end{longtable}
+
+  \begin{enumerate}
+  \item
+    Calcular la probabilidad de que un alumno haya aprobado Física si no
+    ha aprobado Matemáticas.
+  \item
+    Calcular la probabilidad de que un alumno no haya aprobado
+    Matemáticas si ha aprobado Física y Química.
+  \item
+    Calcular la probabilidad de que un alumno no haya aprobado ninguna
+    asignatura.
+  \item
+    ¿Son independientes los sucesos aprobar Física y aprobar Química?
+  \end{enumerate}
+
+  \textbf{Solution}\\
+\item
+  \textbf{Question}\\
+  La prueba del reflejo rojo es un método simple y económico
+  implementado en muchos países como una parte importante del cribado
+  infantil de patologías oculares. Este test se aplicó a una muestra de
+  10000 niños, 260 de los cuales presentaban alguna patología,
+  produciéndose 25 falsos positivos y 82 falsos negativos.
+
+  \begin{enumerate}
+  \item
+    ¿Cuál es la sensibilidad y especificidad del test?
+  \item
+    Según los valores predictivos, ¿para qué es mejor el test, para
+    confirmar o para rechazar la presencia de alguna patología?
+  \end{enumerate}
+
+  \textbf{Solution}\\
+  Sea \(E\) el suceso consistente en tener la enfermedad y \(+\) y \(-\)
+  los sucesos correspondientes a obtener un resultado positivo y
+  negativo respectivamente en el test.
+
+  \begin{enumerate}
+  \item
+    \(VPP=0.9192\).
+  \item
+    \(VPN=0.9776\).
+  \item
+    Es más fiable para descartar la enfermedad ya que el valor
+    predictivo negativo es mayor que el valor predictivo positivo.
+  \item
+    \(P(E\cap +)+P(\overline E\cap -) = 0.966\).
+  \end{enumerate}
+\item
+  \textbf{Question}\\
+  Un recién nacido afectado por el síndrome de Moebius parpadea, en
+  término medio, 2 veces por minuto.
+
+  \begin{enumerate}
+  \item
+    Calcula la probabilidad de que el recién nacido parpadee 2 veces en
+    medio minuto.
+  \item
+    En un hospital nacen 5 niños con síndrome de Moebius. Calcula la
+    probabilidad de que al menos 3 de ellos parpadeen en su primer
+    minuto de vida.
+  \end{enumerate}
+
+  \textbf{Solution}\\
+
+  \begin{enumerate}
+  \item
+    Sea \(X\) el número de pacientes que llegan en 1 horas.
+    \(X\sim P(2)\) y \(P(X>4)=0.0527\).
+  \item
+    Sea \(Y\) el número de horas en un día en las que algún paciente no
+    puede ser atendido. \(Y\sim B(6, 0.0527)\) y \(P(Y>0)=0.2771\). Se
+    necesitan 5 empleados para que esta probabilidad sea menor del
+    10\%.\\
+    Se necesitan 5 empleados para que esta probabilidad sea menor del
+    10\%, ya que \(P(X>5)=0.0527\) y \(P(Y>0)=0.0954\), siendo ahora
+    \(Y\sim B(6, 0.0166)\).
+  \end{enumerate}
+\item
+  \textbf{Question}\\
+  Se sabe que el tiempo que dura una consulta de un optometrista sigue
+  una distribución normal de media 12 minutos y desviación típica 3
+  minutos. Se pide:
+
+  \begin{enumerate}
+  \item
+    ¿Qué porcentaje de las consultas durarán entre 10 y 15 minutos?
+  \item
+    Si los pacientes se citan cada 20 minutos para evitar
+    aglomeraciones. ¿Cuál es la probabilidad de que a un paciente le
+    toque esperar a que acabe la consulta anterior si esta empezó
+    puntual?
+  \item
+    Calcular el percentil 80 del tiempo que duran las consultas e
+    interpretarlo.
+  \end{enumerate}
+
+  \textbf{Solution}\\
+\end{enumerate}
