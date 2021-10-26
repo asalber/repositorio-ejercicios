@@ -1,0 +1,34 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+mx <- 5
+sx <- 2
+sy <- 25
+sy <- 5
+## QUESTION/ANSWER GENERATION
+
+@
+
+\begin{question}
+\puntos{5}La hormona gonadotropina coriónica (hCG) suele utilizarse como indicador para detectar un embarazo en las primeras semanas de gestación. Un test diagnostica un embarazo cuando el nivel de hCG supera los 12 mUI/ml. Sabiendo que la concentración de hCG en mujeres no embarazadas sigue una distribución normal con media 5 mUI/ml y desviación típica 2 mUI/ml, mientras que en embarazadas sigue una distribución normal con media 25 mUI/ml y desviación típica 5 mUI/ml, se pide:
+\begin{enumerate}
+\item Calcular el porcentaje de mujeres embarazadas con una concentración de hCG entre 15 y 20 mUI/ml.
+\item ¿Por encima de qué concentración de hCG estarán el 1\% de las mujeres no embarazadas?
+\item Calcular la sensibilidad y la especificidad del test.
+\item Si en una población hay un 0.5\% de mujeres embarazadas, ¿qué porcentaje de falsos positivos dará el test? ¿Y de falsos negativos? 
+\end{enumerate}
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{vac-med-13}
+%% \extol{0.001}
+%% \degree{Medicina}
+ 
+  

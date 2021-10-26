@@ -1,0 +1,32 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+
+## QUESTION/ANSWER GENERATION
+
+
+@
+
+\begin{question}
+\puntos{1} En un estudio de regresión se sabe que la recta de regresión de $Y$ sobre $X$ es $y+2x-10=0$ y la recta de regresión de $X$ sobre $Y$ es $y+3x-14=0$.
+\begin{enumerate}
+\item Calcular las medias de $X$ e $Y$.
+\item Calcular el coeficiente de correlación lineal e interpretarlo.
+\end{enumerate}
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+\begin{enumerate}
+\item $\bar x=4$ y $\bar y=2$.
+\item $r=-0.8165$. El coeficiente de correlación lineal está cerca de -1 lo que significa que existe una relación lineal fuerte e inversa entre $X$ e $Y$.
+\end{enumerate}
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{reglin-gen-14}
+%% \extol{0.001}
+%% \degree{Todos}
+ 

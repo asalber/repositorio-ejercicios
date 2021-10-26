@@ -1,0 +1,41 @@
+1.  **Question**\
+    Un avión se encuentra a 800 metros de altitud cuando divisa un
+    pueblo con un ángulo de depresión de 15º.
+
+    1.  ¿Qué distancia debe recorrer en linea recta hacia el pueblo
+        manteniendo su altitud, para situarse sobre él?
+
+    2.  ¿Si el aeropuerto está situado a 2 km del pueblo en esa misma
+        dirección, ¿con qué ángulo debe empezar a descender para
+        aterrizar?
+
+    **Solution**\
+
+2.  **Question**\
+    El síndrome PFAPA (acrónimo en inglés de fiebre periódica,
+    estomatitis aftosa, faringitis y adenitis) se caracteriza por
+    episodios recurrentes de fiebre que pueden durar de 3 a 6 días. En
+    el caso de un paciente, la evolución de la temperatura en uno de los
+    episodios de fiebre viene dado por la expresión
+    $T(x)=36.5+e^{\frac{-(x-2)^2}{2}}$, donde $T$ es la temperatura del
+    paciente y $x$ es el tiempo en días que transcurre desde que
+    comienza un episodio de subida de fiebre.
+
+    1.  ¿Cuál será la temperatura máxima que alcanzará el paciente?
+
+    2.  ¿Cuál será la variación de la temperatura del paciente al día de
+        empezar con el episodio febril?
+
+    **Solution**\
+
+3.  **Question**\
+    La evolución de un cultivo de hongos satisface la ecuación
+    $y\sqrt{2t}dy-2y^2dt=0$, donde $y$ es la cantidad de hongos en cada
+    instante $t$ en horas. Si en el instante inicial del cultivo había
+    10 hongos,
+
+    1.  ¿cuántos hongos habrá al cabo de 2 horas?
+
+    2.  ¿Cuándo habrá 1000 hongos en el cultivo?
+
+    **Solution**\

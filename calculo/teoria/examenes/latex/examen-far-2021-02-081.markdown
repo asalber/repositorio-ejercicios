@@ -1,0 +1,51 @@
+1.  **Question**\
+    La cantidad de nieve (en cm. de altura) caída durante la última
+    borrasca en Madrid se puede medir mediante la función
+    $$f(x,y)=\frac{xy}{x^2+y^2},$$ donde $x$ representa la componente
+    este (en metros) e $y$ representa la componente norte (en metros) de
+    la región.
+
+    1.  Un esquiador se encuentra en el punto $a=(0,1)$. ¿Cuál es la
+        tasa de variación de la cantidad de nieve si se mueve hacia el
+        sur?
+
+    2.  En qué dirección debe moverse el esquiador si quiere que la
+        cantidad de nieve aumente lo más rápidamente posible? ¿Cuánto
+        aumenta la cantidad de nieve en esta dirección? (Recuerda que el
+        esquiador se encuentra en el punto $a=(0,1)$).
+
+    3.  Otro esquiador observa que si se dirige hacia el oeste la
+        cantidad de nieve no cambia. ¿En qué puntos puede estar este
+        esquiador si sabe que la componente norte en la que se encuentra
+        es $y=1$?
+
+    **Solution**\
+
+2.  **Question**\
+    El síndrome PFAPA (acrónimo en inglés de fiebre periódica,
+    estomatitis aftosa, faringitis y adenitis) se caracteriza por
+    episodios recurrentes de fiebre que pueden durar de 3 a 6 días. En
+    el caso de un paciente, la evolución de la temperatura en uno de los
+    episodios de fiebre viene dado por la expresión
+    $T(x)=36.5+e^{\frac{-(x-2)^2}{2}}$, donde $T$ es la temperatura del
+    paciente y $x$ es el tiempo en días que transcurre desde que
+    comienza un episodio de subida de fiebre.
+
+    1.  ¿Cuál será la temperatura máxima que alcanzará el paciente?
+
+    2.  ¿Cuál será la variación de la temperatura del paciente al día de
+        empezar con el episodio febril?
+
+    **Solution**\
+
+3.  **Question**\
+    La evolución de un cultivo de hongos satisface la ecuación
+    $y\sqrt{2t}dy-2y^2dt=0$, donde $y$ es la cantidad de hongos en cada
+    instante $t$ en horas. Si en el instante inicial del cultivo había
+    10 hongos,
+
+    1.  ¿cuántos hongos habrá al cabo de 2 horas?
+
+    2.  ¿Cuándo habrá 1000 hongos en el cultivo?
+
+    **Solution**\

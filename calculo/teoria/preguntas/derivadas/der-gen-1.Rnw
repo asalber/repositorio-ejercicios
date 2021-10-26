@@ -1,0 +1,33 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+
+## QUESTION/ANSWER GENERATION
+# sample size
+
+@
+
+\begin{question}
+\puntos{3} Una pelota de playa tiene un volumen de 50 dm$^3$ en el momento que empieza a introducirse aire a razón de 2 dm$^3$/min.
+\begin{enumerate}
+\item ¿A qué velocidad cambiará el radio?
+\item ¿Aproximadamente cuándo la superficie de la pelota se habrá duplicado?
+\end{enumerate}
+Nota: El volumen de una esfera es $V(r)=\frac{4}{3}\pi r^3$ y la superficie $S(r)=4\pi r^2$.
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+\begin{enumerate}
+\item $\dfrac{dr}{dt}=0.0305$ dm/min.
+\item Usando la aproximación lineal del diferencial $dt = S'/dS=35.5013$ minutos aproximadamente.
+\end{enumerate}
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{der-gen-1}
+%% \extol{0.001}
+%% \degree{Todos}
+ 

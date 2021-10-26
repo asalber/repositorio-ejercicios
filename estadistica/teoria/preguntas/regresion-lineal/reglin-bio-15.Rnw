@@ -1,0 +1,62 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+x <- c(0, 0, 3, 3, 6, 6, 10, 10, 20, 20, 30, 30)
+y <- c(33.3, 31, 29.8, 27.8, 28, 29, 25.5, 23.8, 18.3, 15.5, 11.7, 10)
+n <- length(x)
+table <- matrix(c(x,y), nrow = 2, byrow = T)
+#decimals <- matrix(rep(1,2*n), nrow = 2, ncol=9, byrow=TRUE)
+rownames(table) <- c("\\mbox{Ácido laetisárico (mg/l)}", "\\mbox{Crecimiento hongo (cm)}")
+sumx <- sum(x)
+sumy <- sum(y)
+sumx2 <- sum(x^2)
+sumy2 <- sum(y^2)
+sumxy <- sum(x*y)
+
+## QUESTION/ANSWER GENERATION
+# means
+mx <- sumx / n
+my <- sumy / n
+# variances
+s2x <- sumx2/n-mx^2
+s2y <- sumy2/n-my^2
+# Covariances
+sxy <- sumxy/n-mx*my
+# Detercmation coeff
+r2xy <- sxy^2/(s2x*s2y)
+# Slopes
+byx <- sxy/s2x
+@
+
+\begin{question}
+\puntos{5}El ácido laetisárico es un compuesto que se puede emplear para controlar enfermedades causadas por hongos en algunas plantaciones. Los siguientes datos muestran el crecimiento radial (en cm.) del hongo \textsl{Pleurotus ostreatus} expuesto a diferentes concentraciones (en mg/l) de dicho ácido.
+
+$$
+<<echo=FALSE, results=tex>>=
+library(xtable)
+print(xtable(table, auto=T), tabular.environment="array", include.colnames = F, floating=F, hline.after = c(0,nrow(table)), sanitize.text.function = function(x) { x })
+@
+$$
+
+\begin{enumerate}
+\item Obtén la recta que mejor se ajusta para estudiar el crecimiento de los hongos en función de la concentración de ácido.
+\item Calcula los coeficientes de correlación y de determinación de la recta. ¿Qué nos indican estos valores?
+\item Por cada mg/l más de concentración de ácido, ¿crece o decrece la población de hongos? ¿Cuánto?
+\item ¿Qué crecimiento cabe esperar si el hongo se expone a concentraciones de 20 y 200 mg/l? ¿Cuál de estas predicciones es más fiable?
+\end{enumerate}
+Utiliza las siguientes sumas para los cálculos:
+$\sum x_i=\Sexpr{sumx}$ mg/l, $\sum y_i=\Sexpr{sumy}$ cm, $\sum x_i^2=\Sexpr{sumx2}$ (mg/l)$^2$, $\sum y_i^2=\Sexpr{sumy2}$ cm$^2$ y $\sum x_iy_j=\Sexpr{sumxy}$ mg/l$\cdot$ cm.
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{reglin-bio-15}
+%% \extol{0.001}
+%% \degree{Biotecnología}
+ 

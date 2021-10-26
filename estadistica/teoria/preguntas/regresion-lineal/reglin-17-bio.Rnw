@@ -1,0 +1,69 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+x <- c(90, 230, 240, 260, 330, 400, 410, 550, 590, 610, 700, 790)
+y <- c(110, 200, 130, 150, 180, 160, 230, 180, 230, 260, 320, 370)
+n <- length(x)
+table <- matrix(c(x,y), nrow = 2, byrow = T)
+#decimals <- matrix(rep(1,2*n), nrow = 2, ncol=9, byrow=TRUE)
+rownames(table) <- c("\\mbox{Altitud}", "\\mbox{Tasa de respiración}")
+sumx <- sum(x)
+sumy <- sum(y)
+sumx2 <- sum(x^2)
+sumy2 <- sum(y^2)
+sumxy <- sum(x*y)
+
+## QUESTION/ANSWER GENERATION
+# means
+mx <- sumx / n
+my <- sumy / n
+# variances
+s2x <- sumx2/n-mx^2
+s2y <- sumy2/n-my^2
+# Covariances
+sxy <- sumxy/n-mx*my
+# Detercmation coeff
+r2xy <- sxy^2/(s2x*s2y)
+# Slopes
+byx <- sxy/s2x
+@
+
+\begin{question}
+\puntos{4}El serbal es una especie de árbol que crece en terrenos a diferentes altitudes. Se quiere estudiar cómo se adapta el serbal a distintos hábitats, por lo que se recogen muestras de ramas de 12 árboles en diferentes altitudes de Escocia. En el laboratorio se observó la tasa de respiracion noturna de cada rama. En la siguiente tabla se muestra la altitud (en metros) de cada rama y la tasa de respiración nocturna (en nl de O$_2$ por hora por mg de peso).
+
+$$
+<<echo=FALSE, results=tex>>=
+library(xtable)
+print(xtable(table, auto=T), tabular.environment="array", include.colnames = F, floating=F, hline.after = c(0,nrow(table)), sanitize.text.function = function(x) { x })
+@
+$$
+
+\begin{enumerate}
+\item Estudia y cuantifica si la altitud influye de manera lineal y positiva en la tasa de respiración. Justifica tu respuesta.
+\item ¿En cuánto valorarías el aumento de la tasa de respiración por cada $100$ metros de incremento en la altitud? Justifica tu respuesta.
+\item ¿Qué tasa de respiración se espera de un serbal que se encuentra a $500$ metros de altitud? ¿Y para un serbal que se encuentra sobre el nivel del mar?
+\item ¿Son fiables tus predicciones? Justifica tus respuestas.
+\end{enumerate}
+Usar las siguientes sumas para los cálculos:
+$\sum x_i=\Sexpr{sumx}$ m, $\sum y_i=\Sexpr{sumy}$ nl/(mg$\cdot$ h), $\sum x_i^2=\Sexpr{sumx2}$ (m)$^2$, $\sum y_i^2=\Sexpr{sumy2}$ nl/(mg$\cdot$ h)$^2$ y $\sum x_iy_j=\Sexpr{sumxy}$ m$\cdot$ nl/(mg$\cdot$ h).
+\end{question}
+
+%% SOLUTIONS
+\begin{solution}
+\item $\bar x=\Sexpr{round(mx,4)}$ m, $s_x^2=\Sexpr{round(s2x,4)}$ (m)$^2$,\\
+$\bar y=\Sexpr{round(my,4)}$ nl/(mg$\cdot$ h), $s_y^2=\Sexpr{round(s2y,4)}$ nl/(mg$\cdot$ h)$^2$,\\
+$s_{xy}=\Sexpr{round(sxy,4)}$ m $\cdot$ nl/(mg$\cdot$ h).\\
+Como la covarianza es positiva, existe una relación lineal directa entre la altitud y la tasa de respiración.
+\item La tasa de respiración aumenta $b_{yx} = \Sexpr{round(byx,4)}$ nl/(mg$\cdot$h) por cada metro, o lo que es lo mismo, \Sexpr{round(byx *100,4)}$ nl/(mg$\cdot$h) por cada 100 metros.
+\item Recta de regresión de la tasa de respiración sobre la altitud: $y=\Sexpr{round(lm$coefficients[1], 4)} + \Sexpr{round(lm$coefficients[2], 4)}x$.\\
+Predicciones: $y(500) = \Sexpr{round(lm$coefficients[1] + lm$coefficients[2]*500, 4)}$ nl/(mg$\cdot$ h) y $y(0) = \Sexpr{round(lm$coefficients[1] + lm$coefficients[2]*0, 4)}$ nl/(mg$\cdot$ h).
+\item $r^2 = \Sexpr{round(r2, 4)}$. Como el coeficiente de determinación está próximo a 1, la recta de regresión se ajusta bien a la nube de puntos, pero el tamaño muestral es demasiado pequeño para que las predicciones sean fiables. Además, la predicción para la altura a nivel del mar es menos fiable aún porque cae fuera del rango de valores observados en la muestra.
+\end{enumerate}
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{reglin-17-bio}
+%% \extol{0.001}
+%% \degree{Biotecnología}
+ 

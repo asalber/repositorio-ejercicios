@@ -1,0 +1,126 @@
+\begin{enumerate}
+\item
+  \textbf{Question}\\
+  Un test para diagnosticar el cáncer de próstata produce un 1\% de
+  falsos positivos y un 0.2\% de falsos negativos. Se sabe también que
+  una población 1 cada 400 hombres sufre este tipo de cáncer.
+
+  \begin{enumerate}
+  \item
+    Calcular la sensibilidad y la especificidad del test.
+  \item
+    Si un hombre tiene un resultado positivo en el test, ¿cuál es la
+    probabilidad de que tenga cáncer de próstata?
+  \item
+    Calcular e interpretar el valor negativo predictivo del test.
+  \item
+    ¿Es este teste mejor para detectar o para descartar el cáncer de
+    próstata?
+  \item
+    Para ver si existe asociación entre el cáncer de próstata y la
+    práctica del deporte, se tomó una muestra de 1000 hombres, de los
+    cuales 700 practicaban deporte, y se observó que había 2 hombres con
+    cáncer de próstata en el grupo de los que practicaban deporte y 3
+    hombres con cáncer de próstata en el grupo de los que no practicaban
+    deporte. Calcular el riesgo relativo y el odds ratio de sufrir
+    cáncer de próstata cuando se practica deporte.
+  \end{enumerate}
+
+  \textbf{Solution}\\
+  Sea \(C\) el suceso correspondiente a sufrir cáncer de próstata y
+  \(+\) y \(-\) los sucesos consistentes en tener un resultado positivo
+  y negativo en el test respectivamente.
+
+  \begin{enumerate}
+  \item
+    La sensibilidad es \(P(+|D) = 0.2\) y la especificidad
+    \(P(-|\overline D) = 0.99\).
+  \item
+    El valor predictivo positivo es \(P(D|+) = 0.0476\).
+  \item
+    El valor predictivo negativo es \(P(\overline D|-) = 0.998\).
+  \item
+    Como el valor predictivo negativo es mayor que el valor predictivo
+    positivo, el test es mejor para descartar la enfermedad que para
+    confirmarla. De hecho el test no permite detectar la enfermedad ya
+    que el valor predictivo positivo es menor que 0.5.
+  \item
+    \(RR(D)=0.2857\) y \(OR(D)=0.2837\). Por tanto, existe una
+    asociación entre la práctica del deporte y el cáncer de próstata, de
+    manera que la probabilidad de sufrir cancer de próstata cuando un
+    hombre practica deporte es casi un cuarto de la probabilidad de
+    sufrirlo cuando no se practica deporte, y con el odds ocurre algo
+    similar.
+  \end{enumerate}
+\item
+  \textbf{Question}\\
+  La probabilidad de que un hijo de una madre con el gen del daltonismo
+  y un padre sin el gen del daltonismo sea un varón daltónico es
+  \(0.25\).
+
+  \begin{enumerate}
+  \item
+    Si esta pareja tiene 5 hijos, ¿cuál es la probabilidad de que a lo
+    sumo 2 sean varones daltónicos?
+  \item
+    Si esta pareja tiene 5 hojios, y el sexo de los hijos es
+    equiprobable, ¿cuál es la probabilidad de que 3 o más sean mujeres?
+  \item
+    Si se toma una muestra aleatoria de 10000 hombres de una población
+    en la que hay un varón daltónico por cada 5000 hombres, ¿cuál es la
+    probabilidad de que haya más de 3 varones daltónicos?
+  \end{enumerate}
+
+  \textbf{Solution}\\
+
+  \begin{enumerate}
+  \item
+    Sea \(X\) el número de hijos varones daltónicos en una muestra de 5
+    hijos de la pareja. Entonces \(X\sim B(5, 0.25)\) y
+    \(P(X\leq 2)=0.8965\).
+  \item
+    Sea \(Y\) el número de mujeres en una muestra de 5 hijos de la
+    pareja. Entonces \(Y\sim B(5, 0.5)\) y \(P(Y\geq 3)=0.5\).
+  \item
+    Sea \(Z\) el número de varones daltónicos en una muestra de 1000
+    hombres de la población. Entonces
+    \(Z\sim B(10000, 2e-04)\approx P(2)\) y \(P(Z>3)=0.1429\).
+  \end{enumerate}
+\item
+  \textbf{Question}\\
+  La capacidad craneal de los primates sigue una distribución normal de
+  media 1200 cm\(^3\) y desviación típica 140 cm\(^3\).
+
+  \begin{enumerate}
+  \item
+    Calcular la probabilidad de que la capacidad craneal de un primate
+    sea mayor de 1400 cm\(^3\).
+  \item
+    Calcular la probabilidad de que la capacidad craneal de un primate
+    sea exáctamente 1400 cm\(^3\).
+  \item
+    Calcular la capacidad craneal por encima de la cual estarán el 20\%
+    of primates.
+  \item
+    Calcular el rango intercuartílico de la capacidad craneal de los
+    primates e interpretarlo.
+  \end{enumerate}
+
+  \textbf{Solution}\\
+  Sea \(X\) la capacidad craneal de los primates. Entonces
+  \(X\sim N(1200,140)\).
+
+  \begin{enumerate}
+  \item
+    \(P(X>1400) = 0.0766\).
+  \item
+    \(P(X=1400) = 0\).
+  \item
+    \(P_{80} = 1317.827\) cm\(^3\).
+  \item
+    \(Q_1 =  1105.5714\) cm\(^3\), \(Q_3 =  1294.4286\) cm\(^3\) y
+    \(IQR = 188.8571\) cm\(^3\). Por tanto, el 50\% central de los datos
+    está concentrado en un intervalo de amplitud \(188.8571\) cm\(^3\),
+    que es poca dispersión.
+  \end{enumerate}
+\end{enumerate}

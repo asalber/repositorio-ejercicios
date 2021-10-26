@@ -3,25 +3,25 @@ library("exams")
 
 setwd("calculo/teoria/examenes")
 
-questions <- c("edo-far-3.Rnw", "derpar-gen-2.Rnw", "der-gen-1")
+questions <- c("tri-gen-1", "der-far-2", "edo-far-4")
 
-exams2pdf(questions, n=1, name = c("examen-far-2021-01-18", "solucion-far-2021-01-18"), encoding = "UTF-8",
+exams2pdf(questions, n=1, name = c("examen-opt-2021-02-08", "solucion-opt-2021-02-08"), encoding = "UTF-8",
   dir = "pdf",
   edir = "../preguntas",
   template = c("plantillas/examenceu.tex", "plantillas/solucionceu.tex"),
   header = list(
     Subject = "CÁLCULO",
-    Degree= "1º Farmacia y Biotecnología",
-    Date = "18 de enero de 2021",
+    Degree= "1º Óptica",
+    Date = "8 de febrero de 2021",
     Version = "A",
     Time = "1 hora"
   )
 )
 
-# Borrar directorio de imagenes del examen
+# Borrar directorio de imágenes del examen
 unlink("img/exam1", recursive = TRUE) 
 exams2pandoc(questions, n=1, 
-             name = "examen-far-2021-01-18", 
+             name = "examen-opt-2021-02-08", 
              encoding = "UTF-8", 
              type="latex",
              dir = "latex",
@@ -31,6 +31,6 @@ exams2pandoc(questions, n=1,
              svg=T
 )
 
-pandoc("latex/examen-far-2021-01-181.latex", format="markdown")
+pandoc("latex/examen-opt-2021-02-081.latex", format="markdown")
 
 

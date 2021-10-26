@@ -1,0 +1,112 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+library(xtable)
+x <- c(rep(0,12),rep(1,36),rep(2,39),rep(3,24), rep(4, 6), rep(5, 3))
+df <- data.frame(Bebidas = x)
+
+## QUESTION/ANSWER GENERATION
+# Tamaño de la muestra
+nx <- length(x)
+# Media
+mx <- mean(x)
+my <- 2.1
+# Varianza
+s2x <- sum(x^2)/nx-mx^2
+s2y <- 1.5
+# Desviación típica
+sx <- sqrt(s2x)
+sy <- sqrt(s2y)
+# Coef. variación
+cvx <- sx/mx
+cvy <- sy/my
+# Coef. asimetría
+g1x <- sum((x-mx)^3)/(nx*sx^3)
+# Coef. apuntamiento
+g2x <- sum((x-mx)^4)/(nx*sx^4)-3
+# Puntuaciones típicas
+
+@
+
+\begin{question}
+\puntos{5}La siguiente tabla recoge el número de bebidas azucaradas diárias que toma una muestra de jóvenes de 16 años.
+
+$$
+\begin{array}{|c|r|r|r|r|}
+\hline
+\mbox{Bebidas} & n_i & f_i & N_i & F_i\\
+\hline
+0 &    & 0.1 &     &      \\
+\hline
+1 &    &     & 48  &      \\
+\hline
+2 &    &     &     & 0.725\\
+\hline
+3 & 24 &     &     &      \\
+\hline
+4 &    &     &     & 0.975\\
+\hline
+5 &    &     & 120 &      \\
+\hline
+\end{array}
+$$
+
+Se pide: 
+
+\begin{enumerate}
+\item Completar la tabla razonadamente.
+\item Dibujar el polígono de frecuencias absolutas acumuladas.
+\item ¿Existen datos atípicos?
+\item Estudiar la normalidad de los datos.
+\item Si en otra muestra de jóvenes de 18 años se ha obtenido una media de 2.1 bebidas y una varianza de 1.5 bebidas$^2$, ¿en qué distribución es más representativa la media?
+\item ¿Quién consume un número relativo mayor de bebídas azucaradas, un jóven de 16 años que consume 3 bebidas al día o uno de 18 que consume 4?
+\end{enumerate}
+
+Usar las siguientes sumas para los cálculos: $\sum x_i=\Sexpr{sum(x)}$ bebidas, $\sum x_i^2=\Sexpr{sum(x^2)}$ bebidas$^2$, $\sum (x_i-\bar x)^3=\Sexpr{round(sum((x-mx)^3),2)}$ bebidas$^3$ y $\sum (x_i-\bar x)^4=\Sexpr{round(sum((x-mx)^4),2)}$ bebidas$^4$.\\
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+\begin{enumerate}
+\item 
+$$
+<<echo = F, comment = NA, results=tex>>=
+library(rkTeaching)
+table <- frequencyTable(df, "Bebidas")
+library(xtable)
+print(xtable(table, auto=T), tabular.environment="array", include.rownames = F,  floating=F, hline.after = c(0,nrow(table)), sanitize.text.function = function(x) { x })
+@
+$$
+
+\item 
+<<cumulative-distribution-subjects, fig=T, echo=F, height=4, width=6, dev="svg", fig.path="img">>=
+Ni <- cumsum(table(x))
+xi <- c(-0.5, rep(sort(unique(x)), each=2), 5.5)
+Ni <- c(0, 0, rep(Ni, each=2))
+plot(xi, Ni, type="l", col="blue",
+     main = "Distribution of daily sugary drinks",
+     xlab = "Num of drinks",
+     ylab = "Cumulative frequency")
+abline(h=seq(0,120,20), col = "gray", lty=2)
+lines(xi, Ni, col="blue")
+@
+
+\item Cuartiles: $Q_1=\Sexpr{q1}$ bebidas, $Q_2=\Sexpr{q2}$ bebidas, $Q_3=\Sexpr{q3}$ bebidas\\
+$RI = \Sexpr{iqr}$ bebidas\\
+Vallas: $v_1=\Sexpr{f1}$ bebidas y $v_2=\Sexpr{f2}$ bebidas.
+\item $\bar x=\Sexpr{round(mx,4)}$ bebidas, $s^2=\Sexpr{round(s2x,4)}$ bebidas$^2$, $s=\Sexpr{round(sx,4)}$ bebidas, 
+$g_1=\Sexpr{round(g1x,4)}$ y $g_2=\Sexpr{round(g2x,4)}$. Como el coeficiente de asimetría y el coeficiente de curtosis están entre -2 y 2, podemos asumir que la muestra proviene de una población normal.
+\item Sea $Y$ el número de bedidas azucaradas diarias que consume un jóven de 18 años. Entonces, $cv_x=\Sexpr{round(cvx,4)}$ y $cv_y=\Sexpr{round(cvy,4)}$. Como el coeficiente de variación de los jóvenes de 18 años es un poco menor que el de los de 16 años, la media de los jóvenes de 18 años es un poco más representativa.
+\item Puntuación típica para el jóven de 16 años: $z(3)=\Sexpr{round(zx, 4)}$\\
+Puntuación típica para el joven de 18 años: $z(4)=\Sexpr{round(zy, 4)}$\\
+Como la puntación típica del joven de 18 años es mayor que la puntuación típica del joven de 16 años, 4 bebidas es relativamente mayor en jóvenes de 18 años que 3 bebidas en jóvenes de 16 años.
+\end{enumerate}
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{des-21-nut}
+%% \extol{0.001}
+%% \degree{Nutrición}
+ 

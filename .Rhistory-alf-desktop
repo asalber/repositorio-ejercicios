@@ -1,0 +1,512 @@
+source('/datos/CEU/DOCENCIA/ejercicios/repositorio-ejercicios/estadistica/teoria/examenes/examen-far-2020-10-26.R', echo=TRUE)
+source('/datos/CEU/DOCENCIA/ejercicios/repositorio-ejercicios/estadistica/teoria/examenes/examen-far-2020-10-26.R', echo=TRUE)
+source('/datos/CEU/DOCENCIA/ejercicios/repositorio-ejercicios/estadistica/teoria/examenes/examen-far-2020-10-26.R', echo=TRUE)
+source('/datos/CEU/DOCENCIA/ejercicios/repositorio-ejercicios/estadistica/teoria/examenes/examen-far-2020-10-26.R', echo=TRUE)
+source('/datos/CEU/DOCENCIA/ejercicios/repositorio-ejercicios/estadistica/teoria/examenes/examen-far-2020-10-26.R', echo=TRUE)
+source('/datos/CEU/DOCENCIA/ejercicios/repositorio-ejercicios/estadistica/teoria/examenes/examen-far-2020-10-26.R', echo=TRUE)
+source('/datos/CEU/DOCENCIA/ejercicios/repositorio-ejercicios/estadistica/teoria/examenes/examen-far-2020-10-26.R', echo=TRUE)
+source('/datos/CEU/DOCENCIA/ejercicios/repositorio-ejercicios/estadistica/teoria/examenes/examen-far-2020-10-26.R', echo=TRUE)
+source('/datos/CEU/DOCENCIA/ejercicios/repositorio-ejercicios/estadistica/teoria/examenes/examen-far-2020-10-26.R', echo=TRUE)
+source('/datos/CEU/DOCENCIA/ejercicios/repositorio-ejercicios/estadistica/teoria/examenes/examen-far-2020-10-26.R', echo=TRUE)
+source('/datos/CEU/DOCENCIA/ejercicios/repositorio-ejercicios/estadistica/teoria/examenes/examen-far-2020-10-26.R', echo=TRUE)
+source('/datos/CEU/DOCENCIA/ejercicios/repositorio-ejercicios/estadistica/teoria/examenes/examen-far-2020-10-26.R', echo=TRUE)
+source('/datos/CEU/DOCENCIA/ejercicios/repositorio-ejercicios/estadistica/teoria/examenes/examen-far-2020-10-26.R', echo=TRUE)
+source('/datos/CEU/DOCENCIA/ejercicios/repositorio-ejercicios/estadistica/teoria/examenes/examen-far-2020-10-26.R', echo=TRUE)
+setwd("/datos/CEU/DOCENCIA/ejercicios/repositorio-ejercicios/estadistica/teoria/examenes")
+source('/datos/CEU/DOCENCIA/ejercicios/repositorio-ejercicios/estadistica/teoria/examenes/examen-far-2020-10-26.R', echo=TRUE)
+source('/datos/CEU/DOCENCIA/ejercicios/repositorio-ejercicios/estadistica/teoria/examenes/examen-far-2020-10-26.R', echo=TRUE)
+source('/datos/CEU/DOCENCIA/ejercicios/repositorio-ejercicios/estadistica/teoria/examenes/examen-far-2020-10-26.R', echo=TRUE)
+source('/run/media/alf/datos/CEU/DOCENCIA/ejercicios/repositorio-ejercicios/estadistica/teoria/examenes/examen-far-2020-10-26.R', echo=TRUE)
+install.packages("exams")
+source('/run/media/alf/datos/CEU/DOCENCIA/ejercicios/repositorio-ejercicios/estadistica/teoria/examenes/examen-far-2020-10-26.R', echo=TRUE)
+install.packages("xtable")
+source('/run/media/alf/datos/CEU/DOCENCIA/ejercicios/repositorio-ejercicios/estadistica/teoria/examenes/examen-far-2020-10-26.R', echo=TRUE)
+questions <- c("des-med-13", "des-gen-14", "reglin-far-11")
+exams2pdf(questions, n=1, name = c("examen-far-2020-10-26", "solucion-far-2020-10-26"), encoding = "UTF-8",
+dir = "pdf",
+edir = "../preguntas",
+template = c("plantillas/examenceu.tex", "plantillas/solucionceu.tex"),
+header = list(
+Subject = "ESTADÍSTICA\\\\[2mm] (DESCRIPTIVA Y REGRESIÓN)",
+Degree= "1º Farmacia",
+Date = "26 de octubre de 2020",
+Version = "A",
+Time = "1 hora"
+))
+# Borrar directorio de imagenes del examen
+unlink("img/exam1", recursive = TRUE)
+exams2pandoc(questions, n=1,
+name = "examen-far-2020-10-26",
+encoding = "UTF-8",
+type="latex",
+dir = "latex",
+edir = "../preguntas",
+sdir = "img",
+template = c("templates/plain.tex"),
+svg=T
+)
+pandoc("latex/examen-far-2020-10-261.latex", format="markdown")
+questions <- c("des-med-13", "des-gen-14", "reglin-far-11")
+exams2pdf(questions, n=1, name = c("examen-far-2020-10-26", "solucion-far-2020-10-26"), encoding = "UTF-8",
+dir = "pdf",
+edir = "../preguntas",
+template = c("plantillas/examenceu.tex", "plantillas/solucionceu.tex"),
+header = list(
+Subject = "ESTADÍSTICA\\\\[2mm] (DESCRIPTIVA Y REGRESIÓN)",
+Degree= "1º Farmacia",
+Date = "26 de octubre de 2020",
+Version = "A",
+Time = "1 hora"
+))
+# Borrar directorio de imagenes del examen
+unlink("img/exam1", recursive = TRUE)
+exams2pandoc(questions, n=1,
+name = "examen-far-2020-10-26",
+encoding = "UTF-8",
+type="latex",
+dir = "latex",
+edir = "../preguntas",
+sdir = "img",
+template = c("templates/plain.tex"),
+svg=T
+)
+pandoc("latex/examen-far-2020-10-261.latex", format="markdown")
+questions <- c("des-med-13", "des-gen-14", "reglin-far-11")
+exams2pdf(questions, n=1, name = c("examen-far-2020-10-26", "solucion-far-2020-10-26"), encoding = "UTF-8",
+dir = "pdf",
+edir = "../preguntas",
+template = c("plantillas/examenceu.tex", "plantillas/solucionceu.tex"),
+header = list(
+Subject = "ESTADÍSTICA\\\\[2mm] (DESCRIPTIVA Y REGRESIÓN)",
+Degree= "1º Farmacia",
+Date = "26 de octubre de 2020",
+Version = "A",
+Time = "1 hora"
+))
+# Borrar directorio de imagenes del examen
+unlink("img/exam1", recursive = TRUE)
+exams2pandoc(questions, n=1,
+name = "examen-far-2020-10-26",
+encoding = "UTF-8",
+type="latex",
+dir = "latex",
+edir = "../preguntas",
+sdir = "img",
+template = c("templates/plain.tex"),
+svg=T
+)
+pandoc("latex/examen-far-2020-10-261.latex", format="markdown")
+source('/run/media/alf/datos/CEU/DOCENCIA/ejercicios/repositorio-ejercicios/estadistica/teoria/examenes/examen-opt-2020-11-13.R', echo=TRUE)
+exams2pdf(questions, n=1, name = c("examen-opt-2020-11-13", "solucion-opt-2020-11-13"), encoding = "UTF-8",
+dir = "pdf",
+edir = "../preguntas",
+template = c("plantillas/examenceu.tex", "plantillas/solucionceu.tex"),
+header = list(
+Subject = "ESTADÍSTICA\\\\[2mm] (DESCRIPTIVA Y REGRESIÓN)",
+Degree= "1º Óptica",
+Date = "13 de noviembre de 2020",
+Version = "A",
+Time = "1 hora"
+))
+exams2pdf(questions, n=1, name = c("examen-opt-2020-11-13", "solucion-opt-2020-11-13"), encoding = "UTF-8",
+dir = "pdf",
+edir = "../preguntas",
+template = c("plantillas/examenceu.tex", "plantillas/solucionceu.tex"),
+header = list(
+Subject = "ESTADÍSTICA\\\\[2mm] (DESCRIPTIVA Y REGRESIÓN)",
+Degree= "1º Óptica",
+Date = "13 de noviembre de 2020",
+Version = "A",
+Time = "1 hora"
+))
+exams2pdf(questions, n=1, name = c("examen-opt-2020-11-13", "solucion-opt-2020-11-13"), encoding = "UTF-8",
+dir = "pdf",
+edir = "../preguntas",
+template = c("plantillas/examenceu.tex", "plantillas/solucionceu.tex"),
+header = list(
+Subject = "ESTADÍSTICA\\\\[2mm] (DESCRIPTIVA Y REGRESIÓN)",
+Degree= "1º Óptica",
+Date = "13 de noviembre de 2020",
+Version = "A",
+Time = "1 hora"
+))
+exams2pdf(questions, n=1, name = c("examen-opt-2020-11-13", "solucion-opt-2020-11-13"), encoding = "UTF-8",
+dir = "pdf",
+edir = "../preguntas",
+template = c("plantillas/examenceu.tex", "plantillas/solucionceu.tex"),
+header = list(
+Subject = "ESTADÍSTICA\\\\[2mm] (DESCRIPTIVA Y REGRESIÓN)",
+Degree= "1º Óptica",
+Date = "13 de noviembre de 2020",
+Version = "A",
+Time = "1 hora"
+))
+exams2pdf(questions, n=1, name = c("examen-opt-2020-11-13", "solucion-opt-2020-11-13"), encoding = "UTF-8",
+dir = "pdf",
+edir = "../preguntas",
+template = c("plantillas/examenceu.tex", "plantillas/solucionceu.tex"),
+header = list(
+Subject = "ESTADÍSTICA\\\\[2mm] (DESCRIPTIVA Y REGRESIÓN)",
+Degree= "1º Óptica",
+Date = "13 de noviembre de 2020",
+Version = "A",
+Time = "1 hora"
+))
+exams2pdf(questions, n=1, name = c("examen-opt-2020-11-13", "solucion-opt-2020-11-13"), encoding = "UTF-8",
+dir = "pdf",
+edir = "../preguntas",
+template = c("plantillas/examenceu.tex", "plantillas/solucionceu.tex"),
+header = list(
+Subject = "ESTADÍSTICA\\\\[2mm] (DESCRIPTIVA Y REGRESIÓN)",
+Degree= "1º Óptica",
+Date = "13 de noviembre de 2020",
+Version = "A",
+Time = "1 hora"
+))
+## DATA GENERATION
+data <- data.reglin.opt.12
+x <- data$x
+y <- data$y
+z <- data$z
+n <- length(x)
+# Regression lines
+reglinexy <- lm(x~y)
+reglinexz <- lm(x~z)
+reglinexy$coefficients[1]
+exams2pdf(questions, n=1, name = c("examen-opt-2020-11-13", "solucion-opt-2020-11-13"), encoding = "UTF-8",
+dir = "pdf",
+edir = "../preguntas",
+template = c("plantillas/examenceu.tex", "plantillas/solucionceu.tex"),
+header = list(
+Subject = "ESTADÍSTICA\\\\[2mm] (DESCRIPTIVA Y REGRESIÓN)",
+Degree= "1º Óptica",
+Date = "13 de noviembre de 2020",
+Version = "A",
+Time = "1 hora"
+))
+exams2pdf(questions, n=1, name = c("examen-opt-2020-11-13", "solucion-opt-2020-11-13"), encoding = "UTF-8",
+dir = "pdf",
+edir = "../preguntas",
+template = c("plantillas/examenceu.tex", "plantillas/solucionceu.tex"),
+header = list(
+Subject = "ESTADÍSTICA\\\\[2mm] (DESCRIPTIVA Y REGRESIÓN)",
+Degree= "1º Óptica",
+Date = "13 de noviembre de 2020",
+Version = "A",
+Time = "1 hora"
+))
+exams2pdf(questions, n=1, name = c("examen-opt-2020-11-13", "solucion-opt-2020-11-13"), encoding = "UTF-8",
+dir = "pdf",
+edir = "../preguntas",
+template = c("plantillas/examenceu.tex", "plantillas/solucionceu.tex"),
+header = list(
+Subject = "ESTADÍSTICA\\\\[2mm] (DESCRIPTIVA Y REGRESIÓN)",
+Degree= "1º Óptica",
+Date = "13 de noviembre de 2020",
+Version = "A",
+Time = "1 hora"
+))
+setwd("/run/media/alf/datos/CEU/DOCENCIA/ejercicios/repositorio-ejercicios")
+source('/run/media/alf/datos/CEU/DOCENCIA/ejercicios/repositorio-ejercicios/estadistica/teoria/examenes/examen-far-2020-11-17.R', echo=TRUE)
+exams2pdf(questions, n=1, name = c("examen-far-2020-11-17", "solucion-far-2020-11-17"), encoding = "UTF-8",
+dir = "pdf",
+edir = "../preguntas",
+template = c("plantillas/examenceu.tex", "plantillas/solucionceu.tex"),
+header = list(
+Subject = "ESTADÍSTICA\\\\[2mm] (DESCRIPTIVA Y REGRESIÓN)",
+Degree= "1º Farmacia y Biotecnología",
+Date = "17 de noviembre de 2020",
+Version = "A",
+Time = "1 hora"
+))
+# Borrar directorio de imagenes del examen
+unlink("img/exam1", recursive = TRUE)
+exams2pandoc(questions, n=1,
+name = "examen-far-2020-11-17",
+encoding = "UTF-8",
+type="latex",
+dir = "latex",
+edir = "../preguntas",
+sdir = "img",
+template = c("templates/plain.tex"),
+svg=T
+)
+pandoc("latex/examen-far-2020-11-171.latex", format="markdown")
+questions <- c("des-gen-15", "reglin-opt-12")
+data.reglin.opt.12 <- read.csv('../preguntas/regresion-lineal/datos-opt-12.csv')
+exams2pdf(questions, n=1, name = c("examen-opt-2020-11-13", "solucion-opt-2020-11-13"), encoding = "UTF-8",
+dir = "pdf",
+edir = "../preguntas",
+template = c("plantillas/examenceu.tex", "plantillas/solucionceu.tex"),
+header = list(
+Subject = "ESTADÍSTICA\\\\[2mm] (DESCRIPTIVA Y REGRESIÓN)",
+Degree= "1º Óptica",
+Date = "13 de noviembre de 2020",
+Version = "A",
+Time = "1 hora"
+))
+# Borrar directorio de imagenes del examen
+unlink("img/exam1", recursive = TRUE)
+exams2pandoc(questions, n=1,
+name = "examen-opt-2020-11-13",
+encoding = "UTF-8",
+type="latex",
+dir = "latex",
+edir = "../preguntas",
+sdir = "img",
+template = c("templates/plain.tex"),
+svg=T
+)
+pandoc("latex/examen-opt-2020-11-131.latex", format="markdown")
+## DATA GENERATION
+data <- data.reglin.opt.12
+x <- data$x
+y <- data$y
+z <- data$z
+n <- length(x)
+## QUESTION/ANSWER GENERATION
+# means
+mx <- sum(x) / n
+my <- sum(y) / n
+mz <- sum(z) / n
+# variances
+s2x <- sum(x^2) / n - mx^2
+s2y <- sum(y^2) / n - my^2
+s2z <- sum(z^2) / n - mz^2
+# Covariances
+sxy <- sum(x*y) / n - mx*my
+sxz <- sum(x*z) / n - mx*mz
+# Detercmation coeff
+r2xy <- sxy^2 / (s2x * s2y)
+r2xz <- sxz^2 / (s2x * s2z)
+# Regression lines
+reglinexy <- lm(x~y)
+reglinexz <- lm(x~z)
+# Predicción
+pred = reglinexy$coefficients[1] + reglinexy$coefficients[2]*60.
+pred
+exams2pdf(questions, n=1, name = c("examen-opt-2020-11-13", "solucion-opt-2020-11-13"), encoding = "UTF-8",
+dir = "pdf",
+edir = "../preguntas",
+template = c("plantillas/examenceu.tex", "plantillas/solucionceu.tex"),
+header = list(
+Subject = "ESTADÍSTICA\\\\[2mm] (DESCRIPTIVA Y REGRESIÓN)",
+Degree= "1º Óptica",
+Date = "13 de noviembre de 2020",
+Version = "A",
+Time = "1 hora"
+))
+# Borrar directorio de imagenes del examen
+unlink("img/exam1", recursive = TRUE)
+exams2pandoc(questions, n=1,
+name = "examen-opt-2020-11-13",
+encoding = "UTF-8",
+type="latex",
+dir = "latex",
+edir = "../preguntas",
+sdir = "img",
+template = c("templates/plain.tex"),
+svg=T
+)
+pandoc("latex/examen-opt-2020-11-131.latex", format="markdown")
+source('/datos/CEU/DOCENCIA/ejercicios/repositorio-ejercicios/estadistica/teoria/examenes/examen-far-2020-11-17.R', echo=TRUE)
+source('/datos/CEU/DOCENCIA/ejercicios/repositorio-ejercicios/estadistica/teoria/examenes/examen-far-2020-10-26.R', echo=TRUE)
+exams2pdf(questions, n=1, name = c("examen-far-2020-11-17", "solucion-far-2020-11-17"), encoding = "UTF-8",
+dir = "pdf",
+edir = "../preguntas",
+template = c("plantillas/examenceu.tex", "plantillas/solucionceu.tex"),
+header = list(
+Subject = "ESTADÍSTICA\\\\[2mm] (DESCRIPTIVA Y REGRESIÓN)",
+Degree= "1º Farmacia",
+Date = "17 de noviembre de 2020",
+Version = "A",
+Time = "1 hora"
+))
+# Borrar directorio de imagenes del examen
+unlink("img/exam1", recursive = TRUE)
+exams2pandoc(questions, n=1,
+name = "examen-far-2020-11-17",
+encoding = "UTF-8",
+type="latex",
+dir = "latex",
+edir = "../preguntas",
+sdir = "img",
+template = c("templates/plain.tex"),
+svg=T
+)
+pandoc("latex/examen-far-2020-11-171.latex", format="markdown")
+exams2pdf(questions, n=1, name = c("examen-far-2020-10-26", "solucion-far-2020-10-26"), encoding = "UTF-8",
+dir = "pdf",
+edir = "../preguntas",
+template = c("plantillas/examenceu.tex", "plantillas/solucionceu.tex"),
+header = list(
+Subject = "ESTADÍSTICA\\\\[2mm] (DESCRIPTIVA Y REGRESIÓN)",
+Degree= "1º Farmacia",
+Date = "17 de noviembre de 2020",
+Version = "A",
+Time = "1 hora"
+))
+# Borrar directorio de imagenes del examen
+unlink("img/exam1", recursive = TRUE)
+exams2pandoc(questions, n=1,
+name = "examen-far-2020-10-26",
+encoding = "UTF-8",
+type="latex",
+dir = "latex",
+edir = "../preguntas",
+sdir = "img",
+template = c("templates/plain.tex"),
+svg=T
+)
+pandoc("latex/examen-far-2020-10-261.latex", format="markdown")
+## DATA GENERATION
+library(ggplot2)
+set.seed(123)
+n <- 20
+x <- rbinom(n, 10, 0.5)
+y <- rbinom(n, 10, 0.2)
+z <- rbinom(n, 10, 0.8)
+Nota <- c(x, y, z)
+Asignatura <- c(rep('X', n), rep('Y', n), rep('Z', n))
+data <- data.frame(Nota, Asignatura)
+p <- ggplot(data, aes(x=Nota, y=Asignatura)) + geom_boxplot(width=0.5)
+p
+z <- c(177, 180, 193, 172, 173, 188, 185, 177, 168, 182)
+mz <- sumz / n
+mz
+n <- length(x)
+mz <- sumz / n
+mz
+z <- c(177, 180, 193, 172, 173, 188, 185, 177, 168, 182)
+sumz <- sum(z)
+mz <- sumz / n
+mz
+z
+sum(z)/length(z)
+mz
+sumz
+n
+## DATA GENERATION
+x <- c(175, 182, 190, 165, 172, 183, 187, 174, 168, 178)
+n <- length(x)
+mz <- sumz / n
+s2z <- sumz2/n-mz^2
+mz
+s2z
+sqrt(s2z)
+source('/run/media/alf/datos/CEU/DOCENCIA/ejercicios/repositorio-ejercicios/estadistica/teoria/examenes/examen-far-2020-11-17.R', echo=TRUE)
+exams2pdf(questions, n=1, name = c("examen-far-2020-11-17", "solucion-far-2020-11-17"), encoding = "UTF-8",
+dir = "pdf",
+edir = "../preguntas",
+template = c("plantillas/examenceu.tex", "plantillas/solucionceu.tex"),
+header = list(
+Subject = "ESTADÍSTICA\\\\[2mm] (DESCRIPTIVA Y REGRESIÓN)",
+Degree= "1º Farmacia y Biotecnología",
+Date = "17 de noviembre de 2020",
+Version = "A",
+Time = "1 hora"
+))
+source('/datos/CEU/DOCENCIA/ejercicios/repositorio-ejercicios/estadistica/teoria/examenes/examen-far-2020-11-23.R', echo=TRUE)
+exams2pdf(questions, n=1, name = c("examen-far-2020-11-23", "solucion-far-2020-11-23"), encoding = "UTF-8",
+dir = "pdf",
+edir = "../preguntas",
+template = c("plantillas/examenceu.tex", "plantillas/solucionceu.tex"),
+header = list(
+Subject = "ESTADÍSTICA\\\\[2mm] (PROBABILIDAD Y VARIABLES ALEATORIAS)",
+Degree= "1º Farmacia y Biotecnología",
+Date = "23 de noviembre de 2020",
+Version = "A",
+Time = "1 hora"
+))
+exams2pdf(questions, n=1, name = c("examen-far-2020-11-23", "solucion-far-2020-11-23"), encoding = "UTF-8",
+dir = "pdf",
+edir = "../preguntas",
+template = c("plantillas/examenceu.tex", "plantillas/solucionceu.tex"),
+header = list(
+Subject = "ESTADÍSTICA\\\\[2mm] (PROBABILIDAD Y VARIABLES ALEATORIAS)",
+Degree= "1º Farmacia y Biotecnología",
+Date = "23 de noviembre de 2020",
+Version = "A",
+Time = "1 hora"
+))
+source('/datos/CEU/DOCENCIA/ejercicios/repositorio-ejercicios/estadistica/teoria/examenes/examen-far-2020-11-23.R', echo=TRUE)
+exams2pdf(questions, n=1, name = c("examen-far-2020-11-23", "solucion-far-2020-11-23"), encoding = "UTF-8",
+dir = "pdf",
+edir = "../preguntas",
+template = c("plantillas/examenceu.tex", "plantillas/solucionceu.tex"),
+header = list(
+Subject = "ESTADÍSTICA\\\\[2mm] (PROBABILIDAD Y VARIABLES ALEATORIAS)",
+Degree= "1º Farmacia y Biotecnología",
+Date = "23 de noviembre de 2020",
+Version = "A",
+Time = "1 hora"
+))
+source('/datos/CEU/DOCENCIA/ejercicios/repositorio-ejercicios/estadistica/teoria/examenes/examen-far-2020-11-23.R', echo=TRUE)
+exams2pdf(questions, n=1, name = c("examen-far-2020-11-23", "solucion-far-2020-11-23"), encoding = "UTF-8",
+dir = "pdf",
+edir = "../preguntas",
+template = c("plantillas/examenceu.tex", "plantillas/solucionceu.tex"),
+header = list(
+Subject = "ESTADÍSTICA\\\\[2mm] (PROBABILIDAD Y VARIABLES ALEATORIAS)",
+Degree= "1º Farmacia y Biotecnología",
+Date = "23 de noviembre de 2020",
+Version = "A",
+Time = "1 hora"
+))
+exams2pdf(questions, n=1, name = c("examen-far-2020-11-23", "solucion-far-2020-11-23"), encoding = "UTF-8",
+dir = "pdf",
+edir = "../preguntas",
+template = c("plantillas/examenceu.tex", "plantillas/solucionceu.tex"),
+header = list(
+Subject = "ESTADÍSTICA\\\\[2mm] (PROBABILIDAD Y VARIABLES ALEATORIAS)",
+Degree= "1º Farmacia y Biotecnología",
+Date = "23 de noviembre de 2020",
+Version = "A",
+Time = "1 hora"
+))
+exams2pdf(questions, n=1, name = c("examen-far-2020-11-23", "solucion-far-2020-11-23"), encoding = "UTF-8",
+dir = "pdf",
+edir = "../preguntas",
+template = c("plantillas/examenceu.tex", "plantillas/solucionceu.tex"),
+header = list(
+Subject = "ESTADÍSTICA\\\\[2mm] (PROBABILIDAD Y VARIABLES ALEATORIAS)",
+Degree= "1º Farmacia y Biotecnología",
+Date = "23 de noviembre de 2020",
+Version = "A",
+Time = "1 hora"
+))
+exams2pdf(questions, n=1, name = c("examen-far-2020-11-23", "solucion-far-2020-11-23"), encoding = "UTF-8",
+dir = "pdf",
+edir = "../preguntas",
+template = c("plantillas/examenceu.tex", "plantillas/solucionceu.tex"),
+header = list(
+Subject = "ESTADÍSTICA\\\\[2mm] (PROBABILIDAD Y VARIABLES ALEATORIAS)",
+Degree= "1º Farmacia y Biotecnología",
+Date = "23 de noviembre de 2020",
+Version = "A",
+Time = "1 hora"
+))
+source('/datos/CEU/DOCENCIA/ejercicios/repositorio-ejercicios/estadistica/teoria/examenes/examen-far-2020-11-23.R', echo=TRUE)
+source('/run/media/alf/datos/CEU/DOCENCIA/ejercicios/repositorio-ejercicios/estadistica/teoria/examenes/examen-opt-2019-11-13.R', echo=TRUE)
+exams2pdf(questions, n=1, name = c("examen-opt-2020-12-21", "solucion-opt-2020-12-21"), encoding = "UTF-8",
+dir = "pdf",
+edir = "../preguntas",
+template = c("plantillas/examenceu.tex", "plantillas/solucionceu.tex"),
+header = list(
+Subject = "ESTADÍSTICA\\\\[2mm] (PROBABILIDAD Y VARIABLES ALEATORIAS)",
+Degree= "1º Óptica",
+Date = "21 de diciembre de 2020",
+Version = "A",
+Time = "1 hora"
+))
+exams2pdf(questions, n=1, name = c("examen-opt-2020-12-21", "solucion-opt-2020-12-21"), encoding = "UTF-8",
+dir = "pdf",
+edir = "../preguntas",
+template = c("plantillas/examenceu.tex", "plantillas/solucionceu.tex"),
+header = list(
+Subject = "ESTADÍSTICA\\\\[2mm] (PROBABILIDAD Y VARIABLES ALEATORIAS)",
+Degree= "1º Óptica",
+Date = "21 de diciembre de 2020",
+Version = "A",
+Time = "1 hora"
+))

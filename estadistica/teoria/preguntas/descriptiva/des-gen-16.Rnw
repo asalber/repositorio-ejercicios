@@ -1,0 +1,88 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+library(xtable)
+library(ggplot2)
+x <- c(-1.2, -0.7, -0.4, -0.9, -1.6, 0.5, 0.2, -1.8, 0.8)
+y <- c(-2.1, -0.5, -0.7, -1.9, 0.2, -2.8, -1)
+n <- length(x)
+
+## QUESTION/ANSWER GENERATION
+# Sample size
+nx <- length(x)
+ny <- length(y)
+# Mean
+mx <- mean(x)
+my <- mean(y)
+# Varianza
+s2x <- sum(x^2)/nx-mx^2
+s2y <- sum(y^2)/ny-my^2
+# St.deviation
+sx <- sqrt(s2x)
+sy <- sqrt(s2y)
+# Coef. variation
+cvx <- sx/abs(mx)
+cvy <- sy/abs(my)
+# Coef. skewness
+g1x <- sum((x-mx)^3)/(nx*sx^3)
+g1y <- sum((y-my)^3)/(ny*sy^3)
+# Coef. kurtosis
+g2x <- sum((x-mx)^4)/(nx*sx^4)-3
+g2y <- sum((y-my)^4)/(ny*sy^4)-3
+# Standard scores
+zx <- (-0.5-mx)/sx
+zy <- (-1-my)/sy
+@
+
+\begin{question}
+\puntos{5}La siguiente tabla muestra las diferencias de notas entre las notas de bachillerato y las del examen de selectividad en los centros públicos ($X$) y privados ($Y$) de una región:   
+
+$$
+\begin{array}{lrrrrrrrrr}
+\hline
+\mbox{Centros públicos} & -1.2 & -0.7 & -0.4 & -0.9 & -1.6 & 0.5 & 0.2 & -1.8 & 0.8\\
+\mbox{Centros privados} & -2.1 & -0.5 & -0.7 & -1.9 & 0.2 & -2.8 & -1\\  
+\hline
+\end{array}
+$$
+
+\begin{enumerate}
+\item ¿Cuál de los siguientes diagramas de cajas corresponde a cada variable? Comparar la dispersión central de las dos variables según los diagramas de caja. ¿En qué variable es menor la mediana de las diferencias de notas?
+
+<<boxplot-grades, fig=T, echo=F, height=4, width=6, dev="svg", fig.path="img">>=
+boxplot(y, x, horizontal=T)
+@
+
+\item ¿En qué centros es más representativa la media de la diferencia de notas, en los públicos o en los privados?
+\item ¿En qué centros la distribución de la diferencia de notas es más simétrica?
+\item ¿En qué centros la distribución de la diferencia de notas es más apuntada?
+\item ¿Qué diferencia es relativamente menor, $-0.5$ puntos en un centro público o $-1$ en un centro privado?
+\end{enumerate}
+
+Usar las siguientes sumas para los cálculos:\\
+Public: $\sum x_i=\Sexpr{sum(x)}$, $\sum x_i^2=\Sexpr{sum(x^2)}$, $\sum (x_i-\bar x)^3=\Sexpr{round(sum((x-mx)^3),2)}$ y $\sum (x_i-\bar x)^4=\Sexpr{round(sum((x-mx)^4),2)}$.\\
+Private: $\sum y_i=\Sexpr{sum(y)}$, $\sum y_i^2=\Sexpr{sum(y^2)}$, $\sum (y_i-\bar y)^3=\Sexpr{round(sum((y-my)^3),2)}$ y $\sum (y_i-\bar y)^4=\Sexpr{round(sum((y-my)^4),2)}$. \\
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+\begin{enumerate}
+\item El diagrama de cajas 1 corresponde a los centros privados y el 2 a los centros públicos. La dispersión central (anchura de las cajas) es similar en ambas variables. La mediana es menor en los centros privados.
+\item Centros públicos: $\bar x=\Sexpr{round(mx,4)}$ , $s^2=\Sexpr{round(s2x,4)}$ , $s=\Sexpr{round(sx,4)}$  y $cv=\Sexpr{round(cvx,4)}$.\\
+Centros privados: $\bar y=\Sexpr{round(my,4)}$ , $s^2=\Sexpr{round(s2y,4)}$ , $s=\Sexpr{round(sy,4)}$  y $cv=\Sexpr{round(cvy,4)}$.\\
+Por tanto, la media de las diferencias de notas es más representativa en los centros privados.
+\item $g_{1x}=\Sexpr{round(g1x,4)}$ y $g_{1y}=\Sexpr{round(g1y,4)}$. Por tanto, la distribución de las diferencias de notas en los centros privados es más simétrica ya que su coeficiente de asimetría está más cerca de 0.
+\item $g_{2x}=\Sexpr{round(g2x,4)}$ y $g_{2y}=\Sexpr{round(g2y,4)}$. Así pues, la distribución de las diferencias de notas en los centros privados es más apuntada ya que su coeficiente de apuntamiento es mayor.  
+\item Centro público: $z(-0.5)=\Sexpr{round(zx, 4)}$.\\
+Centro privado: $z(-1)=\Sexpr{round(zy, 4)}$.\\
+Por tanto, una diferencia de notas de -0.5 puntos en centros públicos es relativamente menor que una diferencia de -1 puntos en centros privados.
+\end{enumerate}
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{des-gen-16}
+%% \extol{0.001}
+%% \degree{Todos}
+ 

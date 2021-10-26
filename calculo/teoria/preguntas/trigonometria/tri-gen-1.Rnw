@@ -1,0 +1,30 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+
+## QUESTION/ANSWER GENERATION
+# sample size
+
+@
+
+\begin{question}
+\puntos{3} Un avión se encuentra a 800 metros de altitud cuando divisa un pueblo con un ángulo de depresión de 15º. 
+
+\begin{enumerate}
+\item ¿Qué distancia debe recorrer en linea recta hacia el pueblo manteniendo su altitud, para situarse sobre él?
+\item ¿Si el aeropuerto está situado a 2 km del pueblo en esa misma dirección, ¿con qué ángulo debe empezar a descender para aterrizar?
+\end{enumerate}
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{tri-gen-1}
+%% \extol{0.001}
+%% \degree{Todos}
+ 

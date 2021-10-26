@@ -1,0 +1,32 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+
+
+## QUESTION/ANSWER GENERATION
+
+@
+
+\begin{question}
+\puntos{5}Se están ensayando dos tratamientos contra el Covid19, el tratamiento A tiene una efectividad del 90\% mientras que el tratamiento B tiene una efectividad del 70\% y se ha constatado que en un 5\% de los pacientes afectados de Covid19 ninguno de los dos tratamientos es efectivo.
+\begin{enumerate}
+\item ¿Qué probabilidad hay de que en un enfermo de Covid19 sea efectivo solo el tratamiento A?
+\item ¿Qué probabilidad hay de que el tratamiento B tenga efecto en un enfermo de Covid19 si no tuvo efecto el tratamiento A?
+\item ¿Son independientes los tratamientos?
+\item Calcular la probabilidad de que en un grupo de 6 enfermos el tratamiento A sea efectivo en al menos 4 de ellos.
+\item Calcular la probabilidad de que en un grupo de 100 enfermos haya menos de 3 en los que ninguno de los tratamientos sea efectivo.
+\item Calcular la probabilidad de que en un grupo de 5 enfermos al menos en 3 de ellos sea efectivo alguno de los tratamientos.
+\end{enumerate}
+\end{question}  
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{vad-med-13}
+%% \extol{0.01}
+%% \degree{Medicina}
+ 
