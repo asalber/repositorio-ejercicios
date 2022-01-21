@@ -1,0 +1,38 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+
+## QUESTION/ANSWER GENERATION
+# sample size
+
+@
+
+\begin{question}
+El ozono ($O_3$) de la atmósfera se trasforma en oxígeno ($O_2$) mediante la siguiente reacción química:
+
+$$
+2O_3 \rightarrow 3O_2
+$$
+
+Se observó experimentalmente que la velocidad con la que varía la cantidad de oxígeno es inversamente proporcional a la cantidad de oxígeno existente. Si en un determinado lugar hay inicialmente  10 g de oxígeno, y tras una hora esta cantidad de oxígeno se duplica,
+
+\begin{enumerate}
+  \item ¿Qué cantidad de oxígeno habrá tras 5 horas?
+  \item ¿Cuánto tiempo ha de trascurrir para que haya 1 kg de oxígeno?
+\end{enumerate}
+ 
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{edo-5-qui}
+%% \extol{0.001}
+%% \degree{Farmacia}
+ 
+  

@@ -1,0 +1,35 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+
+## QUESTION/ANSWER GENERATION
+# sample size
+
+@
+
+\begin{question}
+Para analizar la tolerancia de hipoxemia de los mamíferos, en un laboratorio unas ratas son sometidas a condiciones extremas con niveles variables de oxígeno. Las ratas se encuentras en una habitación cuyo nivel de oxígeno (en \%) en una posición cualquiera $(x,y)$ es 
+
+$$O(x,y)=\frac{1}{10}x^2y^2e^{x-y}$$
+
+Para que las ratas sobrevivan, deben alcanzar posiciones en las que el nivel de oxígeno sea superior al 18\%.
+
+\begin{enumerate}
+\item La rata $A$ se encuentra en la posición $(3,2)$. Si no se mueve, justifica razonadamente si la rata sobrevivirá.
+\item ¿Qué dirección debe tomar la rata $A$ para que el nivel de oxígeno aumente lo más rápidamente posible? En dicha dirección, ¿cual será la variación instantánea del nivel de oxígeno?
+\item La rata $B$ se encuentra en el punto $(2,2)$. Si empieza a moverse de manera que $y$ disminuye el doble de lo que aumenta $x$, ¿qué variación instantánea experimentará el nivel de oxígeno?
+\end{enumerate}
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{derpar-4-far}
+%% \extol{0.001}
+%% \degree{Todos}
+ 

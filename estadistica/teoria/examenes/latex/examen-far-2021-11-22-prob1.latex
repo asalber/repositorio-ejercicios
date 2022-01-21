@@ -1,0 +1,89 @@
+\begin{enumerate}
+\item
+  \textbf{Question}\\
+  La distribución de la capacidad craneal (en dm\(^3\)) de una población
+  de primates es una normal \(X\sim N(\mu,\sigma)\). En la figura se
+  muestra la campana de Gauss asociada a \(X\). Observa que se indica el
+  área comprendida debajo de la campana limitada por los valores 1 y 3.
+
+  \[\includegraphics{vac-17-med.svg}\]
+
+  \begin{enumerate}
+  \item
+    ¿Cuál es la capacidad craneal media de la población de primates?
+    Justifica la respuesta.
+  \item
+    ¿Es la capacidad craneal media representativa de la distribución?
+    Justifica la respuesta.
+  \item
+    ¿Cuánto valen los coeficientes de asimetría y curtosis? Justifica la
+    respuesta.
+  \item
+    Calcula la probabilidad de que la capacidad craneal de un primate
+    elegido al azar sea superior a 2.5 dm\(^3\).
+  \item
+    ¿Cuál es la capacidad craneal por encima de la cual se encuentran el
+    5\% de los primates con mayor capacidad? Justifica la respuesta.
+  \item
+    Si tomamos un primate al azar y observamos su capacidad craneal,
+    ¿cuál es la probabilidad de que observemos un dato atípico?
+    Justifica la respuesta.
+  \end{enumerate}
+
+  \textbf{Nota}: Si no has podido solucionar los apartados (a) y (b),
+  toma una media \(\mu=1.5\) dm\(^3\) y una desviación típica
+  \(\sigma=0.25\) dm\(^3\) para el resto de los apartados.
+
+  \textbf{Solution}\\
+\item
+  \textbf{Question}\\
+  Una empresa farmaceutica produce un mismo medicamento en 5
+  laboratorios diferentes. Se ha comprobado que en cada laboratorio se
+  produce, de media, un lote defectuoso no comercializable cada tres
+  meses.
+
+  \begin{enumerate}
+  \item
+    ¿Qué probabilidad hay de que en un laboratorio se produzcan más de 3
+    lotes defectuosos durante un año?
+  \item
+    ¿Qué probabilidad hay de que en al menos 2 laboratorios no se
+    produzcan lotes defectuosos durante un año?
+  \end{enumerate}
+
+  \textbf{Solution}\\
+\item
+  \textbf{Question}\\
+  Se ha realizado un estudio sobre la relación entre el grupo sanguineo
+  y el contagio por SARS-CoV-2. Al comienzo del estudio se toma una
+  muestra de personas de los grupos sanguíneos O y A sin infectar y
+  trascurrido un año se obtiene la siguiente tabla:
+
+  \[\begin{array}{llr}
+  \hline
+  \mbox{Grupo sanguineo} & \mbox{Infección} & \mbox{Personas}\\
+  \mbox{O} & \mbox{Si} & 520\\
+  \mbox{O} & \mbox{No} & 6380\\
+  \mbox{A} & \mbox{Si} & 780\\
+  \mbox{A} & \mbox{No} & 6200\\
+  \hline
+  \end{array}\]
+
+  \begin{enumerate}
+  \item
+    Calcula el riesgo relativo y el odds ratio para estudiar la
+    asociación entre el grupo sanguíneo y el contagio por SARS-CoV-2.
+    Explicar cuál de las dos medidas es la más apropiada e
+    interpretarla.
+  \item
+    Si se ha desarrollado un test para el SARS-CoV-2 con una
+    especificidad del 95\% y una sensibilidad del 60\%,
+    independientemente del grupo sanguineo, ¿Cuál sería el porcentaje de
+    errores que tendría el test en cada grupo sanguineo? ¿Qué
+    diagnóstico haríamos si se aplica el test a una persona del grupo O
+    y resulta positivo? ¿Y qué diagnóstico haríamos si se aplica el test
+    a una persona del grupo A y resulta negativo?
+  \end{enumerate}
+
+  \textbf{Solution}\\
+\end{enumerate}

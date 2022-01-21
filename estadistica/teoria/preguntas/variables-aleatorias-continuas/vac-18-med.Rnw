@@ -1,0 +1,36 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+mx <- 5
+sx <- 2
+sy <- 25
+sy <- 5
+## QUESTION/ANSWER GENERATION
+
+@
+
+\begin{question}
+Se sabe que la duración de la batería de un marcapasos sigue una distribución normal. Se ha observado que el 20\% de las baterías duran más de 15 años, mientras que el 10\% duran menos de 12 años. 
+
+\begin{enumerate}
+\item Calcular la media y la desviación típica de la duración de las baterías.\\
+Nota: Si no se sabe calcular la media y la desviación típica, tomar una media de 14 años y una desviación típica de 1.5 años para los siguientes apartados.
+\item Calcular el cuarto decil de la duración de las baterías.
+\item Si se toma una muestra de 5 baterías, cuál es la probabilidad de que más de la mitad duren entre 13 y 14 años.
+\item Si se toma una muestra de 100 baterías, ¿cuál es la probabilidad de que alguna no supere los 11 años de duración?
+\end{enumerate}
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{vac-18-med}
+%% \extol{0.001}
+%% \degree{Medicina}
+ 
+  

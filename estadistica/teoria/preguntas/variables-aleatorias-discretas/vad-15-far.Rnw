@@ -1,0 +1,28 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+
+
+## QUESTION/ANSWER GENERATION
+
+@
+
+\begin{question}
+\puntos{2.5}Una empresa farmaceutica produce un mismo medicamento en 5 laboratorios diferentes. Se ha comprobado que en cada laboratorio se produce, de media, un lote defectuoso no comercializable cada tres meses. 
+\begin{enumerate}
+\item ¿Qué probabilidad hay de que en un laboratorio se produzcan más de 3 lotes defectuosos durante un año?
+\item ¿Qué probabilidad hay de que en al menos 2 laboratorios no se produzcan lotes defectuosos durante un año?
+\end{enumerate}
+\end{question}  
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{vad-med-13}
+%% \extol{0.01}
+%% \degree{Medicina}
+ 

@@ -1,0 +1,50 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+mx <- 5
+sx <- 2
+sy <- 25
+sy <- 5
+## QUESTION/ANSWER GENERATION
+
+@
+
+\begin{question}
+\puntos{2.5}La distribución de la capacidad craneal (en dm$^3$) de una población de primates es una normal $X\sim N(\mu,\sigma)$. En la figura se muestra la campana de Gauss asociada a $X$. Observa que se indica el área comprendida debajo de la campana limitada por los valores 1 y 3.
+
+$$
+<<normal-capacidad-craneal, fig=T, echo=F, height=3, width=6, dev="svg", fig.path="img">>=
+library(ggplot2)
+result <- (pnorm(q = c(3), mean = 2.00, sd = 0.50, lower.tail=TRUE))
+x <- seq(1,3, 0.01)
+y <- dnorm(x,2.00,0.50)
+df <- data.frame(x, y)
+df2 <- data.frame(x = c(2), y = c(0.2), label=c("Area = 0.95"))
+ggplot(df, aes(x, y)) + geom_area(fill=I("#FF9999"), alpha=0.5) + stat_function(fun=dnorm, colour="#FF5555", args=list(mean=2.00, sd=0.50)) + xlab("Capacidad craneal (dm³)") + ylab(expression(paste("Densidad"," ", italic(f(x))))) + scale_x_continuous(breaks=c(1,2,3), limits=c(0.5, 3.5)) + labs(title="Distribución de la capacidad craneal") + geom_text(x = 2, y = 0.2, label="Area = 0.95") + theme_classic()
+@
+$$
+
+\begin{enumerate}
+\item ¿Cuál es la capacidad craneal media de la población de primates? Justifica la respuesta.
+\item ¿Es la capacidad craneal media representativa de la distribución? Justifica la respuesta.
+\item ¿Cuánto valen los coeficientes de asimetría y curtosis? Justifica la respuesta.
+%\item Calcula la probabilidad de que la capacidad craneal de un primate elegido al azar sea superior a 2.5 dm$^3$.
+\item ¿Cuál es el rango intercuartílico de la capacidad craneal?
+\item Si se considera que un individuo es atípico si está fuera del intervalo $(C_1-1.5RI, C_3+1.5RI)$,  ¿cuál es la probabilidad de que un primate elegido al azar tenga una capacidad craneal atípica? Justifica la respuesta.
+\end{enumerate}
+\textbf{Nota}: Si no has podido solucionar los apartados (a) y (b), toma una media $\mu=1.5$ dm$^3$ y una desviación típica $\sigma=0.25$ dm$^3$ para el resto de los apartados.
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{vac-med-13}
+%% \extol{0.001}
+%% \degree{Medicina}
+ 
+  

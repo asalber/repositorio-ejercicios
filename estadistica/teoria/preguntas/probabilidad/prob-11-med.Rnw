@@ -1,0 +1,57 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+pA <- 4/5
+pB <- 0.5
+pNoANoB <- 1/20
+
+## QUESTION/ANSWER GENERATION
+pAoB <- 1-pNoANoB
+pAB <- pA + pB - pAoB
+pNoAB <- pB-pAB
+pNoA <- 1-pA
+pNoB <- 1-pB
+pBSiA <- pAB/pA
+pBSiNoA <- pNoAB/pNoA
+@
+
+\begin{question}
+\puntos{2}Se ha realizado un estudio sobre la relación entre el grupo sanguineo y el contagio por SARS-CoV-2. Los datos obtenidos se muestran en la siguiente tabla:
+
+$$\begin{array}{llr}
+\hline
+\mbox{Grupo sanguineo} & \mbox{Infección} & \mbox{Personas}\\
+\mbox{O} & \mbox{No} & 1800\\
+\mbox{O} & \mbox{Si} & 100\\
+\mbox{A} & \mbox{No} & 4200\\
+\mbox{A} & \mbox{Si} & 400\\
+\mbox{B} & \mbox{No} & 2500\\
+\mbox{B} & \mbox{Si} & 150\\
+\mbox{AB} & \mbox{No} & 800\\
+\mbox{AB} & \mbox{Si} & 50\\
+\hline
+\end{array}
+$$
+
+\begin{enumerate}
+\item Calcular la probabilidad de que una persona al azar se infecte por SARS-CoV-2.
+\item Calcular la probabilidad de que una persona al azar tenga el grupo A y sea infectada por SARS-CoV-2.
+\item Calcular la probabilidad de que una persona al azar tenga el grupo A o sea infectada por SARS-Cov-2.
+\item Calcular la probabilidad de que una persona del grupo O sea infectada por SARS-CoV-2. 
+\item Calcular la probabilidad de que una persona infectada por SARS-CoV-2 no tenga el grupo A ni el B.
+\item ¿Depende la infección por SARS-CoV-2 del grupo sanguineo?
+\end{enumerate}
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{prob-med-2}
+%% \extol{0.001}
+%% \degree{Medicina}
+ 

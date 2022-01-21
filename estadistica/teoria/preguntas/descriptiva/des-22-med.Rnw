@@ -1,0 +1,74 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+x <- c(rep(3,79),rep(9,266),rep(15,193),rep(21,188), rep(27,117), rep(33, 56))
+y <- c(rep(3,25),rep(9,40),rep(15,21),rep(21,12), rep(27,3))
+
+## QUESTION/ANSWER GENERATION
+# Tamaño de la muestra
+nx <- length(x)
+ny <- length(y)
+# Media
+mx <- mean(x)
+my <- mean(y)
+# Varianza
+s2x <- sum(x^2)/nx-mx^2
+s2y <- sum(y^2)/ny-my^2
+# Desviación típica
+sx <- sqrt(s2x)
+sy <- sqrt(s2y)
+# Coef. variación
+cvx <- sx/mx
+cvy <- sy/my
+# Coef. asimetría
+g1x <- sum((x-mx)^3)/(nx*sx^3)
+# Coef. apuntamiento
+g2x <- sum((x-mx)^4)/(nx*sx^4)-3
+# Puntuaciones típicas
+
+@
+
+\begin{question}
+En un estudio realizado con una muestra de 1000 personas se pretende ver la posible relación entre su color de piel, cuantificado en la escala de Von Luschan, y el desarrollo o no de una enfermedad cutánea. La siguiente tabla refleja el total de individuos sanos y enfermos en cada intervalo de la escala de Von Luschan:
+
+$$
+\begin{array}{crr}
+\hline
+\mbox{Color piel (Von Luschan)} & \mbox{Sanos} & \mbox{Enfermos}\\
+0-6 & 79 & 25\\
+6-12 & 266 & 40\\
+12-18 & 193 & 21\\
+18-24 & 188 & 12\\
+24-30 & 117 & 3\\
+30-36 & 56 & 0\\
+\hline
+\end{array}
+$$
+
+Se pide: 
+
+\begin{enumerate}
+\item Calcular el valor del Von Luschan por encima del cual está el 30\% de los individuos.
+\item ¿En qué grupo es más representativa la media del Von Luschan, en los sanos o en los enfermos?
+\item ¿Qué distribución es más simétrica, la de sanos o la de enfermos? ¿Y cuál es más apuntada?
+\item ¿Qué individuo presenta un valor del Von Luschan relativamente mayor, un sano con valor 15 o un enfermo con valor 10?
+\item Tomando las puntuaciones típicas de los sanos y enfermos, ¿en qué distribución la media de las puntuaciones típicas es más representativa?
+\end{enumerate}
+
+Usar las siguientes sumas para los cálculos:\\
+Sanos: $\sum x_in_i=\Sexpr{sum(x)}$, $\sum x_i^2n_i=\Sexpr{sum(x^2)}$, $\sum (x_i-\bar x)^3n_i=\Sexpr{round(sum((x-mx)^3),2)}$ y $\sum (x_i-\bar x)^4n_i=\Sexpr{round(sum((x-mx)^4),2)}$.\\
+Enfermos: $\sum x_in_i=\Sexpr{sum(y)}$, $\sum x_i^2n_i=\Sexpr{sum(y^2)}$, $\sum (x_i-\bar x)^3n_i=\Sexpr{round(sum((y-my)^3),2)}$ y $\sum (x_i-\bar x)^4n_i=\Sexpr{round(sum((y-my)^4),2)}$.\\
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{des-21-nut}
+%% \extol{0.001}
+%% \degree{Nutrición}
+ 

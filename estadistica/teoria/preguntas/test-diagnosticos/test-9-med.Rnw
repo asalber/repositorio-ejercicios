@@ -1,0 +1,63 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+fp <- 0.01
+fn <- 0.002
+pre <- 1 / 400
+# Risks
+ntd <- 2
+nth <- 698
+ncd <- 3
+nch <- 297
+## QUESTION/ANSWER GENERATION
+sen <- 1 - fn / pre
+spe <- 1 - fp / (1 - pre)
+tp <- pre * sen
+tn <- (1 - pre) * spe
+ppv <- tp / (tp + fp)
+npv <- tn / (tn + fn)
+# Risks
+nt <- ntd + nth
+nc <- ncd + nch
+n <- nt + nc
+rt <- ntd / nt
+rc <- ncd / nc
+rr <- rt / rc
+ot <- ntd / nth
+oc <- ncd / nch
+or <- ot / oc
+@
+
+\begin{question}
+\puntos{3}Se ha realizado un estudio sobre la relación entre el Rh sanguineo y el contagio por SARS-CoV-2. Al comienzo del estudio se toma una muestra de personas sin infectar y trascurrido un año se obtiene la siguiente tabla:
+
+$$\begin{array}{llr}
+\hline
+\mbox{Rh sanguineo} & \mbox{Infección} & \mbox{Personas}\\
+- & \mbox{Si} & 520\\
+- & \mbox{No} & 6380\\
++ & \mbox{Si} & 780\\
++ & \mbox{No} & 6200\\
+\hline
+\end{array}
+$$
+
+\begin{enumerate}
+\item Calcula el riesgo relativo y el odds ratio para estudiar la asociación entre el Rh sanguíneo y el contagio por SARS-CoV-2. Explicar cuál de las dos medidas es la más apropiada e interpretarla.
+\item Si se ha desarrollado un test para el SARS-CoV-2 con una especificidad del 95\% y una sensibilidad del 60\%, independientemente del Rh sanguineo,
+¿En qué Rh sanguineo producirá el test más errores? ¿Qué diagnóstico haríamos si se aplica el test a una persona con Rh $-$ y resulta positivo? ¿Y qué diagnóstico haríamos si se aplica el test a una persona con Rh $+$ y resulta negativo?
+\end{enumerate}
+\end{question}
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{test-med-5}
+%% \extol{0.001}
+%% \degree{Medicine}
+ 
+  

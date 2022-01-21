@@ -1,0 +1,56 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+pA <- 4/5
+pB <- 0.5
+pNoANoB <- 1/20
+
+## QUESTION/ANSWER GENERATION
+pAoB <- 1-pNoANoB
+pAB <- pA + pB - pAoB
+pNoAB <- pB-pAB
+pNoA <- 1-pA
+pNoB <- 1-pB
+pBSiA <- pAB/pA
+pBSiNoA <- pNoAB/pNoA
+@
+
+\begin{question}
+Para probar la eficacia de dos tests diferentes de antígenos para detectar la COVID se ha tomado un grupo de 100 personas y se les ha aplicado los dos tests obteniéndose los siguientes resultados:
+
+$$\begin{array}{ccr}
+\hline
+\mbox{Test $A$} & \mbox{Test $B$} & \mbox{Num Resultados}\\
++ & + & 8\\
++ & - & 2\\
+- & + & 3\\
+- & - & 87\\
+\hline
+\end{array}
+$$
+
+Definir los sucesos asociados y calcular sus probabilidades en los siguientes supuestos:
+
+\begin{enumerate}
+\item Obtener resultado $+$ en el test $A$.
+\item Obtener resultado $+$ en el test $A$ y $-$ en el $B$.
+\item Obtener resultado $+$ en alguno de los tests.
+\item Obtener resultados diferentes en los dos tests.
+\item Obtener el mismo resultado en los dos tests.
+\item Si una persona ha dado $+$ en el test $A$, obtener resultado $+$ en test $B$.
+\end{enumerate}
+¿Son independientes los resultados de los tests?
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{prob-12-med}
+%% \extol{0.001}
+%% \degree{Medicina}
+ 

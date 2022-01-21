@@ -1,0 +1,84 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+x <- c(7, 8, 10, 8, 9)
+y <- c(105, 110, 98, 97, 103)
+u <- c(55, 41, 70, 34, 61)
+v <- c(145, 121, 154, 121, 155)
+n1 <- length(x)
+n2 <- length(u)
+sumx <- sum(x)
+sumy <- sum(y)
+sumx2 <- sum(x^2)
+sumy2 <- sum(y^2)
+sumxy <- sum(x*y)
+sumu <- sum(u)
+sumv <- sum(v)
+sumu2 <- sum(u^2)
+sumv2 <- sum(v^2)
+sumuv <- sum(u*v)
+
+## QUESTION/ANSWER GENERATION
+# means
+mx <- sumx / n1
+my <- sumy / n1
+# variances
+s2x <- sumx2/n1-mx^2
+s2y <- sumy2/n1-my^2
+# Covariances
+sxy <- sumxy/n1-mx*my
+# Detercmation coeff
+r2xy <- sxy^2/(s2x*s2y)
+# Slopes
+byx <- sxy/s2x
+
+mod <- lm(y~x)
+@
+
+\begin{question}
+La tabla siguiente muestra la edad $X$ (en años) y la máxima presión arterial $Y$ (en mmHg) de un grupo de 5 niñas y otro grupo de 5 mujeres.
+
+$$
+\begin{tabular}{lrrrrr|rrrrr}
+& \multicolumn{5}{c}{\mbox{Niñas}} & \multicolumn{5}{c}{\mbox{Mujeres}}\\
+\hline
+\mbox{Edad} & 7 & 8 & 10 & 8 & 9 & 55 & 41 & 70 & 34 & 61 \\
+\mbox{Presión} & 105 & 110 & 98 & 97 & 103 & 145 & 121 & 154 & 121 & 155\\
+\hline
+\end{tabular}
+$$
+
+\begin{enumerate}
+\item ¿Existe relación lineal entre la presión y la edad en las mujeres?
+\item ¿Cuánto varía la presión arterial por cada año de edad en las mujeres?
+\item ¿En qué grupo de edad se explica mayor porcentaje de variabilidad de la presión según la edad? A continuación se da el resumen estadístico del modelo de regresión lineal para las niñas.
+
+$$
+\includegraphics[width=0.5\textwidth]{/run/media/alf/datos/misrepositorios/docencia/repositorio-ejercicios/estadistica/teoria/examenes/img/modelo-lineal.png}
+$$
+
+\item Realizar las predicciones siguientes, sólo si tiene sentido hacerlas. En caso de no tener sentido hacerlas, explicar por qué. 
+\begin{enumerate}
+\item Presión sanguínea de una mujer de 55 años. 
+\item Presión sanguínea de una niña de 9 años. 
+\item Presión sanguínea de una mujer de 30 años.
+\end{enumerate}
+\item Explicar razonadamente por qué la predicción de la presión de una mujer de 55 años no es 145 mmHg, mientras que en la tabla la mujer de 55 años sí tenía una presión de 145 mmHg.
+\end{enumerate}
+
+Usar las siguientes sumas para los cálculos:\\
+Niñas: $\sum x_i=\Sexpr{sumx}$ años, $\sum y_i=\Sexpr{sumy}$ mmHg, $\sum x_i^2=\Sexpr{sumx2}$ años$^2$, $\sum y_i^2=\Sexpr{sumy2}$ mmHg$^2$ y $\sum x_iy_j=\Sexpr{sumxy}$ años$\cdot$mmHg.\\
+Mujeres: $\sum x_i=\Sexpr{sumu}$ años, $\sum y_i=\Sexpr{sumv}$ mmHg, $\sum x_i^2=\Sexpr{sumu2}$ años$^2$, $\sum y_i^2=\Sexpr{sumv2}$ mmHg$^2$ y $\sum x_iy_j=\Sexpr{sumuv}$ años$\cdot$mmHg.
+\end{question}
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{reglin-18-med}
+%% \extol{0.001}
+%% \degree{Medicina}
+ 

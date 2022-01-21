@@ -33,7 +33,7 @@ or <- ot / oc
 \item Calcular la sensibilidad y la especificidad del test.
 \item Si un hombre tiene un resultado positivo en el test, ¿cuál es la probabilidad de que tenga cáncer de próstata?
 \item Calcular e interpretar el valor negativo predictivo del test.
-\item ¿Es este teste mejor para detectar o para descartar el cáncer de próstata?
+\item ¿Es este test mejor para detectar o para descartar el cáncer de próstata?
 \item Para ver si existe asociación entre el cáncer de próstata y la práctica del deporte, se tomó una muestra de 1000 hombres, de los cuales 700 practicaban deporte, y se observó que había 2 hombres con cáncer de próstata en el grupo de los que practicaban deporte y 3 hombres con cáncer de próstata en el grupo de los que no practicaban deporte. Calcular el riesgo relativo y el odds ratio de sufrir cáncer de próstata cuando se practica deporte. 
 \end{enumerate}
 \end{question}
