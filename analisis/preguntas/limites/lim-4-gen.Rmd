@@ -1,0 +1,22 @@
+```{r, echo=FALSE, results="hide"}
+```
+
+Question
+========
+(1.5 puntos) Demostrar, usando la definición de límite, que $\dlim_{x\to 1}\frac{3x+1}{2}=2$.
+
+Solution
+========
+Para cualquier $\varepsilon>0$ existe $\delta=\frac{2}{3}\varepsilon$, tal que si $|x-1|<\delta=\frac{2}{3}\varepsilon$ se tiene
+
+$$
+\left|\frac{3x+1}{2}-2\right|= \left|\frac{3x+1-4}{2}\right| = \left|\frac{3x-3}{2}\right| = \left|\frac{3(x-1)}{2}\right| = \frac{3}{2}|x-1|< \frac{3}{2}\frac{2}{3}\varepsilon = \varepsilon.
+$$
+
+Meta-information
+================
+extype: num
+exname: lim-3-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos

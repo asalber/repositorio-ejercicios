@@ -1,0 +1,81 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+x <- c(3, 3, 5, 6, 7, 8, 3, 4, 2, 3)
+y <- c(2, 1, 2, 3, 6, 6, 2, 2, 1, 1)
+n <- length(x)
+table <- matrix(c(x,y), nrow = 2, byrow = T)
+#decimals <- matrix(rep(1,2*n), nrow = 2, ncol=9, byrow=TRUE)
+rownames(table) <- c("X", "Y")
+sumx <- sum(x)
+sumy <- sum(y)
+sumx2 <- sum(x^2)
+sumy2 <- sum(y^2)
+sumxy <- sum(x*y)
+
+## QUESTION/ANSWER GENERATION
+# means
+mx <- sumx / n
+my <- sumy / n
+# variances
+s2x <- sumx2/n-mx^2
+s2y <- sumy2/n-my^2
+# Covariances
+sxy <- sumxy/n-mx*my
+# Detercmation coeff
+r2xy <- sxy^2/(s2x*s2y)
+# Regression lines
+lmyx <- lm(y ~ x)
+lmxy <- lm(x ~ y)
+@
+
+\begin{question}
+La consejería de sanidad de Madrid se da cuenta de una posible relación entre el nivel de contaminación atmosférica y el número de casos de neumonía en la población en las primeras 10 semanas del año. Para comprobarlo, la variable $X$ registra el número de medidores que sobrepasan los límites de contaminación cada semana; y la variable $Y$ indica el número de personas afectadas de neumonía en cada semana.
+
+$$
+<<echo=FALSE, results=tex>>=
+library(xtable)
+print(xtable(table, auto=T), tabular.environment="array", include.colnames = F, floating=F, hline.after = c(0,nrow(table)), sanitize.text.function = function(x) { x })
+@
+$$
+
+\begin{enumerate}
+\item ¿Son el número de personas afectadas y el número de medidores que sobrepasan los límites de contaminación dos variables linealmente independientes? Justifica la respuesta.
+\item ¿Cómo cambia el número de personas afectadas por neumonía en relación al número de medidores que sobrepasan los límites de contaminación?
+\item Justifica si se explica bien o no la relación lineal entre ambas variables y en qué proporción.
+\item En la semana siguiente de construir el modelo de regresión lineal de $Y$ sobre $X$, se espera que 5 medidores sobrepasen los límites de contaminación. ¿Cuántas personas se espera ver afectadas de neumonía en dicha semana? ¿Es buena esta predicción?
+\item ¿Cuál de los siguientes diagramas representa mejor las rectas de regresión?
+
+<<posibles-rectas-regresion, fig=T, echo=F, fig.path="img">>=
+layout(matrix(1:4, ncol = 2, byrow = T))
+plot(x, y, type = "n")
+abline(lmyx)
+abline(-lmxy$coefficients[1]/lmxy$coefficients[2], 1/lmxy$coefficients[2])
+plot(x, y, type = "n")
+abline(h = mean(y))
+abline(v = mean(x))
+plot(x, y, type = "n")
+abline(mean(y)-1.5*mean(x), 1.5)
+abline(mean(y)-0.5*mean(x), 0.5)
+plot(x, y, type = "n")
+abline(mean(y)+1.2*mean(x), -1.2)
+abline(mean(y)+0.7*mean(x), -0.7)
+@
+
+\end{enumerate}
+
+Usar las siguientes sumas para los cálculos:\\
+$\sum x_i=\Sexpr{sumx}$ medidores, $\sum y_i=\Sexpr{sumy}$ personas, $\sum x_i^2=\Sexpr{sumx2}$ medidores$^2$, $\sum y_i^2=\Sexpr{sumy2}$ personas$^2$ y $\sum x_iy_j=\Sexpr{sumxy}$ medidores$\cdot$personas.
+\end{question}
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{reglin-19-med}
+%% \extol{0.001}
+%% \degree{Medicina}
+ 

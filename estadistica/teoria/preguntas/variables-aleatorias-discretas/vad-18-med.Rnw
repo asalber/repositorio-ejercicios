@@ -1,0 +1,31 @@
+% LTeX: language=es
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+
+
+## QUESTION/ANSWER GENERATION
+
+@
+
+\begin{question}
+\puntos{3.5}En una farmacia se venden dos vacunas $A$ y $B$ contra un tipo de virus. Se sabe que la vacuna $A$ produce un 5\% de efectos secundarios, mientras que la vacuna $B$ produce un 2\% de efectos secundarios. Si se han vendido 10 unidades de la vacuna $A$ y 100 unidades de la vacuna $B$, se pide:
+
+\begin{enumerate}
+\item Calcular la probabilidad de que haya menos de 2 efectos secundarios con la vacuna $A$.
+\item Calcular la probabilidad de que haya más de 3 efectos secundarios con la vacuna $B$. 
+\item Si aplicamos ambas vacunas a una misma persona en momentos distintos, y suponiendo que el que una vacuna produzca efectos secundarios es independiente de que los produzca la otra, ¿cuál es la probabilidad de que esa persona tenga algún efecto secundario?
+\end{enumerate}
+\end{question}  
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{vad-18-med}
+%% \extol{0.01}
+%% \degree{Medicina}
+ 

@@ -1,0 +1,53 @@
+% LTeX: language=es
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+fp <- 0.01
+fn <- 0.002
+pre <- 1 / 500
+# Risks
+ntd <- 2
+nth <- 698
+ncd <- 3
+nch <- 297
+## QUESTION/ANSWER GENERATION
+sen <- 1 - fn / pre
+spe <- 1 - fp / (1 - pre)
+tp <- pre * sen
+tn <- (1 - pre) * spe
+ppv <- tp / (tp + fp)
+npv <- tn / (tn + fn)
+# Risks
+nt <- ntd + nth
+nc <- ncd + nch
+n <- nt + nc
+rt <- ntd / nt
+rc <- ncd / nc
+rr <- rt / rc
+ot <- ntd / nth
+oc <- ncd / nch
+or <- ot / oc
+@
+
+\begin{question}
+\puntos{3.5}Un test diagnóstico para detectar una lesión cervical tiene una sensibilidad del 99\% y produce un 80\% de diagnósticos acertados. Suponiendo que la prevalencia de la lesión es del 10\%, se pide:
+
+\begin{enumerate}
+\item Calcular la especificidad del test.
+\item ¿Podemos descartar la lesión cuando el test da un resultado negativo?
+\item ¿Podemos confirmar la lesión cuando el test da un resultado positivo? ¿Cuál sería la mínima prevalencia de la lesión para que el test permitiese diagnosticar la lesión?
+\end{enumerate}
+\end{question}
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{test-12-fis}
+%% \extol{0.001}
+%% \degree{Fisioterapia}
+ 
+  

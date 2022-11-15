@@ -1,0 +1,36 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+mx <- 5
+sx <- 2
+sy <- 25
+sy <- 5
+## QUESTION/ANSWER GENERATION
+
+@
+
+\begin{question}
+El peso de las ratas Wistar macho de un laboratorio sigue una distribución normal con media 400 gramos y desviación típica 30 gramos. 
+
+\begin{enumerate}
+\item ¿Cuál es la probabilidad de que una rata al azar tenga un peso de exactamente 400 gramos?
+\item ¿Cuál es la probabilidad de que una rata al azar tenga un peso superior a 450 gramos? 
+\item Si se toma una rata al azar, ¿cuál es la probabilidad de que su peso sea atípico?\\
+Nota: El intervalo de normalidad es $(C_1-1.5 RI, C_3+1.5RI)$.
+\item Indica un intervalo de pesos centrado en la media en el que se encuentren el 95\% de las ratas macho Wistar. 
+\end{enumerate}
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{vac-19-far}
+%% \extol{0.001}
+%% \degree{Farmacia}
+ 
+  

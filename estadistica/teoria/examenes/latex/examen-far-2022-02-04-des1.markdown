@@ -1,0 +1,87 @@
+1.  **Question**\
+    La cuenta del farmacéutico-tiktoker \@farmaceutikofer cuenta con
+    numerosos vídeos informativo-satíricos sobre enfermedades
+    infecciosas, educación sexual y hábitos saludables. La duración, en
+    segundos, de sus últimos 30 vídeos es la siguiente:
+
+    $$% latex table generated in R 4.1.2 by xtable 1.8-4 package
+      % Wed Feb  2 22:50:18 2022
+      \begin{array}{rrrrrrrrrrrrrrr}
+        31 & 32 & 33 & 33 & 35 & 35 & 37 & 37 & 38 & 39 & 39 & 41 & 41 & 42 & 45 \\ 
+        46 & 46 & 47 & 48 & 48 & 48 & 52 & 52 & 54 & 55 & 55 & 56 & 57 & 59 & 61 \\ 
+        \end{array}$$
+
+    1.  Calcula el valor promedio y el valor más frecuente de la
+        duración de los vídeos.
+
+    2.  ¿Cómo es la dispersión relativa de la muestra?
+
+    3.  Obtén la tabla de frecuencias de la muestra agrupando los datos
+        en clases de amplitud 5. Representa el histograma de la muestra
+        a partir de la tabla construida.
+
+    4.  Calcula el rango intercuartílico y explica su significado.
+
+    5.  ¿Se puede decir que la distribución tiene un apuntamiento
+        normal?
+
+    6.  El ticktoker \@pauloGsow sube vídeos satíricos sobre profesores
+        de instituto cuya duración media es de 45 segundos y su varianza
+        es de 91 segundos. Si tanto \@farmaceutikofer como \@pauloGsow
+        suben un vídeo de 51 segundos de duración, ¿cuál de los dos
+        tiktokers ha subido un vídeo con menor duración en relación a su
+        propia cuenta?
+
+    Usar las siguientes sumas para los cálculos:\
+    $\sum x_i=1342$ s, $\sum x_i^2=62302$ s$^2$,
+    $\sum (x_i-\bar x)^3=2870.46$ s$^3$ y $\sum (x_i-\bar x)^4=315273.2$
+    s$^4$.
+
+    **Solution**\
+
+2.  **Question**\
+    La consejería de sanidad de Madrid se da cuenta de una posible
+    relación entre el nivel de contaminación atmosférica y el número de
+    casos de neumonía en la población en las primeras 10 semanas del
+    año. Para comprobarlo, la variable $X$ registra el número de
+    medidores que sobrepasan los límites de contaminación cada semana; y
+    la variable $Y$ indica el número de personas afectadas de neumonía
+    en cada semana.
+
+    $$% latex table generated in R 4.1.2 by xtable 1.8-4 package
+      % Wed Feb  2 22:50:18 2022
+      \begin{array}{lrrrrrrrrrr}
+         \hline
+      X & 3 & 3 & 5 & 6 & 7 & 8 & 3 & 4 & 2 & 3 \\ 
+        Y & 2 & 1 & 2 & 3 & 6 & 6 & 2 & 2 & 1 & 1 \\ 
+         \hline
+      \end{array}$$
+
+    1.  ¿Son el número de personas afectadas y el número de medidores
+        que sobrepasan los límites de contaminación dos variables
+        linealmente independientes? Justifica la respuesta.
+
+    2.  ¿Cómo cambia el número de personas afectadas por neumonía en
+        relación al número de medidores que sobrepasan los límites de
+        contaminación?
+
+    3.  Justifica si se explica bien o no la relación lineal entre ambas
+        variables y en qué proporción.
+
+    4.  En la semana siguiente de construir el modelo de regresión
+        lineal de $Y$ sobre $X$, se espera que 5 medidores sobrepasen
+        los límites de contaminación. ¿Cuántas personas se espera ver
+        afectadas de neumonía en dicha semana? ¿Es buena esta
+        predicción?
+
+    5.  ¿Cuál de los siguientes diagramas representa mejor las rectas de
+        regresión?
+
+        ![image](media/supplements1/exercise2/reglin-19-med-posibles-rectas-regresion.svg)
+
+    Usar las siguientes sumas para los cálculos:\
+    $\sum x_i=44$ medidores, $\sum y_i=26$ personas, $\sum x_i^2=230$
+    medidores$^2$, $\sum y_i^2=100$ personas$^2$ y $\sum x_iy_j=146$
+    medidores$\cdot$personas.
+
+    **Solution**\

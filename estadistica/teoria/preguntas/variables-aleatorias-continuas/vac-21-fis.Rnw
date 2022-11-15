@@ -1,0 +1,37 @@
+% LTeX: language=es
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+mx <- 45
+sx <- 4
+my <- 48
+sy <- 4
+
+## QUESTION/ANSWER GENERATION
+
+@
+
+\begin{question}
+\puntos{3}La longitud del hueso del fémur se distribuye normalmente tanto en hombres como en mujeres con una desviación típica de 4 cm. Se sabe además que el primer cuartil en mujeres es 42.3 cm, mientras que el tercer cuartil en hombres es 50.7 cm.
+
+\begin{enumerate}
+\item ¿Cuál es la diferencia entre las medias de la longitud del fémur de hombres y mujeres?\\
+Nota: Si no se saben calcular las medias, tomar 44 cm para la media de las mujeres y 47 cm para la media de los hombres en los siguientes apartados.
+\item Calcular el percentil 60 de la longitud del fémur de las mujeres. ¿Qué porcentaje de hombres tendrá una longitud del fémur menor que el percentil 60 de las mujeres? 
+\item Si se toman un hombre y una mujer al azar, ¿cuál es la probabilidad de que ninguno tenga un fémur menor de 45 cm?
+\end{enumerate}
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{vac-21-fis}
+%% \extol{0.001}
+%% \degree{Fisioterapia}
+ 
+  

@@ -9,21 +9,17 @@
 \usepackage{enumitem}
 \usepackage{booktabs}
 \usepackage{array}
+\usepackage{multirow}
 \usepackage{verbatim}
 \usepackage{Sweave}
 \usepackage{xargs}
 \usepackage{fancyhdr}
-
-%% Colors
-\usepackage[table]{xcolor}
-\definecolor{color1}{RGB}{5,161,230} % Blue CEU
-\definecolor{color2}{RGB}{238,50,36} % Red CEU
+\usepackage{setspace} 
 
 %% new environments
 \newenvironment{question}{\item}{}
-\newenvironment{solution}{\hrulefill\\ \textbf{\color{color2}Solución}\par}{\hrulefill}
+\newenvironment{solution}{\comment}{\endcomment}
 \newenvironment{answerlist}{\renewcommand{\labelenumi}{(\alph{enumi})}\begin{enumerate}}{\end{enumerate}}
-
 
 %% compatibility with pandoc
 \providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
@@ -59,17 +55,31 @@
 
 %% headings
 \pagestyle{fancy}
-\lhead{\textsc{\color{color1}Universidad San Pablo CEU}}
-\rhead{\textsl{\textsf{\color{color1}Departamento de Matemática Aplicada y Estadística}}}
+\lhead{\textsc{Universidad CEU San Pablo}}
+\rhead{\textsl{\textsf{Departamento de Matemáticas y Ciencia de Datos}}}
 \cfoot{}
 \renewcommand{\headrulewidth}{0pt}
 
 \begin{document}
-\exasol{\color{color1}EXAMEN DE \mySubject}{\color{color1}\myDegree}{\color{color1}\myDate}{\color{color1}Modelo \myVersion}
+\begin{center}
+\doublespacing
+\sffamily
+\begin{tabular}{|p{0.15\textwidth}|p{0.38\textwidth}|p{0.39\textwidth}|}
+\hline
+\multirow{4}{*}{\includegraphics[width=0.15\textwidth]{/run/media/alf/datos/misrepositorios/docencia/repositorio-ejercicios/img/logoceu.jpg}} & \multicolumn{2}{c|}{\LARGE \textbf{EXAMEN DE ANÁLISIS I}} \\
+\cline{2-3}
+& 1º Grado en Ingeniería Matemática & Nombre: \\
+\cline{2-3}
+& Asignatura: Análisis I & DNI: \\
+\cline{2-3}
+& Fecha: 14/11/2022 & Modelo A\\
+\hline
+\end{tabular}
+\end{center}
+
 \noindent\textbf{Duración}: \myTime. \vskip 1cm
 
 \begin{enumerate}[leftmargin=*]
-
 %% \exinput{exercises}
 
 \end{enumerate}

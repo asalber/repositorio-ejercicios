@@ -1,0 +1,23 @@
+```{r, echo=FALSE, results="hide"}
+
+```
+
+Question
+========
+Dada la sucesión $\left(2+\frac{1}{n}\right)_{n=1}^\infty$,
+
+a. Calcular, si existen, el supremo, ínfimo, máximo y mínimo del conjunto de sus términos.
+b. Demostrar que la sucesión converge a $2$.
+
+
+Solution
+========
+Solución
+
+Meta-information
+================
+extype: num
+exname: suc-1-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos

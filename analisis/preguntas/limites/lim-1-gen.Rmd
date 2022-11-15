@@ -1,0 +1,30 @@
+```{r, echo=FALSE, results="hide"}
+
+```
+
+Question
+========
+(1.5 puntos) Sabiendo que $\lim_{x\to 0}(1+x)^{1/x}=e$, demostrar que las siguientes funciones son infinitésimos equivalentes en $x=0$:
+
+a. $\ln(1+x)$ y $x$.
+b. $e^x-1$ y $x$.
+
+Solution
+========
+Para que dos funciones $f$ y $g$ sean infinitésimos equivalentes en $x=0$ se tiene que cumplir que $\lim_{x\to 0}\frac{f(x)}{g(x)}=1$.
+
+a. $$\lim_{x\to 0}\frac{\ln(1+x)}{x} = \lim_{x\to 0}\frac{1}{x}\ln(1+x) = \lim_{x\to 0} = \ln\left((1+x)^{1/x}\right) = \ln\left(\lim_{x\to 0} (1+x)^{1/x}\right) = \ln(e) = 1.$$
+
+b. Haciendo uso del resultado anterior se tiene
+
+$$\lim_{x\to 0}\frac{e^x-1}{x} = \lim_{x\to 0}\frac{e^{\ln(x+1)}-1}{x} = \lim_{x\to 0}\frac{x+1-1}{x} = \lim_{x\to 0} \frac{x}{x} = \lim_{x\to 0} 1 = 1.$$
+
+Meta-information
+================
+extype: num
+exname: lim-1-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos
+
+

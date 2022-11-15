@@ -1,0 +1,27 @@
+```{r, echo=FALSE, results="hide"}
+
+```
+
+Question
+========
+(2 puntos) Dada la sucesión $\left(\frac{1}{2^n}\right)_{n=1}^\infty$,
+
+a. Calcular, si existen, el supremo, ínfimo, máximo y mínimo del conjunto de sus términos.
+b. Demostrar que la sucesión converge a $0$.
+
+Solution
+========
+a. La sucesión es monótona decreciente, ya que $\forall n\in\mathbb{N}$ $2^n<2^{n+1}$, y por tanto, $x_n=\frac{1}{2^n}<\frac{1}{2^{n+1}}=x_{n+1}$. Así pues, el primer término de la sucesión $x_1=1/2$ es su máximo, y por tanto el supremo. 
+
+    Veamos ahora que $0$ es ínfimo por reducción al absurdo. En primer lugar, $0$ es una cota inferior de la sucesión, pues todos sus términos son positivos. Supongamos ahora que existe otra cota inferior $c\in\mathbb{R}$ tal que $c>0$. Por la propiedad arquimediana, existe $n\in\mathbb{N}$ tal que $\frac{1}{n}< c$. Ahora bien, como $n<2^n$ $\forall n\in\mathbb{N}$, se tiene que $\frac{1}{2^n}<\frac{1}{n}< c$, por lo que el termino $n$ de la sucesión es menor que $c$, lo que contradice que sea cota inferior. Así pues, $0$ es el ínfimo. Sin embargo, la sucesión no tiene mínimo, pues $x_n\neq 0$ $\forall n\in\mathbb{N}$.
+
+b. Como la sucesión es monótona decreciente y está acotada inferiormente, por el [teorema de la convergencia de una sucesión monónota](https://aprendeconalf.es/analisis-manual/sucesiones.html#thm-convergencia-monotona) la sucesión converge y $\lim_{n\to\infty}x_n = \inf(\{x_n:n\in\mathbb{N}\})=0$.
+
+
+Meta-information
+================
+extype: num
+exname: suc-2-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos

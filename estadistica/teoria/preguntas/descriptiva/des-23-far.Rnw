@@ -1,0 +1,62 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+x <- c(31, 32, 33, 33, 35, 35, 37, 37, 38, 39, 39, 41, 41, 42, 45, 46, 46, 47, 48, 48, 48, 52, 52, 54, 55, 55, 56, 57, 59, 61)
+
+table <- matrix(c(x[1:15], x[16:30]), nrow = 2, byrow = T)
+
+# QUESTION/ANSWER GENERATION
+# Tamaño de la muestra
+nx <- length(x)
+# Media
+mx <- mean(x)
+# Varianza
+s2x <- sum(x^2)/nx-mx^2
+# Desviación típica
+sx <- sqrt(s2x)
+# Coef. variación
+cvx <- sx/mx
+# Coef. asimetría
+g1x <- sum((x-mx)^3)/(nx*sx^3)
+# Coef. apuntamiento
+g2x <- sum((x-mx)^4)/(nx*sx^4)-3
+# Puntuaciones típicas
+
+@
+
+\begin{question}
+La cuenta del farmacéutico-tiktoker @farmaceutikofer cuenta con numerosos vídeos informativo-satíricos sobre enfermedades infecciosas, educación sexual y hábitos saludables. La duración, en segundos, de sus últimos 30 vídeos es la siguiente:
+
+$$
+<<echo=FALSE, results=tex>>=
+library(xtable)
+print(xtable(table, auto=T), tabular.environment="array", include.colnames = F, include.rownames = F, floating=F, hline.after = c(), sanitize.text.function = function(x) { x })
+@
+$$
+
+
+\begin{enumerate}
+\item Calcula el valor promedio y el valor más frecuente de la duración de los vídeos.
+\item ¿Cómo es la dispersión relativa de la muestra?
+\item Obtén la tabla de frecuencias de la muestra agrupando los datos en clases de amplitud 5. Representa el histograma de la muestra a partir de la tabla construida.
+\item Calcula el rango intercuartílico y explica su significado.
+\item ¿Se puede decir que la distribución tiene un apuntamiento normal?
+\item El ticktoker @pauloGsow sube vídeos satíricos sobre profesores de instituto cuya duración media es de 45 segundos y su varianza es de 91 segundos. Si tanto @farmaceutikofer como @pauloGsow suben un vídeo de 51 segundos de duración, ¿cuál de los dos tiktokers ha subido un vídeo con menor duración en relación a su propia cuenta?
+\end{enumerate}
+
+Usar las siguientes sumas para los cálculos:\\
+$\sum x_i=\Sexpr{sum(x)}$ s, $\sum x_i^2=\Sexpr{sum(x^2)}$ s$^2$, $\sum (x_i-\bar x)^3=\Sexpr{round(sum((x-mx)^3),2)}$ s$^3$ y $\sum (x_i-\bar x)^4=\Sexpr{round(sum((x-mx)^4),2)}$  s$^4$.
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{des-23-far}
+%% \extol{0.001}
+%% \degree{Farmacia}
+ 

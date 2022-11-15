@@ -1,0 +1,54 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+fp <- 0.01
+fn <- 0.002
+pre <- 1 / 400
+# Risks
+ntd <- 2
+nth <- 698
+ncd <- 3
+nch <- 297
+## QUESTION/ANSWER GENERATION
+sen <- 1 - fn / pre
+spe <- 1 - fp / (1 - pre)
+tp <- pre * sen
+tn <- (1 - pre) * spe
+ppv <- tp / (tp + fp)
+npv <- tn / (tn + fn)
+# Risks
+nt <- ntd + nth
+nc <- ncd + nch
+n <- nt + nc
+rt <- ntd / nt
+rc <- ncd / nc
+rr <- rt / rc
+ot <- ntd / nth
+oc <- ncd / nch
+or <- ot / oc
+@
+
+\begin{question}
+Para evaluar un posible desplazamiento de rótula en la clínica de fisioterapia Abruna Joms se utiliza el Test de Glide. Tras un año, 1000 pacientes se sometieron a dicho test. De ellos, 200 sufrían desplazamiento de rótula y dieron positivo en el test, pero 13 que también sufrían desplazamiento dieron negativo. De los que no sufrían desplazamiento de rótula, 8 dieron positivo y el resto dio negativo. Se pide:
+
+\begin{enumerate}
+\item Representa los datos obtenidos mediante el test de Glide en una tabla o un árbol. 
+\item Calcula la sensibilidad y especificidad del test de Glide obtenida en estos pacientes. 
+\item Justifica si el test de Glide sirve para diagnosticar desplazamiento de rótula con la medida más apropiada. 
+\item Justifica si el test de Glide sirve para descartar desplazamiento de rótula con la medida más apropiada. 
+\item ¿Cuál es la probabilidad de acertar el diagnóstico?
+\end{enumerate}
+\end{question}
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{test-11-med}
+%% \extol{0.001}
+%% \degree{Medicina}
+ 
+  

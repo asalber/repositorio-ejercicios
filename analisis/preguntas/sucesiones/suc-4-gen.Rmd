@@ -1,0 +1,19 @@
+```{r, echo=FALSE, results="hide"}
+
+```
+
+Question
+========
+Calcular el límite de la sucesión $x_1=\sqrt{2}$ y $x_{n+1}=\sqrt{2}^{x_n}$ $\forall n\in\mathbb{N}$.
+
+Solution
+========
+Solución
+
+Meta-information
+================
+extype: num
+exname: suc-4-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos

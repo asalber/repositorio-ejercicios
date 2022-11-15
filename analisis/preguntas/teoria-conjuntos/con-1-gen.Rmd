@@ -1,0 +1,19 @@
+```{r, echo=FALSE, results="hide"}
+
+```
+
+Question
+========
+Calcular, si existe, el supremo, ínfimo, máximo y mínimo del conjunto $\left\{\frac{1}{n}+\frac{1}{m}: n,m\in\mathbb{N}\right\}$.
+
+Solution
+========
+Solución
+
+Meta-information
+================
+extype: num
+exname: con-1-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos

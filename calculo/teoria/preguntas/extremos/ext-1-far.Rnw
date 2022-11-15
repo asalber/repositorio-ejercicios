@@ -1,0 +1,31 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+
+## QUESTION/ANSWER GENERATION
+# sample size
+
+@
+
+\begin{question}
+La temperatura de un gel depende del tiempo según la función $T(x)=x^2+\ln(1.5-x)$, donde $T$ es la temperatura en grados centígrados y $x$ el tiempo en horas. Se pide:
+
+\begin{enumerate}
+\item ¿Calcular la temperatura mínima y máxima del gel en el intervalo de 0 a 1.5 horas?
+\item ¿Con qué velocidad varía la temperatura a las 1.2 horas? Calcular el valor aproximado de la temperatura 5 minutos después usando la aproximación lineal.
+\item ¿En qué momento la velocidad con la que varía la temperatura es máxima?
+\end{enumerate}
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{ext-1-far}
+%% \extol{0.001}
+%% \degree{Farmacia}
+ 

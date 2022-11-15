@@ -1,0 +1,95 @@
+1.  **Question**\
+    El peso de las ratas Wistar macho de un laboratorio sigue una
+    distribución normal con media 400 gramos y desviación típica 30
+    gramos.
+
+    1.  ¿Cuál es la probabilidad de que una rata al azar tenga un peso
+        de exactamente 400 gramos?
+
+    2.  ¿Cuál es la probabilidad de que una rata al azar tenga un peso
+        superior a 450 gramos?
+
+    3.  Si se toma una rata al azar, ¿cuál es la probabilidad de que su
+        peso sea atípico?\
+        Nota: El intervalo de normalidad es $(C_1-1.5 RI, C_3+1.5RI)$.
+
+    4.  Indica un intervalo de pesos centrado en la media en el que se
+        encuentren el 95% de las ratas macho Wistar.
+
+    **Solution**\
+
+2.  **Question**\
+    Para evaluar un posible desplazamiento de rótula en la clínica de
+    fisioterapia Abruna Joms se utiliza el Test de Glide. Tras un año,
+    1000 pacientes se sometieron a dicho test. De ellos, 200 sufrían
+    desplazamiento de rótula y dieron positivo en el test, pero 13 que
+    también sufrían desplazamiento dieron negativo. De los que no
+    sufrían desplazamiento de rótula, 8 dieron positivo y el resto dio
+    negativo. Se pide:
+
+    1.  Representa los datos obtenidos mediante el test de Glide en una
+        tabla o un árbol.
+
+    2.  Calcula la sensibilidad y especificidad del test de Glide
+        obtenida en estos pacientes.
+
+    3.  Justifica si el test de Glide sirve para diagnosticar
+        desplazamiento de rótula con la medida más apropiada.
+
+    4.  Justifica si el test de Glide sirve para descartar
+        desplazamiento de rótula con la medida más apropiada.
+
+    5.  ¿Cuál es la probabilidad de acertar el diagnóstico?
+
+    **Solution**\
+
+3.  **Question**\
+    El nuevo fármaco Recalnal para paliar los cálculos renales produce
+    efectos secundarios en forma de daño hepático al 5% de los pacientes
+    que toman Recalnal. El fármaco se administra a 10 pacientes. Se
+    pide:
+
+    1.  Justifica razonadamente qué tipo de distribución sigue la
+        variable que mide el número de pacientes con daño hepático.
+
+    2.  ¿Cuál es la probabilidad de que al menos 2 de ellos sufran daño
+        hepático?
+
+    3.  Sea el suceso $E_n$ de que al menos uno de entre $n$ pacientes
+        sufra fallo hepático al administrarles Recalnal. En experimentos
+        para conocer la viabilidad de los fármacos, $P(E_n)$ se usa para
+        como criterio acerca de cómo de seguro es el fármaco. ¿Cuál es
+        el mínimo valor de $n$ para que $P(E_n)>0.9$?
+
+    En la fase experimental de Recalnal se administran, en término
+    medio, 3 dosis del fármaco por minuto en voluntarios. Se pide:
+
+    1.  Justifica razonadamente qué tipo de distribución sigue la
+        variable que mide el número de dosis administradas cada 5
+        minutos.
+
+    2.  ¿Cuál es la probabilidad de que se administren 13 dosis en 5
+        minutos?
+
+    **Solution**\
+
+4.  **Question**\
+    En una población hay un 20% de pacientes que han sufrido la
+    enfermedad $A$ pero no la $B$, un 30% de pacientes que han sufrido
+    la $B$ pero no la $A$ y un 90% de pacientes que no han sufrido las
+    dos enfermedades (pero pueden haber sufrido una). Se pide:
+
+    1.  ¿Qué porcentaje de personas han tenido la enfermedad $A$? ¿Y la
+        enfermedad $B$?
+
+    2.  Calcular la probabilidad de haber tenido alguna de las
+        enfermedades.
+
+    3.  Calcular la probabilidad de no sufrir la enfermedad $B$ si no se
+        ha sufrido la enfermedad $A$.
+
+    4.  ¿Qué porcentaje de pacientes con la enfermedad $B$ debería haber
+        en la población para que ambas enfermedades fuesen
+        independientes?
+
+    **Solution**\

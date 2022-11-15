@@ -1,0 +1,76 @@
+```{r, echo=FALSE, results="hide"}
+```
+
+Question
+========
+(2 puntos) Determinar las asíntotas de la función $f(x)=\ln\left(\frac{1}{x}+1\right)x^2$. 
+
+Solution
+========
+El dominio de la función es $\operatorname{Dom}(f) = \mathbb{R}-[-1,0]$ de modo que solo puede haber asíntotas verticales a la izquierda de $-1$ o a la derecha de $0$. Veamos primero, qué pasa con el límite por la izquierda en $-1$.
+
+$$
+\lim_{x\to -1^-}f(x) = \lim_{x\to -1^-}\ln\left(\frac{1}{x}+1\right)x^2 = \ln\left(\frac{1}{-1}+1\right)(-1)^2 = \ln(0) = -\infty.
+$$
+
+Por tanto, $f$ tiene una asíntota vertical por la izquierda en $x=-1$.
+
+Veamos ahora, qué pasa con el límite por la derecha en $0$. 
+
+\begin{align*}
+\lim_{x\to 0^+}f(x) &= \lim_{x\to 0^+}\ln\left(\frac{1}{x}+1\right)x^2 = \lim_{x\to 0^+}\ln\left(\frac{x+1}{x}\right)x^2 = \lim_{x\to 0^+} (\ln(x+1)-\ln(x))x^2 \\ 
+&= \lim_{x\to 0^+}\ln(x+1)x^2 - \lim_{x\to 0^+}\ln(x)x^2 = \ln(0+1)0^2 - \lim_{x\to 0^+}\frac{\ln(x)}{1/x^2} \\
+&= 0 - \lim_{x\to 0^+}\frac{(\ln(x))'}{(1/x^2)'} = -\lim_{x\to 0^+} \frac{1/x}{-2/x^3} = \tag{L'Hôpital}\\
+&= -\lim_{x\to 0^+} \frac{x^3}{-2x} = \lim_{x\to 0^+}\frac{x^2}{2} = 0.
+\end{align*}
+
+Por lo tanto, $f$ no tiene asíntota vertical en $x=0$.
+
+Para ver si hay asíntotas horizontales estudiamos los límites en el infinito.
+
+\begin{align*}
+\lim_{x\to \infty} f(x) &= \lim_{x\to \infty}\ln\left(\frac{1}{x}+1\right)x^2 = \lim_{x\to\infty} \frac{\ln(x^{-1}+1)}{x^{-2}} = \lim_{x\to\infty} \frac{(\ln(x^{-1}+1))'}{(x^{-2})'} \tag{L'Hôpital}\\
+&= \lim_{x\to\infty} \frac{\frac{1}{x^{-1}+1}(-1)x^{-2}}{-2x^{-3}} = \lim_{x\to \infty} \frac{x}{2(x^{-1}+1)} = \infty.
+\end{align*}
+
+Por tanto, $f$ no tiene asíntota horizontal en $\infty$. Veamos ahora qué ocurre en $-\infty$.
+
+\begin{align*}
+\lim_{x\to -\infty} f(x) &= \lim_{x\to -\infty}\ln\left(\frac{1}{x}+1\right)x^2 = \lim_{x\to -\infty} \frac{\ln(x^{-1}+1)}{x^{-2}} = \lim_{x\to -\infty} \frac{(\ln(x^{-1}+1))'}{(x^{-2})'} \tag{L'Hôpital}\\
+&= \lim_{x\to -\infty} \frac{\frac{1}{x^{-1}+1}(-1)x^{-2}}{-2x^{-3}} = \lim_{x\to -\infty} \frac{x}{2(x^{-1}+1)} = -\infty.
+\end{align*}
+
+Luego, $f$ tampoco tiene asíntota vertical en $-\infty$.
+
+Finalmente, veamos si $f$ tiene asíntotas oblicuas. 
+
+\begin{align*}
+\lim_{x\to \infty} \frac{f(x)}{x} &= \lim_{x\to \infty}\frac{\ln\left(\frac{1}{x}+1\right)x^2}{x} = \lim_{x\to \infty}\ln\left(\frac{1}{x}+1\right)x \\
+&= \lim_{x\to \infty} \ln\left(\left(\frac{1}{x}+1\right)^x\right) = \ln\left(\lim_{x\to \infty} \left(\frac{1}{x}+1\right)^x\right) = \ln(e)=1
+\end{align*}
+
+Por tanto, $f$ tiene asíntota vertical en $\infty$ con pendiente $b=1$. Para obtener el término independiente de la asíntota, calculamos el siguiente límite.
+
+\begin{align*}
+\lim_{x\to \infty} f(x)-x &= \lim_{x\to \infty}\ln\left(\frac{1}{x}+1\right)x^2-x = \lim_{x\to \infty}(\ln(x^{-1}+1)x-1)x \\
+&= \lim_{x\to \infty}\frac{\ln(x^{-1}+1)x-1}{x^{-1}} =  \lim_{x\to \infty}\frac{(\ln(x^{-1}+1)x-1)'}{(x^{-1})'} \tag{L'Hôpital} \\
+&= \lim_{x\to \infty}\frac{\frac{-1}{(x^{-1}+1)x^2}x+\ln(x^{-1}+1)}{(-1)x^{-2}} = \lim_{x\to \infty}\frac{\frac{-1}{(x+1)}+\ln(x^{-1}+1)}{-x^{-2}} \\
+&= \lim_{x\to \infty}\frac{\left(\frac{-1}{(1+x)}+\ln(x^{-1}+1)\right)'}{(-x^{-2})'} = \lim_{x\to \infty}\frac{\frac{1}{(x+1)^2}-\frac{1}{(x^{-1}+1)x^2}}{2x^{-3}}\tag{L'Hôpital}\\ 
+&= \lim_{x\to \infty}\frac{\frac{1}{(x+1)^2}-\frac{1}{(x+1)x}}{2x^{-3}} = \lim_{x\to \infty}\frac{\frac{-1}{(x+1)^2x}}{2x^{-3}} \\
+&= \lim_{x\to \infty}\frac{-x^3}{2(x^3+2x^2+x)} = \frac{-1}{2}
+\end{align*}
+
+Así pues, $f$ tiene una asíntota oblicua $y=x-\frac{1}{2}$ en $\infty$.
+
+Del mismo modo se prueba que esta misma recta también es asíntota oblicua de $f$ en $-\infty$.
+
+
+Meta-information
+================
+extype: num
+exname: lim-3-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos
+
+

@@ -1,0 +1,20 @@
+```{r, echo=FALSE, results="hide"}
+```
+
+Question
+========
+Sabiendo que $\operatorname{sen}(x)$ y $x$ son infinitesimos equivalentes en $x=0$, demostrar que también lo son $\operatorname{tg}(x)$ y $x$.
+
+Solution
+========
+Solución
+
+Meta-information
+================
+extype: num
+exname: lim-1-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos
+
+

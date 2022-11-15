@@ -1,0 +1,39 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+pA <- 4/5
+pB <- 0.5
+pNoANoB <- 1/20
+
+## QUESTION/ANSWER GENERATION
+pAoB <- 1-pNoANoB
+pAB <- pA + pB - pAoB
+pNoAB <- pB-pAB
+pNoA <- 1-pA
+pNoB <- 1-pB
+pBSiA <- pAB/pA
+pBSiNoA <- pNoAB/pNoA
+@
+
+\begin{question}
+En una población hay un 20\% de pacientes que han sufrido la enfermedad $A$ pero no la $B$, un 30\% de pacientes que han sufrido la $B$ pero no la $A$ y un 90\% de pacientes que no han sufrido las dos enfermedades (pero pueden haber sufrido una). Se pide:
+\begin{enumerate}
+\item ¿Qué porcentaje de personas han tenido la enfermedad $A$? ¿Y la enfermedad $B$?
+\item Calcular la probabilidad de haber tenido alguna de las enfermedades.
+\item Calcular la probabilidad de no sufrir la enfermedad $B$ si no se ha sufrido la enfermedad $A$.
+\item ¿Qué porcentaje de pacientes con la enfermedad $B$ debería haber en la población para que ambas enfermedades fuesen independientes?
+\end{enumerate}
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{prob-13-med}
+%% \extol{0.001}
+%% \degree{Medicina}
+ 

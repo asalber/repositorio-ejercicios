@@ -1,0 +1,37 @@
+```{r, echo=FALSE, results="hide"}
+
+```
+
+Question
+========
+(2 puntos) La rentabilidad de un bono cada año, en porcentaje, viene dada por la sucesión recurrente $x_1=3$ y $x_{n+1}=\sqrt{\frac{x_n}{2}+3}$. ¿Hacia dónde converge la rentabilidad del bono a medida que pasa el tiempo?
+
+Solution
+========
+Veamos que primero que la sucesión es monótona decreciente. $x_1=3>x_n= \sqrt{\frac{3}{2}+3} = 2.12$. Supongamos ahora que $x_{n-1}>x_n$. Entonces 
+
+$$
+x_{n-1}>x_n \Rightarrow \frac{x_{n-1}}{2}>\frac{x_n}{2} \Rightarrow \frac{x_{n-1}}{2}+3>\frac{x_n}{2}+3 \Rightarrow \sqrt{\frac{x_{n-1}}{2}+3}>\sqrt{\frac{x_n}{2}+3} \Rightarrow x_n>x_{n+1}.
+$$
+
+Por otro lado, es fácil ver que la sucesión está acotada inferiormente por $0$ pues todos los términos son positivos. Así pues, por el [teorema de la convergencia de una sucesión monónota](https://aprendeconalf.es/analisis-manual/sucesiones.html#thm-convergencia-monotona), la sucesión converge a un número $x\in\mathbb{R}$. Para calcular el límite, aprovechando la recurrencia de la sucesión se tiene
+
+$$
+x=\lim_{n\to\infty} x_n = \lim_{n\to\infty} x_{n+1} = \lim_{n\to\infty} \sqrt{\frac{x_n}{2}+3} = \sqrt{\lim_{n\to\infty}\frac{x_n}{2}+3} = \sqrt{\frac{x}{2}+3}
+$$
+
+Así pues, se cumple que $x=\sqrt{\frac{x}{2}+3}$, y de ello se deduce
+
+$$
+x=\sqrt{\frac{x}{2}+3} \Rightarrow x^2=\frac{x}{2}+3 \Rightarrow x^2-3 = \frac{x}{2} \Rightarrow 2x^2-x-6 =0,$$
+
+y resolviendo la ecuación se tiene $x=-3/2$ y $x=2$. Como todos los términos de la sucesión son positivos, es imposible que converja a $-3/2$, y por tanto la rentabilidad del bono converge al $2$\%.
+
+
+Meta-information
+================
+extype: num
+exname: suc-3-eco
+exsolution: Solución
+extol: 0.001
+degree: Todos

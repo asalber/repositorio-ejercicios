@@ -1,0 +1,25 @@
+```{r, echo=FALSE, results="hide"}
+
+```
+
+Question
+========
+(1 punto) Calcular los puntos de acumulación del conjunto $A=[0,1]\cup \left\{\frac{n}{n-1}: n\in\mathbb{N}, n\geq 2\right\}$. ¿Es un conjunto cerrado? ¿Y abierto?
+
+Solution
+========
+Veamos primero que todos los puntos del intervalo $[0,1]$ son puntos de acumulación. Sea $x\in[0,1]$. Entonces para cualquier $\varepsilon>0$, por la densidad de los números reales, el entorno reducido $(x-\varepsilon,x+\varepsilon)\setminus\{x\}$ contiene puntos de $[0,1]$, y por tanto $x$ es un punto de acumulación de $[0,1]$.
+
+Veamos ahora que el conjunto $B=\left\{\frac{n}{n-1}: n\in\mathbb{N}, n\geq 2\right\} = \left\{1+\frac{1}{n-1}: n\in\mathbb{N}, n\geq 2\right\}$ solo tiene $1$ como punto de acumulación. En primer lugar, $1$ es punto de acumulación, ya que para cualquier $\varepsilon>0$, $(1-\varepsilon, 1+\varepsilon)\setminus  \{1\}$ contiene puntos de $A$. Para verlo, basta aplicar la propiedad arquimediana, por la que existe $n\in\mathbb{N}$ tal que $\frac{1}{n}<\varepsilon$, de manera que $1+\frac{1}{n}<1+\varepsilon$, y por tanto $(1-\varepsilon, 1+\varepsilon)\setminus  \{1\}\cap B\neq \emptyset$.
+
+Si $x<1$, tomando $\varepsilon=|x-1|$ el entorno reducido $(x-\varepsilon, x+\varepsilon)\setminus\{x\}$ no contiene puntos de $B$. Del mismo modo, si $x>2$, tomando $\varepsilon=|x-2|$ el entorno reducido $(x-\varepsilon, x+\varepsilon)\setminus\{x\}$ tampoco contiene puntos de $B$. Finalmente, si $1<x\leq 2$, por la propiedad arquimediana, existe $n\in\mathbb{N}$ tal que $\frac{1}{n}\leq x<\frac{1}{n-1}$. Tomando $\varepsilon=\min(\{|x-\frac{1}{n}|,|x-\frac{1}{n-1}|\})$ también se tiene que el entorno reducido $(x-\varepsilon, x+\varepsilon)\setminus\{x\}$ no contiene puntos de $B$. Por tanto, $1$ es el único punto de acumulación de $B$.
+
+Así pues, $\operatorname{Ac}(A)=[0,1]$, y como $\operatorname{Ac}(A)\subseteq A$, $A$ es cerrado ya que contienen a todos sus puntos de acumulación (ver [teorema](https://aprendeconalf.es/analisis-manual/topologia-reales.html#thm-conjunto-cerrado-puntos-acumulacion)), y por tanto, no puede ser abierto ya que los únicos conjuntos cerrados y abiertos a la vez son $\mathbb{R}$ y $\emptyset$.
+
+Meta-information
+================
+extype: num
+exname: top-1-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos

@@ -1,0 +1,34 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+
+## QUESTION/ANSWER GENERATION
+# sample size
+
+@
+
+\begin{question}
+En la farmacia del barrio, la cantidad de paracetamol $Q$ que demandan los clientes depende del precio del paracetamol $p$ y del precio del ibuprofeno $b$, según la función
+
+$$Q(p,b) = \frac{6b}{(p-1)p}$$
+ 
+\begin{enumerate}
+\item Para que esta función tenga sentido en este contexto, ¿qué condiciones deben cumplir los precios de venta del paracetamol y del ibuprofeno? 
+\item Si aumenta el precio del paracetamol, ¿crecerá o bajará la demanda de paracetamol? Justifica la respuesta. 
+\item Si los precios del paracetamol e ibuprofeno son $p=2$ y $b=1$ €, ¿en qué proporción deberían variar los precios del paracetamol e ibuprofeno para que la cantidad demandada de paracetamol aumente lo máximo posible?
+\item Suponiendo los mismos precios del apartado anterior, ¿cuánto variará la cantidad demandada de paracetamol si el precio del paracetamol crece la mitad de lo que crece el precio del ibuprofeno?
+\end{enumerate}
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{derpar-4-far}
+%% \extol{0.001}
+%% \degree{Todos}
+ 
