@@ -1,0 +1,62 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+knitr::opts_chunk$set(fig.align = 'center')
+include_supplement("pildora.png",
+  dir = "/run/media/alf/datos/misrepositorios/docencia/repositorio-ejercicios/img/", recursive = TRUE)
+```
+
+Question
+========
+(2.5 puntos) El envoltorio de unas píldoras está formado por un cilindro con dos semiesferas en sus extremos, tal y como se aprecia en la imagen. 
+
+![](pildora.png){width=8cm height=3cm}
+
+Si el contenido de las píldoras debe ser de $0.15$ ml, hallar las dimensiones de $x$ e $y$ para que el material empleado en el envoltorio sea mínimo.
+
+Solution
+========
+El volumen de una esfera de radio $r$ es $v_e(r)=\frac{4}{3}\pi r^3$ y el de un cilindro de radio $r$ y altura $h$ es $v_c(r,h)=\pi r^2 h$, de modo que que el volumen de la píldora es $v(r,h)=v_e(r)+v_c(r,h) = \frac{4}{3}\pi r^3 + \pi r^2 h$. Como el volumen de la píldora debe ser $0.15$  ml $=0.15$ cm$^3$, imponiendo esta restricción, se tiene
+
+\begin{equation}\label{eq:cont-01-gen-eq1}
+v(r,h)=\frac{4}{3}\pi r^3 + \pi r^2 h = 0.15 \Leftrightarrow h = \frac{0.15-\frac{4}{3}\pi r^3}{\pi r^2}.
+\end{equation}
+
+
+Por otro lado, la superficie de una esfera de radio $r$ es $s_e(r)=4\pi r^2$ y la superficie del envolvente de un cilindro de radio $r$ y altura $h$ es, en realidad, la superficie de un rectángulo de lados $2\pi r$ y $h$, es decir, $s_c(r,h) = 2\pi r h$, de manera que la superficie de la píldora es $s(r,h) = 4\pi r^2+2\pi r h$, pero sustituyendo el valor de $h$ que hemos obtenido de imponer la restricción del volumen se tiene,
+
+$$
+s(r) = 4\pi r^2 + 2\pi r \left(\frac{0.15-\frac{4}{3}\pi r^3}{\pi r^2}\right) = 4\pi r^2 + \left(\frac{0.3-\frac{8}{3}\pi r^3}{r}\right) = 4\pi r^2 + \frac{0.3}{r} - \frac{8}{3}\pi r^2 = \frac{4}{3}\pi r^2+ \frac{0.3}{r},
+$$
+
+que es la función a optimizar.
+
+Para calcular el mínimo de la función, calculamos primero los puntos críticos.
+
+$$
+s'(r) = \frac{4}{3}\pi 2r -\frac{0.3}{r^2} =0 \Leftrightarrow \frac{8}{3}\pi r = \frac{0.3}{r^2} \Leftrightarrow r^3 = \frac{0.9}{8\pi} \Leftrightarrow r = \sqrt[3]{\frac{0.9}{8\pi}} \approx 0.3296 \mbox{cm}.
+$$
+
+Para ver si en este punto hay un mínimo aplicamos el [criterio de la segunda derivada](https://aprendeconalf.es/analisis-manual/derivadas.html#thm-concavidad).
+
+$$
+s''(r) = \frac{8}{3}\pi -\frac{0.3(-2)}{r^3} =\frac{8}{3}\pi+\frac{0.6}{r^3} >0\ \forall r>0.
+$$
+
+Por tanto, $s$ tiene un mínimo local en $r=0.3296$, y la altura del la píldora con la mínima superficie será, utilizando la ecuación $\eqref{eq:cont-01-gen-eq1}$, 
+
+$$
+h =\frac{0.15-\frac{4}{3}\pi 0.3296^3}{\pi 0.3296^2}\approx 0.
+$$
+
+Así pues, las dimensiones óptimas serían $x=h=0$ e $y=2r=0.6592$, que en realidad es una esfera de diámetro $0.6592$ cm.
+
+Meta-information
+================
+extype: num
+exname: ext-01-qui
+exsolution: Solución
+extol: 0.001
+degree: Todos

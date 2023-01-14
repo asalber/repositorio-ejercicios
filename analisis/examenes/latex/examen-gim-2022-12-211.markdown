@@ -1,0 +1,46 @@
+1.  **Question**\
+    (2 puntos) Dar una aproximación de $\ln(\sqrt{1/2})$ usando un
+    polinomio de Taylor de cuarto grado.
+
+    **Solution**\
+    Solución
+
+2.  **Question**\
+    (2 puntos) La función $h(x)=\dfrac{x^2-2x+a}{x^3+bx^2-6x}$ tiene una
+    discontinuidad evitable en $x=2$. Calcular el valor de $a$ y $b$, y
+    clasificar el resto de discontinuidades.
+
+    **Solution**\
+    Solución
+
+3.  **Question**\
+    (2.5 puntos) El envoltorio de unas píldoras está formado por un
+    cilindro con dos semiesferas en sus extremos, tal y como se aprecia
+    en la imagen.
+
+    ![image](media/supplements1/exercise3/pildora.png){width="8cm"
+    height="3cm"}
+
+    Si el contenido de las píldoras debe ser de $0.15$ ml, hallar las
+    dimensiones de $x$ e $y$ para que el material empleado en el
+    envoltorio sea mínimo.
+
+    **Solution**\
+    Solución
+
+4.  **Question**\
+    (1.5 puntos) Demostrar que la función
+    $f(x)=\ln\left(k\left(x^2-2x+\frac{3}{2}\right)\right)$ no puede
+    tener más de una raíz en el intervalo $(0,1)$ para cualquier valor
+    de $k$.
+
+    **Solution**\
+    Solución
+
+5.  **Question**\
+    (2 puntos) Calcular las ecuaciones de las rectas tangente y normal a
+    la gráfica de la curva implícita $e^{x^2y}-\ln(\sqrt{x-y})= 0$ en el
+    punto $x=0$.
+
+    **Solution**\
+    Solución

@@ -1,0 +1,115 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+library(magick)
+knitr::opts_chunk$set(fig.align = 'center')
+include_supplement("area-poligono-regular-inscrito.png",
+  dir = "/run/media/alf/datos/misrepositorios/docencia/practicas-analisis-julia/img/", recursive = TRUE)
+
+typ <- match_exams_device()
+
+graf1 <- '
+\\definecolor{myblue}{rgb}{0.067,0.529,0.871}
+\\definecolor{mypurple}{rgb}{0.859,0.071,0.525}
+\\definecolor{myred}{rgb}{1.0, 0.13, 0.32}
+\\definecolor{mygreen}{rgb}{0.01, 0.75, 0.24}
+\\def\\PolyRadius{2cm}
+\\begin{tikzpicture}[draw=myblue, text=myblue	]
+\\draw (0,0) circle (2);
+\\coordinate (A) at (-1,-1.74);
+\\coordinate (B) at (0,0);
+\\coordinate (C) at (1,-1.74);
+\\fill[fill=red!20] (0,0) -- (-1,-1.74) -- (1, -1.74) -- (0,0);
+\\node[regular polygon,draw,regular polygon sides = 6,minimum size=2*\\PolyRadius] at (0,0) {};
+\\draw pic[draw,angle radius=0.5cm]{angle=A--B--C};
+\\node at (0,-0.35) {\\scriptsize $\\alpha$};
+\\draw [dashed] (0,0) -- (2,0);
+\\draw [dashed] (0,0) -- (-2,0);
+\\draw [dashed] (0,0) -- (1,1.74);
+\\draw [dashed] (0,0) -- (-1,1.74);
+\\draw [dashed] (0,0) -- (-1,-1.74);
+\\draw [dashed] (0,0) -- (1,-1.74) node[right, midway] {$r$};
+\\end{tikzpicture}
+'
+
+graf2 <- '
+\\definecolor{myblue}{rgb}{0.067,0.529,0.871}
+\\definecolor{mypurple}{rgb}{0.859,0.071,0.525}
+\\definecolor{myred}{rgb}{1.0, 0.13, 0.32}
+\\definecolor{mygreen}{rgb}{0.01, 0.75, 0.24}
+\\begin{tikzpicture}[draw=myblue, text=myblue]
+\\coordinate (A) at (-1,-1.74);
+\\coordinate (B) at (0,0);
+\\coordinate (C) at (1,-1.74);
+\\draw pic[draw,angle radius=0.5cm]{angle=A--B--C};
+\\node at (0,-0.35) {\\scriptsize $\\alpha$};
+\\draw (C) -- (A) -- (B) -- (C) node[right, midway] {\\scriptsize $r$};
+\\draw (B) -- (0,-1.74) node[left, midway] {\\scriptsize $a$};
+\\draw (0, -1.74) -- (C) node[below, midway] {\\scriptsize $b$}; 
+\\end{tikzpicture}
+'
+```
+
+Question
+========
+(2 puntos) En el siglo III A.C usó el método por agotamiento para calcular el área encerrada por una circunferencia. La idea consiste en inscribir la circunferencia en polígonos regulares con un número de lados cada vez mayor.
+
+El área de estos polígonos puede calcularse fácilmente descomponiendo los polígonos regulares en triángulos como en el siguiente ejemplo.
+
+```{r area-poligono-regular-inscrito, echo = FALSE, results = "asis"}
+include_tikz(graf1, name = "area-poligono-regular-inscrito", format = typ, markup = "markdown", library = c("shapes.geometric","angles"))
+```
+
+a. Dar el término general de la sucesión $(a_n)_{n=3}^\infty$ que expresa el área del polígono en función del número de lados $n$.
+
+b. Calcular el límite de la sucesión.
+
+Solution
+========
+a. Consideremos cada uno de los triángulos en los que se puede descomponer un polígono regular de $n$ lados.
+
+    ```{r, echo = FALSE, results = "asis"}
+    include_tikz(graf2, name = "graf", format = typ, markup = "markdown", library = "angles")
+    ```
+
+    Puesto que para un polígono de $n$ lados se obtienen $n$ triángulos iguales, se tiene que el ángulo $\alpha=\frac{2\pi}{n}$ de manera que $\frac{\alpha}{2} = \frac{\pi}{n}$.
+
+    Aplicando las razones trigonométricas de un triángulo rectángulo, se puede deducir que 
+
+    \begin{align*}
+    \cos(\alpha/2) &= \cos(\pi/n) = \frac{a}{r} \Rightarrow a = r\cos(\pi/n)\\
+    \operatorname{sen}(\alpha/2) &= \operatorname{sen}(\pi/n) = \frac{b}{r} \Rightarrow b = r\operatorname{sen}(\pi/n)
+    \end{align*}
+
+    Por tanto, el área del triángulo es
+
+    $$
+    \frac{a2b}{2} = ab= r^2\cos(\pi/n)\operatorname{sen}(\pi/n),
+    $$
+
+    y como hay $n$ triángulos idénticos en el polígono regular de $n$ lados, se tiene que el área del polígono es
+
+    $$
+    a_n  = n r^2\cos(\pi/n)\operatorname{sen}(\pi/n)
+    $$
+
+b. Calculamos ahora el límite de la sucesión
+
+\begin{align*}
+\lim_{n\to\infty} a_n &= \lim_{n\to\infty} n r^2\cos(\pi/n)\operatorname{sen}(\pi/n) = r^2 \lim_{n\to\infty}\cos(\pi/n)\lim_{n\to\infty}n\operatorname{sen}(\pi/n) \\ 
+&= r^2 \cos(0)\lim_{n\to\infty}\pi\frac{n}{\pi}\operatorname{sen}(\pi/n) =
+\pi r^2 \lim_{n\to\infty}\frac{\operatorname{sen}(\pi/n)}{\pi/n} \\
+&=  \pi r^2 \lim_{\pi/n\to 0} \frac{\operatorname{sen}(\pi/n)}{\pi/n} = \pi r^2, \tag{infinitésimos equivalentes}
+\end{align*}
+
+que efectivamente es el área del círculo de radio $r$.
+
+Meta-information
+================
+extype: num
+exname: suc-6-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos

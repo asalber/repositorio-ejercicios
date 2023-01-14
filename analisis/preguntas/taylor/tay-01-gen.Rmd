@@ -1,0 +1,53 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+
+```
+
+Question
+========
+(2 puntos) Dar una aproximación de $\ln(\sqrt{1/2})$ usando un polinomio de Taylor de cuarto grado.
+
+Solution
+========
+Para realizar la aproximación que se pide calcularemos el polinomio de Taylor de cuarto grado de la función $f(x)=\ln(\sqrt{x})$ en el punto $1$, ya que el valor de la función y sus sucesivas derivadas en este punto son sencillas. La fórmula del polinomio de Taylor es 
+
+$$
+P_{f,1}^4(x) = f(1)+f'(1)(x-1)+\frac{f''(1)}{2!}(x-1)^2+\frac{f'''(1)}{3!}(x-1)^3+\frac{f''''(1)}{4!}(x-1)^4.
+$$
+
+Así pues, calculamos hasta la cuarta derivada en $1$:
+
+$$
+\renewcommand{\arraystretch}{1.5}
+\begin{array}{lll}
+f(x)=\ln(\sqrt{x})=\frac{1}{2}\ln(x) & \quad & f(1) = \frac{1}{2}\ln(1) = 0\\
+f'(x) = \frac{1}{2}x^{-1} & & f'(1) = \frac{1}{2}\\
+f''(x) = \frac{-1}{2}x^{2} & & f''(1) = \frac{-1}{2}\\
+f'''(x) = x^{-3} & & f'''(1) = 1\\
+f''''(x) = -3x^{-4} & & f''''(1) = -3
+\end{array}
+$$
+
+Y sustituyendo en la fórmula del polinomio de Taylor se tiene 
+
+\begin{align*}
+P_{f,1}^4(x) &= 0+\frac{1}{2}(x-1)+\frac{-1/2}{2}(x-1)^2+\frac{1}{6}(x-1)^3+\frac{-3}{24}(x-1)^4\\  
+&= \frac{1}{2}(x-1)-\frac{1}{4}(x-1)^2+\frac{1}{6}(x-1)^3-\frac{1}{8}(x-1)^4.
+\end{align*}
+
+Para aproximar $\ln(\sqrt{1/2})$ calculamos el polinomio en $x=1/2$.
+
+$$
+P_{f,1}^4(1/2) = \frac{1}{2}\left(\frac{1}{2}-1\right)-\frac{1}{4}\left(\frac{1}{2}-1\right)^2+\frac{1}{6}\left(\frac{1}{2}-1\right)^3-\frac{1}{8}\left(\frac{1}{2}-1\right)^4 = -0.34114583.
+$$
+
+Meta-information
+================
+extype: num
+exname: tay-01-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos

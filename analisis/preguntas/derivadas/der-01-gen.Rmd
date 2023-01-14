@@ -1,0 +1,33 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+
+```
+
+Question
+========
+(1.5 puntos) Demostrar que la función $f(x)=\ln\left(k\left(x^2-2x+\frac{3}{2}\right)\right)$ no puede tener más de una raíz en el intervalo $(0,1)$ para cualquier valor de $k$.
+
+Solution
+========
+$x^2-2x+\frac{3}{2}>0$ $\forall x\in\mathbb{R}$, de manera que, para que exista la función $f$, debe ser también $k>0$ y, por tanto, aplicando propiedades de logaritmos se tiene, $f(x)=\ln\left(k\left(x^2-2x+\frac{3}{2}\right)\right)= \ln(k)+\ln\left(x^2-2x+\frac{3}{2}\right)$.
+
+Por otro lado, como $x^2-2x+\frac{3}{2}$ es un polinomio, es continuo en todo $\mathbb{R}$, y por tanto, $f(x)$ también es continua en todo $\mathbb{R}$, siempre que $k>0$. 
+
+Demostraremos que $f$ no puede tener más de una raíz en el intervalo $(0,1)$ por reducción al absurdo. Supongamos que existen $0 < a < b < 1$ tales que $f(a)=f(b)=0$. Entonces, aplicando el [teorema de Rolle](https://aprendeconalf.es/analisis-manual/derivadas.html#thm-rolle), debe existir algún valor $c\in(a,b)$ tal que $f'(c)=0$. Si calculamos los puntos críticos de $f$ se tiene
+
+$$
+f'(x) = \frac{2x-2}{x^2-2x+3/2} = 0 \Leftrightarrow 2x-2=0 \Leftrightarrow x=1,
+$$
+
+pero como $1\not\in (a,b)$, llegamos a una contradicción ya que no existe ningún valor $c\in(a,b)$ con $f'(c)=0$. Así pues, $f$ no puede más de una raíz en el intervalo $(0,1)$.
+
+Meta-information
+================
+extype: num
+exname: der-01-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos

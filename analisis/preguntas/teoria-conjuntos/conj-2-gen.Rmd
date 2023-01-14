@@ -1,0 +1,31 @@
+---
+lang: es
+---
+
+```{r, echo=FALSE, results="hide"}
+
+```
+
+Question
+========
+(2 puntos) Dado el conjunto $A=\{x\in\mathbb{R} : \frac{x^2-1}{x-2}\leq 0\}$, calcular, si existe, el supremo, ínfimo, máximo y mínimo. ¿Es un conjunto cerrado o abierto?
+
+Solution
+========
+$A$ puede expresarse con la unión de intervalos, ya que $x^2-1\geq 0 \Leftrightarrow x^2\geq 1 \Leftrightarrow x\leq -1 \mbox{ o } x\geq 1$, y por otro lado, $x-2\geq 0 \Leftrightarrow x\geq 2$, de manera que $\frac{x^2-1}{x-2}\leq 0 \Leftrightarrow x\leq -1$ o $1\leq x<2$, es decir, $A=(-\infty,-1]\cup [1,2)$.
+
+Es fácil ver que $A$ está acotado superiormente y la menor de las cotas superiores es $2$, por lo que el supremo es $2$, pero como $2\not\in A$, $A$ no tiene máximo.
+
+En cuanto al ínfimo, $A$ no está acotado inferiormente, de manera que no tiene ínfimo, y por tanto, tampoco mínimo.
+
+$A$ no es abierto, ya que $-1\in A$, pero $-1$ no es un punto interior de A, ya que para cualquier $\varepsilon>0$ el intervalo $(-1-\varepsilon,-1+\varepsilon)$ contiene puntos de $\overline{A}$. 
+
+Por otro lado, $A$ tampoco es cerrado ya que $\overline{A}=(-1,1)\cup [2,\infty)$ no es abierto, pues $2\in\overline{A}$ pero no es un punto interior suyo, ya que para cualquier $\varepsilon>0$ el intervalo $(2-\varepsilon,2+\varepsilon)$ contiene puntos de $A$.
+
+Meta-information
+================
+extype: num
+exname: conj-2-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos

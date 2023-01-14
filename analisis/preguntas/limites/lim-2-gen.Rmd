@@ -1,18 +1,31 @@
+---
+lang: es
+---
+
 ```{r, echo=FALSE, results="hide"}
 ```
 
 Question
 ========
-Sabiendo que $\operatorname{sen}(x)$ y $x$ son infinitesimos equivalentes en $x=0$, demostrar que también lo son $\operatorname{tg}(x)$ y $x$.
+(1 punto) Sabiendo que $\operatorname{sen}(x)$ y $x$ son infinitésimos equivalentes en $x=0$, demostrar que también lo son $\operatorname{tg}(x)$ y $x$.
 
 Solution
 ========
-Solución
+Como $\operatorname{sen}(x)$ y $x$ son infinitésimos equivalentes en $x=0$, se tiene que $\lim_{x\to 0}\frac{\operatorname{sen}(x)}{x} = 1$.
+
+Para demostrar que $\operatorname{tg}(x)$ y $x$ también son infinitésimos equivalentes en $x=0$ calculamos el límite
+
+\begin{align*}
+\lim_{x\to 0}\frac{\operatorname{tg}(x)}{x} &= \lim_{x\to 0}\frac{\frac{\operatorname{sen}(x)}{\cos(x)}}{x} = \lim_{x\to 0}\frac{1}{\cos(x)}\frac{\operatorname{sen}(x)}{x} \\
+&= \lim_{x\to 0}\frac{1}{\cos(x)}\lim_{x\to 0}\frac{\operatorname{sen}(x)}{x} = \lim_{x\to 0}\frac{1}{\cos(x)} 1 = \frac{1}{\cos(0)} = 1.
+\end{align*}
+
+Por tanto, $\operatorname{tg}(x)$ y $x$ son infinitésimos equivalentes en $x=0$.
 
 Meta-information
 ================
 extype: num
-exname: lim-1-gen
+exname: lim-2-gen
 exsolution: Solución
 extol: 0.001
 degree: Todos

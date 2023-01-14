@@ -1,0 +1,237 @@
+\begin{enumerate}
+\item
+  \textbf{Question}\\
+  (2.5 puntos) La población de parásitos que infecta un árbol, en miles,
+  evoluciona diariamente siguiendo la sucesión recursiva \(x_1=2\) y
+  \(x_{n+1}=1-(2+x_n)^{-1}\) \(\forall n\in\mathbb{N}\). Demostrar que
+  la sucesión converge y calcular su límite.
+
+  \textbf{Solution}\\
+  El término recurrente de la sucesión puede escribirse de la siguiente
+  manera
+
+  \[x_{n+1}=1-(2+x_n)^{-1} = \frac{1+x_n}{2+x_n}\ \forall n\in\mathbb{N}.\]
+
+  Veamos primero que la sucesión está acotada inferiormente por \(0\)
+  por inducción. \(x_1=2>0\), y suponiendo \(x_n>0\) se tiene que
+  \(x_{n+1} = \frac{1+x_n}{2+x_n} >0\) \(\forall n\in\mathbb{N}\).
+
+  Veamos ahora que la sucesión es decreciente también por inducción.
+  \(x_1 = 2 < x_2 = 1-(2+2)^{-1} = 3/4\). Supongamos ahora que
+  \(x_{n-1}>x_n\), entonces
+
+  \[\begin{gathered}
+  x_{n-1}>x_n \Leftrightarrow 2+x_{n-1} > 2+x_n \Leftrightarrow (2+x_{n-1})^{-1} < (2+x_n)^{-1} \\
+  \Leftrightarrow 1-(2+x_{n-1})^{-1} > 1-(2+x_n)^{-1} \Leftrightarrow x_{n}>x_{n+1}\ \forall n\in\mathbb{N}.
+  \end{gathered}\]
+
+  Así pues, como la sucesión es monótona decreciente y está acotada
+  inferiormente, según el
+  \href{https://aprendeconalf.es/analisis-manual/sucesiones.html\#thm-convergencia-monotona}{teorema
+  de la convergencia monótona}, la sucesión converge.
+
+  Para calcular el límite aprovechamos la recurrencia,
+
+  \[x = \lim_{n\to\infty}x_n = \lim_{n\to\infty} \frac{1+x_{n-1}}{2+x_{n-1}} =\frac{1+\lim_{n\to\infty}x_{n-1}}{2+\lim_{n\to\infty}x_{n-1}} = \frac{1+x}{2+x},\]
+
+  y resolviendo la ecuación se tiene
+
+  \[x = \frac{1+x}{2+x} \Leftrightarrow x(2+x) = 1+x \Leftrightarrow x^2+x-1=0 \Leftrightarrow x = \frac{-1\pm \sqrt{5}}{2}.\]
+
+  Como hemos visto que la sucesión está acotada inferiormente por \(0\),
+  podemos descartar la solución negativa, de manera que,
+  \(\lim_{n\to\infty}x_n = \frac{-1+ \sqrt{5}}{2}\).
+\item
+  \textbf{Question}\\
+  (2 puntos) En el siglo III A.C usó el método por agotamiento para
+  calcular el área encerrada por una circunferencia. La idea consiste en
+  inscribir la circunferencia en polígonos regulares con un número de
+  lados cada vez mayor.
+
+  El área de estos polígonos puede calcularse fácilmente descomponiendo
+  los polígonos regulares en triángulos como en el siguiente ejemplo.
+
+\begin{verbatim}
+## Warning in system(paste(shcmd, "pdf2svg", paste0(name, ".pdf"), paste0(name, :
+## error in running command
+\end{verbatim}
+
+\begin{verbatim}
+## Warning in normalizePath(dirout[i]): path[1]="/tmp/RtmpsLiGwY/file18d01fcd0bb2/
+## area-poligono-regular-inscrito.svg": No such file or directory
+\end{verbatim}
+
+  \includegraphics{area-poligono-regular-inscrito.svg}
+
+  \begin{enumerate}
+  \item
+    Dar el término general de la sucesión \((a_n)_{n=3}^\infty\) que
+    expresa el área del polígono en función del número de lados \(n\).
+  \item
+    Calcular el límite de la sucesión.
+  \end{enumerate}
+
+  \textbf{Solution}\\
+
+  \begin{enumerate}
+  \item
+    Consideremos cada uno de los triángulos en los que se puede
+    descomponer un polígono regular de \(n\) lados.
+
+\begin{verbatim}
+## Warning in system(paste(shcmd, "pdf2svg", paste0(name, ".pdf"), paste0(name, :
+## error in running command
+\end{verbatim}
+
+\begin{verbatim}
+## Warning in normalizePath(dirout[i]): path[1]="/tmp/RtmpsLiGwY/file18d01fcd0bb2/
+## graf.svg": No such file or directory
+\end{verbatim}
+
+    \includegraphics{graf.svg}
+
+    Puesto que para un polígono de \(n\) lados se obtienen \(n\)
+    triángulos iguales, se tiene que el ángulo \(\alpha=\frac{2\pi}{n}\)
+    de manera que \(\frac{\alpha}{2} = \frac{\pi}{n}\).
+
+    Aplicando las razones trigonométricas de un triángulo rectángulo, se
+    puede deducir que
+
+    \[\begin{aligned}
+       \cos(\alpha/2) &= \cos(\pi/n) = \frac{a}{r} \Rightarrow a = r\cos(\pi/n)\\
+       \operatorname{sen}(\alpha/2) &= \operatorname{sen}(\pi/n) = \frac{b}{r} \Rightarrow b = r\operatorname{sen}(\pi/n)
+       
+    \end{aligned}\]
+
+    Por tanto, el área del triángulo es
+
+    \[\frac{a2b}{2} = ab= r^2\cos(\pi/n)\operatorname{sen}(\pi/n),\]
+
+    y como hay \(n\) triángulos idénticos en el polígono regular de
+    \(n\) lados, se tiene que el área del polígono es
+
+    \[a_n  = n r^2\cos(\pi/n)\operatorname{sen}(\pi/n)\]
+  \item
+    Calculamos ahora el límite de la sucesión
+  \end{enumerate}
+
+  \[\begin{aligned}
+  \lim_{n\to\infty} a_n &= \lim_{n\to\infty} n r^2\cos(\pi/n)\operatorname{sen}(\pi/n) = r^2 \lim_{n\to\infty}\cos(\pi/n)\lim_{n\to\infty}n\operatorname{sen}(\pi/n) \\ 
+  &= r^2 \cos(0)\lim_{n\to\infty}\pi\frac{n}{\pi}\operatorname{sen}(\pi/n) =
+  \pi r^2 \lim_{n\to\infty}\frac{\operatorname{sen}(\pi/n)}{\pi/n} \\
+  &=  \pi r^2 \lim_{\pi/n\to 0} \frac{\operatorname{sen}(\pi/n)}{\pi/n} = \pi r^2, \tag{infinitésimos equivalentes}
+  \end{aligned}\]
+
+  que efectivamente es el área del círculo de radio \(r\).
+\item
+  \textbf{Question}\\
+  (1 punto) Sabiendo que \(\operatorname{sen}(x)\) y \(x\) son
+  infinitésimos equivalentes en \(x=0\), demostrar que también lo son
+  \(\operatorname{tg}(x)\) y \(x\).
+
+  \textbf{Solution}\\
+  Como \(\operatorname{sen}(x)\) y \(x\) son infinitésimos equivalentes
+  en \(x=0\), se tiene que
+  \(\lim_{x\to 0}\frac{\operatorname{sen}(x)}{x} = 1\).
+
+  Para demostrar que \(\operatorname{tg}(x)\) y \(x\) también son
+  infinitésimos equivalentes en \(x=0\) calculamos el límite
+
+  \[\begin{aligned}
+  \lim_{x\to 0}\frac{\operatorname{tg}(x)}{x} &= \lim_{x\to 0}\frac{\frac{\operatorname{sen}(x)}{\cos(x)}}{x} = \lim_{x\to 0}\frac{1}{\cos(x)}\frac{\operatorname{sen}(x)}{x} \\
+  &= \lim_{x\to 0}\frac{1}{\cos(x)}\lim_{x\to 0}\frac{\operatorname{sen}(x)}{x} = \lim_{x\to 0}\frac{1}{\cos(x)} 1 = \frac{1}{\cos(0)} = 1.
+  \end{aligned}\]
+
+  Por tanto, \(\operatorname{tg}(x)\) y \(x\) son infinitésimos
+  equivalentes en \(x=0\).
+\item
+  \textbf{Question}\\
+  (2.5 puntos) Determinar el dominio y el tipo de asíntotas de la
+  función
+
+  \[f(x)=\sqrt{\frac{x^3}{4x-1}}.\]
+
+  \textbf{Solution}\\
+  Para que exista la raíz, el radicando debe ser positivo, es decir,
+  \(\frac{x^3}{4x-1}\geq 0\). Es fácil ver que
+  \(x^3\geq 0\Leftrightarrow x\geq 0\) y
+  \(4x-1\geq 0\Leftrightarrow x\geq 1/4\) de manera que
+  \(\frac{x^3}{4x-1}\geq 0\Leftrightarrow x\leq 0 \mbox{ o } x\geq 1/4\).
+
+  Por otro lado, para que exista \(\frac{x^3}{4x-1}\) el denominador no
+  puede anularse, es decir \(4x-1\neq 0 \Leftrightarrow x\neq 1/4\). Por
+  tanto, concluimos que el dominio de la función es
+  \(\operatorname{Dom}(f)=(-\infty, 0]\cup (\frac{1}{4},\infty)\).
+
+  Estudiamos ahora los tipos de asíntotas que tiene la función.
+
+  \textbf{Asíntotas verticales}
+
+  Los únicos puntos donde pueden existir asíntotas verticales son
+  \(x=0\) y \(x=1/4\), así que calculamos los límites laterales en estos
+  puntos.
+
+  \[\lim_{x\to 0^-}f(x) = \lim_{x\to 0^-} \sqrt{\frac{x^3}{4x-1}} = \sqrt{\frac{0^3}{4\cdot 0-1}} = 0,\]
+
+  y por tanto, \(f\) no tiene asíntota vertical en \(x=0\).
+
+  \[\lim_{x\to 1/4^+}f(x) = \lim_{x\to 1/4^+} \sqrt{\frac{x^3}{4x-1}} = \sqrt{\frac{(1/4)^3}{4(1/4)-1}} = \infty,\]
+
+  y por tanto, \(f\) tiene una asíntota vertical en \(x=1/4\).
+
+  \textbf{Asíntotas horizontales}
+
+  Para ver si hay asíntotas horizontales estudiamos los límites en
+  \(\pm \infty\).
+
+  \[\begin{aligned}
+  \lim_{x\to-\infty}f(x) &=  \lim_{x\to-\infty} \sqrt{\frac{x^3}{4x-1}} = \lim_{x\to-\infty} \sqrt{\frac{\frac{x^3}{x}}{\frac{4x-1}{x}}} = \lim_{x\to-\infty} \sqrt{\frac{x^2}{4-\frac{1}{x}}} = \infty.\\
+  \lim_{x\to\infty}f(x) &=  \lim_{x\to\infty} \sqrt{\frac{x^3}{4x-1}} = \lim_{x\to\infty} \sqrt{\frac{\frac{x^3}{x}}{\frac{4x-1}{x}}} = \lim_{x\to\infty} \sqrt{\frac{x^2}{4-\frac{1}{x}}} = \infty.
+  \end{aligned}\]
+
+  Por tanto, \(f\) no tiene asíntotas horizontales.
+
+  \textbf{Asíntotas oblicuas}
+
+  Para ver si hay asíntotas oblicuas estudiamos los límites de
+  \(f(x)/x\) en \(\pm\infty\)
+
+  \[\begin{aligned}
+  \lim_{x\to-\infty}\frac{f(x)}{x} &=  \lim_{x\to-\infty} \frac{\sqrt{\frac{x^3}{4x-1}}}{x} = \lim_{x\to-\infty} \sqrt{\frac{x^3}{4x^3-x^2}} = \sqrt{\frac{1}{4}} = \frac{-1}{2}\\
+  \lim_{x\to\infty}\frac{f(x)}{x} &=  \lim_{x\to\infty} \frac{\sqrt{\frac{x^3}{4x-1}}}{x} = \lim_{x\to\infty} \sqrt{\frac{x^3}{4x^3-x^2}} = \sqrt{\frac{1}{4}} = \frac{1}{2}
+  \end{aligned}\]
+
+  Por tanto, \(f\) tiene asíntotas oblicuas tanto en \(-\infty\) como en
+  \(\infty\).
+\item
+  \textbf{Question}\\
+  (2 puntos) Dado el conjunto
+  \(A=\{x\in\mathbb{R} : \frac{x^2-1}{x-2}\leq 0\}\), calcular, si
+  existe, el supremo, ínfimo, máximo y mínimo. ¿Es un conjunto cerrado o
+  abierto?
+
+  \textbf{Solution}\\
+  \(A\) puede expresarse con la unión de intervalos, ya que
+  \(x^2-1\geq 0 \Leftrightarrow x^2\geq 1 \Leftrightarrow x\leq -1 \mbox{ o } x\geq 1\),
+  y por otro lado, \(x-2\geq 0 \Leftrightarrow x\geq 2\), de manera que
+  \(\frac{x^2-1}{x-2}\leq 0 \Leftrightarrow x\leq -1\) o \(1\leq x<2\),
+  es decir, \(A=(-\infty,-1]\cup [1,2)\).
+
+  Es fácil ver que \(A\) está acotado superiormente y la menor de las
+  cotas superiores es \(2\), por lo que el supremo es \(2\), pero como
+  \(2\not \in A\), \(A\) no tiene máximo.
+
+  En cuanto al ínfimo, \(A\) no está acotado inferiormente, de manera
+  que no tiene ínfimo, y por tanto, tampoco mínimo.
+
+  \(A\) no es abierto, ya que \(-1\in A\), pero \(-1\) no es un punto
+  interior de A, ya que para cualquier \(\varepsilon>0\) el intervalo
+  \((-1-\varepsilon,-1+\varepsilon)\) contiene puntos de
+  \(\overline{A}\).
+
+  Por otro lado, \(A\) tampoco es cerrado ya que
+  \(\overline{A}=(-1,1)\cup [2,\infty)\) no es abierto, pues
+  \(2\in\overline{A}\) pero no es un punto interior suyo, ya que para
+  cualquier \(\varepsilon>0\) el intervalo
+  \((2-\varepsilon,2+\varepsilon)\) contiene puntos de \(A\).
+\end{enumerate}

@@ -1,0 +1,67 @@
+---
+lang: es
+---
+
+```{r, echo=FALSE, results="hide"}
+```
+
+Question
+========
+(2.5 puntos) Determinar el dominio y el tipo de asíntotas de la función
+
+$$f(x)=\sqrt{\frac{x^3}{4x-1}}.$$
+
+Solution
+========
+Para que exista la raíz, el radicando debe ser positivo, es decir, $\frac{x^3}{4x-1}\geq 0$. Es fácil ver que $x^3\geq 0\Leftrightarrow x\geq 0$ y $4x-1\geq 0\Leftrightarrow x\geq 1/4$ de manera que $\frac{x^3}{4x-1}\geq 0\Leftrightarrow x\leq 0 \mbox{ o } x\geq 1/4$. 
+
+Por otro lado, para que exista $\frac{x^3}{4x-1}$ el denominador no puede anularse, es decir $4x-1\neq 0 \Leftrightarrow x\neq 1/4$. Por tanto, concluimos que el dominio de la función es $\operatorname{Dom}(f)=(-\infty, 0]\cup (\frac{1}{4},\infty)$.
+
+Estudiamos ahora los tipos de asíntotas que tiene la función.
+
+**Asíntotas verticales**
+
+Los únicos puntos donde pueden existir asíntotas verticales son $x=0$ y $x=1/4$, así que calculamos los límites laterales en estos puntos.
+
+$$
+\lim_{x\to 0^-}f(x) = \lim_{x\to 0^-} \sqrt{\frac{x^3}{4x-1}} = \sqrt{\frac{0^3}{4\cdot 0-1}} = 0,
+$$
+
+y por tanto, $f$ no tiene asíntota vertical en $x=0$.
+
+$$
+\lim_{x\to 1/4^+}f(x) = \lim_{x\to 1/4^+} \sqrt{\frac{x^3}{4x-1}} = \sqrt{\frac{(1/4)^3}{4(1/4)-1}} = \infty,
+$$
+
+y por tanto, $f$ tiene una asíntota vertical en $x=1/4$.
+
+**Asíntotas horizontales**
+
+Para ver si hay asíntotas horizontales estudiamos los límites en $\pm \infty$.
+
+\begin{align*}
+\lim_{x\to-\infty}f(x) &=  \lim_{x\to-\infty} \sqrt{\frac{x^3}{4x-1}} = \lim_{x\to-\infty} \sqrt{\frac{\frac{x^3}{x}}{\frac{4x-1}{x}}} = \lim_{x\to-\infty} \sqrt{\frac{x^2}{4-\frac{1}{x}}} = \infty.\\
+\lim_{x\to\infty}f(x) &=  \lim_{x\to\infty} \sqrt{\frac{x^3}{4x-1}} = \lim_{x\to\infty} \sqrt{\frac{\frac{x^3}{x}}{\frac{4x-1}{x}}} = \lim_{x\to\infty} \sqrt{\frac{x^2}{4-\frac{1}{x}}} = \infty.
+\end{align*}
+
+Por tanto, $f$ no tiene asíntotas horizontales.
+
+**Asíntotas oblicuas**
+
+Para ver si hay asíntotas oblicuas estudiamos los límites de $f(x)/x$ en $\pm\infty$
+
+\begin{align*}
+\lim_{x\to-\infty}\frac{f(x)}{x} &=  \lim_{x\to-\infty} \frac{\sqrt{\frac{x^3}{4x-1}}}{x} = \lim_{x\to-\infty} \sqrt{\frac{x^3}{4x^3-x^2}} = \sqrt{\frac{1}{4}} = \frac{-1}{2}\\
+\lim_{x\to\infty}\frac{f(x)}{x} &=  \lim_{x\to\infty} \frac{\sqrt{\frac{x^3}{4x-1}}}{x} = \lim_{x\to\infty} \sqrt{\frac{x^3}{4x^3-x^2}} = \sqrt{\frac{1}{4}} = \frac{1}{2}
+\end{align*}
+
+Por tanto, $f$ tiene asíntotas oblicuas tanto en $-\infty$ como en $\infty$.
+
+
+Meta-information
+================
+extype: num
+exname: lim-3-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos

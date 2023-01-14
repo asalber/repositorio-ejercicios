@@ -1,0 +1,63 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+
+```
+
+Question
+========
+(2 puntos) Calcular las ecuaciones de las rectas tangente y normal a la gráfica de la curva implícita $e^{x^2y}-\ln(\sqrt{x-y})= 0$ en el punto $x=0$.
+
+Solution
+========
+En primer lugar obtenemos los valores de $y$ que cumplen la ecuación de la curva implícita para $x=0$. Sustituyendo en la ecuación se tiene
+
+$$
+\begin{gathered}
+e^{0^2y}-\ln(\sqrt{0-y})= 0 \Leftrightarrow 1-\ln(\sqrt{-y}) = 0 \Leftrightarrow \\ \ln(\sqrt{-y}) = 1 \Leftrightarrow 
+\sqrt{-y} = e \Leftrightarrow y=-e^2.
+\end{gathered}
+$$
+
+Así pues, hay que calcular la ecuación de las rectas tangente y normal en el punto $(0,-e^2)$.
+
+Como la pendiente de la recta tangente es la tasa de variación instantánea, calculamos $y'=\frac{dy}{dx}$ implícitamente
+
+$$
+\begin{gathered}
+\left(e^{x^2y}-\ln(\sqrt{x-y})\right)'= 0' \Leftrightarrow \left(e^{x^2y}-\frac{1}{2}\ln(x-y)\right)'= 0 \Leftrightarrow \\ 
+e^{x^2y}(2xy+x^2y')-\frac{1}{2}\frac{1-y'}{x-y} = 0.
+\end{gathered}
+$$
+
+Sustituyendo en $x=0$ y $y=-e^2$, se tiene
+
+$$
+\begin{gathered}
+e^{0^2(-e^2)}(2\cdot0(-e^2)+0^2y')-\frac{1}{2}\frac{1-y'}{0-(-e^2)} = 0 \\
+\Leftrightarrow \frac{-(1-y')}{2e^2} =0 \Leftrightarrow 1-y' = 0 \Leftrightarrow y'=1.
+\end{gathered}
+$$
+
+Por tanto, la ecuación de la recta tangente a la curva en $(0,-e^2)$ es 
+
+$$
+y = y_0 + \frac{dy}{dx}(x_0,y_0) (x-x_0) = (-e^2)+1(x-0) = x-e^2.
+$$
+
+Y la ecuación de la recta normal a la curva en $(0,-e^2)$ es 
+
+$$
+y = y_0 - \frac{1}{\frac{dy}{dx}(x_0,y_0)} (x-x_0) = (-e^2)-1(x-0) = -x-e^2.
+$$
+
+
+Meta-information
+================
+extype: num
+exname: imp-01-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos

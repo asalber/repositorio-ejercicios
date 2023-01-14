@@ -1,0 +1,56 @@
+---
+lang: es
+---
+
+Question
+========
+(2 puntos) La función $h(x)=\dfrac{x^2-2x+a}{x^3+bx^2-6x}$ tiene una discontinuidad evitable en $x=2$. Calcular el valor de $a$ y $b$, y clasificar el resto de discontinuidades.
+
+Solution
+========
+Para que la función $h(x)=\dfrac{x^2-2x+a}{x^3+bx^2-6x}$ tenga una discontinuidad evitable en $x=2$, debe cumplirse que $\lim_{x\to 2}h(x)\neq h(2)$. Una manera de que esto se cumpla es que la función no esté definida en $x=2$ pero sí exista el límite en ese punto. Para que la función no esté definida en $x=2$ el denominador debe anularse, es decir, 
+
+$$
+2^3+b2^2-6\cdot 2=0\Rightarrow 8+4b-12 =0 \Rightarrow b=1.
+$$
+
+Por otro lado, el límite en $x=2$ es
+
+$$
+\lim_{x\to 2}\frac{x^2-2x+a}{x^3+x^2-6x} = \frac{a}{0},
+$$
+
+de manera que, para que el límite exista, debe ser $a=0$, y en tal caso,
+
+$$
+\lim_{x\to 2}\frac{x^2-2x}{x^3+x^2-6x} = \lim_{x\to 2}\frac{x(x-2)}{x(x-2)(x+3)} = \lim_{x\to 2}\frac{1}{x+3} = \frac{1}{5},
+$$
+
+y, por tanto, $h(x)$ tiene una discontinuidad evitable en $x=2$ como se pide.
+
+Como se trata de una función racional, será discontinua en los puntos que anulen el denominador, es decir $x=-3$, $x=0$ y $x=2$. Ya hemos visto que en $x=2$ hay una discontinuidad evitable y faltaría clasificar las otras dos discontinuidades. 
+
+En $x=-3$ se tiene
+
+\begin{align*}
+\lim_{x\to -3^-}\frac{x(x-2)}{x(x-2)(x+3)} &= \lim_{x\to -3^-}\frac{1}{x+3} = -\infty,\\ 
+\lim_{x\to -3^+}\frac{x(x-2)}{x(x-2)(x+3)} &= \lim_{x\to -3^+}\frac{1}{x+3} = \infty,
+\end{align*}
+
+y, por tanto, $h$ tiene una discontinuidad de salto infinito en $x=-3$.
+
+Finalmente en $x=0$ se tiene
+
+$$
+\lim_{x\to 0} \frac{x(x-2)}{x(x-2)(x+3)} = \lim_{x\to 0}\frac{1}{x+3} = \frac{1}{3},
+$$
+
+por lo que $h$ tiene otra discontinuidad evitable en $x=0$.
+
+Meta-information
+================
+extype: num
+exname: cont-01-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos
