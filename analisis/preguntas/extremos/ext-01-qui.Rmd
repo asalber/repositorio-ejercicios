@@ -14,7 +14,7 @@ Question
 
 ![](pildora.png){width=8cm height=3cm}
 
-Si el contenido de las píldoras debe ser de $0.15$ ml, hallar las dimensiones de $x$ e $y$ para que el material empleado en el envoltorio sea mínimo.
+Si el contenido de las **píldoras** debe ser de $0.15$ ml, hallar las dimensiones de $x$ e $y$ para que el material empleado en el envoltorio sea mínimo.
 
 Solution
 ========

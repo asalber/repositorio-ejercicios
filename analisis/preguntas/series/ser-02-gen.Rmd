@@ -1,0 +1,27 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+
+```
+
+Question
+========
+(2 puntos) Determinar el dominio de convergencia puntual de la serie de potencias 
+
+$$
+\sum \frac{n(x-3)^n}{(n+1)4^n}
+$$
+
+Solution
+========
+
+
+Meta-information
+================
+extype: string
+exname: ser-02-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos

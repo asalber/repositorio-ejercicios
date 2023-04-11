@@ -1,0 +1,31 @@
+```{r echo=FALSE, results=hide}
+## DATA GENERATION
+
+## QUESTION/ANSWER GENERATION
+# sample size
+
+```
+
+\begin{question}
+\puntos{3.5}La evolución de un cultivo de hongos satisface la ecuación $y\sqrt{2t}dy-2y^2dt=0$, donde $y$ es la cantidad de hongos en cada instante $t$ en horas. Si en el instante inicial del cultivo había 10 hongos, 
+\begin{enumerate}
+  -  ¿cuántos hongos habrá al cabo de 2 horas?
+  -  ¿Cuándo habrá 1000 hongos en el cultivo?
+\end{enumerate}
+ 
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{edo-far-4}
+%% \extol{0.001}
+%% \degree{Farmacia}
+ 
+  

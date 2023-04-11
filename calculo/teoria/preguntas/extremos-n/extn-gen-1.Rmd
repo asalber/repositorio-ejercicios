@@ -1,0 +1,29 @@
+```{r echo=FALSE, results=hide}
+## DATA GENERATION
+
+## QUESTION/ANSWER GENERATION
+# sample size
+
+```
+
+\begin{question}
+\puntos{3}Dada la función $f(x,y) = A-(x^2+Bx+y^2+Cy)$, se pide:
+\begin{enumerate}
+-  Encontrar los valores de $A$, $B$ y $C$ tales que la función $f$ tenga un valor máximo de 15 en el punto $(-2,1)$.
+-  Para esos valores, calcular la ecuación del plano tangente y la recta normal a $f$ en el punto $(-2,1)$.
+\end{enumerate}
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{edo-gen-1}
+%% \extol{0.001}
+%% \degree{All}
+ 

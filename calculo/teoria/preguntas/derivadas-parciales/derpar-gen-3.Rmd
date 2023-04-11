@@ -1,0 +1,36 @@
+```{r echo=FALSE, results=hide}
+## DATA GENERATION
+
+## QUESTION/ANSWER GENERATION
+# sample size
+
+```
+
+\begin{question}
+\puntos{3.5}La cantidad de nieve (en cm. de altura) caída durante la última borrasca en Madrid se puede medir mediante la función 
+$$f(x,y)=\frac{xy}{x^2+y^2},$$
+donde $x$ representa la componente este (en metros) e $y$ representa la componente norte (en metros) de la región.
+
+\begin{enumerate}
+-  Un esquiador se encuentra en el punto $a=(0,1)$. ¿Cuál es la tasa de variación de la cantidad de nieve si se mueve hacia el sur?
+
+-  En qué dirección debe moverse el esquiador si quiere que la cantidad de nieve aumente lo más rápidamente posible? ¿Cuánto aumenta la cantidad de nieve en esta dirección? (Recuerda que el esquiador se encuentra en el punto $a=(0,1)$).
+
+-  Otro esquiador observa que si se dirige hacia el oeste la cantidad de nieve no cambia. ¿En qué puntos puede estar este esquiador si sabe que la componente norte en la que se encuentra es $y=1$?
+
+\end{enumerate}
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{derpar-gen-3}
+%% \extol{0.001}
+%% \degree{Todos}
+ 

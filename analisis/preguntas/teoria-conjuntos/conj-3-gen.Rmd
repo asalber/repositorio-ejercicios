@@ -1,0 +1,23 @@
+---
+lang: es
+---
+
+```{r, echo=FALSE, results="hide"}
+
+```
+
+Question
+========
+(2.5 puntos) Estudiar si los polinomios de primer grado son funciones inyectivas, sobreyectivas o biyectivas. ¿Y los polinomios de segundo grado?
+
+Solution
+========
+
+
+Meta-information
+================
+extype: num
+exname: conj-3-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos

@@ -1,0 +1,23 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+
+```
+
+Question
+========
+(3 puntos) Un depósito para la recogida de agua de lluvia tiene forma de pirámide cuadrada invertida con lado de la base $x=10$ m y altura $y=5$ m. El depósito contiene agua hasta una altura de $2$ m en el momento en que empieza a llover de manera que en el depósito entran $0.5$ m$^3$/h, ¿cuál será la tasa de variación que experimentará el nivel de agua en el depósito en ese instante? Suponiendo que la intensidad de la lluvia no cambia, dar una aproximación lineal del tiempo necesario para que se llene el depósito.
+
+Solution
+========
+
+
+Meta-information
+================
+extype: num
+exname: der-02-ind
+exsolution: Solución
+extol: 0.001
+degree: Industriales

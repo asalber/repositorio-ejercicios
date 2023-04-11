@@ -1,0 +1,19 @@
+---
+lang: es
+---
+
+Question
+========
+(2.5 puntos) Dar un ejemplo de una función que tenga una discontinuidad evitable en $x=-2$, una discontinuidad esencial en $x=0$ y una discontinuidad de salto en $x=1$ y demostrar que la función tiene esas discontinuidades.
+
+Solution
+========
+
+
+Meta-information
+================
+extype: num
+exname: cont-01-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos

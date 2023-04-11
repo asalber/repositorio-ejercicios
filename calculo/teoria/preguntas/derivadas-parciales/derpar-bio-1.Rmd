@@ -1,0 +1,38 @@
+```{r echo=FALSE, results=hide}
+## DATA GENERATION
+
+## QUESTION/ANSWER GENERATION
+# sample size
+
+```
+
+\begin{question}
+\puntos{4}Para que una bacteria pueda reproducirse adecuadamente en un medio necesita que el PH del medio permanezca estable. 
+Por otro lado, se sabe que el PH de dicho medio depende de la concentración de tres substancias $x$, $y$ y $z$ cuya relación viene dada por la expresión 
+
+$$ph(x,y,z)=14e^{-(xy+y\sqrt{z})}.$$
+
+Si las concentraciones de las sustancias en el medio son $x=1/2$, $y=1$ y $z=1/4$, se pide:
+
+\begin{enumerate}
+-  ¿Cuál sería la dirección de máxima variación del PH en el punto? 
+¿Habría alguna dirección en la que el PH no variase?
+¿Cuánto variaría el PH del medio si la variable $y$ crece al doble de ritmo que la variable $x$ y la variable $z$ decrece al mismo ritmo que crece la variable $x$?
+-  Si se quiere que la bacteria se reproduzca adecuadamente, ¿Cómo y cuánto tendría que variar la concentración de $z$ si la concentración de $y$ varía el doble que la de $x$?
+%-  ¿Cuál sería la expresión polinómica de grado 1 más parecida a la función PH para las concentraciones de $x$, $y$ y $z$ dadas?
+\end{enumerate}
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{derpar-bio-1}
+%% \extol{0.001}
+%% \degree{Biotecnología}
+ 

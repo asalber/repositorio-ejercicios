@@ -1,0 +1,19 @@
+---
+lang: es
+---
+
+Question
+========
+(2.5 puntos) Usar el método de la bisección para calcular la solución de la ecuación $e^x+x=0$ con un error menor de 10^{-2}$.
+
+Solution
+========
+
+
+Meta-information
+================
+extype: num
+exname: cont-03-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos

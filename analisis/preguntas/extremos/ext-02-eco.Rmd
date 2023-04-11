@@ -1,0 +1,23 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+
+```
+
+Question
+========
+(2.5 puntos) Una empresa de fabricación de microchips sabe que el coste de producción de $n$ unidades diarias de un chip viene dado por la función $c(n)=200+2n+0.0001n^2$ y que el precio de venta de cada chip también depende del número de unidades producidas según la función $p(n)=5-0.0002n$, ambos en euros. ¿Cuál es el número de unidades diarias que debe fabricar la empresa para maximizar sus beneficios?
+
+Solution
+========
+
+
+Meta-information
+================
+extype: num
+exname: ext-02-eco
+exsolution: Solución
+extol: 0.001
+degree: Economía

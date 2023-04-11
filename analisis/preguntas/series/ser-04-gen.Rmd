@@ -1,0 +1,22 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+```
+
+Question
+========
+(2 puntos) Calcular la serie de Taylor de la función $f(x)=\frac{1}{x}$ en $a=1$. ¿Cuál es su dominio de convergencia puntual?
+
+Solution
+========
+
+
+Meta-information
+================
+extype: string
+exname: ser-04-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos

@@ -1,0 +1,23 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+
+```
+
+Question
+========
+(2 puntos) La distancia en metros recorrida por un vehículo que circula en línea recta viene dada por la función $e(t)$ donde $t$ es el tiempo en segundos. Si en el instante $t=2$ el coche ha recorrido una distancia de $8$ m y circula con una velocidad de $5$ m/s y una aceleración de $2$ m/s$^2$, dar una aproximación de la función $e$ en ese instante mediante un polinomio de Taylor de grado 2. Calcular de forma aproximada la distancia recorrida en el instante $t=2.1$ usando el polinomio anterior.
+
+Solution
+========
+
+
+Meta-information
+================
+extype: num
+exname: tay-02-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos

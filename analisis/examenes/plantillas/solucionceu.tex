@@ -38,11 +38,13 @@
 
 %% new commands
 \makeatletter
+\newcommand{\Title}[1]{\def\@Title{#1}}
 \newcommand{\Subject}[1]{\def\@Subject{#1}}
 \newcommand{\Degree}[1]{\def\@Degree{#1}}
 \newcommand{\Date}[1]{\def\@Date{#1}}
 \newcommand{\Version}[1]{\def\@Version{#1}}
 \newcommand{\Time}[1]{\def\@Time{#1}}
+\Title{Título}
 \Subject{Asignatura}
 \Degree{Grado}
 \Date{Fecha}
@@ -51,6 +53,7 @@
 
 %% \exinput{header}
 
+\newcommand{\myTitle}{\@Title}
 \newcommand{\mySubject}{\@Subject}
 \newcommand{\myDegree}{\@Degree}
 \newcommand{\myDate}{\@Date}
@@ -61,13 +64,12 @@
 %% headings
 \pagestyle{fancy}
 \lhead{\textsc{\color{color1}Universidad San Pablo CEU}}
-\rhead{\textsl{\textsf{\color{color1}Departamento de Matemática Aplicada y Estadística}}}
+\rhead{\textsl{\textsf{\color{color1}Departamento de Matemáticas y Ciencia de Datos}}}
 \cfoot{}
 \renewcommand{\headrulewidth}{0pt}
 
 \begin{document}
-\exasol{\color{color1}EXAMEN DE \mySubject}{\color{color1}\myDegree}{\color{color1}\myDate}{\color{color1}Modelo \myVersion}
-\noindent\textbf{Duración}: \myTime. \vskip 1cm
+\exasol{\color{color1}EXAMEN DE \myTitle}{\color{color1}\myDegree}{\color{color1}\myDate}{\color{color1}Modelo \myVersion}
 
 \begin{enumerate}[leftmargin=*]
 

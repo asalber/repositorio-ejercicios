@@ -1,0 +1,26 @@
+```{r echo=FALSE, results=hide}
+## DATA GENERATION
+
+## QUESTION/ANSWER GENERATION
+# sample size
+
+```
+
+\begin{question}
+Una máquina de diálisis funciona bajo el principio de la Ley de Fick, que afirma que la cantidad de material de desecho que pasa por una membrana es proporcional a la diferencia de concentración a un lado y a otro de la misma. Al iniciar la diálisis, la concentración de material de desecho del paciente es de 160 mg/dl y pasada 1 hora desciende a la mitad, mientras que la solución de dializado permanece con una concentración constante de 10 mg/dl. Si se da por finalizada la diálisis cuando el paciente alcanza una concentración de 20 mg/dl. ¿Cuánto tiempo tendrá que estar en diálisis para conseguirlo?
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{edo-6-fis}
+%% \extol{0.001}
+%% \degree{Farmacia}
+ 
+  

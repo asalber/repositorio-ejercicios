@@ -1,0 +1,26 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+```
+
+Question
+========
+(2 puntos) Estudiar la convergencia de las siguientes series
+
+a. $\displaystyle \sum \frac{3n^2+2n}{\sqrt{n^5+n}}$
+
+a. $\displaystyle \sum \cos(n\pi)n^2e^{-n}$
+
+Solution
+========
+
+
+Meta-information
+================
+extype: string
+exname: ser-01-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos

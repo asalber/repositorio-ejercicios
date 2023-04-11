@@ -1,0 +1,22 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+```
+
+Question
+========
+(2 puntos) Un pozo de petróleo produce 200 mil litros de petróleo el primer año de su explotación, pero cada año que pasa la producción decae un 12\%. Calcular la cantidad de petróleo extraída tras $n$ años de actividad. ¿Qué cantidad total de petróleo se extraerá del pozo hasta agotarlo?
+
+Solution
+========
+
+
+Meta-information
+================
+extype: string
+exname: ser-03-ing
+exsolution: Solución
+extol: 0.001
+degree: Ingeniería

@@ -1,0 +1,31 @@
+```{r echo=FALSE, results=hide}
+## DATA GENERATION
+
+## QUESTION/ANSWER GENERATION
+# sample size
+
+```
+
+\begin{question}
+Dos insectos empiezan a moverse desde un mismo punto siguiendo direcciones perpendiculares. 
+\begin{enumerate}
+-  Si el primer insecto se mueve a una velocidad de 3 cm/s y el segundo a un velocidad de 4 cm/s, ¿a qué velocidad instantánea cambia la distancia entre ambos a los 2 segundos de iniciar su movimiento? ¿Y a los 3 segundos?
+-  Si a los 4 segundos de iniciar el movimiento el segundo insecto se queda quieto y el primero se sigue moviendo con la misma dirección y velocidad, ¿a qué velocidad instantánea cambia la distancia entre los dos insectos en ese instante?
+\end{enumerate}
+
+Nota: La distancia entre los insectos es la longitud de la hipotenusa del triangulo rectángulo que tiene por catetos las distancias recorridas por los insectos.
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{der-3-bio}
+%% \extol{0.001}
+%% \degree{Todos}
+ 

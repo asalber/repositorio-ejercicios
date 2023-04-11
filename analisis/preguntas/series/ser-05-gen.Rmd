@@ -1,0 +1,23 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+```
+
+Question
+========
+(2 puntos) Calcular la integral superior de Riemann de la función $f(x)=2x^3+3x$ en el intervalo $[0,2]$.
+
+Solution
+========
+
+
+
+Meta-information
+================
+extype: string
+exname: ser-05-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos

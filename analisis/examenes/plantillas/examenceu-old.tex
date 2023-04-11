@@ -9,12 +9,10 @@
 \usepackage{enumitem}
 \usepackage{booktabs}
 \usepackage{array}
-\usepackage{multirow}
 \usepackage{verbatim}
 \usepackage{Sweave}
 \usepackage{xargs}
 \usepackage{fancyhdr}
-\usepackage{setspace} 
 
 %% new environments
 \newenvironment{question}{\item}{}
@@ -55,28 +53,13 @@
 
 %% headings
 \pagestyle{fancy}
-\lhead{\textsc{Universidad CEU San Pablo}}
+\lhead{\textsc{Universidad San Pablo CEU}}
 \rhead{\textsl{\textsf{Departamento de Matemáticas y Ciencia de Datos}}}
 \cfoot{}
 \renewcommand{\headrulewidth}{0pt}
 
 \begin{document}
-\begin{center}
-\doublespacing
-\sffamily
-\begin{tabular}{|p{0.15\textwidth}|p{0.38\textwidth}|p{0.39\textwidth}|}
-\hline
-\multirow{4}{*}{\includegraphics[width=0.15\textwidth]{/run/media/alf/datos/misrepositorios/docencia/repositorio-ejercicios/img/logoceu.jpg}} & \multicolumn{2}{c|}{\LARGE \textbf{EXAMEN DE ANÁLISIS I}} \\
-\cline{2-3}
-& 1º Grado en Ingeniería Matemática & Nombre: \\
-\cline{2-3}
-& Asignatura: Análisis I & DNI: \\
-\cline{2-3}
-& Fecha: 21/12/2022 & Modelo A\\
-\hline
-\end{tabular}
-\end{center}
-
+\examen{EXAMEN DE \mySubject}{\myDegree}{\myDate}{Modelo \myVersion}
 \noindent\textbf{Duración}: \myTime. \vskip 1cm
 
 \begin{enumerate}[leftmargin=*]

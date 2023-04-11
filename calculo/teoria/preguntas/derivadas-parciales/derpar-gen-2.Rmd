@@ -1,0 +1,35 @@
+```{r echo=FALSE, results=hide}
+## DATA GENERATION
+
+## QUESTION/ANSWER GENERATION
+# sample size
+
+```
+
+\begin{question}
+    \puntos{3.5}La función $T(x,y)=\ln(3xy+2x^2-y)$ da la temperatura de la superficie de una montaña en la latitud $x$ y longitud $y$. Unos montañeros están perdidos en la posición $(1,2)$ y corren el riesgo de morir congelados.
+    
+    \begin{enumerate}
+    -  ¿En qué dirección deben moverse para evitar el riesgo de congelación lo más rápidamente posible?
+    -  Si se mueven en una dirección equivocada de manera que la longitud decrece la mitad de lo que aumenta la latitud, ¿aumentará o disminuirá el riesgo de hipotermia?
+    -  ¿En qué dirección deben moverse para que la temperatura permanezca constante?
+    \end{enumerate}
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+\begin{enumerate}
+-  $\nabla T(1,2)=\frac{1}{3}(5,1)$.
+-  Sea $\mathbf{u}$ el vector $(1,-1/2)$, entonces $T'_{\mathbf{u}}(1,2) = \frac{3}{\sqrt{5}}$ ºC.
+-  Siguiendo la dirección del vector $(1,-5)$.
+\end{enumerate}
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solucion}
+%% \exname{derpar-gen-2}
+%% \extol{0.001}
+%% \degree{Todos}
+ 

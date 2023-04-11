@@ -1,0 +1,30 @@
+```{r echo=FALSE, results=hide}
+## DATA GENERATION
+
+## QUESTION/ANSWER GENERATION
+# sample size
+
+```
+
+\begin{question}
+\puntos{3} El síndrome PFAPA (acrónimo en inglés de fiebre periódica, estomatitis aftosa, faringitis y adenitis) se caracteriza por episodios recurrentes de fiebre que pueden durar de 3 a 6 días. En el caso de un paciente, la evolución de la temperatura en uno de los episodios de fiebre viene dado por la expresión $T(x)=36.5+e^{\frac{-(x-2)^2}{2}}$, donde $T$ es la temperatura del paciente y $x$ es el tiempo en días que transcurre desde que comienza un episodio de subida de fiebre.
+
+\begin{enumerate}
+-  ¿Cuál será la temperatura máxima que alcanzará el paciente?
+-  Utilizando la derivada, calcular de forma aproximada la variación de la temperatura del paciente un día después de comenzar con el episodio febril?
+\end{enumerate}
+\end{question}
+
+
+%% SOLUTIONS
+\begin{solution}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{num}
+%% \exsolution{Solución}
+%% \exname{der-gen-1}
+%% \extol{0.001}
+%% \degree{Todos}
+ 
