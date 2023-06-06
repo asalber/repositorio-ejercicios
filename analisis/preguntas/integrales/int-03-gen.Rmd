@@ -1,0 +1,23 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+```
+
+Question
+========
+(3 puntos) Calcular el volumen del depósito generado al rotar alrededor del eje $y$ la gráfica de la función $f(x)=(x-1)^2$ con $0\leq x\leq 3$. Plantear la integral para obtener la cantidad de chapa necesaria para su construcción, sin llegar a calcularla.
+
+Solution
+========
+
+
+
+Meta-information
+================
+extype: string
+exname: int-03-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos

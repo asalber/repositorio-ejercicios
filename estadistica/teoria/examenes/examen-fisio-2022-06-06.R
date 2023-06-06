@@ -4,7 +4,7 @@ library("exams")
 setwd("estadistica/teoria/examenes")
 examen <- "2022-06-6-prob"
 
-questions <- c("test-12-fis.Rnw", "vad-18-med.Rnw", "vac-21-fis.Rnw")
+questions <- c("")
 
 exams2pdf(questions, n=1, name = c(paste0("examen-fisio-", examen), paste0("solucion-fisio-", examen)), encoding = "UTF-8",
           dir = "pdf",
@@ -13,7 +13,7 @@ exams2pdf(questions, n=1, name = c(paste0("examen-fisio-", examen), paste0("solu
           header = list(
             Subject = "PROBABILIDAD Y VARIABLES ALEATORIAS",
             Degree= "2º Fisioterapia",
-            Date = "6 de junio de 2022",
+            Date = "30 de mayo de 2023",
             Version = "A",
             Time = "1 hora"
           ))

@@ -1,0 +1,23 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+```
+
+Question
+========
+(2 puntos) Calcular el área de región encerrada por la curva polar $r=2\cos(\theta)\operatorname{sen}(\theta)$.
+
+Solution
+========
+
+
+
+Meta-information
+================
+extype: string
+exname: int-02-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos

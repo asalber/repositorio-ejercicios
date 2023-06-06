@@ -1,0 +1,29 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+```
+
+Question
+========
+(2.5 puntos) La distribución de Borel de parámetro $\mu\geq 0$ es una distribución de probabilidad discreta con recorrido $\mathbb{N}$ y función de probabilidad 
+
+$$
+f(n) = \frac{(\mu n)^{n-1}}{e^{\mu n}n!}\ \forall n\in\mathbb{N}, 
+$$
+
+¿Para qué valores de $\mu$ la serie $\sum f(n)$ es absolutamente convergente?
+
+Solution
+========
+
+
+
+Meta-information
+================
+extype: string
+exname: ser-08-prob
+exsolution: Solución
+extol: 0.001
+degree: Todos

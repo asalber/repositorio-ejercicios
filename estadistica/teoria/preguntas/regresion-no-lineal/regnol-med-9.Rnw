@@ -1,8 +1,9 @@
 <<echo=FALSE, results=hide>>=
 ## DATA GENERATION
 library(xtable)
-x <- c(5, 8, 20, 35, 50, 80, 110)
-y <- c(50, 70, 100, 150, 170, 190, 200)
+x <- c(50, 62, 71, 75, 82, 90, 96, 102)
+y <- c(35, 54, 72, 81, 91, 94, 97, 98)
+plot(x,y)
 table <- matrix(c(x,y), nrow = 2, byrow = T)
 #decimals <- matrix(c(rep(0,6), rep(2,6)), nrow = 3, ncol=6, byrow=TRUE)
 rownames(table) <- c("\\mbox{Concentración ($\\mu$g/ml)}", "\\mbox{Señal (Hz)}")
@@ -38,7 +39,8 @@ reglog <- lm(y~log(x))
 @
 
 \begin{question}
-\puntos{5 } Un estudio intenta poner a punto una nueva técnica de detección de un cierto anticuerpo. Para ello se utiliza un inmunosensor piezoeléctrico, que permite medir el cambio en la señal en Hz al variar la concentracióndel anticuerpo ($\mu$g/ml). Se recolectaron los siguientes datos:
+\puntos{5 } La siguiente tabla recoge la reducción de la inflamación en un traumatismo (en porcentaje) para distintas dosis diárias de dexketoprofeno administradas durante 4 días.
+
 $$
 <<echo=FALSE, results=tex>>=
 print(xtable(table, auto=T), tabular.environment="array", include.colnames = F, floating=F, hline.after = c(0,nrow(table)), sanitize.text.function = function(x) { x })

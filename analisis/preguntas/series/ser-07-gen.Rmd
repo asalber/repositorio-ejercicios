@@ -1,0 +1,30 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+```
+
+Question
+========
+(2.5 puntos) Considérese el conjunto de Cantor que resulta de ir eliminando del intervalo $[0,10]$, de manera recursiva, el $80\%$ central de los intervalos restantes. El procedimiento sería el siguiente:
+
+- Etapa 1: Se elimina el intervalo $(1,9)$.
+- Etapa 2: Se eliminan los intervalos $(0.1,0.9)$ y $(9.1,9.9)$.
+- Etapa 3: Se eliminan los intervalos $(0.01,0.09)$, $(0.91,0.99)$, $(9.01,9.09)$ y $(9.91,9.99)$.
+- ... 
+
+¿Cuál es la longitud total de los intervalos eliminados? 
+
+Solution
+========
+
+
+
+Meta-information
+================
+extype: string
+exname: ser-07-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos

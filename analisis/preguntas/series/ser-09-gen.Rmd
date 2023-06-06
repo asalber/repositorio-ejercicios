@@ -1,0 +1,23 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+```
+
+Question
+========
+(2.5 puntos) Calcular la suma inferior de Riemann de la parábola $f(x)=3x^2+2x$ en el intervalo $[0,10]$.
+
+Solution
+========
+
+
+
+Meta-information
+================
+extype: string
+exname: ser-09-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos

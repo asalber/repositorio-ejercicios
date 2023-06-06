@@ -1,0 +1,23 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+```
+
+Question
+========
+(2.5 puntos) La gran pirámide de Gizeh tiene una altura de $138$ m y una base cuadrada de lado $230$ m. Calcular de manera aproximada el trabajo realizado en su construcción. Supóngase que la densidad de las piedras usadas en su construcción es de $2500$ kg/m$^3$ y que la aceleración de la gravedad es $9.81$ m/s$^2$.
+
+Solution
+========
+
+
+
+Meta-information
+================
+extype: string
+exname: int-04-fis
+exsolution: Solución
+extol: 0.001
+degree: Todos

@@ -1,0 +1,27 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+```
+
+Question
+========
+(2.5 puntos) Calcular las siguientes sumas si existen
+
+a.  $\displaystyle \sum_{n=2}^\infty \frac{2}{n^2-1}$.
+
+a.  $\displaystyle\sum_{n=1}^\infty (-1)^n \frac{\sqrt{n}}{\ln(n)}$.
+
+Solution
+========
+
+
+
+Meta-information
+================
+extype: string
+exname: ser-06-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos

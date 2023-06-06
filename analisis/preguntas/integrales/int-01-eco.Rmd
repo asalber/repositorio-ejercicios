@@ -1,0 +1,23 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+```
+
+Question
+========
+(2.5 puntos) La función $f(t)=50\sqrt{t/2}+100$ da los ingresos de una empresa en miles de euros $t$ años después de su creación, mientras que la función $g(t)=\ln(t^2+1)+100$ da los gastos. Calcular el beneficio acumulados de la empresa entre el quinto y el décimo año. 
+
+Solution
+========
+
+
+
+Meta-information
+================
+extype: string
+exname: int-01-eco
+exsolution: Solución
+extol: 0.001
+degree: Todos
