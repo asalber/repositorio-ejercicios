@@ -55,7 +55,7 @@ Así pues, las dimensiones óptimas serían $x=h=0$ e $y=2r=0.6592$, que en real
 
 Meta-information
 ================
-extype: num
+extype: string
 exname: ext-01-qui
 exsolution: Solución
 extol: 0.001

@@ -24,7 +24,7 @@ Por otro lado, $A$ tampoco es cerrado ya que $\overline{A}=(-1,1)\cup [2,\infty)
 
 Meta-information
 ================
-extype: num
+extype: string
 exname: conj-2-gen
 exsolution: Solución
 extol: 0.001

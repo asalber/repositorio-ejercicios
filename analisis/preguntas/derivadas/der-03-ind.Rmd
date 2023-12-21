@@ -16,7 +16,7 @@ Solution
 
 Meta-information
 ================
-extype: num
+extype: string
 exname: der-03-ind
 exsolution: Solución
 extol: 0.001

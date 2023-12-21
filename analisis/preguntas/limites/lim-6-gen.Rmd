@@ -7,7 +7,7 @@ lang: es
 
 Question
 ========
-(3 puntos) Dada la función $f(x)=\dfrac{ax^n}{x^2+bx}$, 
+(2 puntos) Dada la función $f(x)=\dfrac{ax^n}{x^2+bx}$, 
 
 - ¿Cuánto debe valer $a$, $b$ y $n$ para que $f$ tenga una asíntota vertical $x=3$ y una asíntota horizontal $y=2$?
 - ¿Cuánto debe valer $a$, $b$ y $n$ para que $f$ tenga una asíntota oblicua $y=3x-1$?
@@ -18,7 +18,7 @@ Solution
 
 Meta-information
 ================
-extype: num
+extype: string
 exname: lim-6-gen
 exsolution: Solución
 extol: 0.001

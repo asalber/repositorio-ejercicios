@@ -1,0 +1,39 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+```
+
+Question
+========
+(2.5 puntos) La presión en la posición $(x,y,z)$ de un espacio es $f(x,y,z)= x^2+y^2-z^3$, y la posición de un objeto en cada instante $t>0$ en ese mismo espacio está dada por la función vectorial
+
+$$
+\begin{cases}
+x=\sqrt{t}\\
+y=1\\
+z=1/t
+\end{cases}
+$$
+
+a.  Calcular la ecuación de la recta tangente a la trayectoria en el punto $(1,1,1)$.
+
+a.  Calcular la ecuación del plano normal a la trayectoria en el punto $(1,1,1)$.
+
+a.  ¿Es la dirección de esta trayectoria al pasar por el punto $(1,1,1)$ aquella en la que que el crecimiento de la presión es máximo?
+
+a.  ¿Cuál es la tasa de variación de la presión que soporta el objeto con respecto al tiempo en ese mismo instante?
+
+Solution
+========
+
+
+
+Meta-information
+================
+extype: string
+exname: funvec-01-ing
+exsolution: Solución
+extol: 0.001
+degree: Ingenierías

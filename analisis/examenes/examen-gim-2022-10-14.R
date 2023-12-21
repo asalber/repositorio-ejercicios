@@ -1,11 +1,12 @@
 library("knitr")
 library("exams")
 
-setwd("analisis/examenes")
+#setwd("analisis/examenes")
 
-questions <- c("top-1-gen.Rmd", "suc-2-gen.Rmd", "suc-3-eco.Rmd", "lim-4-gen.Rmd", "lim-1-gen.Rmd", "lim-3-gen.Rmd")
 degree <- "gim"
 date <- "2022-11-14"
+questions <- c("top-1-gen.Rmd", "suc-2-gen.Rmd", "suc-3-eco.Rmd", "lim-4-gen.Rmd", "lim-1-gen.Rmd", "lim-3-gen.Rmd")
+
 
 exams2pdf(questions,
   n=1,
@@ -13,7 +14,7 @@ exams2pdf(questions,
   encoding = "UTF-8",
   dir = "pdf",
   edir = "../preguntas",
-  template = c("plantillas/examenceu2.tex", "plantillas/solucionceu.tex"),
+  template = c("plantillas/examenceu.tex", "plantillas/solucionceu.tex"),
   header = list(
     Subject = "ANÁLISIS I",
     Degree= "1º Grado en Ingeniería Matemática",

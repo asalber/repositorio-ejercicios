@@ -20,7 +20,7 @@ b. Como la sucesión es monótona decreciente y está acotada inferiormente, por
 
 Meta-information
 ================
-extype: num
+extype: string
 exname: suc-2-gen
 exsolution: Solución
 extol: 0.001

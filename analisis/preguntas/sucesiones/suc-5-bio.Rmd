@@ -47,7 +47,7 @@ Como hemos visto que la sucesión está acotada inferiormente por $0$, podemos d
 
 Meta-information
 ================
-extype: num
+extype: string
 exname: suc-5-bio
 exsolution: Solución
 extol: 0.001

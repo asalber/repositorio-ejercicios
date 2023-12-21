@@ -14,7 +14,8 @@
 \usepackage{Sweave}
 \usepackage{xargs}
 \usepackage{fancyhdr}
-\usepackage{setspace} 
+\usepackage{setspace}
+\usepackage{makecell}
 
 %% new environments
 \newenvironment{question}{\item}{}
@@ -69,7 +70,7 @@
 \sffamily
 \begin{tabular}{|p{0.15\textwidth}|p{0.38\textwidth}|p{0.39\textwidth}|}
 \hline
-\multirow{4}{*}{\includegraphics[width=0.15\textwidth]{/run/media/alf/datos/misrepositorios/docencia/repositorio-ejercicios/img/logoceu.jpg}} & \multicolumn{2}{c|}{\LARGE \textbf{EXAMEN DE \myTitle}} \\
+\multirow{4}{*}{\includegraphics[width=0.15\textwidth]{/run/media/alf/datos/misrepositorios/docencia/repositorio-ejercicios/img/logoceu.jpg}} & \multicolumn{2}{p{0.77\textwidth}|}{\centering \Large \textbf{\myTitle}} \\
 \cline{2-3}
 & \myDegree & Nombre: \\
 \cline{2-3}

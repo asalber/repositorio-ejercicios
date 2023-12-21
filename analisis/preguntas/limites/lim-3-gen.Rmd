@@ -67,7 +67,7 @@ Del mismo modo se prueba que esta misma recta también es asíntota oblicua de $
 
 Meta-information
 ================
-extype: num
+extype: string
 exname: lim-3-gen
 exsolution: Solución
 extol: 0.001

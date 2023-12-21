@@ -8,7 +8,13 @@ lang: es
 
 Question
 ========
-(2 puntos) Sea $(x_n)_{n=1}^\infty$ una sucesión tal que las subsucesiones de los términos pares $(x_{2n})_{n=1}^\infty$ e impares $(x_{2n+1})_{n=1}^\infty$ convergen a un mismo límite. Demostrar que la sucesión $(x_n)$ converge a ese límite.
+(2 puntos) Sea $(x_n)_{n=1}^\infty$ una sucesión tal que
+
+$$
+\lim_{n\to\infty} x_{2n}= \lim_{n\to\infty}x_{2n+1}=l.
+$$
+
+Demostrar que $\lim_{n\to\infty}x_n = l$.
 
 Solution
 ========
@@ -16,7 +22,7 @@ Solution
 
 Meta-information
 ================
-extype: num
+extype: string
 exname: suc-7-gen
 exsolution: Solución
 extol: 0.001

@@ -1,0 +1,21 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+```
+
+Question
+========
+(2.5 puntos) Una fábrica de componentes electrónicos produce dos tipos de chips. Los ingresos, en cientos de euros,  obtenidos por la venta de $x$ miles de unidades del primer tipo e $y$ miles de unidades del segundo tipo vienen dados por la función $I(x,y) = -x^2-\frac{1}{2}y^2-\frac{1}{4}xy+280x+260y+1000$, mientras que los gastos de producción, vienen dados por la función $C(x,y) = 100x+120y+6000$. ¿Qué cantidad de chips de cada tipo debe producir la fábrica para maximizar el beneficio?
+
+Solution
+========
+
+Meta-information
+================
+extype: string
+exname: extn-01-eco
+exsolution: Solución
+extol: 0.001
+degree: Ingenierías

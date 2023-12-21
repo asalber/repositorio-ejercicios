@@ -1,0 +1,23 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+```
+
+Question
+========
+(2.5 puntos) Calcular la serie de Taylor de la función $f(x)=\ln(x-1)$ en $a=2$ y determinar su dominio de convergencia.
+
+Solution
+========
+
+
+
+Meta-information
+================
+extype: string
+exname: ser-13-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos

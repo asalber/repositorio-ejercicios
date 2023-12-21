@@ -24,7 +24,7 @@ Por tanto, $\operatorname{tg}(x)$ y $x$ son infinitésimos equivalentes en $x=0$
 
 Meta-information
 ================
-extype: num
+extype: string
 exname: lim-2-gen
 exsolution: Solución
 extol: 0.001

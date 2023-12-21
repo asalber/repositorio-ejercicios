@@ -1,0 +1,25 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+```
+
+Question
+========
+(2.5 puntos) Un cable de longitud $l$ tiene una sección circular de radio $r$ y se enrolla sobre un cilindro de radio $R$. ¿Cuál es la longitud más corta que debe tener el cilindro para poder enrollar todo el cable sin que se solape? 
+
+Calcular la longitud para un cilindro de radio 10 cm y un cable de 10 m con una sección circular de radio 2 cm. ¿Cuántas vueltas completas daría el cable alrededor del cilindro?
+
+Solution
+========
+
+
+
+Meta-information
+================
+extype: string
+exname: funvec-02-ing
+exsolution: Solución
+extol: 0.001
+degree: Ingenierías

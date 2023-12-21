@@ -1,0 +1,29 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+```
+
+Question
+========
+(2.5 puntos) El consumo de combustible de una avioneta (en l/m) depende de la altura a la que vuela $h$ (en km) y su velocidad $v$ (en cientos de km/h) según la función $c(h,v) = \frac{v^2}{\ln(\sqrt{h+2})}$.
+
+a.  En el momento en que el avión tiene una altitud de 2 km y una velocidad de 250 km/h, ¿cómo cambiará el consumo si empezamos a cambiar la velocidad y la altura de manera velocidad disminuya la mitad de lo que aumenta la altura? 
+
+a.  En ese mismo instante, ¿cómo debería cambiar la altitud y la velocidad para que el consumo se reduzca lo más rápidamente posible? 
+
+a.  Si en ese instante, el avión empieza a acelerar a razón de 5 km/h y su altura empieza a disminuir a razón de 100 m/min. ¿Cuál será la tasa de variación del consumo de combustible?
+
+Solution
+========
+
+
+
+Meta-information
+================
+extype: string
+exname: dern-01-ing
+exsolution: Solución
+extol: 0.001
+degree: Ingenierías

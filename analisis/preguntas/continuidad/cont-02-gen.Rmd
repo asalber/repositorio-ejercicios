@@ -12,7 +12,7 @@ Solution
 
 Meta-information
 ================
-extype: num
+extype: string
 exname: cont-01-gen
 exsolution: Solución
 extol: 0.001

@@ -1,0 +1,29 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+
+```
+
+Question
+========
+(2 puntos) La cantidad de agua almacenada en un embalse en hectómetros cúbicos viene dada por la función 
+
+$$
+h(t) = \frac{10t+\cos(2t)}{4t+2\operatorname{sen}(3t)}
+$$
+
+Analizar si la cantidad de agua converge o no a largo plazo.
+
+Solution
+========
+
+
+Meta-information
+================
+extype: string
+exname: suc-8-meteo
+exsolution: Solución
+extol: 0.001
+degree: Meteorología

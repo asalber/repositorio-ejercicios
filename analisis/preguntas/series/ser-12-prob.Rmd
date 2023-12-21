@@ -1,0 +1,23 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+```
+
+Question
+========
+(2.5 puntos) Dos personas lanzan una moneda de manera alternada y gana el primero que obtenga una cara. Expresar con una serie la probabilidad de que gane cada una de ellas. Demostrar que la suma de esas dos series es 1. 
+
+Solution
+========
+
+
+
+Meta-information
+================
+extype: string
+exname: ser-12-prob
+exsolution: Solución
+extol: 0.001
+degree: Todos

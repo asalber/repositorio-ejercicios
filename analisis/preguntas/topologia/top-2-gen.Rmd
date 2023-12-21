@@ -1,0 +1,22 @@
+```{r, echo=FALSE, results="hide"}
+```
+
+Question
+========
+(2 puntos) Dado el conjunto $A=\{\frac{\operatorname{sin}(n)}{n}, n\in\mathbb{N}\}$,
+
+a.  Calcular su ínfimo, mínimo, supremo y máximo si existen.
+a.  Calcular sus puntos de acumulación.
+a.  Estudiar si se trata de un conjunto abierto o cerrado.
+
+Solution
+========
+
+
+Meta-information
+================
+extype: string
+exname: top-2-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos

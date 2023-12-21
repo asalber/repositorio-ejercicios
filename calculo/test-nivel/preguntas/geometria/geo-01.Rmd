@@ -1,0 +1,26 @@
+```{r data generation, echo = FALSE, results = "hide"}
+p <- c(sample(1:5, 1), sample(1:5, 1))
+q <- c(sample(6:10, 1), sample(6:10, 1))
+sol <- sqrt(sum((p - q)^2))
+```
+
+Question
+========
+¿Cuál es la distancia entre los puntos
+$P = (`r p[1]`, `r p[2]`)$ y $Q = (`r q[1]`, `r q[2]`)$
+en un sistema de coordenadas cartesianas?
+
+Solution
+========
+The distance $d$ of $p$ and $q$ is given by
+$d^2 = (p_1 - q_1)^2 + (p_2 - q_2)^2$ (Pythagorean formula).
+
+Hence $d = \sqrt{(p_1 - q_1)^2 + (p_2 - q_2)^2} =
+  \sqrt{(`r p[1]` - `r q[1]`)^2 + (`r p[2]` - `r q[2]`)^2}
+   = `r round(sol, digits = 3)`$.
+\
+Meta-information
+================
+extype: schoice
+exsolution: `r mchoice2string(sc$solutions)`
+exname: Distancia euclidea

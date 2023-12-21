@@ -1,0 +1,30 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+```
+
+Question
+========
+(2.5 puntos) El centroide de la región plana encerrada entre la gráfica de una función $f(x)$ y el eje $x$ en un intervalo $[a,b]$ tiene coordenadas
+
+\begin{align*}
+\bar x &= \frac{\int_a^b x f(x)\,dx}{\int_a^b f(x)\,dx},\\
+\bar y &= \frac{\int_a^b f(x)^2\, dx}{2\int_a^b f(x)\,dx}.
+\end{align*}
+
+Aplicar el mismo razonamiento usado en la deducción de estas fórmulas para deducir las fórmulas del centroide de la región plana encerrada entre las gráficas de dos funciones $f(x)$ y $g(x)$ en el intervalo $[a,b]$, siendo $f(x)\geq g(x)$ $\forall x\in[a,b]$.
+
+Solution
+========
+
+
+
+Meta-information
+================
+extype: string
+exname: ser-11-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos

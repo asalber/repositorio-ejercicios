@@ -1,0 +1,23 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+```
+
+Question
+========
+(2.5 puntos) Calcular el area de la región encerrada entre las gráficas de las funciones $f(x)=3x^3-x^2-10x$ y $g(x) = -x^2+2x$.
+
+Solution
+========
+
+
+
+Meta-information
+================
+extype: string
+exname: ser-11-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos

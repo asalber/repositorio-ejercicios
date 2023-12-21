@@ -60,7 +60,7 @@ Por tanto, $f$ tiene asíntotas oblicuas tanto en $-\infty$ como en $\infty$.
 
 Meta-information
 ================
-extype: num
+extype: string
 exname: lim-3-gen
 exsolution: Solución
 extol: 0.001

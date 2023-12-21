@@ -8,7 +8,7 @@ lang: es
 
 Question
 ========
-(2.5 puntos) Utilizar el teorema de la compresión de sucesiones para calcular el límite de la sucesión $\left(\frac{3n+\cos(n)}{2n+\operatorname{sen}(n)}\right)_{n=1}^\infty$.
+(2 puntos) Utilizar el teorema de la compresión de sucesiones para calcular el límite de la sucesión $\left(\frac{3n+\cos(n)}{2n+\operatorname{sen}(n)}\right)_{n=1}^\infty$.
 
 Solution
 ========
@@ -16,7 +16,7 @@ Solution
 
 Meta-information
 ================
-extype: num
+extype: string
 exname: suc-8-gen
 exsolution: Solución
 extol: 0.001

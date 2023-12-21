@@ -30,7 +30,7 @@ y resolviendo la ecuación se tiene $x=-3/2$ y $x=2$. Como todos los términos d
 
 Meta-information
 ================
-extype: num
+extype: string
 exname: suc-3-eco
 exsolution: Solución
 extol: 0.001

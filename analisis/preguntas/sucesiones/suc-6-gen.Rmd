@@ -108,7 +108,7 @@ que efectivamente es el área del círculo de radio $r$.
 
 Meta-information
 ================
-extype: num
+extype: string
 exname: suc-6-gen
 exsolution: Solución
 extol: 0.001

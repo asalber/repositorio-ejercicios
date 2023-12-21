@@ -1,0 +1,22 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+```
+
+Question
+========
+(2.5 puntos) Un depósito se obtiene girando la gráfica de la función $f(x)=x^2-2$ alrededor del eje $y$. ¿Qué altura debe tener el depósito para que pueda almacenar 100 m$^3$?
+
+Solution
+========
+
+
+Meta-information
+================
+extype: string
+exname: ser-12-ing
+exsolution: Solución
+extol: 0.001
+degree: Todos

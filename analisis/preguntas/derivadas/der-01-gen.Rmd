@@ -26,7 +26,7 @@ pero como $1\not\in (a,b)$, llegamos a una contradicción ya que no existe ning�
 
 Meta-information
 ================
-extype: num
+extype: string
 exname: der-01-gen
 exsolution: Solución
 extol: 0.001

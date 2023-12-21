@@ -1,0 +1,24 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+```
+
+Question
+========
+(2.5 puntos) Calcular la longitud del arco de circunferencia del círculo $x^2+y^2=25$ desde el punto $(-3,4)$ hasta el punto $(4,3)$.
+
+
+Solution
+========
+
+
+
+Meta-information
+================
+extype: string
+exname: ser-11-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos

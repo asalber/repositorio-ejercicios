@@ -1,0 +1,26 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+```
+
+Question
+========
+(2.5 puntos) Estudiar la convergencia de las siguientes series y calcular su suma en caso de que converjan.
+
+a.  $\displaystyle \sum_{n=1}^\infty \frac{2^n + 3^n}{4^{n-1}}$.
+a.  $\displaystyle \sum_{n=1}^\infty \sqrt{\frac{(n+1)}{n^2+n-1}}$.
+
+Solution
+========
+
+
+
+Meta-information
+================
+extype: string
+exname: ser-11-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos

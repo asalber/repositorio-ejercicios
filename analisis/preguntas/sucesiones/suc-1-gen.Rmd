@@ -16,7 +16,7 @@ Solución
 
 Meta-information
 ================
-extype: num
+extype: string
 exname: suc-1-gen
 exsolution: Solución
 extol: 0.001

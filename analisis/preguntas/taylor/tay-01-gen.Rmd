@@ -46,7 +46,7 @@ $$
 
 Meta-information
 ================
-extype: num
+extype: string
 exname: tay-01-gen
 exsolution: Solución
 extol: 0.001
