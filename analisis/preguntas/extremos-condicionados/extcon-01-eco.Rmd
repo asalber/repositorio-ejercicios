@@ -1,0 +1,24 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+```
+
+Question
+========
+(2.5 puntos) La función de producción de una empresa de circuitos para teléfonos móviles está dada por $f(k,l) =
+50k^{3/4}l^{1/4}$, donde $k$ son las unidades de capital invertidas y $l$ son las horas de mano de obra. Si el coste cada unidad de capital es 200€ y el de cada hora trabajada 50€, calcular la máxima producción si el coste total no puede exceder los 40000€.
+
+Solution
+========
+
+
+
+Meta-information
+================
+extype: string
+exname: extcon-01-eco
+exsolution: Solución
+extol: 0.001
+degree: Ingenierías

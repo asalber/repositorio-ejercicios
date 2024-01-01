@@ -1,0 +1,23 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+```
+
+Question
+========
+(2.5 puntos) Calcular los polinomios de Maclaurin de segundo grado de la función $f(x,y)=\cos(x)\operatorname{sen}(y)$ en los puntos $(0,\pi/2)$, $(\pi/2,0)$ y $(\pi,\pi/2)$, Justificar, en función del término cuadrático del polinomio si la función tiene un máximo relativo, un mínimo relativo o un punto de inflexión en cada uno de estos puntos.
+
+Solution
+========
+
+
+
+Meta-information
+================
+extype: string
+exname: extcon-01-eco
+exsolution: Solución
+extol: 0.001
+degree: Ingenierías

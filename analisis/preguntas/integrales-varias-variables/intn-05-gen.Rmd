@@ -1,0 +1,23 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+```
+
+Question
+========
+(2 puntos) Calcular la integral $\displaystyle \int_0^4\int_{\sqrt{y}}^2 \frac{1}{x^3+1}\,dx\,dy$.
+
+Solution
+========
+
+
+
+Meta-information
+================
+extype: string
+exname: intn-05-gen
+exsolution: Solución
+extol: 0.001
+degree: Ingenierías

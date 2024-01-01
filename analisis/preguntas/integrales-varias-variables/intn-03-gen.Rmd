@@ -1,0 +1,26 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+```
+
+Question
+========
+(2.5 puntos) Calcular el centro de masas de una placa metálica circular de radio $a$ en los siguientes casos:
+
+a.  La densidad en cada punto es proporcional a la distancia al origen.
+a.  La densidad en cada punto es proporcional a la distancia al eje $y$.
+
+Solution
+========
+
+
+
+Meta-information
+================
+extype: string
+exname: funvec-02-ing
+exsolution: Solución
+extol: 0.001
+degree: Ingenierías

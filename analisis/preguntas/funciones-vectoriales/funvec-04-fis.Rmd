@@ -1,0 +1,29 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+```
+
+Question
+========
+(3 puntos) Una moto se mueve siguiendo la trayectoria dada por la función vectorial $\mathbf{f}(t)=2t^3 \mathbf{i} + (3t-t^3) \mathbf{j}$. 
+
+a.  ¿Con qué rapidez se mueve en el instante $t=1$?
+
+a.  Calcular la curvatura de la trayectoria en el instante $t=1$.
+
+a.  Calcular las componentes tangencial y normal de la aceleración en el instante $t=1$.
+
+Solution
+========
+
+
+
+Meta-information
+================
+extype: string
+exname: funvec-04-fis
+exsolution: Solución
+extol: 0.001
+degree: Ingenierías

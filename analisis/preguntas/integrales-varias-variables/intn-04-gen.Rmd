@@ -1,0 +1,23 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+```
+
+Question
+========
+(3 puntos) Calcular el volumen de un helado formado por un cono de barquillo con ecuación $2x^2+2y^2-z^2=0$ sobre el que se coloca semiesfera de ecuación $x^2+y^2+(z-2)^2 = 1$. ¿Qué cantidad de barquillo se necesita para construir el cono del helado?
+
+Solution
+========
+
+
+
+Meta-information
+================
+extype: string
+exname: intn-04-gen
+exsolution: Solución
+extol: 0.001
+degree: Ingenierías

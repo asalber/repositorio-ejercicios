@@ -1,0 +1,27 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+```
+
+Question
+========
+(3 puntos) La temperatura de una placa de inducción térmica en cada punto $(x,y)$ de su superficie viene dada por la función $T(x,y) = ye^{-x^2-2y^2}$.
+
+a.  ¿Cuál es la tasa de variación instantánea de la temperatura en el punto $(0,0)$ si empezamos a movernos en la dirección en la que $x$ decrece un tercio de lo que aumenta $y$?
+
+a.  ¿En qué puntos la temperatura será máxima y mínima? ¿Cuál será la temperatura en esos puntos?
+
+Solution
+========
+
+
+
+Meta-information
+================
+extype: string
+exname: funvec-02-ing
+exsolution: Solución
+extol: 0.001
+degree: Ingenierías

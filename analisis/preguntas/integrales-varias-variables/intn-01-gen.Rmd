@@ -1,0 +1,23 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+```
+
+Question
+========
+(2.5 puntos) Calcular el volumen que queda comprendido en el interior del cono $z^2-4x^2-4y^2=0$ limitado por la esfera $x^2+y^2+z^2=9$. Calcular también el area de la superficie del cono que queda dentro de la esfera.
+
+Solution
+========
+
+
+
+Meta-information
+================
+extype: string
+exname: funvec-02-ing
+exsolution: Solución
+extol: 0.001
+degree: Ingenierías
