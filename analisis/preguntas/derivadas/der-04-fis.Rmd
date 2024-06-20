@@ -1,0 +1,29 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+
+```
+
+Question
+========
+(2.5 puntos) Un globo que está lleno de un gas perfecto tiene un volumen de 5 litros, una presión de 1 atmósfera y una temperatura de 300 K. 
+
+a.  Si en ese instante se empieza a calentar el gas a razón de 5 K/min, ¿cómo cambiará la presión suponiendo que el volumen se mantiene constante?
+
+a.  Si en ese instante se empieza a comprimir el globo de manera que el volumen decrece a razón de 10 cl/min, ¿que variación experimentará la presión si se mantiene la temperatura constante? Dar una aproximación lineal del instante en el que el globo explotará, suponiendo que la presión máxima que puede soportar es de 1.1 atmósferas.
+
+Nota: La ecuación de los gases perfectos es $PV = cT$, donde $P$ es la presión, $V$ el volumen, $T$ la temperatura absoluta y $c$ una constante.
+
+Solution
+========
+
+
+Meta-information
+================
+extype: string
+exname: der-04-fis
+exsolution: Solución
+extol: 0.001
+degree: Industriales

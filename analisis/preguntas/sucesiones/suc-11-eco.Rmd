@@ -1,0 +1,24 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+
+```
+
+Question
+========
+(2.5 puntos) El tipo de interés de una cuenta corriente cambia cada año según la sucesión $\left(\frac{n^2+n}{\sqrt{e^n}}\right)_{n=1}^\infty$.  ¿Es una sucesión monótona? ¿Hacia dónde tiende el tipo de interés a largo plazo?
+
+
+Solution
+========
+
+
+Meta-information
+================
+extype: string
+exname: suc-11-eco
+exsolution: Solución
+extol: 0.001
+degree: Todos

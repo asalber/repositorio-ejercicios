@@ -9,7 +9,7 @@ Question
 ========
 (4 puntos) La superficie de una función $f(x,y)$ contiene las trayectorias dadas por las funciones vectoriales $\mathbf{f}=(e^{-t}, 2t+2, 3-2t+t^2)$ y $\mathbf{g}(t)=\left(\sqrt(t), \frac{t^2+3}{2}, 4t^4-t\right)$.
 
-a. Calcular la ecuación de la recta tangente a la trayectoria de $g$ en el punto $(1,2,3)$.
+a. Calcular la ecuación de la recta tangente a la trayectoria de $\mathbf{g}$ en el punto $(1,2,3)$.
 
 a. Calcular la ecuación del plano tangente a la superficie de $f$ en el punto $(1,2,3)$. 
 

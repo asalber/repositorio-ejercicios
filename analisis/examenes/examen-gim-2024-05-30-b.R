@@ -3,31 +3,32 @@ library("exams")
 
 setwd("analisis/examenes")
 
-questions <- c("der-03-ind.Rmd", "tay-02-fis.Rmd", "ext-02-eco.Rmd", "cont-02-gen.Rmd")
 degree <- "gim"
-date <- "2023-01-26"
+date <- "2024-05-30"
+questions <- paste0(c("int-05-gen", "ser-15-gen", "ser-12-prob", "ser-13-gen"), ".Rmd")
 
 exams2pdf(questions,
   n=1,
-  name = c(paste0("examen-", degree, "-", date, "-b"), paste0("solucion-", degree, "-", date, "-b" )),
+  name = c(paste0("examen-", degree, "-", date, "-b"), paste0("solucion-", degree, "-", date)),
   encoding = "UTF-8", 
   dir = "pdf",
   edir = "../preguntas",
-  template = c("plantillas/examenceu2.tex", "plantillas/solucionceu.tex"),
+  template = c("plantillas/examenceu.tex", "plantillas/solucionceu.tex"),
   header = list(
-    Subject = "ANÁLISIS I",
+    Title = "EXAMEN DE ANÁLISIS",
+    Subject = "ANÁLISIS II",
     Degree= "1º Grado en Ingeniería Matemática",
     Date = date,
-    Version = "A",
+    Version = "B",
     Time = "1 hora y 15 minutos"
   )
 )
 
 # Borrar directorio de imágenes del examen
-unlink("img/exam1", recursive = TRUE) 
+unlink("img/exam1", recursive = TRUE)
 exams2pandoc(questions, n=1, 
              name = paste0("examen-", degree, "-", date, "-b"), 
-             encoding = "UTF-8", 
+             encoding = "UTF-8",
              type="latex",
              dir = "latex",
              edir = "../preguntas",

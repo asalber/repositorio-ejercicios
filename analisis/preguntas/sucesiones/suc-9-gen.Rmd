@@ -23,7 +23,7 @@ Solution
 Meta-information
 ================
 extype: string
-exname: suc-8-gen
+exname: suc-9-gen
 exsolution: Solución
 extol: 0.001
 degree: Todos

@@ -7,7 +7,10 @@ lang: es
 
 Question
 ========
-(2.5 puntos) Calcular el volumen que queda comprendido en el interior del cono $z^2-4x^2-4y^2=0$ limitado por la esfera $x^2+y^2+z^2=9$. Calcular también el area de la superficie del cono que queda dentro de la esfera.
+(3.5 puntos) Calcular el volumen comprendido entre la gráfica de la función $f(x,y)=\frac{x}{y}$ y el plano $z=0$ en la región limitada por las curvas de la figura.
+
+![](/run/media/alf/datos/misrepositorios/docencia/repositorio-ejercicios/img/region-integracion.pdf){width=7cm height=5cm}
+
 
 Solution
 ========
@@ -17,7 +20,7 @@ Solution
 Meta-information
 ================
 extype: string
-exname: funvec-02-ing
+exname: intn-01-gen
 exsolution: Solución
 extol: 0.001
 degree: Ingenierías

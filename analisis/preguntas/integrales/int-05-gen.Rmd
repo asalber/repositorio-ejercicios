@@ -24,7 +24,7 @@ Solution
 Meta-information
 ================
 extype: string
-exname: ser-11-gen
+exname: int-05-gen
 exsolution: Solución
 extol: 0.001
 degree: Todos

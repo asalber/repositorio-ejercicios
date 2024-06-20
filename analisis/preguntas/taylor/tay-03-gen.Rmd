@@ -1,0 +1,24 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+
+```
+
+Question
+========
+(2.5 puntos) Calcular el polinomio de Maclaurin de tercer grado de la función $f(x) = 2\sqrt[3]{{1 + x}}$ y utilizarlo para aproximar $\sqrt[3]{9}$ dando una cota del error cometido.
+
+
+Solution
+========
+
+
+Meta-information
+================
+extype: string
+exname: tay-03-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos

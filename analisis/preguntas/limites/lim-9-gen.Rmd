@@ -1,0 +1,22 @@
+---
+lang: es
+---
+
+```{r, echo=FALSE, results="hide"}
+```
+
+Question
+========
+(2.5 puntos) Calcular las asíntotas de la función $f(x) = \ln(\sqrt{x^4e^x})$. ¿Hacia dónde se aproxima pendiente de la recta tangente a $f$ cuando $x$ tiende a infinito?
+
+Solution
+========
+
+
+Meta-information
+================
+extype: string
+exname: lim-9-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos

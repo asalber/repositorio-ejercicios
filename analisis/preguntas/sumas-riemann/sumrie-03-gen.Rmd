@@ -1,0 +1,23 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+```
+
+Question
+========
+(2.5 puntos) Usar las sumas inferiores y superiores de Riemann para dar una aproximación del área encerrada entre la gráfica de la función $f(x) = \sqrt{25-x^2}$ y el eje $x$ en el intervalo $[0,5]$ tomando una partición de 5 subintervalos de igual amplitud, y dar una cota del error cometido en la aproximación. ¿Cuántos subintervalos de igual amplitud habría que tomar para que el error cometido en la aproximación sea menor que $0.01$?
+
+Solution
+========
+
+
+
+Meta-information
+================
+extype: string
+exname: sumrie-03-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos

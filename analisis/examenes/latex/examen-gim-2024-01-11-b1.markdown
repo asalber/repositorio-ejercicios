@@ -1,0 +1,38 @@
+1.  **Question**\
+    (2.5 puntos) Un depósito para la recogida de agua de lluvia tiene
+    forma de cono invertido con radio $r=5$ m y altura $h=5$ m. El
+    depósito contiene agua hasta una altura de $2$ m en el momento en
+    que empieza a llover de manera que en el depósito entran $0.5$
+    m$^3$/h, ¿cuál será la tasa de variación que experimentará el nivel
+    de agua en el depósito en ese instante? Suponiendo que la intensidad
+    de la lluvia no cambia, dar una aproximación lineal del tiempo
+    necesario para que se llene el depósito.
+
+    **Solution**\
+
+2.  **Question**\
+    (2.5 puntos) Calcular el polinomio de Maclaurin de tercer grado de
+    la función $f(x) = 2\sqrt[3]{{1 + x}}$ y utilizarlo para aproximar
+    $\sqrt[3]{9}$ dando una cota del error cometido.
+
+    **Solution**\
+
+3.  **Question**\
+    (2.5 puntos) En Economía una función de utilidad expresa la
+    satisfacción que un consumidor obtiene por la compra de un conjunto
+    de bienes o servicios. La función $U(x,y)=\sqrt[3]{\frac{x^2y}{2}}$,
+    expresa la utilidad de la compra de $x$ litros de vino e $y$ litros
+    de cerveza para un bar. Si el precio del litro de vino es 4€ y el
+    del litro de cerveza 2€, ¿cuántos litros de vino y cerveza debe
+    comprar el bar para conseguir la máxima utilidad si dispone de un
+    presupuesto de 1000€?
+
+    **Solution**\
+
+4.  **Question**\
+    (2.5 puntos) Dar un ejemplo de una función que tenga una
+    discontinuidad evitable en $x=-2$, una discontinuidad esencial en
+    $x=0$ y una discontinuidad de salto en $x=1$ y demostrar que la
+    función tiene esas discontinuidades.
+
+    **Solution**\

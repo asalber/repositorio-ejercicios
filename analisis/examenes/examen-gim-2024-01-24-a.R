@@ -3,19 +3,20 @@ library("exams")
 
 setwd("analisis/examenes")
 
-questions <- c("der-03-ind.Rmd", "tay-02-fis.Rmd", "ext-02-eco.Rmd", "cont-02-gen.Rmd")
 degree <- "gim"
-date <- "2023-01-26"
+date <- "2024-01-24"
+questions <- c("funvec-04-fis.Rmd", "extn-02-fis.Rmd", "funvec-03-gen.Rmd")
 
 exams2pdf(questions,
   n=1,
-  name = c(paste0("examen-", degree, "-", date, "-b"), paste0("solucion-", degree, "-", date, "-b" )),
+  name = c(paste0("examen-", degree, "-", date, "-a"), paste0("solucion-", degree, "-", date, "-b")),
   encoding = "UTF-8", 
   dir = "pdf",
   edir = "../preguntas",
-  template = c("plantillas/examenceu2.tex", "plantillas/solucionceu.tex"),
+  template = c("plantillas/examenceu.tex", "plantillas/solucionceu.tex"),
   header = list(
-    Subject = "ANÁLISIS I",
+    Title = "EXAMEN DE ANÁLISIS (1ª PARTE)",
+    Subject = "ANÁLISIS III",
     Degree= "1º Grado en Ingeniería Matemática",
     Date = date,
     Version = "A",

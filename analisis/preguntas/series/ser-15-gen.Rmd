@@ -1,0 +1,26 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+```
+
+Question
+========
+(2.5 puntos) Estudiar la convergencia de las siguientes series y, en caso de que converjan, dar una cota del error cometido al aproximar su suma mediante la suma parcial de orden 100.
+
+a.  $\displaystyle \sum_{n=1}^\infty \frac{e^{1/n}}{n^2}$.
+a.  $\displaystyle \sum_{n=1}^\infty \sqrt{\frac{(n+1)}{n^2+n-1}}$.
+
+Solution
+========
+
+
+
+Meta-information
+================
+extype: string
+exname: ser-15-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos

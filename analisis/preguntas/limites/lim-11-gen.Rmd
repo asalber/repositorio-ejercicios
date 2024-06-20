@@ -1,0 +1,22 @@
+---
+lang: es
+---
+
+```{r, echo=FALSE, results="hide"}
+```
+
+Question
+========
+(2.5 puntos) La tangente hiperbólica $\tanh(x) = \frac{e^x - e^{-x}}{e^x + e^{-x}}$ se utiliza a menudo como función de activación en las redes neuronales artificiales. Estudiar sus asíntotas.
+
+Solution
+========
+
+
+Meta-information
+================
+extype: string
+exname: lim-11-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos

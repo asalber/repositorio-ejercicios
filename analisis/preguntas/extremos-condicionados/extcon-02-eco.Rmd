@@ -1,0 +1,23 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+```
+
+Question
+========
+(2.5 puntos) En Economía una función de utilidad expresa la satisfacción que un consumidor obtiene por la compra de un conjunto de bienes o servicios. La función $U(x,y)=\sqrt[3]{\frac{x^2y}{2}}$, expresa la utilidad de la compra de $x$ litros de vino e $y$ litros de cerveza para un bar. Si el precio del litro de vino es 4€ y el del litro de cerveza 2€, ¿cuántos litros de vino y cerveza debe comprar el bar para conseguir la máxima utilidad si dispone de un presupuesto de 1000€?
+
+Solution
+========
+
+
+
+Meta-information
+================
+extype: string
+exname: extcon-02-eco
+exsolution: Solución
+extol: 0.001
+degree: Ingenierías

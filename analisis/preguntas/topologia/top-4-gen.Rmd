@@ -1,0 +1,21 @@
+```{r, echo=FALSE, results="hide"}
+```
+
+Question
+========
+(2.5 puntos) Dar ejemplos de conjuntos que cumplan lo siguiente y demostrarlo.
+
+a.  Un conjunto que tenga exactamente dos puntos de acumulación.
+a.  Un conjunto que no sea abierto ni cerrado.
+
+Solution
+========
+
+
+Meta-information
+================
+extype: string
+exname: top-4-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos

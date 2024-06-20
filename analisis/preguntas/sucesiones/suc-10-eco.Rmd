@@ -1,0 +1,30 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+
+```
+
+Question
+========
+(2.5 puntos) El precio normalizado medio anual del metro cuadrado urbanizable en una ciudad sigue la sucesión 
+
+$$
+a_1 = 1, \quad a_{n+1} = \sqrt{2a_n+3}\quad \forall n \in \mathbb{N}.
+$$
+
+Estudiar si el precio converge a largo plazo y en tal caso calcular el valor límite.
+
+
+Solution
+========
+
+
+Meta-information
+================
+extype: string
+exname: suc-10-eco
+exsolution: Solución
+extol: 0.001
+degree: Todos

@@ -1,0 +1,24 @@
+---
+lang: es
+---
+
+```{r, echo=FALSE, results="hide"}
+```
+
+Question
+========
+(2.5 puntos) Sabiendo que el area del arco de la circunferencia unidad está comprendido entre las areas de los triángulos que se muestran en la siguiente figura cuando el ángulo $x$ está en el primer cuadrante, demostrar que $\operatorname{sen}(x)$ y $x$ son infinitésimos equivalentes.
+
+![](/run/media/alf/datos/misrepositorios/docencia/repositorio-ejercicios/img/arco-circunferencia.pdf){width=6cm height=5cm}
+
+Solution
+========
+
+
+Meta-information
+================
+extype: string
+exname: lim-10-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos

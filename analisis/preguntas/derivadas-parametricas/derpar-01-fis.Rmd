@@ -1,0 +1,35 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+
+```
+
+Question
+========
+(2.5 puntos) Una partícula se mueve por el plano de tal forma que su posición en el instante $t$ viene dada por
+
+$$
+\left(
+x =\frac{(t-2)^2}{t^2+1},\, y=\frac{2t}{t^2+1}
+\right)
+\quad t\in \mathbb{R}.
+$$
+
+Calcular los valores máximos y mínimos de $x$ y de $y$.
+¿En qué instante la tasa de crecimiento de $y$ coincide con la de $x$?
+
+
+Solution
+========
+
+
+
+Meta-information
+================
+extype: string
+exname: imp-02-far
+exsolution: Solución
+extol: 0.001
+degree: Farmacia

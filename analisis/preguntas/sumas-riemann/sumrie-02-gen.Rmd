@@ -7,8 +7,7 @@ lang: es
 
 Question
 ========
-(2.5 puntos) Calcular mediante una integral definida la longitud del arco de circunferencia del círculo $x^2+y^2=25$ desde el punto $(-3,4)$ hasta el punto $(4,3)$.
-
+(2.5 puntos) Calcular mediante sumas de Riemann la integral inferior de Riemann de la función $f(x) = x^3-3x^2$ en el intervalo $[1, 2]$.
 
 Solution
 ========
@@ -18,7 +17,7 @@ Solution
 Meta-information
 ================
 extype: string
-exname: int-07-gen
+exname: sumrie-02-gen
 exsolution: Solución
 extol: 0.001
 degree: Todos

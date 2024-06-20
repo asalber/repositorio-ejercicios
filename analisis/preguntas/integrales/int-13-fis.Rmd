@@ -1,0 +1,25 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+```
+
+Question
+========
+(4 puntos) Calcular el volumen de un depósito con forma de sólido de revolución obtenido al rotar alrededor del eje $y$ la función $y = \operatorname{sen}(x/2)^2$ en el intervalo $[0, \pi]$.
+
+Si empezamos a introducir agua en el depósito a un ritmo dado por la función $e(t)=e^{1-t}$ l/m y al mismo tiempo sale agua a un ritmo dado por la función $s(t)=te^{1-t}$. Calcular el volumen de agua en el depósito en cada instante $t$ desde el instante en que comienza a entrar agua en el depósito. ¿Se llenará el depósito en algún momento? ¿Qué cantidad de agua habrá en el depósito a largo plazo?
+
+Solution
+========
+
+
+
+Meta-information
+================
+extype: string
+exname: int-13-fis
+exsolution: Solución
+extol: 0.001
+degree: Todos

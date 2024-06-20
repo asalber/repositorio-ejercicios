@@ -1,0 +1,18 @@
+```{r, echo=FALSE, results="hide"}
+```
+
+Question
+========
+(2.5 puntos) Dado el conjunto $A=\left\{x\in\mathbb{Q}: 2x^3-3x^2+x>0\right\}$, calcular su supremo, su ínfimo, su máximo y su mínimo. ¿Es un conjunto abierto o cerrado? Dar sus puntos de acumulación que no pertenecen al conjunto y demostrarlo.
+
+Solution
+========
+
+
+Meta-information
+================
+extype: string
+exname: top-3-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos

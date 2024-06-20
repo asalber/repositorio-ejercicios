@@ -1,0 +1,19 @@
+---
+lang: es
+---
+
+Question
+========
+(2.5 puntos) Demostrar que la función $f(x)=\ln(x)$ es igual a su derivada en un único punto y calcular su valor aproximado con al menos 2 decimales.
+
+Solution
+========
+
+
+Meta-information
+================
+extype: string
+exname: cont-05-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos

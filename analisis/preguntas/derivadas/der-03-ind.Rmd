@@ -8,7 +8,7 @@ lang: es
 
 Question
 ========
-(3 puntos) Un depósito para la recogida de agua de lluvia tiene forma de cono invertido con radio $r=5$ m y altura $h=5$ m. El depósito contiene agua hasta una altura de $2$ m en el momento en que empieza a llover de manera que en el depósito entran $0.5$ m$^3$/h, ¿cuál será la tasa de variación que experimentará el nivel de agua en el depósito en ese instante? Suponiendo que la intensidad de la lluvia no cambia, dar una aproximación lineal del tiempo necesario para que se llene el depósito.
+(2.5 puntos) Un depósito para la recogida de agua de lluvia tiene forma de cono invertido con radio $r=5$ m y altura $h=5$ m. El depósito contiene agua hasta una altura de $2$ m en el momento en que empieza a llover de manera que en el depósito entran $0.5$ m$^3$/h, ¿cuál será la tasa de variación que experimentará el nivel de agua en el depósito en ese instante? Suponiendo que la intensidad de la lluvia no cambia, dar una aproximación lineal del tiempo necesario para que se llene el depósito.
 
 Solution
 ========

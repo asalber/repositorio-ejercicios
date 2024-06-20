@@ -1,0 +1,22 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+```
+
+Question
+========
+(3.5 puntos) Calcular la masa y el centro de masas de una placa metálica circular de radio $a$ con una densidad en cada punto proporcional a la distancia al eje $y$.
+
+Solution
+========
+
+
+Meta-information
+================
+extype: string
+exname: intn-03-fis
+exsolution: Solución
+extol: 0.001
+degree: Ingenierías

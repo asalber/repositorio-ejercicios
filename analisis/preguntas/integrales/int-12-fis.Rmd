@@ -1,0 +1,28 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+```
+
+Question
+========
+(2.5 puntos) ¿Qué trabajo se realiza al lanzar un cohete de 50 toneladas desde la superficie de la tierra a una órbita situada a 100 km sobre la superficie terrestre?  
+Nota: Debe tenerse en cuenta que la aceleración de la gravedad disminuye con la altura según la fórmula 
+
+$$
+g_h = g_0 \left(\frac{R}{R+h}\right)^2,
+$$
+donde $g_h$ es la aceleración de la gravedad a una altura $h$ m sobre la superficie terrestre, $g_0=9.81$ m/s$^2$ es la aceleración de la gravedad en la superficie terrestre, y $R=6371$ km es el radio de la Tierra.
+
+Solution
+========
+
+
+Meta-information
+================
+extype: string
+exname: int-12-fis
+exsolution: Solución
+extol: 0.001
+degree: Todos

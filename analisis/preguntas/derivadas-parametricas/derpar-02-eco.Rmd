@@ -1,0 +1,38 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+
+```
+
+Question
+========
+(2.5 puntos) En un ecosistema en el que hay una especie _presa_, $p$, y otra _depredador_, $d$, la cantidad de individuos de una y otra dependen del tiempo, en años, según las siguientes expresiones ($t>0$):
+
+$$
+\begin{cases}
+p(t) = \frac{\ln (t  + 2)}{t + 2}  \\
+d(t) = te^{- 2t}
+\end{cases}
+$$
+
+a.  ¿En qué instante el número de presas será máximo? ¿Y mínimo?
+
+a.  ¿En qué instante el número de depredadores será máximo? ¿Y mínimo?
+
+a.  Calcular la tasa de variación del número de presas con respecto al número de depredadores en el instante $t=2$ e interpretarla.
+
+
+Solution
+========
+
+
+
+Meta-information
+================
+extype: string
+exname: derpar-02-eco
+exsolution: Solución
+extol: 0.001
+degree: Farmacia

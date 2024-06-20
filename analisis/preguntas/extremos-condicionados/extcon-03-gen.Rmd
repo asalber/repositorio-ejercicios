@@ -1,0 +1,23 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+```
+
+Question
+========
+(3 puntos) Calcular el volumen máximo de una caja rectangular que puede ser introducida en una esfera de radio $r$ cm.
+
+Solution
+========
+
+
+
+Meta-information
+================
+extype: string
+exname: extcon-03-gen
+exsolution: Solución
+extol: 0.001
+degree: Ingenierías

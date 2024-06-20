@@ -1,0 +1,30 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+
+```
+
+Question
+========
+(2.5 puntos) La concentración de un fármaco en sangre, $C$ en mg/dl, y el tiempo, $t$ en s, están relacionados mediante la expresión $e^{tC}-t^2C^3-\ln(C)=0$.
+
+a.  ¿Cómo varía la concentración del fármaco en sangre con el tiempo en el instante $t=0$?
+
+a.  Calcular la ecuación de la recta normal a la curva definida por la ecuación anterior en ese mismo instante.
+
+
+
+Solution
+========
+
+
+
+Meta-information
+================
+extype: string
+exname: imp-02-far
+exsolution: Solución
+extol: 0.001
+degree: Farmacia

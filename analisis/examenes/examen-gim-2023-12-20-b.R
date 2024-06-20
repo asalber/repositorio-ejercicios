@@ -4,8 +4,8 @@ library("exams")
 setwd("analisis/examenes")
 
 degree <- "gim"
-date <- "2023-12-22"
-questions <- c("extcon-01-eco.Rmd", "tay2-01-gen.Rmd", "intn-05-gen.Rmd", "intn-04-gen.Rmd")
+date <- "2024-01-11"
+questions <- c("der-03-ind.Rmd", "tay-02-gen.Rmd", "ext-02-eco.Rmd", "cont-02-gen.Rmd")
 
 exams2pdf(questions,
   n=1,
@@ -16,7 +16,7 @@ exams2pdf(questions,
   template = c("plantillas/examenceu.tex", "plantillas/solucionceu.tex"),
   header = list(
     Title = "EXAMEN DE ANÁLISIS",
-    Subject = "ANÁLISIS III",
+    Subject = "ANÁLISIS I",
     Degree= "2º Grado en Ingeniería Matemática",
     Date = date,
     Version = "A",

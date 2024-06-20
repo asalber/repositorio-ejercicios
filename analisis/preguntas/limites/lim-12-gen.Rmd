@@ -1,0 +1,25 @@
+---
+lang: es
+---
+
+```{r, echo=FALSE, results="hide"}
+```
+
+Question
+========
+(2.5 puntos) Calcular las derivadas de las siguientes funciones usando la definición de derivada.
+
+a.  $f(x)=e^x$.
+b.  $f(x)=\ln(x)$.
+
+Solution
+========
+
+
+Meta-information
+================
+extype: string
+exname: lim-12-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos

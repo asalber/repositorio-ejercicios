@@ -1,0 +1,22 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+```
+
+Question
+========
+(2.5 puntos) Dada una muestra de valores $(x_1,\ldots, x_n)$ con media aritmética $\bar x$, demostrar que la media geométrica $\sqrt[n]{x_1\cdot x_n}$ es siempre menor o igual que la media aritmética.
+Solution
+========
+
+
+
+Meta-information
+================
+extype: string
+exname: extcon-04-gen
+exsolution: Solución
+extol: 0.001
+degree: Ingenierías
