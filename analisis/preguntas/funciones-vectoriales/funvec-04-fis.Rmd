@@ -18,7 +18,61 @@ a.  Calcular las componentes tangencial y normal de la aceleración en el instan
 Solution
 ========
 
+a.  La rapidez de la moto en el instante $t=1$ se obtiene calculando el módulo del vector derivada de $\mathbf{f}(t)$ en $t=1$.
 
+$$
+\mathbf{f}'(t) = (6t^2, 3-t^2)
+$$
+
+y
+
+$$
+|\mathbf{f}'(1)| = |(6, 0)| = 6
+$$
+
+a.  La [curvatura de la trayectoria](https://aprendeconalf.es/analisis-manual/12-funciones-vectoriales.html#thm-curvatura-trayectoria-espacio-real) en el instante $t=1$ se obtiene mediante la fórmula
+
+$$
+\kappa(t) = \frac{|\mathbf{f}'(t) \times \mathbf{f}''(t)|}{|\mathbf{f}'(t)|^3}.
+$$
+
+Calculamos la derivada segunda de $\mathbf{f}(t)$.
+
+$$
+\mathbf{f}''(t) = (12t, -6t)\quad \mbox{y}\quad \mathbf{f}''(1) = (12, -6)
+$$
+
+y
+
+$$
+\kappa(1) 
+= \frac{|\mathbf{f}'(1) \times \mathbf{f}''(1)|}{|\mathbf{f}'(1)|^3} 
+= \frac{|(6, 0) \times (12, -6)|}{|6,0|^3} 
+= \frac{|(0, 0, -36)|}{6^3} 
+= \frac{36}{216}
+= \frac{1}{6}. 
+$$
+
+a.  La aceleración de la moto la da el vector de la segunda derivada de $\mathbf{f}(t)$, que ya hemos calculado en el apartado anterior y vale $\mathbf{f}''(1) = (12, -6)$. 
+
+Como el vector tangente $\mathbf{f}'(1) = (6, 0)$ tiene la dirección del eje $x$, la componente tangencial de la aceleración es la primera componente de $\mathbf{f}''(1)$, es decir, $12$, y la componente normal es la segunda componente de $\mathbf{f}''(1)$, es decir, $-6$.
+
+Podemos llegar al mismo resultado aplicando las [fórmulas de las componentes tangencial y normal del vector aceleración](https://aprendeconalf.es/analisis-manual/12-funciones-vectoriales.html#def-componente-tangencial-normal-aceleracion).
+
+\begin{align*}
+a_T(1) 
+&= |v(1)|'
+= \frac{\mathbf{f}'(1) \cdot \mathbf{f}''(1)}{|\mathbf{f}'(1)|} 
+= \frac{(6, 0) \cdot (12, -6)}{6}
+= \frac{72}{6}
+= 12, \\
+a_N(1)
+&= \frac{|\mathbf{f}'(1) \times \mathbf{f}''(1)|}{|\mathbf{f}'(1)|}
+= \frac{|(6, 0) \times (12, -6)|}{6}
+= \frac{|(0, 0, -36)|}{6}
+= \frac{36}{6}
+= -6.
+\end{align*}
 
 Meta-information
 ================

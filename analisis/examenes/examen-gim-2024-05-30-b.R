@@ -4,7 +4,7 @@ library("exams")
 setwd("analisis/examenes")
 
 degree <- "gim"
-date <- "2024-05-30"
+date <- "2024-06-25"
 questions <- paste0(c("int-05-gen", "ser-15-gen", "ser-12-prob", "ser-13-gen"), ".Rmd")
 
 exams2pdf(questions,

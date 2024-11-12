@@ -1,0 +1,33 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+
+```
+
+Question
+========
+(2 puntos) Una inversión financiera ofrece una rentabilidad anual dada por la sucesión
+
+$$
+\begin{cases}
+a_1 = 2\%, \\
+a_{n+1} = \frac{8a_n}{a_n+4}\%
+\end{cases}
+$$
+
+¿Hacia qué valor tiende la rentabilidad a largo plazo?
+
+
+Solution
+========
+
+
+Meta-information
+================
+extype: string
+exname: suc-12-eco
+exsolution: Solución
+extol: 0.001
+degree: Todos

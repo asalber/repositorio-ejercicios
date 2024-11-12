@@ -1,0 +1,32 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+```
+
+Question
+========
+(3 puntos) Dada la función 
+
+$$
+f(x) = 
+\begin{cases}
+x + 1 & \text{si } x<0 \\
+1 - x^2 & \text{si } x \geq 0
+\end{cases}
+$$
+
+Calcular la integral inferior de Riemann de $f$ en el intervalo $[-1, 1]$.
+
+Solution
+========
+
+
+Meta-information
+================
+extype: string
+exname: sumrie-05-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos

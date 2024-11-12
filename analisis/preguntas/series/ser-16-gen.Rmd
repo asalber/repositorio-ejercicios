@@ -1,0 +1,25 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+```
+
+Question
+========
+(4 puntos) La función de densidad de probabilidad de una variable aleatoria normal estándar es $f(x) = \frac{1}{\sqrt{2\pi}}e^{-x^2/2}$. Dado que esta función no tiene integral elemental, calcular la serie que resulta de integrar su serie de MacLaurin y determinar su dominio de convergencia puntual. 
+
+Utilizar los $5$ primeros términos de esta serie para calcular de manera aproximada la probabilidad de que la variable tome un valor entre $0$ y $1$. Dar una cota del error cometido.
+
+Solution
+========
+
+
+
+Meta-information
+================
+extype: string
+exname: ser-16-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos

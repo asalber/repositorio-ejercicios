@@ -1,0 +1,24 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+```
+
+Question
+========
+(3 puntos) Calcular el área de la intersección del círculo de radio 1 centrado en el origen y la rosa de 4 pétalos de ecuación $r = 2\sin(2\theta)$.
+
+
+Solution
+========
+
+
+
+Meta-information
+================
+extype: string
+exname: int-16-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos

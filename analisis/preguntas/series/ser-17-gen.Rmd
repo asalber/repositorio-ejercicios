@@ -1,0 +1,32 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+```
+
+Question
+========
+(3 puntos) La alfombra de Sierpiński es un conjunto fractal que es una generalización en dos dimensiones del conjunto de Cantor. Se puede construir de la siguiente manera: 
+
+1.  Comenzamos con un cuadrado de lado 1. 
+2.  Dividimos el cuadrado en 9 cuadrados más pequeños de lado 1/3 del lado original.
+3.  Eliminamos el cuadrado central.
+4.  Repetimos el proceso en cada uno de los cuadrados restantes.
+
+![](/run/media/alf/datos/misrepositorios/docencia/repositorio-ejercicios/img/alfombra-sierpinski.png)
+
+Calcular el área de la alfombra de Sierpiński.
+
+Solution
+========
+
+
+
+Meta-information
+================
+extype: string
+exname: ser-17-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos

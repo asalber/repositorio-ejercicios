@@ -1,0 +1,31 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+```
+
+Question
+========
+(3 puntos) Calcular el trabajo necesario para mover un objeto de masa $m$ a una altitud de 1000 km sobre la superficie terrestre. ¿Cuál sería el trabajo realizado si el cuerpo se moviese hasta el infinito?
+
+Nota: Debe tenerse en cuenta que la aceleración de la gravedad disminuye con la altura según la fórmula
+
+$$
+g_h = g_0 \left( \frac{R}{R+h} \right)^2,
+$$
+ 
+donde $g_h$ es la aceleración de la gravedad a una altura $h$ sobre la superficie terrestre, $g_0 = 9.81 \, \text{m/s}^2$ es la aceleración de la gravedad en la superficie terrestre, y $R = 6371$ km es el radio de la Tierra.
+
+Solution
+========
+
+
+
+Meta-information
+================
+extype: string
+exname: int-14-fis
+exsolution: Solución
+extol: 0.001
+degree: Todos

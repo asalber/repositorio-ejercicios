@@ -1,0 +1,29 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+```
+
+Question
+========
+(2.5 puntos) En Economía, una función de utilidad expresa el beneficio obtenido por un consumidor con la compra de un un conjunto bienes o servicios. La función de utilidad de un consumidor viene dada por $U(x,y,z)=x^{0.5}y^{0.3}z^{0.2}$, donde $x$, $y$ y $z$ son las cantidades de tres bienes diferentes. Los precios de cada producto son $p_x=2$, $p_y=3$ y $p_z=4$, y el presupuesto del consumidor es de $1000$ €.
+
+a.  Calcular la utilidad marginal por unidad de cada producto.
+
+a.  ¿Cómo interpretarías las derivadas parciales de segundo orden de la función de utilidad?
+
+a.  Calcular el polinomio de Taylor de segundo grado de la función de utilidad en el punto para un gasto de $200$ € en $x$ y $300$ € en $y$ y utilizarlo para aproximar la utilidad si se gastan $201$ € en $x$ y $299$ € en $y$.
+
+Solution
+========
+
+
+
+Meta-information
+================
+extype: string
+exname: extcon-01-eco
+exsolution: Solución
+extol: 0.001
+degree: Ingenierías

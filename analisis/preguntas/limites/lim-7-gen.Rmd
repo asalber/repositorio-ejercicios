@@ -7,7 +7,7 @@ lang: es
 
 Question
 ========
-(3 puntos) Calcular las asíntotas de la función $f(x) = e^{\frac{x}{x^2-1}}+3x-2$.
+(2 puntos) Calcular las asíntotas de la función $f(x) = e^{\frac{x}{x^2-1}}+3x$.
 
 Solution
 ========

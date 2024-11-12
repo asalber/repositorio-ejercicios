@@ -1,0 +1,35 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+```
+
+Question
+========
+(3.5 puntos) Una compañía produce productos de dos tipos $X$ e $Y$. La demanda de estos productos viene dada por las funciones 
+
+\begin{align*}
+d_x(x,y) &= 120 - 2x + y\\
+d_y(x,y) &= 100 + \frac{x}{2} - y
+\end{align*}
+
+donde $d_x$ y $d_y$ son las unidades demandadas de productos $X$ e $Y$ respectivamente, y $x$ e $y$ sus precios. El coste de producción de $d_x$ unidades de $x$ y $d_y$ unidades de $y$ viene dado por la función $c(d_x,d_y) = 20 d_x + 30 d_y + \frac{1}{2}d_xd_y$. 
+
+a.  Calcular las derivadas parciales de las funciones de demanda e interpretarlas.
+
+a.  Calcular las derivadas parciales de la función de beneficio con respecto a los precios de los productos e interpretarlas.
+
+a.  ¿Cuántas unidades de cada producto debe producir la compañía para maximizar sus beneficios? ¿Cuál es el beneficio máximo?
+
+
+Solution
+========
+
+Meta-information
+================
+extype: string
+exname: extn-03-eco
+exsolution: Solución
+extol: 0.001
+degree: Economía

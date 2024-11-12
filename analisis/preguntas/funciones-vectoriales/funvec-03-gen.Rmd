@@ -7,13 +7,15 @@ lang: es
 
 Question
 ========
-(4 puntos) La superficie de una función $f(x,y)$ contiene las trayectorias dadas por las funciones vectoriales $\mathbf{f}=(e^{-t}, 2t+2, 3-2t+t^2)$ y $\mathbf{g}(t)=\left(\sqrt(t), \frac{t^2+3}{2}, 4t^4-t\right)$.
+(3.5 puntos) La superficie de una función $f(x,y)$ contiene las trayectorias dadas por las funciones vectoriales $\mathbf{f}(t)=(e^{-t}, 2t+2, 3-2t+t^2)$ y $\mathbf{g}(t)=\left(\sqrt(t), \frac{t^2+3}{2}, 4t^4-t\right)$.
 
-a. Calcular la ecuación de la recta tangente a la trayectoria de $\mathbf{g}$ en el punto $(1,2,3)$.
+a.  Calcular la ecuación de la recta tangente a la trayectoria de $\mathbf{g}$ en el punto $(1,2,3)$.
 
-a. Calcular la ecuación del plano tangente a la superficie de $f$ en el punto $(1,2,3)$. 
+a.  Calcular la ecuación del plano tangente a la superficie de $f$ en el punto $(1,2,3)$. 
 
-b. En ese mismo punto, ¿cuál es la tasa de variación de $f$ con respecto a $x$ si $y$ se mantiene constante? ¿Cuál es la tasa de variación instantánea de $f$ con respecto a $y$ si $x$ se mantiene constante?
+a.  En ese mismo punto, ¿cuál es la tasa de variación de $f$ con respecto a $x$ si $y$ se mantiene constante? ¿Cuál es la tasa de variación instantánea de $f$ con respecto a $y$ si $x$ se mantiene constante?
+
+a.  Usar el polinomio de Taylor de primer grado de $f$ en el punto $(1,2)$ para aproximar el valor de $f(0.9, 2.1)$.
 
 
 Solution

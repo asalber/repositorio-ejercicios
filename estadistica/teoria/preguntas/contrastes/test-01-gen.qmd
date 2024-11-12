@@ -1,0 +1,69 @@
+---
+title: Ejercicio de Inferencia
+format: pdf
+#   docx:
+#     reference-doc: ../../../../plantillas/plantilla-ceu.docx
+# lang: es-ES
+---
+
+En un estudio sobre el reparto de género de las tareas domésticas se ha medido el número medio de horas diarias que se destinan a las
+tareas domésticas en un grupo de personas, obteniendo los siguientes resultados:
+
+$$
+\begin{array}{lrrrrrrrr}
+\text{Mujeres:} & 3.2 & 3.1 & 2.7 & 4.4 & 3.7 & 3.9 & 2.4 & 3.6 \\
+\text{Hombres:} & 3.3 & 2.1 & 1.7 & 2.4 & 1.6 & 1.8 & 2.7 & \mbox{ }
+\end{array}
+$$
+
+Suponiendo que el tiempo dedicado a las tareas domésticas sigue una distribución normal tanto mujeres como en hombres, se pide: 
+
+a.  Contrastar con un nivel de significación $0.1$ si el tiempo medio que dedican los hombres a las tareas domésticas es inferior a $2.6$ horas diarias.
+
+a.  ¿Qué tamaño muestral sería necesario para estimar con un $95$% de confianza el tiempo medio que dedican los hombres a las tareas domésticas con un margen de error de $\pm 0.1$ horas?
+
+a.  Contrastar si las mujeres dedican más tiempo que los hombres a las tareas domésticas asumiendo varianzas iguales. 
+
+a.  ¿Entre qué valores estará la diferencia del tiempo medio destinado a tareas domésticas entre mujeres y hombres para un $90$\% de confianza?
+
+:::{.callout-tip collapse="true"}
+## Solución
+Sea $X$ la variable que mide el tiempo dedicado a las tareas domésticas en mujeres e $Y$ en hombres.
+
+a.  Planteamos las hipótesis $H_0: \mu_x = 2.6$ y $H_1: \mu_x < 2.6$. Realizamos el contraste de la t de student para una población.
+
+    \begin{align*}
+    \bar y &= 2.2286\\
+    \hat s_y &= 0.6157\\
+    \end{align*}
+
+    El estadístico de contraste es $t = \frac{2.2286 -2.6}{0.6157/\sqrt{7}} = -1.5955$ y el p-valor es $p(t(6) < -1.5955) = 0.0809$. Como el p-valor es menor que $\alpha = 0.1$, rechazamos la hipótesis nula y concluimos que el tiempo medio que dedican los hombres a las tareas domésticas es inferior a $2.6$ horas diarias.
+
+a.  El tamaño muestral necesario es
+
+    $$
+    n = \left(\frac{Z_{\alpha/2} \cdot \hat s_y}{E}\right)^2 = \left(\frac{1.96 \cdot 0.6157}{0.1}\right)^2 = 145.68. 
+    $$
+
+a.  Planteamos las hipótesis $H_0: \mu_x = \mu_y$ y $H_1: \mu_x > \mu_y$. Realizamos el contraste de la t de student para dos poblaciones independientes asumiendo varianzas iguales.
+
+    \begin{align*}
+    \bar x &= 3.375\\
+    \hat s_x &= 0.6548\\
+    \hat s_p &= \sqrt{\frac{7\cdot 0.6548^2 + 6\cdot 0.6157^2}{8 + 7 -2}} = 0.6367\\
+    \end{align*}
+
+    El estadístico de contraste es 
+
+    $$
+    t = \frac{3.375 - 2.2286}{0.6367\sqrt{\frac{1}{8} + \frac{1}{7}}} = 3.479,
+    $$
+
+    y el p-valor es $p(t(13) > 3.479) = 0.002$. Como el p-valor es menor que $\alpha = 0.05$, rechazamos la hipótesis nula y concluimos que las mujeres dedican más tiempo que los hombres a las tareas domésticas.
+
+a.  El intervalo de confianza para la diferencia de medias es
+
+    $$
+    3.375 -2.2286 \pm 1.782 \cdot 0.6367\sqrt{\frac{1}{8} + \frac{1}{7}} = 1.1464 \pm 0.5849 = (0.5615, 1.7313).
+    $$
+:::

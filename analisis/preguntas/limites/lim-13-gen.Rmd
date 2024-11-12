@@ -1,0 +1,22 @@
+---
+lang: es
+---
+
+```{r, echo=FALSE, results="hide"}
+```
+
+Question
+========
+(2 puntos) Demostrar sin usar la regla de L'Hôpital que $1 - \cos(x)$ y $\frac{x^2}{2}$ son infinitésimos equivalentes en $x=0$.
+
+Solution
+========
+
+
+Meta-information
+================
+extype: string
+exname: lim-13-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos

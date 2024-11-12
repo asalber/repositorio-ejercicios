@@ -1,0 +1,26 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+```
+
+Question
+========
+(4 puntos) Calcular el volumen de un depósito limitado por el paraboloide elíptico de ecuación $z = \dfrac{x^2}{9} + \dfrac{y^2}{4}$ y el plano $z = 1$ en m$^3$.
+
+![](/run/media/alf/datos/misrepositorios/docencia/repositorio-ejercicios/img/paraboloide-eliptico.png)
+
+
+Solution
+========
+
+
+
+Meta-information
+================
+extype: string
+exname: int-15-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos

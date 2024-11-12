@@ -1,0 +1,22 @@
+---
+lang: es
+---
+
+```{r, echo=FALSE, results="hide"}
+```
+
+Question
+========
+(2 puntos) Demostrar usando la definición de límite que $\lim_{x\to 1}\frac{x-1}{x^2-1} = \frac{1}{2}$.
+
+Solution
+========
+
+
+Meta-information
+================
+extype: string
+exname: lim-14-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos
