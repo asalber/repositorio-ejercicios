@@ -1,0 +1,30 @@
+---
+lang: es
+---
+
+Question
+========
+(2.5 puntos) Se dice que una función $f$ es _Lipschitziana_ en un intervalo $[a,b]$ si existe una constante $L>0$, llamada constante de Lipschitz, tal que 
+
+$$
+|f(x)-f(y)|\leq L|x-y|,
+$$
+
+para cualesquiera $x,y\in [a,b]$.
+
+a.  Demostrar que si $f$ tiene derivada continua en $[a,b]$, entonces $f$ es Lipschitziana en $[a,b]$ y la menor constante de Lipschitz es $L=\max_{x\in [a,b]}|f'(x)|$.
+
+a.  Usando el resultado anterior, demostrar que $f(x) = (x^2-4)^2$ es Lipschitziana en $[-2,2]$, y calcular la menor constante de Lipschitz.
+
+
+Solution
+========
+
+
+Meta-information
+================
+extype: string
+exname: cont-05-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos

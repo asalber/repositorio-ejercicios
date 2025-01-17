@@ -1,0 +1,22 @@
+---
+lang: es
+---
+
+```{r, echo=FALSE, results="hide"}
+```
+
+Question
+========
+(2.5 puntos) Dar un ejemplo de una función no polinómica que tenga una asíntota vertical $x=2$, una asíntota horizontal $y=1$ y una asíntota oblicua $y=2x-1$, y demostrarlo.
+
+Solution
+========
+
+
+Meta-information
+================
+extype: string
+exname: lim-15-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos

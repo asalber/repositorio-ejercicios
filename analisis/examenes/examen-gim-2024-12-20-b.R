@@ -4,20 +4,20 @@ library("exams")
 setwd("analisis/examenes")
 
 degree <- "gim"
-date <- "2023-11-15"
-questions <- c("suc-7-gen.Rmd", "lim-8-meteo.Rmd", "top-02-gen.Rmd", "lim-6-gen.Rmd", "suc-9-gen.Rmd" )
+date <- "2024-12-20"
+questions <- c("extcon-05-fis.Rmd", "intn-02-fis.Rmd", "intn-01-gen.Rmd")
 
 exams2pdf(questions,
   n=1,
-  name = c(paste0("examen-", degree, "-", date), paste0("solucion-", degree, "-", date)),
+  name = c(paste0("examen-", degree, "-", date, "-b"), paste0("solucion-", degree, "-", date, "-b")),
   encoding = "UTF-8", 
   dir = "pdf",
   edir = "../preguntas",
   template = c("plantillas/examenceu.tex", "plantillas/solucionceu.tex"),
   header = list(
-    Title = "EXAMEN DE ANÁLISIS",
-    Subject = "ANÁLISIS I",
-    Degree= "1º Grado en Ingeniería Matemática",
+    Title = "EXAMEN DE ANÁLISIS (2ª PARTE)",
+    Subject = "ANÁLISIS III",
+    Degree= "Grado en Ingeniería Matemática",
     Date = date,
     Version = "A",
     Time = "1 hora y 30 minutos"

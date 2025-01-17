@@ -7,7 +7,7 @@ lang: es
 
 Question
 ========
-(3.5 puntos) Calcular el volumen comprendido entre la gráfica de la función $f(x,y)=\frac{x}{y}$ y el plano $z=0$ en la región limitada por las curvas de la figura.
+(3 puntos) Calcular el volumen comprendido entre la gráfica de la función $f(x,y)=\frac{x}{y}$ y el plano $z=0$ en la región limitada por las curvas de la figura.
 
 ![](/run/media/alf/datos/misrepositorios/docencia/repositorio-ejercicios/img/region-integracion.pdf){width=7cm height=5cm}
 

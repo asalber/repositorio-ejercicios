@@ -1,0 +1,33 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+```
+
+Question
+========
+(3 puntos) Un coche circula por una circuito elíptico cuya trayectoria viene dada por la función vectorial $f(t)=(400\cos(10t), 100\operatorname{sen}(10t))$, donde $t$ está dado en minutos y las coordenadas de $f$ en metros.
+
+a.  Calcular la rapidez del vehículo en el instante $t=\pi$.
+
+a.  Calcular la curvatura de la trayectoria en ese instante.
+
+a.  Calcular la componente tangencial del vector aceleración en ese instante.
+
+a.  Calcular la componente normal del vector aceleración en ese instante.
+
+a.  Suponiendo que los neumáticos no proporcionan ningún agarre (por ejemplo porque hay hielo en la carretera), ¿cuál es el mínimo ángulo que debería tener el peralte de la curva en este instante para que el coche no se salga del circuito? Tómese una aceleración debida a la gravedad de $9.8$ m/s$^2$.
+
+Solution
+========
+
+
+
+Meta-information
+================
+extype: string
+exname: funvec-01-ing
+exsolution: Solución
+extol: 0.001
+degree: Ingenierías

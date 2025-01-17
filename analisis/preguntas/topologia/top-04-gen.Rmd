@@ -15,7 +15,7 @@ Solution
 Meta-information
 ================
 extype: string
-exname: top-4-gen
+exname: top-04-gen
 exsolution: Solución
 extol: 0.001
 degree: Todos

@@ -1,0 +1,22 @@
+---
+lang: es
+---
+
+Question
+========
+(2.5 puntos) Calcular el límite de las siguientes sucesiones.
+
+a.  $\left(\sqrt{n^2+n}-n\right)_{n=1}^\infty$
+a.  $\left(\frac{(n+1)!}{n^n}\right)_{n=1}^\infty$
+
+Solution
+========
+
+
+Meta-information
+================
+extype: string
+exname: suc-13-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos

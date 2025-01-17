@@ -5,7 +5,7 @@ library("exams")
 
 degree <- "gim"
 date <- "2022-11-14"
-questions <- c("top-1-gen.Rmd", "suc-2-gen.Rmd", "suc-3-eco.Rmd", "lim-4-gen.Rmd", "lim-1-gen.Rmd", "lim-3-gen.Rmd")
+questions <- c("top-01-gen.Rmd", "suc-2-gen.Rmd", "suc-3-eco.Rmd", "lim-4-gen.Rmd", "lim-1-gen.Rmd", "lim-3-gen.Rmd")
 
 
 exams2pdf(questions,

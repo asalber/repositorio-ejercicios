@@ -12,7 +12,7 @@ Solution
 Meta-information
 ================
 extype: string
-exname: top-3-gen
+exname: top-03-gen
 exsolution: Solución
 extol: 0.001
 degree: Todos

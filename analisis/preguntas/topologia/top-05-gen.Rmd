@@ -1,0 +1,24 @@
+```{r, echo=FALSE, results="hide"}
+```
+
+Question
+========
+(2.5 puntos) Dada la colección de conjuntos $A_n = \left[1-\frac{2}{n}, 2+\frac{1}{n}\right)$ con $n \in \mathbb{N}$, calcular para cada uno de los conjuntos $\bigcup_{n=1}^{\infty} A_n$ y $\bigcap_{n=1}^{\infty} A_n$: 
+
+a.  Supremo, ínfimo, máximo y mínimo.
+a.  Puntos interiores, puntos exteriores y puntos frontera.
+a.  Determinar si son abiertos o cerrados.
+
+Justificar la respuesta de cada apartado.
+
+Solution
+========
+
+
+Meta-information
+================
+extype: string
+exname: top-05-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos

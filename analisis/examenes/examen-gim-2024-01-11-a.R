@@ -5,7 +5,7 @@ setwd("analisis/examenes")
 
 degree <- "gim"
 date <- "2024-01-11"
-questions <- c("top-4-gen.Rmd", "suc-10-eco.Rmd", "lim-9-gen.Rmd", "lim-10-gen.Rmd")
+questions <- c("top-04-gen.Rmd", "suc-10-eco.Rmd", "lim-9-gen.Rmd", "lim-10-gen.Rmd")
 
 exams2pdf(questions,
   n=1,

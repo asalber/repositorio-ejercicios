@@ -1,0 +1,29 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+
+```
+
+Question
+========
+(2.5 puntos) Demostrar la fórmula del binomio 
+
+$$
+(1+x)^n = 1+\binom{n}{1}x+ \binom{n}{2}x^2 + \ldots + \binom{n}{n}x^n.
+$$
+
+con $n\in\mathbb{N}$ usando polinomios de Taylor.
+
+Solution
+========
+
+
+Meta-information
+================
+extype: string
+exname: tay-04-gen
+exsolution: Solución
+extol: 0.001
+degree: Todos

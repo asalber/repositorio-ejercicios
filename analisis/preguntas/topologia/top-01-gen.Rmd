@@ -18,7 +18,7 @@ Así pues, $\operatorname{Ac}(A)=[0,1]$, y como $\operatorname{Ac}(A)\subseteq A
 Meta-information
 ================
 extype: string
-exname: top-1-gen
+exname: top-01-gen
 exsolution: Solución
 extol: 0.001
 degree: Todos

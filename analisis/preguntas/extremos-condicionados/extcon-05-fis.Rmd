@@ -1,0 +1,25 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+```
+
+Question
+========
+(3 puntos) Una ventana como la de la figura de más abajo está formada por un rectángulo de base $l$ y altura $h$ y un semicírculo de diámetro $l$. Si el área de la ventana es fija, qué relación debe haber entre $l$ y $h$ para que el perímetro de la ventana sea mínimo. Calcular las dimensiones óptimas para un área de 1 m$^2$. Usar el método de los multiplicadores de Lagrange.
+
+![](/run/media/alf/datos/misrepositorios/docencia/repositorio-ejercicios/img/ventana.pdf){width=5cm height=5cm}
+
+Solution
+========
+
+
+
+Meta-information
+================
+extype: string
+exname: extcon-05-fis
+exsolution: Solución
+extol: 0.001
+degree: Ingenierías

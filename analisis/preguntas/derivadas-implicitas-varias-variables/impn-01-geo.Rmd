@@ -1,0 +1,29 @@
+---
+lang: es
+---
+
+```{r, echo = FALSE, results = "hide"}
+
+```
+
+Question
+========
+(3 puntos) La ecuación $(x^2+y^2+z^2+R^2-r^2)^2 = 4r^2(x^2+y^2)$ define la superficie de un toroide de radio mayor $R$ y radio menor $r$. 
+
+a.  Para un toro de radio mayor $4$ y radio menor $2$, probar que la ecuación anterior define implícitamente a $z$ como una función de $x$ y $y$ en un entorno del punto $(4,0,2)$.
+
+a. Calcular el gradiente de $z$ como función implícita de $x$ y $y$ en el punto $(4,0)$ e interpretarlo.
+
+
+Solution
+========
+
+
+
+Meta-information
+================
+extype: string
+exname: impn-01-geo
+exsolution: Solución
+extol: 0.001
+degree: Ingenierías
